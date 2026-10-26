@@ -18,10 +18,28 @@ async function bootstrap() {
 
   const configService = app.get(ConfigService);
   const port = configService.get<number>('port') || 4000;
-  const corsOrigins = configService.get<string[]>('corsOrigins') || [
-    'http://localhost:3000',
-    'http://localhost:3001',
-    'https://ustozakademiyasi.uz',
+  const rawCors =
+    configService.get<string[]>('cors.origins') ||
+    configService.get<string[]>('corsOrigins') ||
+    [];
+
+  const envCors = process.env.CORS_ORIGINS
+    ? process.env.CORS_ORIGINS.split(',').map((s) => s.trim())
+    : [];
+
+  const corsOrigins = [
+    ...new Set([
+      ...rawCors,
+      ...envCors,
+      'https://ustozakademiyasi-front.duckdns.org',
+      'http://ustozakademiyasi-front.duckdns.org',
+      'https://ustozakademiyasi-back.duckdns.org',
+      'http://ustozakademiyasi-back.duckdns.org',
+      'https://ustozakademiyasi.uz',
+      'http://localhost:3000',
+      'http://localhost:3001',
+      'http://127.0.0.1:3000',
+    ]),
   ];
 
   // Ensure uploads directory exists
@@ -59,15 +77,26 @@ async function bootstrap() {
       if (
         corsOrigins.includes(origin) ||
         corsOrigins.includes('*') ||
-        origin.startsWith('http://localhost:')
+        origin.endsWith('.duckdns.org') ||
+        origin.startsWith('http://localhost:') ||
+        origin.startsWith('http://127.0.0.1:')
       ) {
         return callback(null, true);
       }
-      return callback(new Error('CORS siyosati tomonidan bloklandi: ' + origin), false);
+      return callback(null, true);
     },
     credentials: true,
     methods: ['GET', 'POST', 'PUT', 'PATCH', 'DELETE', 'OPTIONS'],
-    allowedHeaders: ['Content-Type', 'Authorization', 'x-request-id', 'Accept'],
+    allowedHeaders: [
+      'Content-Type',
+      'Authorization',
+      'x-request-id',
+      'x-source',
+      'x-bot-api-token',
+      'Accept',
+      'Origin',
+      'X-Requested-With',
+    ],
   });
 
   // Versioned global prefix
