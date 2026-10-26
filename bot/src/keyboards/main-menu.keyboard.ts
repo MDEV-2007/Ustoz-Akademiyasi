@@ -26,6 +26,27 @@ export function getMainMenuReplyKeyboard(lang: BotLanguage = 'uz'): Keyboard {
     .persistent();
 }
 
+export function getWelcomeQuickInlineKeyboard(lang: BotLanguage = 'uz'): InlineKeyboard {
+  const config = getConfig();
+  const websiteLabel =
+    lang === 'ru'
+      ? '🌐 Официальный сайт'
+      : lang === 'en'
+      ? '🌐 Official website'
+      : '🌐 Rasmiy sayt';
+
+  const contactLabel =
+    lang === 'ru'
+      ? '📞 Контакты'
+      : lang === 'en'
+      ? '📞 Contact'
+      : '📞 Bog‘lanish';
+
+  return new InlineKeyboard()
+    .url(websiteLabel, config.PUBLIC_WEBSITE_URL)
+    .text(contactLabel, 'nav:contact');
+}
+
 export function getMainMenuInlineKeyboard(lang: BotLanguage = 'uz'): InlineKeyboard {
   const strings = BOT_LOCALIZED_STRINGS[lang] || BOT_LOCALIZED_STRINGS.uz;
   const config = getConfig();

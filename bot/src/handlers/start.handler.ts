@@ -6,6 +6,7 @@ import { BOT_LOCALIZED_STRINGS, BotLanguage } from '../config/constants';
 import {
   getMainMenuReplyKeyboard,
   getMainMenuInlineKeyboard,
+  getWelcomeQuickInlineKeyboard,
   getLanguageInlineKeyboard,
 } from '../keyboards/main-menu.keyboard';
 import { apiClient } from '../services/api-client.service';
@@ -120,7 +121,7 @@ export async function sendWelcomeExperience(ctx: MyContext, lang: BotLanguage) {
     if (fs.existsSync(bannerPath)) {
       await ctx.replyWithPhoto(new InputFile(bannerPath), {
         caption: welcomeText,
-        reply_markup: getMainMenuInlineKeyboard(lang),
+        reply_markup: getWelcomeQuickInlineKeyboard(lang),
         parse_mode: 'HTML',
       });
       await ctx.reply(s.CHOOSE_SECTION, {
@@ -134,7 +135,7 @@ export async function sendWelcomeExperience(ctx: MyContext, lang: BotLanguage) {
   }
 
   await ctx.reply(welcomeText, {
-    reply_markup: getMainMenuInlineKeyboard(lang),
+    reply_markup: getWelcomeQuickInlineKeyboard(lang),
     parse_mode: 'HTML',
   });
   await ctx.reply(s.CHOOSE_SECTION, {
