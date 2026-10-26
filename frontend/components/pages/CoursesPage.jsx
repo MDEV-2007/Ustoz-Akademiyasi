@@ -214,7 +214,7 @@ export default function CoursesPage({
 
               {/* Right Column (5 cols): Contact & Registration Form (Side by side on desktop) */}
               <div className="lg:col-span-5 lg:sticky lg:top-24 space-y-4">
-                <div className="p-6 sm:p-7 rounded-2xl bg-white border border-[#E2E8E4] shadow-sm space-y-5">
+                <div className="p-4 sm:p-7 rounded-2xl bg-white border border-[#E2E8E4] shadow-sm space-y-4 sm:space-y-5">
                   <div className="space-y-1.5">
                     <span className="text-xs font-semibold uppercase tracking-wider text-[#047857]">
                       Bepul sinov darsi

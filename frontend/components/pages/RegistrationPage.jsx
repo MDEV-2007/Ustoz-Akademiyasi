@@ -97,7 +97,7 @@ export default function RegistrationPage({
 
   // ROUTE 13: TRIAL-LESSON REGISTRATION (/royxatdan-otish)
   return (
-    <div className="min-h-[calc(100vh-6rem)] flex items-center justify-center py-8 lg:py-14 max-w-[1360px] 2xl:max-w-[1520px] min-[1920px]:max-w-[1680px] mx-auto px-4 sm:px-6 lg:px-8 2xl:px-12 w-full">
+    <div className="min-h-[calc(100vh-6rem)] flex items-center justify-center py-6 sm:py-8 lg:py-14 max-w-[1360px] 2xl:max-w-[1520px] min-[1920px]:max-w-[1680px] mx-auto px-3 sm:px-6 lg:px-8 2xl:px-12 w-full">
       <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-14 items-center justify-center w-full my-auto">
         <div className="lg:col-span-5 flex flex-col justify-center space-y-6">
           <div>
