@@ -61,7 +61,7 @@ export function formatLeadNotificationHtml(lead: {
     `📚 <b>Kurs:</b> ${escapeHtml(lead.courseTitle)}`,
     `📍 <b>Filial:</b> ${escapeHtml(lead.branchName)}`,
     lead.notes && /Ustoz:\s*[^|]+/i.test(lead.notes)
-      ? `👨‍🏫 <b>Tanlangan ustoz:</b> ${escapeHtml(lead.notes.match(/Ustoz:\s*[^|]+/i)[0].trim())}`
+      ? `👨‍🏫 <b>Tanlangan ustoz:</b> ${escapeHtml((lead.notes.match(/Ustoz:\s*[^|]+/i)?.[0] ?? '').trim())}`
       : null,
     `🌐 <b>Manba:</b> ${escapeHtml(lead.source)}`,
     `📝 <b>So‘rov turi:</b> ${escapeHtml(lead.inquiryType || 'Sinov darsi')}`,
