@@ -1,0 +1,327 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --background: #F8FAF8;
+    --foreground: #14231F;
+    --primary: #073F31;
+    --accent: #63E6BE;
+    --gold: #E8B84A;
+
+    /* Motion System Tokens (Apple/Linear restraint) */
+    --ease-smooth: cubic-bezier(0.22, 1, 0.36, 1);
+    --ease-spring-subtle: cubic-bezier(0.16, 1, 0.3, 1);
+    --duration-micro: 180ms;
+    --duration-card: 220ms;
+    --duration-reveal: 550ms;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    background-color: var(--background);
+    color: var(--foreground);
+    font-family: 'Plus Jakarta Sans', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+    scroll-behavior: smooth;
+    overflow-x: hidden;
+  }
+}
+
+/* ==========================================================================
+   GLOBAL SCROLLBAR REMOVAL (ALL BROWSERS: CHROME, EDGE, SAFARI, FIREFOX)
+   ========================================================================== */
+html,
+body,
+#root,
+#__next,
+* {
+  scrollbar-width: none !important;
+  -ms-overflow-style: none !important;
+}
+
+::-webkit-scrollbar,
+html::-webkit-scrollbar,
+body::-webkit-scrollbar,
+*::-webkit-scrollbar {
+  display: none !important;
+  width: 0 !important;
+  height: 0 !important;
+  background: transparent !important;
+  opacity: 0 !important;
+}
+
+::-webkit-scrollbar-track,
+*::-webkit-scrollbar-track {
+  display: none !important;
+  background: transparent !important;
+}
+
+::-webkit-scrollbar-thumb,
+*::-webkit-scrollbar-thumb {
+  display: none !important;
+  background: transparent !important;
+}
+
+.font-arabic {
+  font-family: 'Noto Naskh Arabic', 'Amiri', serif;
+}
+
+/* ==========================================================================
+   PREMIUM MOTION DESIGN SYSTEM (RESTRAINED, PURPOSEFUL, ACCESSIBLE)
+   ========================================================================== */
+
+/* 1. Choreographed Hero Sequence */
+@keyframes heroEntrance {
+  from {
+    opacity: 0;
+    transform: translateY(14px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.motion-fade-up-1 {
+  animation: heroEntrance 0.6s var(--ease-smooth) 0.04s both;
+}
+
+.motion-fade-up-2 {
+  animation: heroEntrance 0.65s var(--ease-smooth) 0.12s both;
+}
+
+.motion-fade-up-3 {
+  animation: heroEntrance 0.65s var(--ease-smooth) 0.20s both;
+}
+
+.motion-fade-up-4 {
+  animation: heroEntrance 0.65s var(--ease-smooth) 0.28s both;
+}
+
+.motion-fade-up-5 {
+  animation: heroEntrance 0.75s var(--ease-smooth) 0.36s both;
+}
+
+.motion-fade-up-6 {
+  animation: heroEntrance 0.65s var(--ease-smooth) 0.44s both;
+}
+
+/* 2. Natural Card Hover & Elevate State (Apple-standard: subtle 2-3px lift) */
+.motion-card {
+  transition: transform 220ms var(--ease-smooth),
+              box-shadow 220ms var(--ease-smooth),
+              border-color 220ms ease;
+  will-change: transform, box-shadow;
+}
+
+.motion-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 24px -4px rgba(7, 63, 49, 0.08);
+  border-color: rgba(7, 63, 49, 0.25);
+}
+
+.motion-card:active {
+  transform: translateY(-1px);
+}
+
+/* 3. Button Micro-interaction */
+.motion-button {
+  transition: background-color 160ms ease,
+              transform 160ms var(--ease-smooth),
+              box-shadow 160ms ease;
+  will-change: transform;
+}
+
+.motion-button:hover {
+  transform: translateY(-1px);
+}
+
+.motion-button:active {
+  transform: scale(0.985);
+}
+
+/* 4. Directional Arrow Micro-motion */
+.motion-arrow {
+  transition: transform 180ms var(--ease-smooth);
+}
+
+.group:hover .motion-arrow,
+button:hover .motion-arrow,
+a:hover .motion-arrow {
+  transform: translateX(3px);
+}
+
+/* 5. Dropdown Menu Smooth Reveal */
+@keyframes dropdownReveal {
+  from {
+    opacity: 0;
+    transform: translateY(-4px) scale(0.98);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+.motion-dropdown {
+  animation: dropdownReveal 160ms var(--ease-smooth) forwards;
+  transform-origin: top left;
+}
+
+/* 6. Viewport Reveal on Scroll (Subtle, Restrained, High Performance) */
+.reveal-on-scroll {
+  opacity: 0;
+  transform: translateY(18px);
+  transition: opacity 0.6s var(--ease-smooth), transform 0.6s var(--ease-smooth);
+  will-change: opacity, transform;
+}
+
+.reveal-on-scroll.reveal-from-left {
+  transform: translateX(-18px);
+}
+
+.reveal-on-scroll.reveal-from-right {
+  transform: translateX(18px);
+}
+
+.reveal-on-scroll.reveal-scale {
+  transform: scale(0.97);
+}
+
+.reveal-on-scroll.is-revealed {
+  opacity: 1;
+  transform: translate(0, 0) scale(1);
+}
+
+/* Mobile & Tablet Safety Override: Never hide content on small viewports */
+@media (max-width: 768px) {
+  .reveal-on-scroll {
+    opacity: 1 !important;
+    transform: none !important;
+    transition: none !important;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .reveal-on-scroll {
+    opacity: 1 !important;
+    transform: none !important;
+    transition: none !important;
+  }
+}
+
+/* Precise Stagger Delays (80ms - 140ms intervals) */
+.stagger-1 { transition-delay: 80ms; }
+.stagger-2 { transition-delay: 160ms; }
+.stagger-3 { transition-delay: 240ms; }
+.stagger-4 { transition-delay: 320ms; }
+.stagger-5 { transition-delay: 400ms; }
+.stagger-6 { transition-delay: 480ms; }
+.stagger-7 { transition-delay: 560ms; }
+.stagger-8 { transition-delay: 640ms; }
+
+/* Subtle Ambient Breathe for Hero Video & Pattern */
+@keyframes ambientBreathe {
+  0% {
+    opacity: 0.28;
+    transform: scale(1);
+  }
+  100% {
+    opacity: 0.40;
+    transform: scale(1.02);
+  }
+}
+
+.ambient-hero-pattern {
+  animation: ambientBreathe 14s ease-in-out infinite alternate;
+  will-change: opacity, transform;
+}
+
+/* 7. Subtle Audio Playback Indicator */
+@keyframes audioPulseBar {
+  0%, 100% {
+    height: 4px;
+    opacity: 0.6;
+  }
+  50% {
+    height: 14px;
+    opacity: 1;
+  }
+}
+
+.audio-bar-1 { animation: audioPulseBar 0.6s ease-in-out infinite alternate; }
+.audio-bar-2 { animation: audioPulseBar 0.6s ease-in-out infinite alternate 0.15s; }
+.audio-bar-3 { animation: audioPulseBar 0.6s ease-in-out infinite alternate 0.3s; }
+
+/* 8. Subtle Geometric Background */
+.islamic-pattern-bg {
+  background-image: radial-gradient(rgba(255, 255, 255, 0.04) 1px, transparent 1px);
+  background-size: 24px 24px;
+}
+
+/* 9. Accessibility: Strict Reduced-Motion Support */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+    transform: none !important;
+  }
+
+  .reveal-on-scroll {
+    opacity: 1 !important;
+    transform: none !important;
+    transition: none !important;
+  }
+}
+
+/* ==========================================================================
+   RESPONSIVE DESIGN SYSTEM TOKENS & UTILITIES
+   ========================================================================== */
+
+/* Prevent iOS Safari 100%+ auto-zoom on form inputs */
+@media (max-width: 640px) {
+  input,
+  select,
+  textarea {
+    font-size: 16px !important;
+  }
+}
+
+/* Seamless horizontal scroll without jarring desktop scrollbars */
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+/* Responsive touch target accessibility (WCAG 2.2 min 44x44px target) */
+.touch-target {
+  min-height: 44px;
+  min-width: 44px;
+}
+
+/* Fluid responsive typography helpers */
+.text-fluid-h1 {
+  font-size: clamp(1.875rem, 3.5vw + 1rem, 3.25rem);
+  line-height: 1.15;
+}
+
+.text-fluid-h2 {
+  font-size: clamp(1.35rem, 2.2vw + 0.6rem, 2.25rem);
+  line-height: 1.2;
+}
+
+/* Fix text rendering for Arabic script across mobile webviews */
+.font-arabic {
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+}
+

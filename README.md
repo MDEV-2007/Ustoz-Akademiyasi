@@ -1,36 +1,64 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Ustoz Akademiyasi — Full-Stack Monorepo
 
-## Getting Started
+Toshkentdagi 8 ta filialga ega «Ustoz Akademiyasi» arab tili o‘quv markazining to‘liq arxitekturasi:
 
-First, run the development server:
-
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+```
+Ustoz Akademiyasi/
+├── frontend/             # Next.js 16 (App Router, TailwindCSS, Arab tili interaktiv platformasi, Admin panel)
+│   ├── app/              # 16 ta marshrut va ko'p tilli (uz, ru, en) sahifalar
+│   ├── components/       # Modul layout, UI va sahifa komponentlari
+│   ├── features/         # Ro'yxatdan o'tish va telefon validatsiya xizmatlari
+│   ├── lib/              # API mijoz, audio sintezator va ma'lumotlar konstantalari
+│   └── package.json
+│
+├── backend/              # NestJS REST API (PostgreSQL + Prisma/TypeORM + Redis)
+│   ├── src/              # Kurslar, filiallar, arizalar (CRM) va admin auth
+│   └── package.json
+│
+├── bot/                  # Telegram Bot xizmati (Ariza qabul qilish, bildirishnomalar)
+│   ├── src/              # Telegraf / Telegram Bot API
+│   └── package.json
+│
+├── docker-compose.yml    # PostgreSQL, Redis, Backend, Bot va Frontend to'liq docker muhiti
+└── package.json          # Monorepo boshqaruv buyruqlari
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+---
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+## Ishga tushirish (Getting Started)
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+### 1. Barcha xizmatlarni mahalliy ishga tushirish (Local Dev)
 
-## Learn More
+Loyiha ildizidan turib quyidagi buyruqlarni ishlatishingiz mumkin:
 
-To learn more about Next.js, take a look at the following resources:
+```bash
+# Frontendni ishga tushirish (http://localhost:3000)
+npm run dev
+# yoki
+npm run dev:frontend
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+# Backend API ni ishga tushirish (http://localhost:4000)
+npm run dev:backend
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+# Telegram Botni ishga tushirish
+npm run dev:bot
+```
 
-## Deploy on Vercel
+### 2. Loyihani qurish (Production Build)
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+```bash
+# Frontendni ishlab chiqarishga tayyorlash (Static export / SSR)
+npm run build
+# yoki
+npm run build:frontend
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+# Backendni qurish
+npm run build:backend
+```
+
+### 3. Docker orqali barchasini birdaniga ishga tushirish
+
+```bash
+docker-compose up -d --build
+```
+Bu buyruq PostgreSQL (5432), Redis (6379), Backend (4000), Telegram Bot (3001) va Frontend (3000) ni avtomatik ravishda konteynerlarda ishga tushiradi.

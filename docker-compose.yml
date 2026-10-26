@@ -1,0 +1,113 @@
+version: '3.8'
+
+services:
+  # PostgreSQL Database
+  postgres:
+    image: postgres:16-alpine
+    container_name: ustoz_postgres
+    restart: always
+    environment:
+      POSTGRES_USER: ${POSTGRES_USER:-postgres}
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:-postgres_password_2026}
+      POSTGRES_DB: ${POSTGRES_DB:-ustoz_akademiyasi}
+    ports:
+      - "5432:5432"
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U postgres"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+
+  # Redis for Queues & Caching
+  redis:
+    image: redis:7-alpine
+    container_name: ustoz_redis
+    restart: always
+    command: redis-server --appendonly yes
+    ports:
+      - "6379:6379"
+    volumes:
+      - redis_data:/data
+    healthcheck:
+      test: ["CMD", "redis-cli", "ping"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+
+  # Ustoz Akademiyasi NestJS API
+  backend:
+    build:
+      context: ./backend
+      dockerfile: Dockerfile
+    container_name: ustoz_api
+    restart: always
+    depends_on:
+      postgres:
+        condition: service_healthy
+      redis:
+        condition: service_healthy
+    environment:
+      NODE_ENV: production
+      PORT: 4000
+      DATABASE_URL: postgresql://${POSTGRES_USER:-postgres}:${POSTGRES_PASSWORD:-postgres_password_2026}@postgres:5432/${POSTGRES_DB:-ustoz_akademiyasi}?schema=public
+      REDIS_URL: redis://redis:6379
+      JWT_ACCESS_SECRET: ${JWT_ACCESS_SECRET:-ustoz_super_secure_access_secret_2026_xyz}
+      JWT_REFRESH_SECRET: ${JWT_REFRESH_SECRET:-ustoz_super_secure_refresh_secret_2026_xyz}
+      SUPERADMIN_EMAIL: ${SUPERADMIN_EMAIL:-admin@ustozakademiyasi.uz}
+      SUPERADMIN_PASSWORD: ${SUPERADMIN_PASSWORD:-SecureAdminPassword2026!#}
+      CORS_ORIGINS: ${CORS_ORIGINS:-http://localhost:3000,https://ustozakademiyasi.uz}
+      TELEGRAM_BOT_TOKEN: ${TELEGRAM_BOT_TOKEN:-}
+      TELEGRAM_CHAT_IDS: ${TELEGRAM_CHAT_IDS:-}
+      BOT_API_TOKEN: ${BOT_API_TOKEN:-ustoz_bot_secure_service_token_2026}
+    ports:
+      - "4000:4000"
+    volumes:
+      - uploads_data:/app/uploads
+
+  # Ustoz Akademiyasi Telegram Bot Service
+  telegram-bot:
+    build:
+      context: ./bot
+      dockerfile: Dockerfile
+    container_name: ustoz_telegram_bot
+    restart: always
+    depends_on:
+      - backend
+      - redis
+    environment:
+      NODE_ENV: production
+      BOT_TOKEN: ${BOT_TOKEN:-${TELEGRAM_BOT_TOKEN:-}}
+      BOT_MODE: ${BOT_MODE:-polling}
+      BACKEND_API_URL: http://backend:4000/api/v1
+      BOT_API_TOKEN: ${BOT_API_TOKEN:-ustoz_bot_secure_service_token_2026}
+      REDIS_URL: redis://redis:6379
+      ADMIN_TELEGRAM_IDS: ${ADMIN_TELEGRAM_IDS:-}
+      ADMIN_NOTIFICATION_CHAT_ID: ${ADMIN_NOTIFICATION_CHAT_ID:-}
+      PUBLIC_WEBSITE_URL: ${PUBLIC_WEBSITE_URL:-https://ustozakademiyasi.uz}
+      LOG_LEVEL: ${LOG_LEVEL:-info}
+    ports:
+      - "3001:3001"
+
+  # Ustoz Akademiyasi Next.js Frontend
+  frontend:
+    build:
+      context: ./frontend
+      dockerfile: Dockerfile
+    container_name: ustoz_frontend
+    restart: always
+    depends_on:
+      - backend
+    environment:
+      NODE_ENV: production
+      PORT: 3000
+      NEXT_PUBLIC_API_URL: http://localhost:4000/api/v1
+      NEST_BACKEND_URL: http://backend:4000/api/v1
+    ports:
+      - "3000:3000"
+
+volumes:
+  postgres_data:
+  redis_data:
+  uploads_data:

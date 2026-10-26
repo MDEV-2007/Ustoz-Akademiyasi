@@ -1,0 +1,4696 @@
+{
+  "openapi": "3.0.0",
+  "paths": {
+    "/api/v1": {
+      "get": {
+        "operationId": "AppController_getRootInfo",
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": ""
+          }
+        },
+        "summary": "API Holati va Ommaviy Yo‘nalishlar Ma’lumotnomasi",
+        "tags": [
+          "Root & API Directory"
+        ]
+      }
+    },
+    "/api/v1/auth/login": {
+      "post": {
+        "operationId": "AuthController_login",
+        "parameters": [],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/LoginDto"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Muvaffaqiyatli kirish"
+          },
+          "401": {
+            "description": "Elektron pochta yoki parol noto‘g‘ri"
+          }
+        },
+        "summary": "Admin/Manager tizimga kirish",
+        "tags": [
+          "Admin - Authentication"
+        ]
+      }
+    },
+    "/api/v1/auth/refresh": {
+      "post": {
+        "operationId": "AuthController_refresh",
+        "parameters": [],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/RefreshTokenDto"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Yangi access va refresh tokenlar"
+          }
+        },
+        "summary": "Tokenlarni yangilash (Rotate refresh token)",
+        "tags": [
+          "Admin - Authentication"
+        ]
+      }
+    },
+    "/api/v1/auth/logout": {
+      "post": {
+        "operationId": "AuthController_logout",
+        "parameters": [],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/RefreshTokenDto"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": ""
+          }
+        },
+        "summary": "Joriy sessiyani tugatish va tokenni bekor qilish",
+        "tags": [
+          "Admin - Authentication"
+        ]
+      }
+    },
+    "/api/v1/auth/logout-all": {
+      "post": {
+        "operationId": "AuthController_logoutAll",
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": ""
+          }
+        },
+        "security": [
+          {
+            "bearer": []
+          }
+        ],
+        "summary": "Foydalanuvchining barcha faol sessiyalarini bekor qilish",
+        "tags": [
+          "Admin - Authentication"
+        ]
+      }
+    },
+    "/api/v1/auth/me": {
+      "get": {
+        "operationId": "AuthController_getProfile",
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": ""
+          }
+        },
+        "security": [
+          {
+            "bearer": []
+          }
+        ],
+        "summary": "Tizimga kirgan foydalanuvchi ma’lumotlarini olish",
+        "tags": [
+          "Admin - Authentication"
+        ]
+      }
+    },
+    "/api/v1/auth/change-password": {
+      "post": {
+        "operationId": "AuthController_changePassword",
+        "parameters": [],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/ChangePasswordDto"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": ""
+          }
+        },
+        "security": [
+          {
+            "bearer": []
+          }
+        ],
+        "summary": "Foydalanuvchi parolini o‘zgartirish",
+        "tags": [
+          "Admin - Authentication"
+        ]
+      }
+    },
+    "/api/v1/admin/users": {
+      "get": {
+        "operationId": "UsersController_findAll",
+        "parameters": [
+          {
+            "name": "page",
+            "required": false,
+            "in": "query",
+            "description": "Sahifa raqami",
+            "schema": {
+              "minimum": 1,
+              "default": 1,
+              "type": "number"
+            }
+          },
+          {
+            "name": "limit",
+            "required": false,
+            "in": "query",
+            "description": "Har bir sahifadagi elementlar soni",
+            "schema": {
+              "minimum": 1,
+              "maximum": 500,
+              "default": 20,
+              "type": "number"
+            }
+          },
+          {
+            "name": "search",
+            "required": false,
+            "in": "query",
+            "description": "Qidiruv so‘zi",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "role",
+            "required": false,
+            "in": "query",
+            "schema": {
+              "type": "string",
+              "enum": [
+                "SUPER_ADMIN",
+                "ADMIN",
+                "MANAGER",
+                "CONTENT_EDITOR"
+              ]
+            }
+          },
+          {
+            "name": "status",
+            "required": false,
+            "in": "query",
+            "schema": {
+              "type": "string",
+              "enum": [
+                "ACTIVE",
+                "INACTIVE",
+                "SUSPENDED"
+              ]
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": ""
+          }
+        },
+        "security": [
+          {
+            "bearer": []
+          }
+        ],
+        "summary": "Barcha ma’muriyat xodimlari ro‘yxati (Faqat Super Admin)",
+        "tags": [
+          "Admin - User & Staff Management"
+        ]
+      },
+      "post": {
+        "operationId": "UsersController_create",
+        "parameters": [],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/CreateUserDto"
+              }
+            }
+          }
+        },
+        "responses": {
+          "201": {
+            "description": ""
+          }
+        },
+        "security": [
+          {
+            "bearer": []
+          }
+        ],
+        "summary": "Yangi ma’muriyat xodimi (Admin/Manager/Editor) yaratish",
+        "tags": [
+          "Admin - User & Staff Management"
+        ]
+      }
+    },
+    "/api/v1/admin/users/{id}": {
+      "get": {
+        "operationId": "UsersController_findOne",
+        "parameters": [
+          {
+            "name": "id",
+            "required": true,
+            "in": "path",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": ""
+          }
+        },
+        "security": [
+          {
+            "bearer": []
+          }
+        ],
+        "summary": "Xodim ma’lumotlari",
+        "tags": [
+          "Admin - User & Staff Management"
+        ]
+      },
+      "patch": {
+        "operationId": "UsersController_update",
+        "parameters": [
+          {
+            "name": "id",
+            "required": true,
+            "in": "path",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/UpdateUserDto"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": ""
+          }
+        },
+        "security": [
+          {
+            "bearer": []
+          }
+        ],
+        "summary": "Xodim ma’lumotlari, roli yoki statusini o‘zgartirish",
+        "tags": [
+          "Admin - User & Staff Management"
+        ]
+      },
+      "delete": {
+        "operationId": "UsersController_remove",
+        "parameters": [
+          {
+            "name": "id",
+            "required": true,
+            "in": "path",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": ""
+          }
+        },
+        "security": [
+          {
+            "bearer": []
+          }
+        ],
+        "summary": "Xodimni faolsizlantirish va sessiyalarini bekor qilish",
+        "tags": [
+          "Admin - User & Staff Management"
+        ]
+      }
+    },
+    "/api/v1/public/course-categories": {
+      "get": {
+        "operationId": "CategoriesPublicController_findPublicCategories",
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": ""
+          }
+        },
+        "summary": "Faol o‘quv kurs kategoriyalari ro‘yxati",
+        "tags": [
+          "Public - Course Categories"
+        ]
+      }
+    },
+    "/api/v1/admin/categories": {
+      "get": {
+        "operationId": "CategoriesAdminController_findAll",
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": ""
+          }
+        },
+        "security": [
+          {
+            "bearer": []
+          }
+        ],
+        "summary": "Barcha kategoriyalar (Admin)",
+        "tags": [
+          "Admin - Course Categories"
+        ]
+      },
+      "post": {
+        "operationId": "CategoriesAdminController_create",
+        "parameters": [],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/CreateCategoryDto"
+              }
+            }
+          }
+        },
+        "responses": {
+          "201": {
+            "description": ""
+          }
+        },
+        "security": [
+          {
+            "bearer": []
+          }
+        ],
+        "summary": "Yangi kategoriya yaratish",
+        "tags": [
+          "Admin - Course Categories"
+        ]
+      }
+    },
+    "/api/v1/admin/categories/{id}": {
+      "get": {
+        "operationId": "CategoriesAdminController_findOne",
+        "parameters": [
+          {
+            "name": "id",
+            "required": true,
+            "in": "path",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": ""
+          }
+        },
+        "security": [
+          {
+            "bearer": []
+          }
+        ],
+        "summary": "Kategoriya tafsiloti",
+        "tags": [
+          "Admin - Course Categories"
+        ]
+      },
+      "patch": {
+        "operationId": "CategoriesAdminController_update",
+        "parameters": [
+          {
+            "name": "id",
+            "required": true,
+            "in": "path",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/UpdateCategoryDto"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": ""
+          }
+        },
+        "security": [
+          {
+            "bearer": []
+          }
+        ],
+        "summary": "Kategoriyani tahrirlash",
+        "tags": [
+          "Admin - Course Categories"
+        ]
+      },
+      "delete": {
+        "operationId": "CategoriesAdminController_remove",
+        "parameters": [
+          {
+            "name": "id",
+            "required": true,
+            "in": "path",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": ""
+          }
+        },
+        "security": [
+          {
+            "bearer": []
+          }
+        ],
+        "summary": "Kategoriyani o‘chirish",
+        "tags": [
+          "Admin - Course Categories"
+        ]
+      }
+    },
+    "/api/v1/public/courses": {
+      "get": {
+        "operationId": "CoursesPublicController_findPublicCourses",
+        "parameters": [
+          {
+            "name": "page",
+            "required": false,
+            "in": "query",
+            "description": "Sahifa raqami",
+            "schema": {
+              "minimum": 1,
+              "default": 1,
+              "type": "number"
+            }
+          },
+          {
+            "name": "limit",
+            "required": false,
+            "in": "query",
+            "description": "Har bir sahifadagi elementlar soni",
+            "schema": {
+              "minimum": 1,
+              "maximum": 500,
+              "default": 20,
+              "type": "number"
+            }
+          },
+          {
+            "name": "search",
+            "required": false,
+            "in": "query",
+            "description": "Qidiruv so‘zi",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "category",
+            "required": false,
+            "in": "query",
+            "description": "Kategoriya ID si yoki slugi",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "level",
+            "required": false,
+            "in": "query",
+            "description": "Daraja bo‘yicha filtr (masalan: A1, B1-C1)",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "audience",
+            "required": false,
+            "in": "query",
+            "description": "Auditoriya (Bolalar, Kattalar)",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "featured",
+            "required": false,
+            "in": "query",
+            "description": "Faqat tanlangan/asosiy kurslar",
+            "schema": {
+              "type": "boolean"
+            }
+          },
+          {
+            "name": "status",
+            "required": false,
+            "in": "query",
+            "description": "Nashr holati (Admin uchun)",
+            "schema": {
+              "type": "string",
+              "enum": [
+                "DRAFT",
+                "PUBLISHED",
+                "ARCHIVED"
+              ]
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Kurslar ro‘yxati"
+          }
+        },
+        "summary": "Faol kurslar ro‘yxati (Kategoriya, daraja va qidiruv bilan)",
+        "tags": [
+          "Public - Courses"
+        ]
+      }
+    },
+    "/api/v1/public/courses/featured": {
+      "get": {
+        "operationId": "CoursesPublicController_findFeaturedCourses",
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": ""
+          }
+        },
+        "summary": "Bosh sahifa uchun tanlangan (featured) kurslar",
+        "tags": [
+          "Public - Courses"
+        ]
+      }
+    },
+    "/api/v1/public/courses/{slug}": {
+      "get": {
+        "operationId": "CoursesPublicController_findPublicBySlug",
+        "parameters": [
+          {
+            "name": "slug",
+            "required": true,
+            "in": "path",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Kurs tafsiloti"
+          },
+          "404": {
+            "description": "Kurs topilmadi"
+          }
+        },
+        "summary": "Kursning to‘liq tafsiloti (slug orqali)",
+        "tags": [
+          "Public - Courses"
+        ]
+      }
+    },
+    "/api/v1/admin/courses": {
+      "get": {
+        "operationId": "CoursesAdminController_findAll",
+        "parameters": [
+          {
+            "name": "page",
+            "required": false,
+            "in": "query",
+            "description": "Sahifa raqami",
+            "schema": {
+              "minimum": 1,
+              "default": 1,
+              "type": "number"
+            }
+          },
+          {
+            "name": "limit",
+            "required": false,
+            "in": "query",
+            "description": "Har bir sahifadagi elementlar soni",
+            "schema": {
+              "minimum": 1,
+              "maximum": 500,
+              "default": 20,
+              "type": "number"
+            }
+          },
+          {
+            "name": "search",
+            "required": false,
+            "in": "query",
+            "description": "Qidiruv so‘zi",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "category",
+            "required": false,
+            "in": "query",
+            "description": "Kategoriya ID si yoki slugi",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "level",
+            "required": false,
+            "in": "query",
+            "description": "Daraja bo‘yicha filtr (masalan: A1, B1-C1)",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "audience",
+            "required": false,
+            "in": "query",
+            "description": "Auditoriya (Bolalar, Kattalar)",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "featured",
+            "required": false,
+            "in": "query",
+            "description": "Faqat tanlangan/asosiy kurslar",
+            "schema": {
+              "type": "boolean"
+            }
+          },
+          {
+            "name": "status",
+            "required": false,
+            "in": "query",
+            "description": "Nashr holati (Admin uchun)",
+            "schema": {
+              "type": "string",
+              "enum": [
+                "DRAFT",
+                "PUBLISHED",
+                "ARCHIVED"
+              ]
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": ""
+          }
+        },
+        "security": [
+          {
+            "bearer": []
+          }
+        ],
+        "summary": "Barcha kurslar ro‘yxati (Admin - DRAFT, PUBLISHED, ARCHIVED)",
+        "tags": [
+          "Admin - Courses Management"
+        ]
+      },
+      "post": {
+        "operationId": "CoursesAdminController_create",
+        "parameters": [],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/CreateCourseDto"
+              }
+            }
+          }
+        },
+        "responses": {
+          "201": {
+            "description": ""
+          }
+        },
+        "security": [
+          {
+            "bearer": []
+          }
+        ],
+        "summary": "Yangi o‘quv kursi yaratish",
+        "tags": [
+          "Admin - Courses Management"
+        ]
+      }
+    },
+    "/api/v1/admin/courses/{id}": {
+      "get": {
+        "operationId": "CoursesAdminController_findOne",
+        "parameters": [
+          {
+            "name": "id",
+            "required": true,
+            "in": "path",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": ""
+          }
+        },
+        "security": [
+          {
+            "bearer": []
+          }
+        ],
+        "summary": "Kursning to‘liq admin tafsilotlari",
+        "tags": [
+          "Admin - Courses Management"
+        ]
+      },
+      "patch": {
+        "operationId": "CoursesAdminController_update",
+        "parameters": [
+          {
+            "name": "id",
+            "required": true,
+            "in": "path",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/UpdateCourseDto"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": ""
+          }
+        },
+        "security": [
+          {
+            "bearer": []
+          }
+        ],
+        "summary": "Mavjud kursni tahrirlash",
+        "tags": [
+          "Admin - Courses Management"
+        ]
+      },
+      "delete": {
+        "operationId": "CoursesAdminController_remove",
+        "parameters": [
+          {
+            "name": "id",
+            "required": true,
+            "in": "path",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": ""
+          }
+        },
+        "security": [
+          {
+            "bearer": []
+          }
+        ],
+        "summary": "Kursni arxivlash (Soft delete)",
+        "tags": [
+          "Admin - Courses Management"
+        ]
+      }
+    },
+    "/api/v1/public/branches": {
+      "get": {
+        "operationId": "BranchesPublicController_findPublicBranches",
+        "parameters": [
+          {
+            "name": "search",
+            "required": false,
+            "in": "query",
+            "description": "Filial nomi yoki mo‘ljal qidiruvi",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "area",
+            "required": false,
+            "in": "query",
+            "description": "Hudud bo‘yicha filtr",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": ""
+          }
+        },
+        "summary": "Toshkentdagi 8 ta rasmiy filial ro‘yxati (Qidiruv va tuman bo‘yicha)",
+        "tags": [
+          "Public - Branches"
+        ]
+      }
+    },
+    "/api/v1/public/branches/{slug}": {
+      "get": {
+        "operationId": "BranchesPublicController_findPublicBySlug",
+        "parameters": [
+          {
+            "name": "slug",
+            "required": true,
+            "in": "path",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": ""
+          }
+        },
+        "summary": "Filial tafsiloti (Mavjud kurslar va jadvallar bilan)",
+        "tags": [
+          "Public - Branches"
+        ]
+      }
+    },
+    "/api/v1/admin/branches": {
+      "get": {
+        "operationId": "BranchesAdminController_findAll",
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": ""
+          }
+        },
+        "security": [
+          {
+            "bearer": []
+          }
+        ],
+        "summary": "Barcha filiallar (Admin)",
+        "tags": [
+          "Admin - Branches Management"
+        ]
+      },
+      "post": {
+        "operationId": "BranchesAdminController_create",
+        "parameters": [],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/CreateBranchDto"
+              }
+            }
+          }
+        },
+        "responses": {
+          "201": {
+            "description": ""
+          }
+        },
+        "security": [
+          {
+            "bearer": []
+          }
+        ],
+        "summary": "Yangi filial qo‘shish",
+        "tags": [
+          "Admin - Branches Management"
+        ]
+      }
+    },
+    "/api/v1/admin/branches/{id}": {
+      "get": {
+        "operationId": "BranchesAdminController_findOne",
+        "parameters": [
+          {
+            "name": "id",
+            "required": true,
+            "in": "path",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": ""
+          }
+        },
+        "security": [
+          {
+            "bearer": []
+          }
+        ],
+        "summary": "Filial tafsiloti (Admin)",
+        "tags": [
+          "Admin - Branches Management"
+        ]
+      },
+      "patch": {
+        "operationId": "BranchesAdminController_update",
+        "parameters": [
+          {
+            "name": "id",
+            "required": true,
+            "in": "path",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/UpdateBranchDto"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": ""
+          }
+        },
+        "security": [
+          {
+            "bearer": []
+          }
+        ],
+        "summary": "Filial ma’lumotlarini tahrirlash",
+        "tags": [
+          "Admin - Branches Management"
+        ]
+      },
+      "delete": {
+        "operationId": "BranchesAdminController_remove",
+        "parameters": [
+          {
+            "name": "id",
+            "required": true,
+            "in": "path",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": ""
+          }
+        },
+        "security": [
+          {
+            "bearer": []
+          }
+        ],
+        "summary": "Filialni faolsizlantirish",
+        "tags": [
+          "Admin - Branches Management"
+        ]
+      }
+    },
+    "/api/v1/public/teachers": {
+      "get": {
+        "operationId": "TeachersPublicController_findPublicTeachers",
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": ""
+          }
+        },
+        "summary": "Kafedralar va ustozlar jamoasi ro‘yxati",
+        "tags": [
+          "Public - Teachers & Departments"
+        ]
+      }
+    },
+    "/api/v1/public/teachers/{slug}": {
+      "get": {
+        "operationId": "TeachersPublicController_findPublicBySlug",
+        "parameters": [
+          {
+            "name": "slug",
+            "required": true,
+            "in": "path",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": ""
+          }
+        },
+        "summary": "Ustoz/kafedra tafsiloti",
+        "tags": [
+          "Public - Teachers & Departments"
+        ]
+      }
+    },
+    "/api/v1/admin/teachers": {
+      "get": {
+        "operationId": "TeachersAdminController_findAll",
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": ""
+          }
+        },
+        "security": [
+          {
+            "bearer": []
+          }
+        ],
+        "summary": "Barcha ustozlar (Admin)",
+        "tags": [
+          "Admin - Teachers & Departments"
+        ]
+      },
+      "post": {
+        "operationId": "TeachersAdminController_create",
+        "parameters": [],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/CreateTeacherDto"
+              }
+            }
+          }
+        },
+        "responses": {
+          "201": {
+            "description": ""
+          }
+        },
+        "security": [
+          {
+            "bearer": []
+          }
+        ],
+        "summary": "Yangi ustoz/kafedra qo‘shish",
+        "tags": [
+          "Admin - Teachers & Departments"
+        ]
+      }
+    },
+    "/api/v1/admin/teachers/{id}": {
+      "get": {
+        "operationId": "TeachersAdminController_findOne",
+        "parameters": [
+          {
+            "name": "id",
+            "required": true,
+            "in": "path",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": ""
+          }
+        },
+        "security": [
+          {
+            "bearer": []
+          }
+        ],
+        "summary": "Ustoz tafsiloti (Admin)",
+        "tags": [
+          "Admin - Teachers & Departments"
+        ]
+      },
+      "patch": {
+        "operationId": "TeachersAdminController_update",
+        "parameters": [
+          {
+            "name": "id",
+            "required": true,
+            "in": "path",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/UpdateTeacherDto"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": ""
+          }
+        },
+        "security": [
+          {
+            "bearer": []
+          }
+        ],
+        "summary": "Ustoz ma’lumotlarini tahrirlash",
+        "tags": [
+          "Admin - Teachers & Departments"
+        ]
+      },
+      "delete": {
+        "operationId": "TeachersAdminController_remove",
+        "parameters": [
+          {
+            "name": "id",
+            "required": true,
+            "in": "path",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": ""
+          }
+        },
+        "security": [
+          {
+            "bearer": []
+          }
+        ],
+        "summary": "Ustozni faolsizlantirish",
+        "tags": [
+          "Admin - Teachers & Departments"
+        ]
+      }
+    },
+    "/api/v1/public/schedules": {
+      "get": {
+        "operationId": "SchedulesPublicController_findPublicSchedules",
+        "parameters": [
+          {
+            "name": "courseId",
+            "required": false,
+            "in": "query",
+            "description": "Kurs ID yoki slugi",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "branchId",
+            "required": false,
+            "in": "query",
+            "description": "Filial ID yoki slugi",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "teacherId",
+            "required": false,
+            "in": "query",
+            "description": "Ustoz ID si",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": ""
+          }
+        },
+        "summary": "Faol guruhlar dars jadvali (Kurs va filial bo‘yicha filtr)",
+        "tags": [
+          "Public - Course Schedules"
+        ]
+      }
+    },
+    "/api/v1/admin/schedules": {
+      "get": {
+        "operationId": "SchedulesAdminController_findAll",
+        "parameters": [
+          {
+            "name": "courseId",
+            "required": false,
+            "in": "query",
+            "description": "Kurs ID yoki slugi",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "branchId",
+            "required": false,
+            "in": "query",
+            "description": "Filial ID yoki slugi",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "teacherId",
+            "required": false,
+            "in": "query",
+            "description": "Ustoz ID si",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": ""
+          }
+        },
+        "security": [
+          {
+            "bearer": []
+          }
+        ],
+        "summary": "Barcha guruhlar jadvallari (Admin)",
+        "tags": [
+          "Admin - Schedules Management"
+        ]
+      },
+      "post": {
+        "operationId": "SchedulesAdminController_create",
+        "parameters": [],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/CreateScheduleDto"
+              }
+            }
+          }
+        },
+        "responses": {
+          "201": {
+            "description": ""
+          }
+        },
+        "security": [
+          {
+            "bearer": []
+          }
+        ],
+        "summary": "Yangi guruh jadvalini kiritish",
+        "tags": [
+          "Admin - Schedules Management"
+        ]
+      }
+    },
+    "/api/v1/admin/schedules/{id}": {
+      "get": {
+        "operationId": "SchedulesAdminController_findOne",
+        "parameters": [
+          {
+            "name": "id",
+            "required": true,
+            "in": "path",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": ""
+          }
+        },
+        "security": [
+          {
+            "bearer": []
+          }
+        ],
+        "summary": "Jadval tafsiloti (Admin)",
+        "tags": [
+          "Admin - Schedules Management"
+        ]
+      },
+      "patch": {
+        "operationId": "SchedulesAdminController_update",
+        "parameters": [
+          {
+            "name": "id",
+            "required": true,
+            "in": "path",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/UpdateScheduleDto"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": ""
+          }
+        },
+        "security": [
+          {
+            "bearer": []
+          }
+        ],
+        "summary": "Guruh jadvalini tahrirlash",
+        "tags": [
+          "Admin - Schedules Management"
+        ]
+      },
+      "delete": {
+        "operationId": "SchedulesAdminController_remove",
+        "parameters": [
+          {
+            "name": "id",
+            "required": true,
+            "in": "path",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": ""
+          }
+        },
+        "security": [
+          {
+            "bearer": []
+          }
+        ],
+        "summary": "Guruh jadvalini o‘chirish",
+        "tags": [
+          "Admin - Schedules Management"
+        ]
+      }
+    },
+    "/api/v1/public/trial-registrations": {
+      "post": {
+        "operationId": "LeadsPublicController_createRegistration",
+        "parameters": [],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/CreateTrialRegistrationDto"
+              }
+            }
+          }
+        },
+        "responses": {
+          "201": {
+            "description": "Ariza qabul qilindi va referenceId taqdim etildi"
+          },
+          "400": {
+            "description": "Kiritilgan ma’lumotlar yaroqsiz"
+          },
+          "409": {
+            "description": "Qisqa vaqt ichida takroriy ariza"
+          }
+        },
+        "summary": "Bepul sinov darsiga ariza topshirish",
+        "tags": [
+          "Public - Trial Registrations"
+        ]
+      }
+    },
+    "/api/v1/admin/leads": {
+      "get": {
+        "operationId": "LeadsAdminController_findAll",
+        "parameters": [
+          {
+            "name": "page",
+            "required": false,
+            "in": "query",
+            "description": "Sahifa raqami",
+            "schema": {
+              "minimum": 1,
+              "default": 1,
+              "type": "number"
+            }
+          },
+          {
+            "name": "limit",
+            "required": false,
+            "in": "query",
+            "description": "Har bir sahifadagi elementlar soni",
+            "schema": {
+              "minimum": 1,
+              "maximum": 500,
+              "default": 20,
+              "type": "number"
+            }
+          },
+          {
+            "name": "search",
+            "required": false,
+            "in": "query",
+            "description": "Qidiruv so‘zi",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "status",
+            "required": false,
+            "in": "query",
+            "description": "Ariza holati bo‘yicha filtr",
+            "schema": {
+              "type": "string",
+              "enum": [
+                "NEW",
+                "CONTACTED",
+                "CALLBACK",
+                "INTERESTED",
+                "TRIAL_BOOKED",
+                "ENROLLED",
+                "NOT_INTERESTED",
+                "UNREACHABLE",
+                "DUPLICATE",
+                "SCHEDULED",
+                "ATTENDED",
+                "CONVERTED",
+                "CANCELLED",
+                "SPAM"
+              ]
+            }
+          },
+          {
+            "name": "source",
+            "required": false,
+            "in": "query",
+            "description": "Manba bo‘yicha filtr (masalan: TELEGRAM_BOT, WEBSITE)",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "courseId",
+            "required": false,
+            "in": "query",
+            "description": "Kurs ID yoki slugi bo‘yicha filtr",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "branchId",
+            "required": false,
+            "in": "query",
+            "description": "Filial ID yoki slugi bo‘yicha filtr",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "managerId",
+            "required": false,
+            "in": "query",
+            "description": "Biriktirilgan menejer ID si",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "startDate",
+            "required": false,
+            "in": "query",
+            "description": "Boshlanish sanasi (ISO 8601: 2026-10-01)",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "endDate",
+            "required": false,
+            "in": "query",
+            "description": "Tugash sanasi (ISO 8601: 2026-10-31)",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": ""
+          }
+        },
+        "security": [
+          {
+            "bearer": []
+          }
+        ],
+        "summary": "Arizalar ro‘yxati (Filtr, qidiruv va sahifalash bilan)",
+        "tags": [
+          "Admin - Leads Management"
+        ]
+      }
+    },
+    "/api/v1/admin/leads/export/csv": {
+      "get": {
+        "operationId": "LeadsAdminController_exportCsv",
+        "parameters": [
+          {
+            "name": "page",
+            "required": false,
+            "in": "query",
+            "description": "Sahifa raqami",
+            "schema": {
+              "minimum": 1,
+              "default": 1,
+              "type": "number"
+            }
+          },
+          {
+            "name": "limit",
+            "required": false,
+            "in": "query",
+            "description": "Har bir sahifadagi elementlar soni",
+            "schema": {
+              "minimum": 1,
+              "maximum": 500,
+              "default": 20,
+              "type": "number"
+            }
+          },
+          {
+            "name": "search",
+            "required": false,
+            "in": "query",
+            "description": "Qidiruv so‘zi",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "status",
+            "required": false,
+            "in": "query",
+            "description": "Ariza holati bo‘yicha filtr",
+            "schema": {
+              "type": "string",
+              "enum": [
+                "NEW",
+                "CONTACTED",
+                "CALLBACK",
+                "INTERESTED",
+                "TRIAL_BOOKED",
+                "ENROLLED",
+                "NOT_INTERESTED",
+                "UNREACHABLE",
+                "DUPLICATE",
+                "SCHEDULED",
+                "ATTENDED",
+                "CONVERTED",
+                "CANCELLED",
+                "SPAM"
+              ]
+            }
+          },
+          {
+            "name": "source",
+            "required": false,
+            "in": "query",
+            "description": "Manba bo‘yicha filtr (masalan: TELEGRAM_BOT, WEBSITE)",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "courseId",
+            "required": false,
+            "in": "query",
+            "description": "Kurs ID yoki slugi bo‘yicha filtr",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "branchId",
+            "required": false,
+            "in": "query",
+            "description": "Filial ID yoki slugi bo‘yicha filtr",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "managerId",
+            "required": false,
+            "in": "query",
+            "description": "Biriktirilgan menejer ID si",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "startDate",
+            "required": false,
+            "in": "query",
+            "description": "Boshlanish sanasi (ISO 8601: 2026-10-01)",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "endDate",
+            "required": false,
+            "in": "query",
+            "description": "Tugash sanasi (ISO 8601: 2026-10-31)",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": ""
+          }
+        },
+        "security": [
+          {
+            "bearer": []
+          }
+        ],
+        "summary": "Filtrlangan arizalarni CSV formatida yuklab olish",
+        "tags": [
+          "Admin - Leads Management"
+        ]
+      }
+    },
+    "/api/v1/admin/leads/{id}": {
+      "get": {
+        "operationId": "LeadsAdminController_findOne",
+        "parameters": [
+          {
+            "name": "id",
+            "required": true,
+            "in": "path",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": ""
+          }
+        },
+        "security": [
+          {
+            "bearer": []
+          }
+        ],
+        "summary": "Arizaning to‘liq tafsilotlari va status tarixi",
+        "tags": [
+          "Admin - Leads Management"
+        ]
+      }
+    },
+    "/api/v1/admin/leads/{id}/status": {
+      "patch": {
+        "operationId": "LeadsAdminController_updateStatus",
+        "parameters": [
+          {
+            "name": "id",
+            "required": true,
+            "in": "path",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/UpdateLeadStatusDto"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": ""
+          }
+        },
+        "security": [
+          {
+            "bearer": []
+          }
+        ],
+        "summary": "Ariza statusini yangilash",
+        "tags": [
+          "Admin - Leads Management"
+        ]
+      }
+    },
+    "/api/v1/admin/leads/{id}/assign": {
+      "patch": {
+        "operationId": "LeadsAdminController_assignManager",
+        "parameters": [
+          {
+            "name": "id",
+            "required": true,
+            "in": "path",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/AssignManagerDto"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": ""
+          }
+        },
+        "security": [
+          {
+            "bearer": []
+          }
+        ],
+        "summary": "Arizani ma’sul menejerga biriktirish",
+        "tags": [
+          "Admin - Leads Management"
+        ]
+      }
+    },
+    "/api/v1/admin/leads/{id}/notes": {
+      "patch": {
+        "operationId": "LeadsAdminController_updateNotes",
+        "parameters": [
+          {
+            "name": "id",
+            "required": true,
+            "in": "path",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/UpdateInternalNotesDto"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": ""
+          }
+        },
+        "security": [
+          {
+            "bearer": []
+          }
+        ],
+        "summary": "Ichki ma’muriyat qaydlarini yangilash",
+        "tags": [
+          "Admin - Leads Management"
+        ]
+      }
+    },
+    "/api/v1/admin/leads/{id}/retry-notification": {
+      "post": {
+        "operationId": "LeadsAdminController_retryNotification",
+        "parameters": [
+          {
+            "name": "id",
+            "required": true,
+            "in": "path",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "201": {
+            "description": ""
+          }
+        },
+        "security": [
+          {
+            "bearer": []
+          }
+        ],
+        "summary": "Muvaffaqiyatsiz bo‘lgan Telegram xabarnomasini qayta yuborish",
+        "tags": [
+          "Admin - Leads Management"
+        ]
+      }
+    },
+    "/api/v1/public/articles": {
+      "get": {
+        "operationId": "ArticlesPublicController_findPublicArticles",
+        "parameters": [
+          {
+            "name": "page",
+            "required": false,
+            "in": "query",
+            "description": "Sahifa raqami",
+            "schema": {
+              "minimum": 1,
+              "default": 1,
+              "type": "number"
+            }
+          },
+          {
+            "name": "limit",
+            "required": false,
+            "in": "query",
+            "description": "Har bir sahifadagi elementlar soni",
+            "schema": {
+              "minimum": 1,
+              "maximum": 500,
+              "default": 20,
+              "type": "number"
+            }
+          },
+          {
+            "name": "search",
+            "required": false,
+            "in": "query",
+            "description": "Qidiruv so‘zi",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "topic",
+            "required": false,
+            "in": "query",
+            "description": "Mavzu bo‘yicha filtr (masalan: Kundalik lug‘at)",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "status",
+            "required": false,
+            "in": "query",
+            "schema": {
+              "type": "string",
+              "enum": [
+                "DRAFT",
+                "PUBLISHED",
+                "ARCHIVED"
+              ]
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": ""
+          }
+        },
+        "summary": "Chop etilgan maqolalar va lug‘atlar ro‘yxati",
+        "tags": [
+          "Public - Educational Articles"
+        ]
+      }
+    },
+    "/api/v1/public/articles/{slug}": {
+      "get": {
+        "operationId": "ArticlesPublicController_findPublicBySlug",
+        "parameters": [
+          {
+            "name": "slug",
+            "required": true,
+            "in": "path",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": ""
+          }
+        },
+        "summary": "Maqola tafsiloti (slug orqali)",
+        "tags": [
+          "Public - Educational Articles"
+        ]
+      }
+    },
+    "/api/v1/admin/articles": {
+      "get": {
+        "operationId": "ArticlesAdminController_findAll",
+        "parameters": [
+          {
+            "name": "page",
+            "required": false,
+            "in": "query",
+            "description": "Sahifa raqami",
+            "schema": {
+              "minimum": 1,
+              "default": 1,
+              "type": "number"
+            }
+          },
+          {
+            "name": "limit",
+            "required": false,
+            "in": "query",
+            "description": "Har bir sahifadagi elementlar soni",
+            "schema": {
+              "minimum": 1,
+              "maximum": 500,
+              "default": 20,
+              "type": "number"
+            }
+          },
+          {
+            "name": "search",
+            "required": false,
+            "in": "query",
+            "description": "Qidiruv so‘zi",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "topic",
+            "required": false,
+            "in": "query",
+            "description": "Mavzu bo‘yicha filtr (masalan: Kundalik lug‘at)",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "status",
+            "required": false,
+            "in": "query",
+            "schema": {
+              "type": "string",
+              "enum": [
+                "DRAFT",
+                "PUBLISHED",
+                "ARCHIVED"
+              ]
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": ""
+          }
+        },
+        "security": [
+          {
+            "bearer": []
+          }
+        ],
+        "summary": "Barcha maqolalar (Admin - DRAFT, PUBLISHED, ARCHIVED)",
+        "tags": [
+          "Admin - Articles Management"
+        ]
+      },
+      "post": {
+        "operationId": "ArticlesAdminController_create",
+        "parameters": [],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/CreateArticleDto"
+              }
+            }
+          }
+        },
+        "responses": {
+          "201": {
+            "description": ""
+          }
+        },
+        "security": [
+          {
+            "bearer": []
+          }
+        ],
+        "summary": "Yangi maqola yaratish",
+        "tags": [
+          "Admin - Articles Management"
+        ]
+      }
+    },
+    "/api/v1/admin/articles/{id}": {
+      "get": {
+        "operationId": "ArticlesAdminController_findOne",
+        "parameters": [
+          {
+            "name": "id",
+            "required": true,
+            "in": "path",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": ""
+          }
+        },
+        "security": [
+          {
+            "bearer": []
+          }
+        ],
+        "summary": "Maqola tafsilotlari (Admin)",
+        "tags": [
+          "Admin - Articles Management"
+        ]
+      },
+      "patch": {
+        "operationId": "ArticlesAdminController_update",
+        "parameters": [
+          {
+            "name": "id",
+            "required": true,
+            "in": "path",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/UpdateArticleDto"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": ""
+          }
+        },
+        "security": [
+          {
+            "bearer": []
+          }
+        ],
+        "summary": "Maqolani tahrirlash",
+        "tags": [
+          "Admin - Articles Management"
+        ]
+      },
+      "delete": {
+        "operationId": "ArticlesAdminController_remove",
+        "parameters": [
+          {
+            "name": "id",
+            "required": true,
+            "in": "path",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": ""
+          }
+        },
+        "security": [
+          {
+            "bearer": []
+          }
+        ],
+        "summary": "Maqolani arxivlash",
+        "tags": [
+          "Admin - Articles Management"
+        ]
+      }
+    },
+    "/api/v1/public/faqs": {
+      "get": {
+        "operationId": "FaqPublicController_findPublicFaqs",
+        "parameters": [
+          {
+            "name": "category",
+            "required": false,
+            "in": "query",
+            "description": "Kategoriya bo‘yicha filtr",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": ""
+          }
+        },
+        "summary": "Tez-tez beriladigan savollar ro‘yxati",
+        "tags": [
+          "Public - FAQs"
+        ]
+      }
+    },
+    "/api/v1/admin/faqs": {
+      "get": {
+        "operationId": "FaqAdminController_findAll",
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": ""
+          }
+        },
+        "security": [
+          {
+            "bearer": []
+          }
+        ],
+        "summary": "Barcha savol-javoblar (Admin)",
+        "tags": [
+          "Admin - FAQs Management"
+        ]
+      },
+      "post": {
+        "operationId": "FaqAdminController_create",
+        "parameters": [],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/CreateFaqDto"
+              }
+            }
+          }
+        },
+        "responses": {
+          "201": {
+            "description": ""
+          }
+        },
+        "security": [
+          {
+            "bearer": []
+          }
+        ],
+        "summary": "Yangi savol-javob qo‘shish",
+        "tags": [
+          "Admin - FAQs Management"
+        ]
+      }
+    },
+    "/api/v1/admin/faqs/{id}": {
+      "get": {
+        "operationId": "FaqAdminController_findOne",
+        "parameters": [
+          {
+            "name": "id",
+            "required": true,
+            "in": "path",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": ""
+          }
+        },
+        "security": [
+          {
+            "bearer": []
+          }
+        ],
+        "summary": "Savol-javob tafsiloti (Admin)",
+        "tags": [
+          "Admin - FAQs Management"
+        ]
+      },
+      "patch": {
+        "operationId": "FaqAdminController_update",
+        "parameters": [
+          {
+            "name": "id",
+            "required": true,
+            "in": "path",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/UpdateFaqDto"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": ""
+          }
+        },
+        "security": [
+          {
+            "bearer": []
+          }
+        ],
+        "summary": "Savol-javobni tahrirlash",
+        "tags": [
+          "Admin - FAQs Management"
+        ]
+      },
+      "delete": {
+        "operationId": "FaqAdminController_remove",
+        "parameters": [
+          {
+            "name": "id",
+            "required": true,
+            "in": "path",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": ""
+          }
+        },
+        "security": [
+          {
+            "bearer": []
+          }
+        ],
+        "summary": "Savol-javobni o‘chirish",
+        "tags": [
+          "Admin - FAQs Management"
+        ]
+      }
+    },
+    "/api/v1/public/testimonials": {
+      "get": {
+        "operationId": "TestimonialsPublicController_findPublicTestimonials",
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": ""
+          }
+        },
+        "summary": "Tasdiqlangan va rozilik olingan bitiruvchilar fikrlari",
+        "tags": [
+          "Public - Testimonials"
+        ]
+      }
+    },
+    "/api/v1/admin/testimonials": {
+      "get": {
+        "operationId": "TestimonialsAdminController_findAll",
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": ""
+          }
+        },
+        "security": [
+          {
+            "bearer": []
+          }
+        ],
+        "summary": "Barcha fikrlar (Admin)",
+        "tags": [
+          "Admin - Testimonials Management"
+        ]
+      },
+      "post": {
+        "operationId": "TestimonialsAdminController_create",
+        "parameters": [],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/CreateTestimonialDto"
+              }
+            }
+          }
+        },
+        "responses": {
+          "201": {
+            "description": ""
+          }
+        },
+        "security": [
+          {
+            "bearer": []
+          }
+        ],
+        "summary": "Yangi fikr qo‘shish (Rozilik tasdiqlangan bo‘lishi lozim)",
+        "tags": [
+          "Admin - Testimonials Management"
+        ]
+      }
+    },
+    "/api/v1/admin/testimonials/{id}": {
+      "get": {
+        "operationId": "TestimonialsAdminController_findOne",
+        "parameters": [
+          {
+            "name": "id",
+            "required": true,
+            "in": "path",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": ""
+          }
+        },
+        "security": [
+          {
+            "bearer": []
+          }
+        ],
+        "summary": "Fikr tafsiloti (Admin)",
+        "tags": [
+          "Admin - Testimonials Management"
+        ]
+      },
+      "patch": {
+        "operationId": "TestimonialsAdminController_update",
+        "parameters": [
+          {
+            "name": "id",
+            "required": true,
+            "in": "path",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/UpdateTestimonialDto"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": ""
+          }
+        },
+        "security": [
+          {
+            "bearer": []
+          }
+        ],
+        "summary": "Fikrni tahrirlash",
+        "tags": [
+          "Admin - Testimonials Management"
+        ]
+      },
+      "delete": {
+        "operationId": "TestimonialsAdminController_remove",
+        "parameters": [
+          {
+            "name": "id",
+            "required": true,
+            "in": "path",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": ""
+          }
+        },
+        "security": [
+          {
+            "bearer": []
+          }
+        ],
+        "summary": "Fikrni o‘chirish",
+        "tags": [
+          "Admin - Testimonials Management"
+        ]
+      }
+    },
+    "/api/v1/public/achievements": {
+      "get": {
+        "operationId": "AchievementsPublicController_findPublicAchievements",
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": ""
+          }
+        },
+        "summary": "Markazning tasdiqlangan statistik ko‘rsatkichlari va yutuqlari",
+        "tags": [
+          "Public - Achievements"
+        ]
+      }
+    },
+    "/api/v1/admin/achievements": {
+      "get": {
+        "operationId": "AchievementsAdminController_findAll",
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": ""
+          }
+        },
+        "security": [
+          {
+            "bearer": []
+          }
+        ],
+        "summary": "Barcha yutuqlar (Admin)",
+        "tags": [
+          "Admin - Achievements Management"
+        ]
+      },
+      "post": {
+        "operationId": "AchievementsAdminController_create",
+        "parameters": [],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/CreateAchievementDto"
+              }
+            }
+          }
+        },
+        "responses": {
+          "201": {
+            "description": ""
+          }
+        },
+        "security": [
+          {
+            "bearer": []
+          }
+        ],
+        "summary": "Yangi yutuq/statistika qo‘shish",
+        "tags": [
+          "Admin - Achievements Management"
+        ]
+      }
+    },
+    "/api/v1/admin/achievements/{id}": {
+      "get": {
+        "operationId": "AchievementsAdminController_findOne",
+        "parameters": [
+          {
+            "name": "id",
+            "required": true,
+            "in": "path",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": ""
+          }
+        },
+        "security": [
+          {
+            "bearer": []
+          }
+        ],
+        "summary": "Yutuq tafsiloti (Admin)",
+        "tags": [
+          "Admin - Achievements Management"
+        ]
+      },
+      "patch": {
+        "operationId": "AchievementsAdminController_update",
+        "parameters": [
+          {
+            "name": "id",
+            "required": true,
+            "in": "path",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/UpdateAchievementDto"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": ""
+          }
+        },
+        "security": [
+          {
+            "bearer": []
+          }
+        ],
+        "summary": "Yutuqni tahrirlash",
+        "tags": [
+          "Admin - Achievements Management"
+        ]
+      },
+      "delete": {
+        "operationId": "AchievementsAdminController_remove",
+        "parameters": [
+          {
+            "name": "id",
+            "required": true,
+            "in": "path",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": ""
+          }
+        },
+        "security": [
+          {
+            "bearer": []
+          }
+        ],
+        "summary": "Yutuqni o‘chirish",
+        "tags": [
+          "Admin - Achievements Management"
+        ]
+      }
+    },
+    "/api/v1/admin/media": {
+      "get": {
+        "operationId": "MediaController_findAll",
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": ""
+          }
+        },
+        "security": [
+          {
+            "bearer": []
+          }
+        ],
+        "summary": "Yuklangan barcha media fayllar ro‘yxati",
+        "tags": [
+          "Admin - Media Assets"
+        ]
+      }
+    },
+    "/api/v1/admin/media/{id}": {
+      "get": {
+        "operationId": "MediaController_findOne",
+        "parameters": [
+          {
+            "name": "id",
+            "required": true,
+            "in": "path",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": ""
+          }
+        },
+        "security": [
+          {
+            "bearer": []
+          }
+        ],
+        "summary": "Media fayl tafsiloti",
+        "tags": [
+          "Admin - Media Assets"
+        ]
+      },
+      "delete": {
+        "operationId": "MediaController_remove",
+        "parameters": [
+          {
+            "name": "id",
+            "required": true,
+            "in": "path",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": ""
+          }
+        },
+        "security": [
+          {
+            "bearer": []
+          }
+        ],
+        "summary": "Media faylni o‘chirish",
+        "tags": [
+          "Admin - Media Assets"
+        ]
+      }
+    },
+    "/api/v1/admin/media/upload": {
+      "post": {
+        "operationId": "MediaController_uploadFile",
+        "parameters": [],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "multipart/form-data": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "file": {
+                    "type": "string",
+                    "format": "binary"
+                  },
+                  "altText": {
+                    "type": "string"
+                  }
+                }
+              }
+            }
+          }
+        },
+        "responses": {
+          "201": {
+            "description": ""
+          }
+        },
+        "security": [
+          {
+            "bearer": []
+          }
+        ],
+        "summary": "Rasm yoki media fayl yuklash",
+        "tags": [
+          "Admin - Media Assets"
+        ]
+      }
+    },
+    "/api/v1/public/site-settings": {
+      "get": {
+        "operationId": "SettingsPublicController_findPublicSettings",
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": ""
+          }
+        },
+        "summary": "Veb-saytning ommaviy umumiy sozlamalari (Aloqa, ijtimoiy tarmoqlar, brend)",
+        "tags": [
+          "Public - Site Settings"
+        ]
+      }
+    },
+    "/api/v1/admin/settings": {
+      "get": {
+        "operationId": "SettingsAdminController_findAll",
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": ""
+          }
+        },
+        "security": [
+          {
+            "bearer": []
+          }
+        ],
+        "summary": "Barcha tizim sozlamalari (Admin)",
+        "tags": [
+          "Admin - Site Settings Management"
+        ]
+      }
+    },
+    "/api/v1/admin/settings/{key}": {
+      "patch": {
+        "operationId": "SettingsAdminController_update",
+        "parameters": [
+          {
+            "name": "key",
+            "required": true,
+            "in": "path",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/UpdateSettingDto"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": ""
+          }
+        },
+        "security": [
+          {
+            "bearer": []
+          }
+        ],
+        "summary": "Sozlamani yangilash",
+        "tags": [
+          "Admin - Site Settings Management"
+        ]
+      }
+    },
+    "/api/v1/admin/analytics/dashboard": {
+      "get": {
+        "operationId": "AnalyticsController_getDashboard",
+        "parameters": [
+          {
+            "name": "startDate",
+            "required": false,
+            "in": "query",
+            "description": "Boshlanish sanasi (ISO 8601)",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "endDate",
+            "required": false,
+            "in": "query",
+            "description": "Tugash sanasi (ISO 8601)",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": ""
+          }
+        },
+        "security": [
+          {
+            "bearer": []
+          }
+        ],
+        "summary": "Asosiy boshqaruv paneli (Dashboard) statistikasi va ko‘rsatkichlari",
+        "tags": [
+          "Admin - Dashboard Analytics"
+        ]
+      }
+    },
+    "/api/v1/admin/audit-logs": {
+      "get": {
+        "operationId": "AuditLogsController_findAll",
+        "parameters": [
+          {
+            "name": "page",
+            "required": false,
+            "in": "query",
+            "description": "Sahifa raqami",
+            "schema": {
+              "minimum": 1,
+              "default": 1,
+              "type": "number"
+            }
+          },
+          {
+            "name": "limit",
+            "required": false,
+            "in": "query",
+            "description": "Har bir sahifadagi elementlar soni",
+            "schema": {
+              "minimum": 1,
+              "maximum": 500,
+              "default": 20,
+              "type": "number"
+            }
+          },
+          {
+            "name": "search",
+            "required": false,
+            "in": "query",
+            "description": "Qidiruv so‘zi",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "action",
+            "required": false,
+            "in": "query",
+            "description": "Amal turi",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "entityType",
+            "required": false,
+            "in": "query",
+            "description": "Obyekt turi",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "userId",
+            "required": false,
+            "in": "query",
+            "description": "Foydalanuvchi ID si",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": ""
+          }
+        },
+        "security": [
+          {
+            "bearer": []
+          }
+        ],
+        "summary": "Admin harakatlari va xavfsizlik audit jurnali",
+        "tags": [
+          "Admin - Audit Logs"
+        ]
+      }
+    },
+    "/api/v1/health/live": {
+      "get": {
+        "operationId": "HealthController_checkLiveness",
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "Ilova ishlayapti"
+          }
+        },
+        "summary": "Liveness tekshiruvi",
+        "tags": [
+          "Public - Health Checks"
+        ]
+      }
+    },
+    "/api/v1/health/ready": {
+      "get": {
+        "operationId": "HealthController_checkReadiness",
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "Tizim va ma’lumotlar bazasi tayyor"
+          }
+        },
+        "summary": "Readiness tekshiruvi (Ma’lumotlar bazasi ulanishi bilan)",
+        "tags": [
+          "Public - Health Checks"
+        ]
+      }
+    }
+  },
+  "info": {
+    "title": "Ustoz Akademiyasi API",
+    "description": "Ustoz Akademiyasi arab tili ta'lim markazi uchun to'liq ishlab chiqarish darajasidagi REST API spetsifikatsiyasi.",
+    "version": "1.0.0",
+    "contact": {}
+  },
+  "tags": [
+    {
+      "name": "Public - Kurslar",
+      "description": ""
+    },
+    {
+      "name": "Public - Filiallar",
+      "description": ""
+    },
+    {
+      "name": "Public - Ustozlar",
+      "description": ""
+    },
+    {
+      "name": "Public - Jadval",
+      "description": ""
+    },
+    {
+      "name": "Public - Arizalar",
+      "description": ""
+    },
+    {
+      "name": "Public - Maqolalar",
+      "description": ""
+    },
+    {
+      "name": "Public - FAQ",
+      "description": ""
+    },
+    {
+      "name": "Public - Natijalar",
+      "description": ""
+    },
+    {
+      "name": "Public - Yutuqlar",
+      "description": ""
+    },
+    {
+      "name": "Public - Sozlamalar",
+      "description": ""
+    },
+    {
+      "name": "Public - Health Checks",
+      "description": ""
+    },
+    {
+      "name": "Admin - Autentifikatsiya",
+      "description": ""
+    },
+    {
+      "name": "Admin - Foydalanuvchilar",
+      "description": ""
+    },
+    {
+      "name": "Admin - Kurslar",
+      "description": ""
+    },
+    {
+      "name": "Admin - Kategoriyalar",
+      "description": ""
+    },
+    {
+      "name": "Admin - Filiallar",
+      "description": ""
+    },
+    {
+      "name": "Admin - Ustozlar",
+      "description": ""
+    },
+    {
+      "name": "Admin - Jadval",
+      "description": ""
+    },
+    {
+      "name": "Admin - Arizalar",
+      "description": ""
+    },
+    {
+      "name": "Admin - Maqolalar",
+      "description": ""
+    },
+    {
+      "name": "Admin - FAQ",
+      "description": ""
+    },
+    {
+      "name": "Admin - Sharhlar",
+      "description": ""
+    },
+    {
+      "name": "Admin - Yutuqlar",
+      "description": ""
+    },
+    {
+      "name": "Admin - Media",
+      "description": ""
+    },
+    {
+      "name": "Admin - Sozlamalar",
+      "description": ""
+    },
+    {
+      "name": "Admin - Analitika",
+      "description": ""
+    },
+    {
+      "name": "Admin - Audit Jurnali",
+      "description": ""
+    }
+  ],
+  "servers": [],
+  "components": {
+    "securitySchemes": {
+      "bearer": {
+        "scheme": "bearer",
+        "bearerFormat": "JWT",
+        "type": "http",
+        "name": "Authorization",
+        "description": "Kirish uchun JWT access tokenini kiriting",
+        "in": "header"
+      }
+    },
+    "schemas": {
+      "LoginDto": {
+        "type": "object",
+        "properties": {
+          "email": {
+            "type": "string",
+            "example": "admin@ustozakademiyasi.uz",
+            "description": "Foydalanuvchi elektron pochtasi"
+          },
+          "password": {
+            "type": "string",
+            "example": "SecureAdminPassword2026!#",
+            "description": "Maxfiy parol"
+          }
+        },
+        "required": [
+          "email",
+          "password"
+        ]
+      },
+      "RefreshTokenDto": {
+        "type": "object",
+        "properties": {
+          "refreshToken": {
+            "type": "string",
+            "description": "Aylantiriluvchi yangilash tokeni (Refresh token)"
+          }
+        },
+        "required": [
+          "refreshToken"
+        ]
+      },
+      "ChangePasswordDto": {
+        "type": "object",
+        "properties": {
+          "currentPassword": {
+            "type": "string",
+            "description": "Hozirgi amaldagi parol"
+          },
+          "newPassword": {
+            "type": "string",
+            "minLength": 8,
+            "description": "Yangi parol (kamida 8 ta belgi)"
+          }
+        },
+        "required": [
+          "currentPassword",
+          "newPassword"
+        ]
+      },
+      "CreateUserDto": {
+        "type": "object",
+        "properties": {
+          "fullName": {
+            "type": "string",
+            "example": "Zafar Mahmudov"
+          },
+          "email": {
+            "type": "string",
+            "example": "zafar@ustozakademiyasi.uz"
+          },
+          "phone": {
+            "type": "string",
+            "example": "+998901234567"
+          },
+          "password": {
+            "type": "string",
+            "example": "SecurePassword123!",
+            "minLength": 8
+          },
+          "role": {
+            "type": "string",
+            "enum": [
+              "SUPER_ADMIN",
+              "ADMIN",
+              "MANAGER",
+              "CONTENT_EDITOR"
+            ],
+            "default": "MANAGER"
+          },
+          "status": {
+            "type": "string",
+            "enum": [
+              "ACTIVE",
+              "INACTIVE",
+              "SUSPENDED"
+            ],
+            "default": "ACTIVE"
+          },
+          "isActive": {
+            "type": "boolean",
+            "example": true
+          }
+        },
+        "required": [
+          "fullName",
+          "email",
+          "password",
+          "role"
+        ]
+      },
+      "UpdateUserDto": {
+        "type": "object",
+        "properties": {
+          "fullName": {
+            "type": "string"
+          },
+          "email": {
+            "type": "string"
+          },
+          "phone": {
+            "type": "string"
+          },
+          "password": {
+            "type": "string",
+            "minLength": 8
+          },
+          "role": {
+            "type": "string",
+            "enum": [
+              "SUPER_ADMIN",
+              "ADMIN",
+              "MANAGER",
+              "CONTENT_EDITOR"
+            ]
+          },
+          "status": {
+            "type": "string",
+            "enum": [
+              "ACTIVE",
+              "INACTIVE",
+              "SUSPENDED"
+            ]
+          },
+          "isActive": {
+            "type": "boolean",
+            "example": true
+          }
+        }
+      },
+      "CreateCategoryDto": {
+        "type": "object",
+        "properties": {
+          "name": {
+            "type": "string",
+            "example": "Bolalar uchun"
+          },
+          "slug": {
+            "type": "string",
+            "example": "bolalar-uchun"
+          },
+          "description": {
+            "type": "string"
+          },
+          "sortOrder": {
+            "type": "number",
+            "default": 0
+          },
+          "status": {
+            "type": "string",
+            "enum": [
+              "ACTIVE",
+              "INACTIVE"
+            ],
+            "default": "ACTIVE"
+          }
+        },
+        "required": [
+          "name",
+          "slug"
+        ]
+      },
+      "UpdateCategoryDto": {
+        "type": "object",
+        "properties": {
+          "name": {
+            "type": "string"
+          },
+          "slug": {
+            "type": "string"
+          },
+          "description": {
+            "type": "string"
+          },
+          "sortOrder": {
+            "type": "number"
+          },
+          "status": {
+            "type": "string",
+            "enum": [
+              "ACTIVE",
+              "INACTIVE"
+            ]
+          }
+        }
+      },
+      "CourseOutcomeInputDto": {
+        "type": "object",
+        "properties": {
+          "text": {
+            "type": "string"
+          },
+          "sortOrder": {
+            "type": "number",
+            "default": 0
+          }
+        },
+        "required": [
+          "text"
+        ]
+      },
+      "CourseModuleInputDto": {
+        "type": "object",
+        "properties": {
+          "title": {
+            "type": "string",
+            "example": "1-modul: Harflar maxraji"
+          },
+          "topics": {
+            "type": "string",
+            "example": "Alif, Ba, Ta tovushlari"
+          },
+          "sortOrder": {
+            "type": "number",
+            "default": 0
+          }
+        },
+        "required": [
+          "title",
+          "topics"
+        ]
+      },
+      "CourseFaqInputDto": {
+        "type": "object",
+        "properties": {
+          "question": {
+            "type": "string"
+          },
+          "answer": {
+            "type": "string"
+          },
+          "sortOrder": {
+            "type": "number",
+            "default": 0
+          }
+        },
+        "required": [
+          "question",
+          "answer"
+        ]
+      },
+      "CreateCourseDto": {
+        "type": "object",
+        "properties": {
+          "title": {
+            "type": "string",
+            "example": "Professional Fonetika"
+          },
+          "slug": {
+            "type": "string",
+            "example": "professional-fonetika"
+          },
+          "shortDescription": {
+            "type": "string",
+            "example": "Arab harflarini asl maxrajidan o‘rganish kursi"
+          },
+          "description": {
+            "type": "string",
+            "example": "Batafsil dars metodikasi va dasturi..."
+          },
+          "categoryId": {
+            "type": "string",
+            "description": "Kategoriya ID si"
+          },
+          "targetAudience": {
+            "type": "string",
+            "example": "0 dan boshlovchi o‘smirlar va kattalar"
+          },
+          "level": {
+            "type": "string",
+            "example": "A1 — Boshlang‘ich"
+          },
+          "durationMonths": {
+            "type": "number",
+            "example": 3
+          },
+          "priceAmount": {
+            "type": "number",
+            "example": 500000
+          },
+          "currency": {
+            "type": "string",
+            "default": "UZS"
+          },
+          "ageMinimum": {
+            "type": "number",
+            "example": 4
+          },
+          "ageMaximum": {
+            "type": "number",
+            "example": 99
+          },
+          "entryRequirements": {
+            "type": "string"
+          },
+          "durationNote": {
+            "type": "string"
+          },
+          "priceStatus": {
+            "type": "string"
+          },
+          "methodology": {
+            "type": "string"
+          },
+          "plateType": {
+            "type": "string"
+          },
+          "coverImage": {
+            "type": "string"
+          },
+          "status": {
+            "type": "string",
+            "enum": [
+              "DRAFT",
+              "PUBLISHED",
+              "ARCHIVED"
+            ],
+            "default": "PUBLISHED"
+          },
+          "featured": {
+            "type": "boolean",
+            "default": false
+          },
+          "metaTitle": {
+            "type": "string"
+          },
+          "metaDescription": {
+            "type": "string"
+          },
+          "outcomes": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/CourseOutcomeInputDto"
+            }
+          },
+          "syllabusModules": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/CourseModuleInputDto"
+            }
+          },
+          "faqs": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/CourseFaqInputDto"
+            }
+          },
+          "branchIds": {
+            "description": "Ushbu kurs mavjud bo‘lgan filial ID lari",
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          }
+        },
+        "required": [
+          "title",
+          "slug",
+          "shortDescription",
+          "description",
+          "categoryId",
+          "targetAudience",
+          "level"
+        ]
+      },
+      "UpdateCourseDto": {
+        "type": "object",
+        "properties": {
+          "title": {
+            "type": "string",
+            "example": "Professional Fonetika"
+          },
+          "slug": {
+            "type": "string",
+            "example": "professional-fonetika"
+          },
+          "shortDescription": {
+            "type": "string",
+            "example": "Arab harflarini asl maxrajidan o‘rganish kursi"
+          },
+          "description": {
+            "type": "string",
+            "example": "Batafsil dars metodikasi va dasturi..."
+          },
+          "categoryId": {
+            "type": "string",
+            "description": "Kategoriya ID si"
+          },
+          "targetAudience": {
+            "type": "string",
+            "example": "0 dan boshlovchi o‘smirlar va kattalar"
+          },
+          "level": {
+            "type": "string",
+            "example": "A1 — Boshlang‘ich"
+          },
+          "durationMonths": {
+            "type": "number",
+            "example": 3
+          },
+          "priceAmount": {
+            "type": "number",
+            "example": 500000
+          },
+          "currency": {
+            "type": "string",
+            "default": "UZS"
+          },
+          "ageMinimum": {
+            "type": "number",
+            "example": 4
+          },
+          "ageMaximum": {
+            "type": "number",
+            "example": 99
+          },
+          "entryRequirements": {
+            "type": "string"
+          },
+          "durationNote": {
+            "type": "string"
+          },
+          "priceStatus": {
+            "type": "string"
+          },
+          "methodology": {
+            "type": "string"
+          },
+          "plateType": {
+            "type": "string"
+          },
+          "coverImage": {
+            "type": "string"
+          },
+          "status": {
+            "type": "string",
+            "enum": [
+              "DRAFT",
+              "PUBLISHED",
+              "ARCHIVED"
+            ],
+            "default": "PUBLISHED"
+          },
+          "featured": {
+            "type": "boolean",
+            "default": false
+          },
+          "metaTitle": {
+            "type": "string"
+          },
+          "metaDescription": {
+            "type": "string"
+          },
+          "outcomes": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/CourseOutcomeInputDto"
+            }
+          },
+          "syllabusModules": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/CourseModuleInputDto"
+            }
+          },
+          "faqs": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/CourseFaqInputDto"
+            }
+          },
+          "branchIds": {
+            "description": "Ushbu kurs mavjud bo‘lgan filial ID lari",
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          }
+        },
+        "required": [
+          "title",
+          "slug",
+          "shortDescription",
+          "description",
+          "categoryId",
+          "targetAudience",
+          "level"
+        ]
+      },
+      "CreateBranchDto": {
+        "type": "object",
+        "properties": {
+          "name": {
+            "type": "string",
+            "example": "Archako'cha filiali"
+          },
+          "officialLabel": {
+            "type": "string",
+            "example": "ARCHAKO'CHA FILIALI"
+          },
+          "slug": {
+            "type": "string",
+            "example": "archakocha"
+          },
+          "district": {
+            "type": "string"
+          },
+          "area": {
+            "type": "string",
+            "example": "Shayxontohur / Ko'kcha yo'nalishi"
+          },
+          "address": {
+            "type": "string"
+          },
+          "addressNote": {
+            "type": "string",
+            "example": "Toshkent sh., Archako'cha hududi"
+          },
+          "landmark": {
+            "type": "string"
+          },
+          "latitude": {
+            "type": "number",
+            "example": 41.311081
+          },
+          "longitude": {
+            "type": "number",
+            "example": 69.240562
+          },
+          "phone": {
+            "type": "string",
+            "example": "+998 55 518 44 00"
+          },
+          "workingHours": {
+            "type": "string",
+            "default": "Dushanba – Shanba (guruhlar jadvali bo‘yicha)"
+          },
+          "description": {
+            "type": "string"
+          },
+          "highlight": {
+            "type": "string",
+            "example": "Barcha asosiy o'quv yo'nalishlari faol filial."
+          },
+          "images": {
+            "default": [],
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "status": {
+            "type": "string",
+            "enum": [
+              "ACTIVE",
+              "INACTIVE"
+            ],
+            "default": "ACTIVE"
+          },
+          "metaTitle": {
+            "type": "string"
+          },
+          "metaDescription": {
+            "type": "string"
+          },
+          "courseIds": {
+            "description": "Filialda mavjud kurs ID yoki sluglari",
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          }
+        },
+        "required": [
+          "name",
+          "officialLabel",
+          "slug",
+          "area"
+        ]
+      },
+      "UpdateBranchDto": {
+        "type": "object",
+        "properties": {
+          "name": {
+            "type": "string",
+            "example": "Archako'cha filiali"
+          },
+          "officialLabel": {
+            "type": "string",
+            "example": "ARCHAKO'CHA FILIALI"
+          },
+          "slug": {
+            "type": "string",
+            "example": "archakocha"
+          },
+          "district": {
+            "type": "string"
+          },
+          "area": {
+            "type": "string",
+            "example": "Shayxontohur / Ko'kcha yo'nalishi"
+          },
+          "address": {
+            "type": "string"
+          },
+          "addressNote": {
+            "type": "string",
+            "example": "Toshkent sh., Archako'cha hududi"
+          },
+          "landmark": {
+            "type": "string"
+          },
+          "latitude": {
+            "type": "number",
+            "example": 41.311081
+          },
+          "longitude": {
+            "type": "number",
+            "example": 69.240562
+          },
+          "phone": {
+            "type": "string",
+            "example": "+998 55 518 44 00"
+          },
+          "workingHours": {
+            "type": "string",
+            "default": "Dushanba – Shanba (guruhlar jadvali bo‘yicha)"
+          },
+          "description": {
+            "type": "string"
+          },
+          "highlight": {
+            "type": "string",
+            "example": "Barcha asosiy o'quv yo'nalishlari faol filial."
+          },
+          "images": {
+            "default": [],
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "status": {
+            "type": "string",
+            "enum": [
+              "ACTIVE",
+              "INACTIVE"
+            ],
+            "default": "ACTIVE"
+          },
+          "metaTitle": {
+            "type": "string"
+          },
+          "metaDescription": {
+            "type": "string"
+          },
+          "courseIds": {
+            "description": "Filialda mavjud kurs ID yoki sluglari",
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          }
+        },
+        "required": [
+          "name",
+          "officialLabel",
+          "slug",
+          "area"
+        ]
+      },
+      "CreateTeacherDto": {
+        "type": "object",
+        "properties": {
+          "fullName": {
+            "type": "string",
+            "example": "Professional Fonetika va Maxraj kafedrasi"
+          },
+          "slug": {
+            "type": "string",
+            "example": "dept-phonetics"
+          },
+          "department": {
+            "type": "string",
+            "example": "Fonetika va Maxraj"
+          },
+          "badge": {
+            "type": "string",
+            "example": "Maxraj va Talaffuz mutaxassislari"
+          },
+          "qualification": {
+            "type": "string",
+            "example": "Arab fonetikasi va klassik talaffuz qoidalari bo‘yicha malakali ustozlar"
+          },
+          "focus": {
+            "type": "string",
+            "example": "0 dan boshlagan o‘quvchilarga 28 ta harfning artikulyatsion nuqtalarini o‘rgatish"
+          },
+          "biography": {
+            "type": "string"
+          },
+          "photo": {
+            "type": "string"
+          },
+          "yearsOfExperience": {
+            "type": "number",
+            "default": 3
+          },
+          "languages": {
+            "default": [
+              "Arab tili",
+              "O‘zbek tili"
+            ],
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "displayOrder": {
+            "type": "number",
+            "default": 0
+          },
+          "status": {
+            "type": "string",
+            "enum": [
+              "ACTIVE",
+              "INACTIVE"
+            ],
+            "default": "ACTIVE"
+          }
+        },
+        "required": [
+          "fullName",
+          "slug",
+          "department",
+          "qualification",
+          "focus"
+        ]
+      },
+      "UpdateTeacherDto": {
+        "type": "object",
+        "properties": {
+          "fullName": {
+            "type": "string",
+            "example": "Professional Fonetika va Maxraj kafedrasi"
+          },
+          "slug": {
+            "type": "string",
+            "example": "dept-phonetics"
+          },
+          "department": {
+            "type": "string",
+            "example": "Fonetika va Maxraj"
+          },
+          "badge": {
+            "type": "string",
+            "example": "Maxraj va Talaffuz mutaxassislari"
+          },
+          "qualification": {
+            "type": "string",
+            "example": "Arab fonetikasi va klassik talaffuz qoidalari bo‘yicha malakali ustozlar"
+          },
+          "focus": {
+            "type": "string",
+            "example": "0 dan boshlagan o‘quvchilarga 28 ta harfning artikulyatsion nuqtalarini o‘rgatish"
+          },
+          "biography": {
+            "type": "string"
+          },
+          "photo": {
+            "type": "string"
+          },
+          "yearsOfExperience": {
+            "type": "number",
+            "default": 3
+          },
+          "languages": {
+            "default": [
+              "Arab tili",
+              "O‘zbek tili"
+            ],
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "displayOrder": {
+            "type": "number",
+            "default": 0
+          },
+          "status": {
+            "type": "string",
+            "enum": [
+              "ACTIVE",
+              "INACTIVE"
+            ],
+            "default": "ACTIVE"
+          }
+        },
+        "required": [
+          "fullName",
+          "slug",
+          "department",
+          "qualification",
+          "focus"
+        ]
+      },
+      "CreateScheduleDto": {
+        "type": "object",
+        "properties": {
+          "courseId": {
+            "type": "string",
+            "description": "Kurs ID si"
+          },
+          "branchId": {
+            "type": "string",
+            "description": "Filial ID si"
+          },
+          "teacherId": {
+            "type": "string",
+            "description": "Ustoz ID si"
+          },
+          "daysOfWeek": {
+            "example": [
+              "DUSHANBA",
+              "CHORSHANBA",
+              "JUMA"
+            ],
+            "description": "Hafta kunlari",
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "startTime": {
+            "type": "string",
+            "example": "09:00",
+            "description": "Boshlanish vaqti"
+          },
+          "endTime": {
+            "type": "string",
+            "example": "10:30",
+            "description": "Tugash vaqti"
+          },
+          "startDate": {
+            "type": "string",
+            "example": "2026-11-01"
+          },
+          "endDate": {
+            "type": "string",
+            "example": "2027-02-01"
+          },
+          "capacity": {
+            "type": "number",
+            "default": 12
+          },
+          "status": {
+            "type": "string",
+            "enum": [
+              "ACTIVE",
+              "INACTIVE"
+            ],
+            "default": "ACTIVE"
+          }
+        },
+        "required": [
+          "courseId",
+          "branchId",
+          "daysOfWeek",
+          "startTime",
+          "endTime"
+        ]
+      },
+      "UpdateScheduleDto": {
+        "type": "object",
+        "properties": {
+          "courseId": {
+            "type": "string",
+            "description": "Kurs ID si"
+          },
+          "branchId": {
+            "type": "string",
+            "description": "Filial ID si"
+          },
+          "teacherId": {
+            "type": "string",
+            "description": "Ustoz ID si"
+          },
+          "daysOfWeek": {
+            "example": [
+              "DUSHANBA",
+              "CHORSHANBA",
+              "JUMA"
+            ],
+            "description": "Hafta kunlari",
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "startTime": {
+            "type": "string",
+            "example": "09:00",
+            "description": "Boshlanish vaqti"
+          },
+          "endTime": {
+            "type": "string",
+            "example": "10:30",
+            "description": "Tugash vaqti"
+          },
+          "startDate": {
+            "type": "string",
+            "example": "2026-11-01"
+          },
+          "endDate": {
+            "type": "string",
+            "example": "2027-02-01"
+          },
+          "capacity": {
+            "type": "number",
+            "default": 12
+          },
+          "status": {
+            "type": "string",
+            "enum": [
+              "ACTIVE",
+              "INACTIVE"
+            ],
+            "default": "ACTIVE"
+          }
+        },
+        "required": [
+          "courseId",
+          "branchId",
+          "daysOfWeek",
+          "startTime",
+          "endTime"
+        ]
+      },
+      "CreateTrialRegistrationDto": {
+        "type": "object",
+        "properties": {
+          "fullName": {
+            "type": "string",
+            "example": "Abdulloh Karimov",
+            "description": "O‘quvchi yoki ota-onaning ism va familiyasi"
+          },
+          "phone": {
+            "type": "string",
+            "example": "+998 90 123-45-67",
+            "description": "O‘zbekiston telefon raqami"
+          },
+          "courseSlug": {
+            "type": "string",
+            "example": "professional-fonetika",
+            "description": "Tanlangan kurs slugi yoki ID si"
+          },
+          "branchSlug": {
+            "type": "string",
+            "example": "archakocha",
+            "description": "Tanlangan filial slugi yoki ID si"
+          },
+          "notes": {
+            "type": "string",
+            "example": "Kunduzgi guruhlar ma’qul",
+            "description": "Qo‘shimcha izoh yoki qulay vaqt"
+          },
+          "message": {
+            "type": "string",
+            "example": "Sinov darsiga yozilmoqchiman",
+            "description": "Foydalanuvchi xabari"
+          },
+          "comment": {
+            "type": "string",
+            "example": "Qo‘shimcha fikr yoki savol",
+            "description": "Izoh"
+          },
+          "preferredTime": {
+            "type": "string",
+            "example": "14:00-16:00",
+            "description": "O‘quvchi uchun ma’qul vaqt"
+          },
+          "idempotencyKey": {
+            "type": "string",
+            "description": "Takroriy yuborishdan himoya qiluvchi idempotensiya kaliti"
+          },
+          "source": {
+            "type": "string",
+            "example": "TELEGRAM_BOT",
+            "description": "Ariza manbai (WEBSITE, TELEGRAM_BOT, etc.)"
+          },
+          "telegramUserId": {
+            "type": "string",
+            "example": "123456789",
+            "description": "Foydalanuvchining Telegram ID si"
+          },
+          "telegramUsername": {
+            "type": "string",
+            "example": "abdulloh_uz",
+            "description": "Foydalanuvchining Telegram username"
+          },
+          "inquiryType": {
+            "type": "string",
+            "example": "TRIAL_LESSON",
+            "description": "So‘rov turi (TRIAL_LESSON, COURSE_INQUIRY, CONSULTATION)"
+          },
+          "callbackTime": {
+            "type": "string",
+            "description": "Qayta qo‘ng‘iroq vaqti"
+          }
+        },
+        "required": [
+          "fullName",
+          "phone"
+        ]
+      },
+      "UpdateLeadStatusDto": {
+        "type": "object",
+        "properties": {
+          "status": {
+            "type": "string",
+            "enum": [
+              "NEW",
+              "CONTACTED",
+              "CALLBACK",
+              "INTERESTED",
+              "TRIAL_BOOKED",
+              "ENROLLED",
+              "NOT_INTERESTED",
+              "UNREACHABLE",
+              "DUPLICATE",
+              "SCHEDULED",
+              "ATTENDED",
+              "CONVERTED",
+              "CANCELLED",
+              "SPAM"
+            ],
+            "description": "Yangi status"
+          },
+          "comment": {
+            "type": "string",
+            "description": "Status o‘zgarishi sababi yoki izoh"
+          },
+          "notes": {
+            "type": "string",
+            "description": "Status o‘zgarishi sababi yoki izoh"
+          },
+          "callbackTime": {
+            "type": "string",
+            "description": "Qayta qo‘ng‘iroq vaqti (agar status CALLBACK bo‘lsa)"
+          },
+          "operatorName": {
+            "type": "string",
+            "description": "Amalni bajargan operator nomi"
+          }
+        }
+      },
+      "AssignManagerDto": {
+        "type": "object",
+        "properties": {
+          "managerId": {
+            "type": "string",
+            "description": "Menejer (User) ID si"
+          }
+        }
+      },
+      "UpdateInternalNotesDto": {
+        "type": "object",
+        "properties": {
+          "internalNotes": {
+            "type": "string",
+            "description": "Ichki ma’muriyat izohlari"
+          }
+        }
+      },
+      "ArticleItemInputDto": {
+        "type": "object",
+        "properties": {
+          "arabicText": {
+            "type": "string",
+            "example": "السَّلَامُ عَلَيْكُمْ"
+          },
+          "translit": {
+            "type": "string",
+            "example": "As-salamu alaykum"
+          },
+          "translation": {
+            "type": "string",
+            "example": "Sizga tinchlik va omonlik bo‘lsin"
+          },
+          "sortOrder": {
+            "type": "number",
+            "default": 0
+          }
+        },
+        "required": [
+          "arabicText",
+          "translit",
+          "translation"
+        ]
+      },
+      "CreateArticleDto": {
+        "type": "object",
+        "properties": {
+          "title": {
+            "type": "string",
+            "example": "Kundalik hayotda kerak bo'ladigan 10 ta Arabcha so'z va ibora"
+          },
+          "slug": {
+            "type": "string",
+            "example": "kundalik-hayotda-kerak-boladigan-10-ta-arabcha-soz"
+          },
+          "excerpt": {
+            "type": "string",
+            "example": "Arab tilini o'rganishni boshlagan har bir inson uchun..."
+          },
+          "content": {
+            "type": "string"
+          },
+          "intro": {
+            "type": "string"
+          },
+          "coverImage": {
+            "type": "string"
+          },
+          "topic": {
+            "type": "string",
+            "example": "Kundalik lug'at"
+          },
+          "sourceNote": {
+            "type": "string",
+            "example": "Instagram (@ustoz_akademiyasi) rasmiy o‘quv rukni asosida"
+          },
+          "readTime": {
+            "type": "string",
+            "default": "4 daqiqa"
+          },
+          "status": {
+            "type": "string",
+            "enum": [
+              "DRAFT",
+              "PUBLISHED",
+              "ARCHIVED"
+            ],
+            "default": "PUBLISHED"
+          },
+          "metaTitle": {
+            "type": "string"
+          },
+          "metaDescription": {
+            "type": "string"
+          },
+          "items": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/ArticleItemInputDto"
+            }
+          }
+        },
+        "required": [
+          "title",
+          "slug",
+          "excerpt",
+          "topic"
+        ]
+      },
+      "UpdateArticleDto": {
+        "type": "object",
+        "properties": {
+          "title": {
+            "type": "string",
+            "example": "Kundalik hayotda kerak bo'ladigan 10 ta Arabcha so'z va ibora"
+          },
+          "slug": {
+            "type": "string",
+            "example": "kundalik-hayotda-kerak-boladigan-10-ta-arabcha-soz"
+          },
+          "excerpt": {
+            "type": "string",
+            "example": "Arab tilini o'rganishni boshlagan har bir inson uchun..."
+          },
+          "content": {
+            "type": "string"
+          },
+          "intro": {
+            "type": "string"
+          },
+          "coverImage": {
+            "type": "string"
+          },
+          "topic": {
+            "type": "string",
+            "example": "Kundalik lug'at"
+          },
+          "sourceNote": {
+            "type": "string",
+            "example": "Instagram (@ustoz_akademiyasi) rasmiy o‘quv rukni asosida"
+          },
+          "readTime": {
+            "type": "string",
+            "default": "4 daqiqa"
+          },
+          "status": {
+            "type": "string",
+            "enum": [
+              "DRAFT",
+              "PUBLISHED",
+              "ARCHIVED"
+            ],
+            "default": "PUBLISHED"
+          },
+          "metaTitle": {
+            "type": "string"
+          },
+          "metaDescription": {
+            "type": "string"
+          },
+          "items": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/ArticleItemInputDto"
+            }
+          }
+        },
+        "required": [
+          "title",
+          "slug",
+          "excerpt",
+          "topic"
+        ]
+      },
+      "CreateFaqDto": {
+        "type": "object",
+        "properties": {
+          "question": {
+            "type": "string",
+            "example": "Arab tilini umuman 0 dan boshlasam, qaysi kursga yozilishim kerak?"
+          },
+          "answer": {
+            "type": "string",
+            "example": "Agar siz hali arab harflarini tanimasangiz..."
+          },
+          "category": {
+            "type": "string",
+            "example": "Boshlang'ich"
+          },
+          "sortOrder": {
+            "type": "number",
+            "default": 0
+          },
+          "status": {
+            "type": "string",
+            "enum": [
+              "ACTIVE",
+              "INACTIVE"
+            ],
+            "default": "ACTIVE"
+          }
+        },
+        "required": [
+          "question",
+          "answer",
+          "category"
+        ]
+      },
+      "UpdateFaqDto": {
+        "type": "object",
+        "properties": {
+          "question": {
+            "type": "string",
+            "example": "Arab tilini umuman 0 dan boshlasam, qaysi kursga yozilishim kerak?"
+          },
+          "answer": {
+            "type": "string",
+            "example": "Agar siz hali arab harflarini tanimasangiz..."
+          },
+          "category": {
+            "type": "string",
+            "example": "Boshlang'ich"
+          },
+          "sortOrder": {
+            "type": "number",
+            "default": 0
+          },
+          "status": {
+            "type": "string",
+            "enum": [
+              "ACTIVE",
+              "INACTIVE"
+            ],
+            "default": "ACTIVE"
+          }
+        },
+        "required": [
+          "question",
+          "answer",
+          "category"
+        ]
+      },
+      "CreateTestimonialDto": {
+        "type": "object",
+        "properties": {
+          "displayName": {
+            "type": "string",
+            "example": "Sardorbek Alimov"
+          },
+          "text": {
+            "type": "string",
+            "example": "Ustozlar professional va sabr bilan harflar maxrajini o‘rgatishdi."
+          },
+          "courseId": {
+            "type": "string"
+          },
+          "branchId": {
+            "type": "string"
+          },
+          "rating": {
+            "type": "number",
+            "default": 5,
+            "minimum": 1,
+            "maximum": 5
+          },
+          "photo": {
+            "type": "string"
+          },
+          "consentConfirmed": {
+            "type": "boolean",
+            "default": true,
+            "description": "Fikrni veb-saytda e’lon qilishga rozilik tasdiqlanganmi"
+          },
+          "status": {
+            "type": "string",
+            "enum": [
+              "DRAFT",
+              "PUBLISHED",
+              "ARCHIVED"
+            ],
+            "default": "PUBLISHED"
+          },
+          "displayOrder": {
+            "type": "number",
+            "default": 0
+          }
+        },
+        "required": [
+          "displayName",
+          "text",
+          "consentConfirmed"
+        ]
+      },
+      "UpdateTestimonialDto": {
+        "type": "object",
+        "properties": {
+          "displayName": {
+            "type": "string",
+            "example": "Sardorbek Alimov"
+          },
+          "text": {
+            "type": "string",
+            "example": "Ustozlar professional va sabr bilan harflar maxrajini o‘rgatishdi."
+          },
+          "courseId": {
+            "type": "string"
+          },
+          "branchId": {
+            "type": "string"
+          },
+          "rating": {
+            "type": "number",
+            "default": 5,
+            "minimum": 1,
+            "maximum": 5
+          },
+          "photo": {
+            "type": "string"
+          },
+          "consentConfirmed": {
+            "type": "boolean",
+            "default": true,
+            "description": "Fikrni veb-saytda e’lon qilishga rozilik tasdiqlanganmi"
+          },
+          "status": {
+            "type": "string",
+            "enum": [
+              "DRAFT",
+              "PUBLISHED",
+              "ARCHIVED"
+            ],
+            "default": "PUBLISHED"
+          },
+          "displayOrder": {
+            "type": "number",
+            "default": 0
+          }
+        },
+        "required": [
+          "displayName",
+          "text",
+          "consentConfirmed"
+        ]
+      },
+      "CreateAchievementDto": {
+        "type": "object",
+        "properties": {
+          "title": {
+            "type": "string",
+            "example": "Bitiruvchilar soni"
+          },
+          "description": {
+            "type": "string"
+          },
+          "value": {
+            "type": "string",
+            "example": "15,000+"
+          },
+          "unit": {
+            "type": "string",
+            "example": "o‘quvchilar"
+          },
+          "icon": {
+            "type": "string",
+            "example": "Award"
+          },
+          "displayOrder": {
+            "type": "number",
+            "default": 0
+          },
+          "status": {
+            "type": "string",
+            "enum": [
+              "ACTIVE",
+              "INACTIVE"
+            ],
+            "default": "ACTIVE"
+          }
+        },
+        "required": [
+          "title",
+          "value"
+        ]
+      },
+      "UpdateAchievementDto": {
+        "type": "object",
+        "properties": {
+          "title": {
+            "type": "string",
+            "example": "Bitiruvchilar soni"
+          },
+          "description": {
+            "type": "string"
+          },
+          "value": {
+            "type": "string",
+            "example": "15,000+"
+          },
+          "unit": {
+            "type": "string",
+            "example": "o‘quvchilar"
+          },
+          "icon": {
+            "type": "string",
+            "example": "Award"
+          },
+          "displayOrder": {
+            "type": "number",
+            "default": 0
+          },
+          "status": {
+            "type": "string",
+            "enum": [
+              "ACTIVE",
+              "INACTIVE"
+            ],
+            "default": "ACTIVE"
+          }
+        },
+        "required": [
+          "title",
+          "value"
+        ]
+      },
+      "UpdateSettingDto": {
+        "type": "object",
+        "properties": {
+          "value": {
+            "type": "object",
+            "description": "Sozlama qiymati (JSON yoki matn)"
+          },
+          "description": {
+            "type": "string"
+          },
+          "isPublic": {
+            "type": "boolean",
+            "default": true
+          }
+        },
+        "required": [
+          "value"
+        ]
+      }
+    }
+  }
+}

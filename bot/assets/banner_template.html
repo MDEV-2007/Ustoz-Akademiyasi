@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+  <meta charset="UTF-8">
+  <title>Ustoz Akademiyasi Banner</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,400;0,600;0,700;0,800;0,900;1,500;1,600&display=swap" rel="stylesheet">
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+    body {
+      width: 1200px;
+      height: 675px;
+      overflow: hidden;
+      background: #021E15;
+      font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+    }
+
+    /* Ambient background lighting */
+    .bg-canvas {
+      position: absolute;
+      inset: 0;
+      background: radial-gradient(circle at 50% 42%, #073F31 0%, #03281E 55%, #01160F 100%);
+    }
+
+    /* Glowing Emerald Aura */
+    .emerald-glow {
+      position: absolute;
+      width: 540px;
+      height: 540px;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -58%);
+      background: radial-gradient(circle, rgba(0, 229, 153, 0.18) 0%, rgba(7, 150, 111, 0.08) 45%, transparent 70%);
+      border-radius: 50%;
+      pointer-events: none;
+    }
+
+    /* Subtle geometric mesh lines */
+    .grid-overlay {
+      position: absolute;
+      inset: 0;
+      background-image: 
+        linear-gradient(rgba(0, 229, 153, 0.03) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(0, 229, 153, 0.03) 1px, transparent 1px);
+      background-size: 48px 48px;
+      mask-image: radial-gradient(circle at 50% 50%, black 30%, transparent 80%);
+      -webkit-mask-image: radial-gradient(circle at 50% 50%, black 30%, transparent 80%);
+    }
+
+    /* Outer Framing */
+    .frame-border {
+      position: absolute;
+      inset: 24px;
+      border: 1px solid rgba(0, 229, 153, 0.22);
+      border-radius: 16px;
+      pointer-events: none;
+    }
+    .frame-inner-border {
+      position: absolute;
+      inset: 32px;
+      border: 1px solid rgba(255, 255, 255, 0.06);
+      border-radius: 12px;
+      pointer-events: none;
+    }
+
+    /* Corner accents */
+    .corner {
+      position: absolute;
+      width: 20px;
+      height: 20px;
+      border-color: #00E599;
+      border-style: solid;
+      pointer-events: none;
+    }
+    .corner-tl { top: 20px; left: 20px; border-width: 3px 0 0 3px; border-top-left-radius: 4px; }
+    .corner-tr { top: 20px; right: 20px; border-width: 3px 3px 0 0; border-top-right-radius: 4px; }
+    .corner-bl { bottom: 20px; left: 20px; border-width: 0 0 3px 3px; border-bottom-left-radius: 4px; }
+    .corner-br { bottom: 20px; right: 20px; border-width: 0 3px 3px 0; border-bottom-right-radius: 4px; }
+
+    /* Main Content Container */
+    .content-box {
+      position: relative;
+      z-index: 10;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      padding: 0 40px;
+    }
+
+    /* Shield Logo Container with soft drop-shadow */
+    .logo-wrapper {
+      position: relative;
+      margin-bottom: 24px;
+      filter: drop-shadow(0 14px 28px rgba(0, 229, 153, 0.28)) drop-shadow(0 4px 10px rgba(0, 0, 0, 0.6));
+    }
+
+    /* Brand Typography */
+    .brand-title {
+      font-size: 46px;
+      font-weight: 900;
+      letter-spacing: 2.5px;
+      color: #FFFFFF;
+      text-transform: uppercase;
+      line-height: 1.1;
+      margin-bottom: 12px;
+    }
+    .brand-title .emerald {
+      color: #00E599;
+    }
+
+    /* Slogan Row */
+    .slogan-row {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 18px;
+      margin-bottom: 22px;
+    }
+    .divider-line {
+      width: 60px;
+      height: 1px;
+      background: linear-gradient(90deg, transparent, rgba(0, 229, 153, 0.6), transparent);
+    }
+    .slogan-text {
+      font-size: 20px;
+      font-weight: 500;
+      font-style: italic;
+      color: #C8F3E2;
+      letter-spacing: 0.5px;
+    }
+
+    /* Badge Pill */
+    .badge-pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      background: rgba(7, 63, 49, 0.65);
+      border: 1px solid rgba(0, 229, 153, 0.35);
+      padding: 9px 24px;
+      border-radius: 9999px;
+      backdrop-filter: blur(8px);
+      box-shadow: 0 4px 16px rgba(0, 0, 0, 0.3);
+    }
+    .badge-dot {
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: #00E599;
+      box-shadow: 0 0 10px #00E599;
+    }
+    .badge-label {
+      font-size: 13px;
+      font-weight: 700;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: #FFFFFF;
+    }
+  </style>
+</head>
+<body>
+  <div class="bg-canvas"></div>
+  <div class="grid-overlay"></div>
+  <div class="emerald-glow"></div>
+
+  <div class="frame-border"></div>
+  <div class="frame-inner-border"></div>
+  <div class="corner corner-tl"></div>
+  <div class="corner corner-tr"></div>
+  <div class="corner corner-bl"></div>
+  <div class="corner corner-br"></div>
+
+  <div class="content-box">
+    <!-- Official Brand Shield from site -->
+    <div class="logo-wrapper">
+      <svg width="118" height="127" viewBox="0 0 100 108" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <defs>
+          <linearGradient id="shieldBaseGrad" x1="50" y1="6" x2="50" y2="102" gradientUnits="userSpaceOnUse">
+            <stop offset="0%" stopColor="#00E599" />
+            <stop offset="42%" stopColor="#059E6B" />
+            <stop offset="100%" stopColor="#023826" />
+          </linearGradient>
+          <linearGradient id="shieldMidGrad" x1="50" y1="20" x2="50" y2="102" gradientUnits="userSpaceOnUse">
+            <stop offset="0%" stopColor="#07966F" />
+            <stop offset="100%" stopColor="#042C1E" />
+          </linearGradient>
+          <linearGradient id="shieldBotGrad" x1="50" y1="50" x2="50" y2="102" gradientUnits="userSpaceOnUse">
+            <stop offset="0%" stopColor="#0A7758" />
+            <stop offset="100%" stopColor="#021E14" />
+          </linearGradient>
+          <linearGradient id="shieldRaysGrad" x1="50" y1="18" x2="50" y2="76" gradientUnits="userSpaceOnUse">
+            <stop offset="0%" stopColor="#FFFFFF" />
+            <stop offset="65%" stopColor="#E6FAF1" />
+            <stop offset="100%" stopColor="#B3F3D5" />
+          </linearGradient>
+        </defs>
+
+        <!-- Top Bright Emerald Shield Base -->
+        <path d="M6 6H94V52C94 81 50 102 50 102C50 102 6 81 6 52V6Z" fill="url(#shieldBaseGrad)" />
+        <!-- Middle Curved Band -->
+        <path d="M6 34C26 14 74 14 94 34V52C94 81 50 102 50 102C50 102 6 81 6 52V34Z" fill="url(#shieldMidGrad)" />
+        <!-- Bottom Deep Forest Arc -->
+        <path d="M11 66C32 51 68 51 89 66C81 86 50 102 50 102C50 102 19 86 11 66Z" fill="url(#shieldBotGrad)" />
+        <!-- Inner Glass Contour -->
+        <path d="M8 8H92V51C92 78.5 50 98.5 50 98.5C50 98.5 8 78.5 8 51V8Z" stroke="rgba(255,255,255,0.32)" stroke-width="1.6" />
+        <!-- Sun Rays ("Zulmatlardan Nur tomon") -->
+        <g stroke="url(#shieldRaysGrad)" stroke-width="4.8" stroke-linecap="round">
+          <line x1="50" y1="43" x2="50" y2="20" />
+          <line x1="42" y1="45" x2="31" y2="25" />
+          <line x1="36" y1="50" x2="19" y2="36" />
+          <line x1="58" y1="45" x2="69" y2="25" />
+          <line x1="64" y1="50" x2="81" y2="36" />
+          <line x1="20" y1="54" x2="41" y2="54" />
+          <line x1="59" y1="54" x2="80" y2="54" />
+        </g>
+        <!-- Central Book Peak -->
+        <path d="M41 54L50 46L59 54" stroke="url(#shieldRaysGrad)" stroke-width="4.8" stroke-linecap="round" stroke-linejoin="round" />
+        <!-- Open Book Curve -->
+        <path d="M23 63C23 69 32 69 44 69C48 69 50 72 50 74.5C50 72 52 69 56 69C68 69 77 69 77 63" stroke="url(#shieldRaysGrad)" stroke-width="5.2" stroke-linecap="round" stroke-linejoin="round" />
+      </svg>
+    </div>
+
+    <!-- Brand Name -->
+    <div class="brand-title">
+      USTOZ <span class="emerald">AKADEMIYASI</span>
+    </div>
+
+    <!-- Official Slogan -->
+    <div class="slogan-row">
+      <div class="divider-line"></div>
+      <div class="slogan-text">«Zulmatlardan Nur tomon»</div>
+      <div class="divider-line"></div>
+    </div>
+
+    <!-- Badge -->
+    <div class="badge-pill">
+      <div class="badge-dot"></div>
+      <span class="badge-label">Arab tili ta’limi &bull; Rasmiy Telegram Boti</span>
+    </div>
+  </div>
+</body>
+</html>

@@ -1,0 +1,135 @@
+version: '3.8'
+
+services:
+  # 1. PostgreSQL Database (Isolated on custom port, persistent volume)
+  ustoz_postgres:
+    image: postgres:16-alpine
+    container_name: ustoz_postgres
+    restart: always
+    environment:
+      POSTGRES_USER: ${POSTGRES_USER:-ustoz_admin}
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:-UstozSecureDbPass2026!#}
+      POSTGRES_DB: ${POSTGRES_DB:-ustoz_akademiyasi}
+    ports:
+      # Bound to 127.0.0.1:5435 so it never conflicts with host Postgres 5432
+      - "127.0.0.1:5435:5432"
+    volumes:
+      - ustoz_postgres_data:/var/lib/postgresql/data
+    networks:
+      - ustoz_network
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U ${POSTGRES_USER:-ustoz_admin} -d ${POSTGRES_DB:-ustoz_akademiyasi}"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+
+  # 2. Redis for Queues & Caching (Internal only, zero host port conflict)
+  ustoz_redis:
+    image: redis:7-alpine
+    container_name: ustoz_redis
+    restart: always
+    command: redis-server --appendonly yes
+    volumes:
+      - ustoz_redis_data:/data
+    networks:
+      - ustoz_network
+    healthcheck:
+      test: ["CMD", "redis-cli", "ping"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+
+  # 3. NestJS Backend API
+  ustoz_backend:
+    build:
+      context: ./backend
+      dockerfile: Dockerfile
+    container_name: ustoz_api
+    restart: always
+    depends_on:
+      ustoz_postgres:
+        condition: service_healthy
+      ustoz_redis:
+        condition: service_healthy
+    environment:
+      NODE_ENV: production
+      PORT: 4000
+      API_PREFIX: api/v1
+      DATABASE_URL: postgresql://${POSTGRES_USER:-ustoz_admin}:${POSTGRES_PASSWORD:-UstozSecureDbPass2026!#}@ustoz_postgres:5432/${POSTGRES_DB:-ustoz_akademiyasi}?schema=public
+      REDIS_URL: redis://ustoz_redis:6379
+      JWT_ACCESS_SECRET: ${JWT_ACCESS_SECRET:-ustoz_super_secure_access_secret_2026_xyz}
+      JWT_REFRESH_SECRET: ${JWT_REFRESH_SECRET:-ustoz_super_secure_refresh_secret_2026_xyz}
+      SUPERADMIN_EMAIL: ${SUPERADMIN_EMAIL:-admin@ustozakademiyasi.uz}
+      SUPERADMIN_PASSWORD: ${SUPERADMIN_PASSWORD:-SecureAdminPassword2026!#}
+      CORS_ORIGINS: "https://ustozakademiyasi-front.duckdns.org,http://ustozakademiyasi-front.duckdns.org,http://localhost:3000,http://127.0.0.1:3000"
+      TELEGRAM_BOT_TOKEN: ${TELEGRAM_BOT_TOKEN:-8643739593:AAEDTpqkcKvHpcw7AkIEe0sbmvTywYQk7SE}
+      TELEGRAM_CHAT_IDS: ${TELEGRAM_CHAT_IDS:--1003976608840}
+      TELEGRAM_OPERATOR_IDS: ${TELEGRAM_OPERATOR_IDS:-8273794138}
+      BOT_API_TOKEN: ${BOT_API_TOKEN:-ustoz_bot_secure_service_token_2026}
+      UPLOAD_DIR: uploads
+    ports:
+      # Bound to localhost 4005 so Nginx proxies here without port 4000 conflict
+      - "127.0.0.1:4005:4000"
+    volumes:
+      - ustoz_uploads_data:/app/uploads
+    networks:
+      - ustoz_network
+
+  # 4. Ustoz Akademiyasi Telegram Bot (Polling Mode)
+  ustoz_bot:
+    build:
+      context: ./bot
+      dockerfile: Dockerfile
+    container_name: ustoz_telegram_bot
+    restart: always
+    depends_on:
+      - ustoz_backend
+      - ustoz_redis
+    environment:
+      NODE_ENV: production
+      BOT_TOKEN: ${TELEGRAM_BOT_TOKEN:-8643739593:AAEDTpqkcKvHpcw7AkIEe0sbmvTywYQk7SE}
+      BOT_MODE: polling
+      BACKEND_API_URL: http://ustoz_backend:4000/api/v1
+      BOT_API_TOKEN: ${BOT_API_TOKEN:-ustoz_bot_secure_service_token_2026}
+      REDIS_URL: redis://ustoz_redis:6379
+      ADMIN_TELEGRAM_IDS: ${TELEGRAM_OPERATOR_IDS:-8273794138}
+      ADMIN_NOTIFICATION_CHAT_ID: ${TELEGRAM_CHAT_IDS:--1003976608840}
+      PUBLIC_WEBSITE_URL: https://ustozakademiyasi-front.duckdns.org
+      LOG_LEVEL: info
+    networks:
+      - ustoz_network
+
+  # 5. Next.js Frontend
+  ustoz_frontend:
+    build:
+      context: ./frontend
+      dockerfile: Dockerfile
+      args:
+        NEXT_PUBLIC_API_URL: https://ustozakademiyasi-back.duckdns.org/api/v1
+    container_name: ustoz_frontend
+    restart: always
+    depends_on:
+      - ustoz_backend
+    environment:
+      NODE_ENV: production
+      PORT: 3000
+      NEXT_PUBLIC_API_URL: https://ustozakademiyasi-back.duckdns.org/api/v1
+      NEST_BACKEND_URL: http://ustoz_backend:4000/api/v1
+    ports:
+      # Bound to localhost 3005 so Nginx proxies here without port 3000 conflict
+      - "127.0.0.1:3005:3000"
+    networks:
+      - ustoz_network
+
+volumes:
+  ustoz_postgres_data:
+    name: ustoz_postgres_data
+  ustoz_redis_data:
+    name: ustoz_redis_data
+  ustoz_uploads_data:
+    name: ustoz_uploads_data
+
+networks:
+  ustoz_network:
+    name: ustoz_network
+    driver: bridge
