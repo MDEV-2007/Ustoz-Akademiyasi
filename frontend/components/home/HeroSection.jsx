@@ -28,7 +28,7 @@ export default function HeroSection({
       </div>
 
       <div className="relative z-10 max-w-[1360px] 2xl:max-w-[1520px] min-[1920px]:max-w-[1680px] mx-auto px-4 sm:px-6 lg:px-8 2xl:px-12 w-full">
-        <div className="grid lg:grid-cols-12 gap-8 lg:gap-12 2xl:gap-14 items-center">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 2xl:gap-14 items-center">
           {/* Left Column: Editorial Headline & Value Proposition */}
           <div className="lg:col-span-7 space-y-5 lg:space-y-6 2xl:space-y-8">
             <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#63E6BE]/15 border border-[#63E6BE]/30 text-[#63E6BE] text-xs font-bold uppercase tracking-wider motion-fade-up-1">

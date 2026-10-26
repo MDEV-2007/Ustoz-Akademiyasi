@@ -38,7 +38,7 @@ export default function CoursesPage({
       return (
         <div className="py-12 lg:py-16 max-w-[1360px] 2xl:max-w-[1600px] min-[1920px]:max-w-[1780px] mx-auto px-4 sm:px-6 lg:px-8 2xl:px-12 space-y-16">
           {/* 1. COURSE HERO INTRODUCTION */}
-          <div className="grid lg:grid-cols-12 gap-8 lg:gap-12 items-center">
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center">
             <div className="lg:col-span-7 space-y-6">
               <div className="inline-flex items-center gap-2 px-3 py-1 rounded-md bg-[#047857]/10 text-[#047857] text-xs font-semibold uppercase tracking-wider">
                 <span>Hilol Kids 4+</span>
@@ -132,7 +132,7 @@ export default function CoursesPage({
 
           {/* 3. SYLLABUS, DETAILS & REGISTRATION (SIDE-BY-SIDE) */}
           <div id="royxatdan-otish" className="scroll-mt-20 pt-8 border-t border-[#E2E8E4]">
-            <div className="grid lg:grid-cols-12 gap-8 lg:gap-10 items-start">
+            <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-10 items-start">
               {/* Left Column (7 cols): O'quv dasturi (Syllabus), Metodika va Filiallar */}
               <div className="lg:col-span-7 space-y-8">
                 {/* O'quv dasturi (Syllabus) */}
@@ -250,7 +250,7 @@ export default function CoursesPage({
     // STANDARD 2-COLUMN LAYOUT FOR OTHER COURSES
     return (
       <div className="py-12 lg:py-16 max-w-[1360px] 2xl:max-w-[1600px] min-[1920px]:max-w-[1780px] mx-auto px-4 sm:px-6 lg:px-8 2xl:px-12 space-y-12">
-        <div className="grid lg:grid-cols-12 gap-10 items-start">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 items-start">
           <div className="lg:col-span-7 space-y-6">
             <span className="inline-block px-3 py-1 rounded bg-[#07966F]/15 text-[#073F31] text-xs font-semibold">
               {course.category} • {course.level}

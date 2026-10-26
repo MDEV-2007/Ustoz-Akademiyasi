@@ -386,7 +386,7 @@ export default function LeafletBranchesView({
   }[locale] || labels.uz;
 
   return (
-    <div className="grid lg:grid-cols-12 gap-8 items-start">
+    <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
       {/* LEFT COLUMN: Scrollable Cards List (Matching exact screenshot structure) */}
       <div className="lg:col-span-5 space-y-4">
         {/* Search bar */}

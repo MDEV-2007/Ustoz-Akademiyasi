@@ -175,7 +175,7 @@ export default function ArticlesPage({
           </header>
 
           {/* Main 2-Column Layout */}
-          <div className="grid lg:grid-cols-12 gap-8 lg:gap-12 items-start">
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-start">
             
             {/* Left Main Column: The Article Content Cards */}
             <main className="lg:col-span-8 space-y-6">

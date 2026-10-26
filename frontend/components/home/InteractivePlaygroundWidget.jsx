@@ -171,7 +171,7 @@ export default function InteractivePlaygroundWidget({
 
       {/* TAB 1: HARFLAR VA MAXRAJ */}
       {playgroundTab === 'harflar' && (
-        <div className="p-5 sm:p-7 grid lg:grid-cols-12 gap-7 items-start">
+        <div className="p-5 sm:p-7 grid grid-cols-1 lg:grid-cols-12 gap-7 items-start">
           {/* Right-to-Left Letter Selector Grid */}
           <div className="lg:col-span-6">
             <div className="flex items-center justify-between mb-3">

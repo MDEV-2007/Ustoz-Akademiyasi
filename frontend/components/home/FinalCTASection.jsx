@@ -17,10 +17,10 @@ export default function FinalCTASection({
   t = {}
 }) {
   return (
-    <section className="py-16 lg:py-24 bg-white">
+    <section className="py-16 lg:py-24 bg-white overflow-hidden">
       <div className="max-w-[1360px] 2xl:max-w-[1520px] min-[1920px]:max-w-[1680px] mx-auto px-4 sm:px-6 lg:px-8 2xl:px-12">
-        <div className="grid lg:grid-cols-12 gap-8 lg:gap-14 items-center justify-center">
-          <div className="lg:col-span-5 flex flex-col justify-center space-y-6 reveal-on-scroll reveal-from-left">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-14 items-center justify-center">
+          <div className="lg:col-span-5 flex flex-col justify-center space-y-6">
             <div>
               <span className="text-xs font-bold uppercase tracking-wider text-[#07966F]">
                 {t.registrationModal?.badge || 'Birinchi Qadam'}

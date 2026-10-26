@@ -158,16 +158,16 @@ export default function Footer({
           </div>
         </div>
 
-        <div className="pt-6 flex flex-wrap items-center justify-between gap-4 text-xs text-white/60">
+        <div className="pt-6 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-white/60 text-center sm:text-left">
           <div>
             © 2026 Ustoz Akademiyasi. {t.footer?.rights || 'Barcha huquqlar himoyalangan.'}
           </div>
-          <div className="flex items-center gap-3">
+          <div className="flex flex-wrap items-center justify-center sm:justify-end gap-2 sm:gap-3 w-full sm:w-auto">
             <a
               href={brandConfig.instagramUrl}
               target="_blank"
               rel="noreferrer"
-              className="inline-flex items-center gap-2 px-3 py-1.5 rounded-xl bg-white/5 hover:bg-white/10 border border-white/10 text-white/80 hover:text-white transition group shadow-xs"
+              className="inline-flex items-center gap-1.5 sm:gap-2 px-2.5 sm:px-3 py-1.5 rounded-xl bg-white/5 hover:bg-white/10 border border-white/10 text-white/80 hover:text-white transition group shadow-xs text-[11px] sm:text-xs"
             >
               <Instagram className="w-3.5 h-3.5 text-[#E1306C] group-hover:scale-110 transition-transform" />
               <span>Instagram ({brandConfig.instagramFollowers})</span>
@@ -176,7 +176,7 @@ export default function Footer({
               href={brandConfig.telegramUrl}
               target="_blank"
               rel="noreferrer"
-              className="inline-flex items-center gap-2 px-3 py-1.5 rounded-xl bg-white/5 hover:bg-white/10 border border-white/10 text-white/80 hover:text-white transition group shadow-xs"
+              className="inline-flex items-center gap-1.5 sm:gap-2 px-2.5 sm:px-3 py-1.5 rounded-xl bg-white/5 hover:bg-white/10 border border-white/10 text-white/80 hover:text-white transition group shadow-xs text-[11px] sm:text-xs"
             >
               <TelegramIcon className="w-3.5 h-3.5 text-[#2AABEE] group-hover:scale-110 transition-transform" />
               <span>Telegram ({brandConfig.telegramHandle})</span>
@@ -185,7 +185,7 @@ export default function Footer({
               href={brandConfig.facebookUrl || 'https://www.facebook.com/hiloltalimuz/'}
               target="_blank"
               rel="noreferrer"
-              className="inline-flex items-center gap-2 px-3 py-1.5 rounded-xl bg-white/5 hover:bg-white/10 border border-white/10 text-white/80 hover:text-white transition group shadow-xs"
+              className="inline-flex items-center gap-1.5 sm:gap-2 px-2.5 sm:px-3 py-1.5 rounded-xl bg-white/5 hover:bg-white/10 border border-white/10 text-white/80 hover:text-white transition group shadow-xs text-[11px] sm:text-xs"
             >
               <FacebookIcon className="w-3.5 h-3.5 text-[#1877F2] fill-[#1877F2] group-hover:scale-110 transition-transform" />
               <span>Facebook</span>

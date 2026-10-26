@@ -45,7 +45,7 @@ export default function ArticlesSection({
           </button>
         </div>
 
-        <div className="grid lg:grid-cols-12 gap-6">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-6">
           {/* Featured Lead Article */}
           <div className="lg:col-span-7 bg-[#F8FAF8] rounded-2xl p-6 sm:p-8 border border-[#073F31]/15 flex flex-col justify-between reveal-on-scroll reveal-from-left motion-card">
             <div className="space-y-3">

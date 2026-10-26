@@ -33,6 +33,14 @@
    GLOBAL SCROLLBAR REMOVAL (ALL BROWSERS: CHROME, EDGE, SAFARI, FIREFOX)
    ========================================================================== */
 html,
+body {
+  overflow-x: hidden !important;
+  max-width: 100vw !important;
+  width: 100% !important;
+  position: relative;
+}
+
+html,
 body,
 #root,
 #__next,
@@ -201,9 +209,11 @@ a:hover .motion-arrow {
   transform: translate(0, 0) scale(1);
 }
 
-/* Mobile & Tablet Safety Override: Never hide content on small viewports */
-@media (max-width: 768px) {
-  .reveal-on-scroll {
+/* Mobile & Tablet Safety Override: Never shift or hide content on touch/mobile viewports */
+@media (max-width: 1024px) {
+  .reveal-on-scroll,
+  .reveal-on-scroll.reveal-from-left,
+  .reveal-on-scroll.reveal-from-right {
     opacity: 1 !important;
     transform: none !important;
     transition: none !important;
