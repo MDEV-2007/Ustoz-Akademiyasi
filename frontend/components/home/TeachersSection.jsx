@@ -2,6 +2,7 @@
 
 import React from 'react';
 import { ArrowRight } from 'lucide-react';
+import ImageWithSkeleton from '../ui/ImageWithSkeleton';
 
 export default function TeachersSection({
   t,
@@ -46,11 +47,11 @@ export default function TeachersSection({
               <div>
                 {/* Photo Container */}
                 <div className="relative aspect-[4/5] w-full overflow-hidden bg-slate-900/5">
-                  <img
+                  <ImageWithSkeleton
                     src={teacher.image}
                     alt={teacher.fullName}
                     className="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-500"
-                    loading="lazy"
+                    containerClassName="w-full h-full"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-80" />
 
@@ -134,11 +135,11 @@ export default function TeachersSection({
                 {/* Photo Container */}
                 {dept.image ? (
                   <div className="relative aspect-[4/5] w-full overflow-hidden bg-slate-900/5">
-                    <img
+                    <ImageWithSkeleton
                       src={dept.image}
                       alt={dept.title}
                       className="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-500"
-                      loading="lazy"
+                      containerClassName="w-full h-full"
                     />
                     <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-80" />
 

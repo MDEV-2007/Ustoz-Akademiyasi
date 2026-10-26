@@ -68,6 +68,12 @@ body::-webkit-scrollbar,
   font-family: 'Noto Naskh Arabic', 'Amiri', serif;
 }
 
+@keyframes shimmer {
+  100% {
+    transform: translateX(100%);
+  }
+}
+
 /* ==========================================================================
    PREMIUM MOTION DESIGN SYSTEM (RESTRAINED, PURPOSEFUL, ACCESSIBLE)
    ========================================================================== */

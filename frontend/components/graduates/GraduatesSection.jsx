@@ -12,6 +12,7 @@ import {
   ArrowUpRight
 } from 'lucide-react';
 import ImageLightbox from '@/components/ui/ImageLightbox';
+import ImageWithSkeleton from '@/components/ui/ImageWithSkeleton';
 
 export default function GraduatesSection({
   graduates = [],
@@ -247,11 +248,11 @@ export default function GraduatesSection({
                   onClick={() => openAdultGallery(groupItem)}
                   className="lg:col-span-5 relative rounded-xl overflow-hidden aspect-[9/13] max-h-[500px] bg-[#064E3B]/5 border border-[#E2E8E4] cursor-pointer group"
                 >
-                  <img
+                  <ImageWithSkeleton
                     src={groupItem.image}
                     alt={groupItem.name}
                     className="w-full h-full object-cover object-top transition-transform duration-500 group-hover:scale-[1.02]"
-                    loading="lazy"
+                    containerClassName="w-full h-full"
                   />
 
                   {/* Clean bottom action overlay on hover */}
@@ -349,11 +350,11 @@ export default function GraduatesSection({
                   >
                     {/* Clean Portrait Framing */}
                     <div className="relative aspect-[9/13] bg-[#064E3B]/5 overflow-hidden">
-                      <img
+                      <ImageWithSkeleton
                         src={grad.image}
                         alt={grad.name}
                         className="w-full h-full object-cover object-top transition-transform duration-300 group-hover:scale-[1.03]"
-                        loading="lazy"
+                        containerClassName="w-full h-full"
                       />
 
                       {/* Subtle hover icon hint */}
@@ -407,11 +408,11 @@ export default function GraduatesSection({
                   onClick={() => openKidsGallery(kids)}
                   className="lg:col-span-5 relative rounded-xl overflow-hidden aspect-[9/14] max-h-[500px] bg-[#064E3B]/5 border border-[#E2E8E4] cursor-pointer group"
                 >
-                  <img
+                  <ImageWithSkeleton
                     src={kids.image}
                     alt={kids.title}
                     className="w-full h-full object-cover object-center transition-transform duration-500 group-hover:scale-[1.02]"
-                    loading="lazy"
+                    containerClassName="w-full h-full"
                   />
 
                   <div className="absolute inset-0 bg-[#064E3B]/20 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">

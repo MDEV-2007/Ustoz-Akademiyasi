@@ -17,6 +17,7 @@ import {
 import AuthenticVisualPlate from '@/components/ui/AuthenticVisualPlate';
 import GraduatesSection from '@/components/graduates/GraduatesSection';
 import ImageLightbox from '@/components/ui/ImageLightbox';
+import ImageWithSkeleton from '@/components/ui/ImageWithSkeleton';
 
 const METHODOLOGY_GUIDES = [
   {
@@ -272,11 +273,11 @@ export default function AboutFacultyPage({
                       onClick={() => openHistoryLightboxAtIndex(idx)}
                       className="relative rounded-2xl overflow-hidden aspect-[4/5] max-h-[360px] bg-[#073F31]/5 border border-[#073F31]/15 cursor-pointer group/img mx-auto w-full max-w-[280px] sm:max-w-[320px] shadow-sm"
                     >
-                      <img
+                      <ImageWithSkeleton
                         src={item.image}
                         alt={item.title}
                         className="w-full h-full object-cover object-top transition-transform duration-500 group-hover/img:scale-105"
-                        loading="lazy"
+                        containerClassName="w-full h-full"
                       />
 
                       <div className="absolute inset-0 bg-[#073F31]/25 opacity-0 group-hover/img:opacity-100 transition-opacity flex items-center justify-center">
@@ -357,11 +358,12 @@ export default function AboutFacultyPage({
               onClick={() => openLightboxAtIndex(0)}
               className="lg:col-span-5 relative rounded-2xl overflow-hidden aspect-[4/5] max-h-[520px] bg-[#073F31]/5 border border-[#073F31]/15 cursor-pointer group shadow-sm mx-auto w-full max-w-[380px] lg:max-w-none"
             >
-              <img
+              <ImageWithSkeleton
                 src={heroGuide.image}
                 alt={heroGuide.title}
                 className="w-full h-full object-cover object-center transition-transform duration-500 group-hover:scale-[1.03]"
-                loading="eager"
+                containerClassName="w-full h-full"
+                priority
               />
 
               <div className="absolute inset-0 bg-[#073F31]/20 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
@@ -455,11 +457,11 @@ export default function AboutFacultyPage({
                         onClick={() => openLightboxAtIndex(globalIndex)}
                         className="relative aspect-[4/5] w-full overflow-hidden bg-[#073F31]/5 cursor-pointer"
                       >
-                        <img
+                        <ImageWithSkeleton
                           src={guide.image}
                           alt={guide.title}
                           className="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-500"
-                          loading="lazy"
+                          containerClassName="w-full h-full"
                         />
                         <div className="absolute inset-0 bg-black/25 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
                           <span className="px-3 py-1.5 rounded-lg bg-white/95 text-[#073F31] text-[11px] font-bold shadow-md flex items-center gap-1">
@@ -633,11 +635,11 @@ export default function AboutFacultyPage({
               >
                 <div>
                   <div className="relative aspect-[4/5] w-full overflow-hidden bg-slate-900/5">
-                    <img
+                    <ImageWithSkeleton
                       src={teacher.image}
                       alt={teacher.fullName}
                       className="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-500"
-                      loading="lazy"
+                      containerClassName="w-full h-full"
                     />
                     <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-80" />
 
@@ -723,11 +725,11 @@ export default function AboutFacultyPage({
                 <div>
                   {dept.image ? (
                     <div className="relative aspect-[4/5] w-full overflow-hidden bg-slate-900/5">
-                      <img
+                      <ImageWithSkeleton
                         src={dept.image}
                         alt={dept.title}
                         className="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-500"
-                        loading="lazy"
+                        containerClassName="w-full h-full"
                       />
                       <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-80" />
 

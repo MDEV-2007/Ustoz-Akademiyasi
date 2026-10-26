@@ -10,6 +10,7 @@ import {
   ArrowRight
 } from 'lucide-react';
 import VideoLightbox from '../ui/VideoLightbox';
+import VideoWithSkeleton from '../ui/VideoWithSkeleton';
 
 const KIDS_VIDEOS = [
   {
@@ -118,9 +119,10 @@ export default function KidsVideoGallery({ onRegisterClick }) {
           onClick={() => handleOpenModal(featuredVideo)}
           className="w-full lg:w-[350px] xl:w-[380px] flex-shrink-0 relative bg-[#064E3B]/10 cursor-pointer group min-h-[360px] lg:min-h-[400px]"
         >
-          <video
+          <VideoWithSkeleton
             src={featuredVideo.src}
             className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-[1.02]"
+            containerClassName="w-full h-full"
             preload="metadata"
             muted
             playsInline
@@ -219,9 +221,10 @@ export default function KidsVideoGallery({ onRegisterClick }) {
             >
               {/* Uncluttered Video Thumbnail with Centered Play Button */}
               <div className="relative aspect-[9/13] bg-[#064E3B]/5 overflow-hidden">
-                <video
+                <VideoWithSkeleton
                   src={video.src}
                   className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-[1.03]"
+                  containerClassName="w-full h-full"
                   preload="metadata"
                   muted
                   playsInline

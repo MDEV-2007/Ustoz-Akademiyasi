@@ -4,6 +4,7 @@ import React from 'react';
 import { useI18n } from '@/lib/i18n';
 import { Award } from 'lucide-react';
 import { OfficialBrandShield } from './BrandShield';
+import ImageWithSkeleton from './ImageWithSkeleton';
 
 export const AuthenticVisualPlate = ({ type, customImage, altText }) => {
   const { t, locale } = useI18n();
@@ -11,7 +12,7 @@ export const AuthenticVisualPlate = ({ type, customImage, altText }) => {
   if (customImage) {
     return (
       <div className="relative w-full h-full min-h-[220px] bg-[#073F31] overflow-hidden">
-        <img
+        <ImageWithSkeleton
           src={customImage}
           alt={
             altText ||
@@ -21,7 +22,7 @@ export const AuthenticVisualPlate = ({ type, customImage, altText }) => {
               ? 'Official photo of Ustoz Akademiyasi'
               : 'Ustoz Akademiyasi rasmiy fotolavhasi')
           }
-          loading="lazy"
+          containerClassName="w-full h-full"
           className="w-full h-full object-cover"
         />
       </div>
