@@ -11,7 +11,7 @@ RUN apk add --no-cache libc6-compat openssl
 FROM base AS dependencies
 COPY package*.json ./
 COPY prisma ./prisma/
-RUN npm ci
+RUN npm install
 
 # 3. Build stage
 FROM base AS builder
@@ -41,6 +41,7 @@ COPY --from=builder --chown=node:node /app/package*.json ./
 COPY --from=builder --chown=node:node /app/node_modules ./node_modules
 COPY --from=builder --chown=node:node /app/dist ./dist
 COPY --from=builder --chown=node:node /app/prisma ./prisma
+COPY --from=builder --chown=node:node /app/tsconfig*.json ./
 
 USER node
 
