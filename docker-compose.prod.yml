@@ -68,8 +68,8 @@ services:
       BOT_API_TOKEN: ${BOT_API_TOKEN:-ustoz_bot_secure_service_token_2026}
       UPLOAD_DIR: uploads
     ports:
-      # Bound to localhost 4005 so Nginx proxies here without port 4000 conflict
-      - "127.0.0.1:4005:4000"
+      # Bound to 4005 so Nginx container proxies here without port 4000 conflict
+      - "4005:4000"
     volumes:
       - ustoz_uploads_data:/app/uploads
     networks:
@@ -116,8 +116,8 @@ services:
       NEXT_PUBLIC_API_URL: https://ustozakademiyasi-back.duckdns.org/api/v1
       NEST_BACKEND_URL: http://ustoz_backend:4000/api/v1
     ports:
-      # Bound to localhost 3005 so Nginx proxies here without port 3000 conflict
-      - "127.0.0.1:3005:3000"
+      # Bound to 3005 so Nginx container proxies here without port 3000 conflict
+      - "3005:3000"
     networks:
       - ustoz_network
 
