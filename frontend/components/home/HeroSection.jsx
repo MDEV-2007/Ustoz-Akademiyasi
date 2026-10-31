@@ -16,7 +16,7 @@ export default function HeroSection({
   navigate,
 }) {
   return (
-    <section className="relative overflow-hidden bg-gradient-to-b from-[#061c14] via-[#082319] to-[#0a2e22] text-white pt-10 sm:pt-14 lg:pt-16 pb-12 sm:pb-16 lg:pb-20 border-b border-white/10">
+    <section className="relative overflow-hidden bg-gradient-to-b from-[#061c14] via-[#082319] to-[#0a2e22] text-white pt-16 sm:pt-20 lg:pt-24 xl:pt-28 pb-14 sm:pb-18 lg:pb-24 border-b border-white/10">
       {/* Delicate Islamic Geometric & Mesh Pattern Overlay */}
       <div className="absolute inset-0 z-0 islamic-pattern-bg ambient-hero-pattern opacity-5 mix-blend-overlay pointer-events-none" />
 
@@ -24,7 +24,7 @@ export default function HeroSection({
       <div className="absolute right-0 top-1/3 -translate-y-1/2 w-[550px] h-[550px] rounded-full bg-gradient-to-tr from-emerald-500/20 via-amber-400/10 to-transparent blur-3xl pointer-events-none" />
       <div className="absolute left-0 bottom-10 w-[350px] h-[350px] rounded-full bg-emerald-600/10 blur-3xl pointer-events-none" />
 
-      <div className="relative z-10 max-w-[1360px] 2xl:max-w-[1520px] min-[1920px]:max-w-[1680px] mx-auto px-4 sm:px-6 lg:px-8 2xl:px-12 w-full">
+      <div className="relative z-10 max-w-[1360px] 2xl:max-w-[1600px] min-[1920px]:max-w-[1780px] mx-auto px-4 sm:px-6 lg:px-8 2xl:px-12 w-full">
         {/* Main 2-Column Grid */}
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-12 xl:gap-14 items-center">
           
@@ -113,9 +113,9 @@ export default function HeroSection({
           {/* ======================================================== */}
           {/* Right Column (40% width on desktop) — Visual Composition */}
           {/* ======================================================== */}
-          <div className="lg:col-span-5 relative flex items-center justify-center mt-6 lg:mt-0">
+          <div className="lg:col-span-5 relative flex items-center justify-center mt-8 lg:mt-0 pt-4 lg:pt-0">
             {/* Visual Centerpiece Arch Frame */}
-            <div className="relative w-full max-w-[340px] sm:max-w-[420px] aspect-[4/5] mx-auto rounded-3xl overflow-hidden border-2 border-emerald-500/30 shadow-[0_20px_50px_rgba(6,28,20,0.6)] bg-emerald-950/40 backdrop-blur-md group">
+            <div className="relative w-full max-w-[320px] sm:max-w-[370px] lg:max-w-[390px] aspect-[4/4.8] mx-auto rounded-3xl overflow-hidden border-2 border-emerald-500/30 shadow-[0_20px_50px_rgba(6,28,20,0.6)] bg-emerald-950/40 backdrop-blur-md group">
               <img
                 src="/teachers/teacher_1.png"
                 alt="Arab Tili Ustoz"
@@ -147,7 +147,7 @@ export default function HeroSection({
             </div>
 
             {/* Floating Glassmorphic Micro-Card 1: Top-Right (CEFR C1) */}
-            <div className="absolute -top-3 right-0 sm:-right-4 bg-emerald-950/90 backdrop-blur-md border border-amber-400/40 rounded-2xl p-2.5 sm:p-3 shadow-xl flex items-center gap-2 sm:gap-2.5 max-w-[200px] sm:max-w-[220px] transition-transform duration-300 hover:scale-105 z-20">
+            <div className="absolute top-3 sm:top-2 right-2 sm:-right-3 bg-emerald-950/90 backdrop-blur-md border border-amber-400/40 rounded-2xl p-2.5 sm:p-3 shadow-xl flex items-center gap-2 sm:gap-2.5 max-w-[200px] sm:max-w-[220px] transition-transform duration-300 hover:scale-105 z-20">
               <div className="w-7 h-7 sm:w-8 sm:h-8 rounded-xl bg-amber-400/20 text-amber-400 flex items-center justify-center flex-shrink-0">
                 <Star className="w-3.5 h-3.5 sm:w-4 sm:h-4 fill-amber-400" />
               </div>
@@ -160,7 +160,7 @@ export default function HeroSection({
             </div>
 
             {/* Floating Glassmorphic Micro-Card 2: Bottom-Left (Kids 4+) */}
-            <div className="absolute -bottom-3 left-0 sm:-left-4 bg-emerald-950/90 backdrop-blur-md border border-emerald-400/40 rounded-2xl p-2.5 sm:p-3 shadow-xl flex items-center gap-2 sm:gap-2.5 max-w-[190px] sm:max-w-[210px] transition-transform duration-300 hover:scale-105 z-20">
+            <div className="absolute bottom-3 sm:bottom-2 left-2 sm:-left-3 bg-emerald-950/90 backdrop-blur-md border border-emerald-400/40 rounded-2xl p-2.5 sm:p-3 shadow-xl flex items-center gap-2 sm:gap-2.5 max-w-[190px] sm:max-w-[210px] transition-transform duration-300 hover:scale-105 z-20">
               <div className="w-7 h-7 sm:w-8 sm:h-8 rounded-xl bg-emerald-400/20 text-emerald-400 flex items-center justify-center flex-shrink-0">
                 <Sparkles className="w-3.5 h-3.5 sm:w-4 sm:h-4" />
               </div>
