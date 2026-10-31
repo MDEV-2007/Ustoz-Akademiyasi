@@ -10,11 +10,11 @@ import { escapeHtml, safeEditOrReply } from '../utils/formatters';
 export const contactComposer = new Composer<MyContext>();
 
 async function showContactInfo(ctx: MyContext) {
-  let phone = '+998 55 518 44 00';
+  let phone = '+998 71 200 00 00';
   let hours = 'Dushanba – Shanba, 09:00 – 19:00';
-  let address = 'Toshkent shahri, 8 ta rasmiy filial';
+  let address = 'Toshkent shahri bo‘ylab 8 ta metroga yaqin filial';
   let tgHandle = '@arabtili_demo';
-  let tgUrl = 'https://t.me/ustozakademiyasi';
+  let tgUrl = 'https://t.me/arabtili_demo';
 
   try {
     const settings = await apiClient.getSiteSettings();
