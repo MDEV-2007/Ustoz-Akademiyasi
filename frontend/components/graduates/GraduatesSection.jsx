@@ -108,10 +108,10 @@ export default function GraduatesSection({
   const defaultKidsGraduates = [
     {
       id: 'kids-grad-1',
-      title: 'Hilol Kids — Kichkintoylarimiz bitiruv marosimi',
+      title: 'Kids — Kichkintoylarimiz bitiruv marosimi',
       subtitle: '4+ yoshdagi o‘quvchilarimiz taqdirlandi',
-      course: 'Hilol Kids 4+ dasturi',
-      certificate: 'Hilol Kids rasmiy sertifikati va Oltin medallari',
+      course: 'Kids 4+ dasturi',
+      certificate: 'Kids rasmiy sertifikati va Oltin medallari',
       image: '/graduates/kids_bitiruvchilar.png',
       quote: 'Bolajonlarimiz o‘yinlar, ko‘rgazmali darslar va arabcha multfilmlar yordamida harflarni bexato o‘zlashtirib, birinchi katta natijalariga erishdilar.',
       badge: 'Kids bitiruvchilari',
@@ -424,7 +424,7 @@ export default function GraduatesSection({
 
                   <div className="absolute top-3 left-3 pointer-events-none">
                     <span className="px-2.5 py-1 rounded bg-[#064E3B]/90 text-white text-[11px] font-medium backdrop-blur-xs">
-                      Hilol Kids • Bitiruv marosimi
+                      Kids • Bitiruv marosimi
                     </span>
                   </div>
                 </div>
@@ -433,7 +433,7 @@ export default function GraduatesSection({
                 <div className="lg:col-span-7 space-y-5">
                   <div className="space-y-2">
                     <div className="text-xs font-semibold uppercase tracking-wider text-[#D6A63A]">
-                      Hilol Kids 4+ Dasturi
+                      Kids 4+ Dasturi
                     </div>
                     <h4 className="text-2xl sm:text-3xl font-bold text-[#172421] tracking-tight leading-snug">
                       Kichkintoylarimizning ilk katta natijalari
@@ -490,7 +490,7 @@ export default function GraduatesSection({
                       onClick={() => navigate('/kurslar/hilol-kids')}
                       className="px-5 py-2.5 rounded-lg bg-[#064E3B] hover:bg-[#047857] text-white text-xs sm:text-sm font-semibold transition-colors cursor-pointer"
                     >
-                      Hilol Kids dasturi haqida
+                      Kids dasturi haqida
                     </button>
 
                     <button

@@ -146,7 +146,7 @@ export default function AdminHeader() {
                   <div className="p-2.5 rounded-xl bg-slate-50 border border-slate-100 hover:bg-slate-100 transition-colors">
                     <p className="font-semibold text-slate-800">Yangi ariza kelib tushdi</p>
                     <p className="text-[11px] text-slate-500 mt-0.5">
-                      Telegram orqali «Hilol Kids 4+» kursiga ariza topshirildi.
+                      Telegram orqali «Kids 4+» kursiga ariza topshirildi.
                     </p>
                     <span className="text-[9px] text-slate-400 block mt-1">Hozirgina</span>
                   </div>

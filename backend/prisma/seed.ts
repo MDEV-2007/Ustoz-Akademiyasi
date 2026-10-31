@@ -52,7 +52,7 @@ async function main() {
   const coursesData = [
     {
       slug: 'hilol-kids',
-      title: 'Hilol Kids 4+',
+      title: 'Kids 4+',
       categoryName: 'Bolalar uchun',
       audience: '4 yosh va undan katta bolajonlar uchun',
       level: "Boshlang'ich (0 dan)",
@@ -75,7 +75,7 @@ async function main() {
         { module: '3-bosqich: Multfilm va Jonli nutq', topics: "Qisqa arabcha multfilmlarni ko'rish, qahramonlar iboralarini takrorlash va kichik dialoglar." },
       ],
       faqs: [
-        { q: 'Farzandim hali o‘qish va yozishni bilmaydi, kursga qatnasha oladimi?', a: 'Ha, Hilol Kids 4+ dasturi aynan 4 yoshdan boshlab harf tanimaydigan bolajonlar uchun eshitish, ko‘rish va o‘yin metodikasi asosida tuzilgan.' },
+        { q: 'Farzandim hali o‘qish va yozishni bilmaydi, kursga qatnasha oladimi?', a: 'Ha, Kids 4+ dasturi aynan 4 yoshdan boshlab harf tanimaydigan bolajonlar uchun eshitish, ko‘rish va o‘yin metodikasi asosida tuzilgan.' },
       ],
     },
     {
@@ -498,7 +498,7 @@ async function main() {
   // 7. FAQs
   const faqsData = [
     { category: "Boshlang'ich", question: 'Arab tilini umuman 0 dan boshlasam, qaysi kursga yozilishim kerak?', answer: "Agar siz hali arab harflarini tanimasangiz yoki talaffuzingizda ikkilanish bo'lsa, o'qishni «Professional Fonetika» kursidan boshlaysiz. Bu bosqichda 28 ta harfning maxraji va o'qish qoidalari to'liq o'rgatiladi.", sortOrder: 1 },
-    { category: 'Bolalar uchun', question: 'Hilol Kids 4+ kursiga necha yoshdan qabul qilinadi va darslar qanday o‘tiladi?', answer: "Hilol Kids 4+ dasturiga 4 yoshdan boshlab bolajonlar qabul qilinadi. Darslar zerikarli yodlashsiz — maxsus arabcha multfilmlar, «Bolajonlar bilan raqamlarni topish o'yini» va ko'rgazmali kartochkalar orqali olib boriladi.", sortOrder: 2 },
+    { category: 'Bolalar uchun', question: 'Kids 4+ kursiga necha yoshdan qabul qilinadi va darslar qanday o‘tiladi?', answer: "Kids 4+ dasturiga 4 yoshdan boshlab bolajonlar qabul qilinadi. Darslar zerikarli yodlashsiz — maxsus arabcha multfilmlar, «Bolajonlar bilan raqamlarni topish o'yini» va ko'rgazmali kartochkalar orqali olib boriladi.", sortOrder: 2 },
     { category: 'Filiallar', question: 'Toshkent shahrining qaysi hududlarida filiallaringiz bor?', answer: "Ustoz Akademiyasining Toshkent shahrida 8 ta filiali faoliyat yuritadi: Archako'cha, Yangi ToshMI, Qoraqamish, Algoritm, Yunusobod, Sergeli, Tinchlik va Beruniy filiallari.", sortOrder: 3 },
     { category: 'Sertifikat', question: 'Grammatika va CEFR kursida qaysi darajalarga tayyorlanadi?', answer: "Fonetika bosqichini tamomlagan o'quvchilar Sarf va Nahv qoidalari bilan birga A2, B1, B2 hamda C1 (Milliy va xalqaro CEFR) sertifikat imtihonlarining 4 ta bo'limiga tizimli tayyorlanadilar.", sortOrder: 4 },
     { category: "To'lov va Jadval", question: 'Kurs narxlari va dars vaqtlarini qanday bilsam bo‘ladi?', answer: "Har bir filialdagi guruhlar jadvali hamda joriy o'quv to'lovlari bo'yicha aniq ma'lumot olish uchun saytdagi sinov darsi shaklini to'ldiring yoki +998 71 200 00 00 raqamiga qo'ng'iroq qiling.", sortOrder: 5 },

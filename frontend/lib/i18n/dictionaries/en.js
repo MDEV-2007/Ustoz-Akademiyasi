@@ -29,7 +29,7 @@ export const en = {
     badge: '#1 Specialized Arabic Language Academy in Tashkent',
     titleLine1: 'Master Arabic Professionally:',
     titleLine2: 'From Zero to CEFR C1 Level',
-    subtitle: '8 modern branches across Tashkent, 15,000+ successful graduates, dedicated Hilol Kids 4+ curriculum for children, and internationally certified scholars.',
+    subtitle: '8 modern branches across Tashkent, 15,000+ successful graduates, dedicated Kids 4+ curriculum for children, and internationally certified scholars.',
     primaryCta: 'Book Free Trial Lesson',
     secondaryCta: 'Explore Courses',
     statGraduates: 'Successful Graduates',
@@ -70,7 +70,7 @@ export const en = {
     methodologyLabel: 'Teaching Methodology:',
     items: {
       'hilol-kids': {
-        title: 'Hilol Kids 4+',
+        title: 'Kids 4+',
         category: 'For Children',
         audience: 'Children aged 4 and above',
         level: 'Beginner (from 0)',
@@ -287,7 +287,7 @@ export const en = {
         focus: 'Advanced grammar analysis and targeted preparation across all 4 exam components: Listening, Reading, Writing, and Speaking.'
       },
       'dept-kids': {
-        title: 'Department of Hilol Kids 4+ & Women’s Education',
+        title: 'Department of Kids 4+ & Women’s Education',
         badge: 'Child Pedagogy & Female Faculty',
         qualification: 'Child psychology specialists using gamified methods',
         focus: 'Inspiring children from age 4 through cartoons, counting games, and colorful media, while providing supportive women-only classrooms.'
@@ -360,9 +360,9 @@ export const en = {
       },
       'farzandingizni-arab-tiliga-multfilmlar-orqali-qiziqtirish': {
         title: 'Inspiring Your Child to Learn Arabic Through Cartoons & Games',
-        topic: 'Hilol Kids 4+',
+        topic: 'Kids 4+',
         excerpt: 'Children aged 4–10 learn faster through animated visuals, games, and engaging cartoon characters than dry rules.',
-        intro: '«Do you know the secrets to engaging your child in Arabic? We produced customized Arabic dubs of children’s favorite cartoons» — the cornerstone of our Hilol Kids 4+ curriculum.'
+        intro: '«Do you know the secrets to engaging your child in Arabic? We produced customized Arabic dubs of children’s favorite cartoons» — the cornerstone of our Kids 4+ curriculum.'
       },
       'arab-tilidagi-kasblar-va-imkoniyatlar': {
         title: 'Careers with Arabic Language and Practical Opportunities',
@@ -384,7 +384,7 @@ export const en = {
       },
       {
         category: 'For Kids',
-        q: 'What is the starting age for Hilol Kids 4+ and how are lessons conducted?',
+        q: 'What is the starting age for Kids 4+ and how are lessons conducted?',
         a: 'Children are admitted from age 4. Classes avoid tedious rote memorization, utilizing educational cartoons, counting games, and illustrated cards.'
       },
       {
@@ -436,7 +436,7 @@ export const en = {
     restartQuiz: 'Try Again',
     kidsTitle: 'Kids Game: Find the Matching Number',
     kidsInstructions: 'Tap the button that matches the Arabic numeral shown on screen:',
-    kidsBadge: 'Hilol Kids 4+ Methodology',
+    kidsBadge: 'Kids 4+ Methodology',
     kidsPronunciation: 'Arabic pronunciation:',
     matchTarget: 'Find:',
     correctCompliment: 'Well done! Exactly right! Now find the next number!',
@@ -529,7 +529,7 @@ export const en = {
     telegramDesc: 'At t.me/ustozakademiyasi: animated Arabic cartoons for kids, quizzes (116+ interactive polls), and free educational books.',
     graduatesTitle: 'Graduates',
     graduatesCount: '15,000+ Students',
-    graduatesDesc: 'Alumni who completed Phonetics, Grammar, CEFR, and Hilol Kids 4+ tracks.',
+    graduatesDesc: 'Alumni who completed Phonetics, Grammar, CEFR, and Kids 4+ tracks.',
   },
   teachersPage: {
     badge: 'Academic Faculty',
@@ -558,7 +558,7 @@ export const en = {
     subtitle: 'Results-driven methodology, comfortable campuses, and recognized master teachers',
     card1Title: '8 Modern Branches',
     card1Desc: 'Strategically located across all major Tashkent districts with modern amenities.',
-    card2Title: 'Hilol Kids 4+ Methodology',
+    card2Title: 'Kids 4+ Methodology',
     card2Desc: 'Gentle, engaging education for children through tailored cartoons and interactive games.',
     card3Title: 'Guaranteed CEFR C1 Track',
     card3Desc: 'Comprehensive preparation across all 4 examination competencies for state-certified credentials.',

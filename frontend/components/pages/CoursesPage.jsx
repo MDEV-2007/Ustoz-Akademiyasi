@@ -26,7 +26,7 @@ export default function CoursesPage({
     const slug = path.replace('/kurslar/', '');
     const course = courses.find((c) => c.slug === slug) || courses[0];
 
-    // CONVERSION-FOCUSED FLOW FOR HILOL KIDS 4+
+    // CONVERSION-FOCUSED FLOW FOR KIDS 4+
     if (slug === 'hilol-kids') {
       const scrollToRegistration = () => {
         document.getElementById('royxatdan-otish')?.scrollIntoView({ behavior: 'smooth' });
@@ -41,7 +41,7 @@ export default function CoursesPage({
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center">
             <div className="lg:col-span-7 space-y-6">
               <div className="inline-flex items-center gap-2 px-3 py-1 rounded-md bg-[#047857]/10 text-[#047857] text-xs font-semibold uppercase tracking-wider">
-                <span>Hilol Kids 4+</span>
+                <span>Kids 4+</span>
                 <span className="w-1 h-1 rounded-full bg-[#047857]/40" />
                 <span>Bolalar arab tili dasturi</span>
               </div>
@@ -160,7 +160,7 @@ export default function CoursesPage({
                           <span className="text-xs font-bold text-[#047857] px-2 py-0.5 rounded bg-[#047857]/10">
                             {i + 1}-bosqich
                           </span>
-                          <span className="text-[11px] text-[#66736E]">Hilol Kids</span>
+                          <span className="text-[11px] text-[#66736E]">Kids</span>
                         </div>
                         <h3 className="text-base font-bold text-[#172421]">
                           {mod.module}
@@ -190,7 +190,7 @@ export default function CoursesPage({
                 <div className="space-y-3 pt-2">
                   <div className="flex items-center justify-between">
                     <h3 className="text-base sm:text-lg font-bold text-[#172421]">
-                      {t.courseDetail?.branchesTitle || 'Hilol Kids darslari mavjud filiallar (8 ta):'}
+                      {t.courseDetail?.branchesTitle || 'Kids darslari mavjud filiallar (8 ta):'}
                     </h3>
                     <span className="text-xs text-[#66736E]">
                       Toshkent shahri bo‘ylab

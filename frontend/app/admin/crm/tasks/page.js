@@ -33,7 +33,7 @@ export default function AdminTasksPage() {
     },
     {
       id: '2',
-      title: 'Chilonzor filialida ertangi «Hilol Kids» guruhi xonasini tayyorlash',
+      title: 'Chilonzor filialida ertangi «Kids» guruhi xonasini tayyorlash',
       assignedTo: 'Filial ma’muri',
       priority: 'MEDIUM',
       dueDate: 'Ertaga, 10:00',

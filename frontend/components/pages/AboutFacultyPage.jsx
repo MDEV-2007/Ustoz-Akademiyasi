@@ -83,12 +83,12 @@ const HISTORY_ITEMS = [
     year: '2019-yil',
     badge: 'Tashkil topish',
     step: 'Ilk qadam',
-    title: '«Hilol Ta’lim» nomi ostida asos solindi',
+    title: '«Arab Tili» nomi ostida asos solindi',
     image: '/about/history_2019.png',
     quote:
-      '«Hilol Ta\'lim — 2019-yilda asos solingan va hozirda 1000 ga yaqin talabalarga ilm va yaxshilik ulashib kelayotgan o‘quv markazimizga...»',
+      '«Arab Tili — 2019-yilda asos solingan va hozirda 1000 ga yaqin talabalarga ilm va yaxshilik ulashib kelayotgan o‘quv markazimizga...»',
     desc:
-      'O‘quv markazimiz 2019-yilda samimiy niyat va yuksak maqsadlar bilan «Hilol Ta’lim» brendi ostida o‘z faoliyatini boshlagan. Ilk yillardayoq 1000 ga yaqin talabaga arab tili alifbosi, harflar maxraji va to‘g‘ri talaffuz bo‘yicha mustahkam poydevor yaratildi.',
+      'O‘quv markazimiz 2019-yilda samimiy niyat va yuksak maqsadlar bilan «Arab Tili» brendi ostida o‘z faoliyatini boshlagan. Ilk yillardayoq 1000 ga yaqin talabaga arab tili alifbosi, harflar maxraji va to‘g‘ri talaffuz bo‘yicha mustahkam poydevor yaratildi.',
     statsLabel: 'Ilk talabalar soni',
     statsValue: '1,000 ga yaqin talaba',
     features: [
@@ -105,7 +105,7 @@ const HISTORY_ITEMS = [
     title: '«Ustoz Akademiyasi» — yangi taraqqiyot sari qadam',
     image: '/about/history_2024.png',
     quote:
-      '«2024-yil sentabr oyidan boshlab o‘sish va taraqqiyot sari yangi qadam qo‘ydik. Hilol ta\'lim o‘rniga Ustoz akademiyasi nomi bilan xizmat ko‘rsatishni boshladik. Bizning maqsadimiz — sizga yanada yuqori darajada ta\'lim va bilim berishdir.»',
+      '«2024-yil sentabr oyidan boshlab o‘sish va taraqqiyot sari yangi qadam qo‘ydik. Arab Tili o‘rniga Ustoz akademiyasi nomi bilan xizmat ko‘rsatishni boshladik. Bizning maqsadimiz — sizga yanada yuqori darajada ta\'lim va bilim berishdir.»',
     desc:
       'Ta’lim ko‘lamini kengaytirish, zamonaviy standartlar va innovatsion metodikalarni joriy etish maqsadida markazimiz yangi bosqichga ko‘tarildi. Bugungi kunda akademiyamiz 8 ta filial va 15,000 dan ortiq muvaffaqiyatli bitiruvchilarga ega nufuzli ta’lim maskanidir.',
     statsLabel: 'Bugungi natija',
@@ -113,7 +113,7 @@ const HISTORY_ITEMS = [
     features: [
       'Toshkent bo‘ylab 8 ta zamonaviy filial tarmog‘i',
       'C1 darajali CEFR ustozlari jamoasi',
-      'Hilol Kids 4+ innovatsion bolalar metodikasi',
+      'Kids 4+ innovatsion bolalar metodikasi',
       '15,000 dan ortiq mamnun o‘quvchilar'
     ]
   }
@@ -208,7 +208,7 @@ export default function AboutFacultyPage({
             </div>
             <p className="text-xs sm:text-sm text-[#65756F] leading-relaxed">
               {t.aboutPage?.graduatesDesc ||
-                'Fonetika, grammatika, CEFR va Hilol Kids 4+ yo‘nalishlarida tahsil olgan bitiruvchilar.'}
+                'Fonetika, grammatika, CEFR va Kids 4+ yo‘nalishlarida tahsil olgan bitiruvchilar.'}
             </p>
           </div>
         </div>
@@ -222,7 +222,7 @@ export default function AboutFacultyPage({
                 <span>Markaz Tarixi va Rebranding Yo‘li</span>
               </span>
               <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-[#14231F] tracking-tight">
-                «Hilol Ta’lim»dan «Ustoz Akademiyasi» sari
+                «Arab Tili»dan «Ustoz Akademiyasi» sari
               </h2>
               <p className="text-sm sm:text-base text-[#65756F] leading-relaxed">
                 2019-yildagi ilk qadamlardan — bugungi 8 ta filial va 15,000 dan ortiq bitiruvchilarga ega zamonaviy akademiyagacha bo‘lgan rivojlanish tarixi.

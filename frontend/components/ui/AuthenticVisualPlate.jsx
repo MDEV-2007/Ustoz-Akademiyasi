@@ -34,7 +34,7 @@ export const AuthenticVisualPlate = ({ type, customImage, altText }) => {
     return (
       <div
         role="img"
-        aria-label="Hilol Kids 4+"
+        aria-label="Kids 4+"
         className="w-full h-full bg-[#073F31] text-white p-3.5 sm:p-5 flex flex-col justify-between relative overflow-hidden select-none"
       >
         <div className="flex items-center justify-between border-b border-white/15 pb-2.5 sm:pb-3">
@@ -42,10 +42,10 @@ export const AuthenticVisualPlate = ({ type, customImage, altText }) => {
             <OfficialBrandShield size={20} className="flex-shrink-0" />
             <span className="text-[11px] sm:text-xs font-semibold tracking-wider uppercase text-[#63E6BE] truncate">
               {locale === 'ru'
-                ? 'Hilol Kids 4+ • Игровая методика'
+                ? 'Kids 4+ • Игровая методика'
                 : locale === 'en'
-                ? 'Hilol Kids 4+ • Playful Method'
-                : 'Hilol Kids 4+ • O‘yin metodikasi'}
+                ? 'Kids 4+ • Playful Method'
+                : 'Kids 4+ • O‘yin metodikasi'}
             </span>
           </div>
           <span className="text-[10px] sm:text-[11px] px-1.5 sm:px-2 py-0.5 rounded bg-white/10 text-white/90 flex-shrink-0">

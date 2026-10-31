@@ -33,7 +33,7 @@ export const INITIAL_BRAND_CONFIG = {
 export const INITIAL_COURSES = [
   {
     slug: 'hilol-kids',
-    title: 'Hilol Kids 4+',
+    title: 'Kids 4+',
     category: 'Bolalar uchun',
     audience: '4 yosh va undan katta bolajonlar uchun',
     level: "Boshlang'ich (0 dan)",
@@ -67,7 +67,7 @@ export const INITIAL_COURSES = [
     faq: [
       {
         q: 'Farzandim hali o‘qish va yozishni bilmaydi, kursga qatnasha oladimi?',
-        a: 'Ha, Hilol Kids 4+ dasturi aynan 4 yoshdan boshlab harf tanimaydigan bolajonlar uchun eshitish, ko‘rish va o‘yin metodikasi asosida tuzilgan.'
+        a: 'Ha, Kids 4+ dasturi aynan 4 yoshdan boshlab harf tanimaydigan bolajonlar uchun eshitish, ko‘rish va o‘yin metodikasi asosida tuzilgan.'
       },
       {
         q: 'Multfilmlar qayerdan olinadi?',
@@ -211,7 +211,7 @@ export const INITIAL_BRANCHES = [
     landmark: "Shofayz ko‘prigi yaqinida",
     image: "/branches/branch_archakocha.png",
     hours: 'Dushanba – Shanba (guruhlar jadvali bo‘yicha)',
-    coursesAvailable: ['Hilol Kids 4+', 'Professional Fonetika', 'Grammatika va CEFR', 'Kundalik va Kasbiy Arab Tili'],
+    coursesAvailable: ['Kids 4+', 'Professional Fonetika', 'Grammatika va CEFR', 'Kundalik va Kasbiy Arab Tili'],
     highlight: "Barcha asosiy o'quv yo'nalishlari va sinov darslari faol olib boriladigan filial."
   },
   {
@@ -223,7 +223,7 @@ export const INITIAL_BRANCHES = [
     landmark: 'Makro chorrahasi',
     image: '/branches/branch_toshmi.png',
     hours: 'Dushanba – Shanba (guruhlar jadvali bo‘yicha)',
-    coursesAvailable: ['Hilol Kids 4+', 'Professional Fonetika', 'Grammatika va CEFR'],
+    coursesAvailable: ['Kids 4+', 'Professional Fonetika', 'Grammatika va CEFR'],
     highlight: 'Talabalar, kattalar va bolajonlar uchun qulay o‘quv xonalariga ega filial.'
   },
   {
@@ -235,7 +235,7 @@ export const INITIAL_BRANCHES = [
     landmark: '“Zeb-ziynat” to‘yxonasi yonida',
     image: '/branches/branch_qoraqamish.png',
     hours: 'Dushanba – Shanba (guruhlar jadvali bo‘yicha)',
-    coursesAvailable: ['Hilol Kids 4+', 'Professional Fonetika', 'Grammatika va CEFR', 'Kundalik va Kasbiy Arab Tili'],
+    coursesAvailable: ['Kids 4+', 'Professional Fonetika', 'Grammatika va CEFR', 'Kundalik va Kasbiy Arab Tili'],
     highlight: "Instagram sahifamizda yoritilganidek, tantanali bitiruv tadbirlari va sertifikat topshirish marosimlari o'tkaziladigan faol filial."
   },
   {
@@ -247,7 +247,7 @@ export const INITIAL_BRANCHES = [
     landmark: '“Zarhal” to‘yxonasi ro‘parasida',
     image: '/branches/branch_algoritm.png',
     hours: 'Dushanba – Shanba (guruhlar jadvali bo‘yicha)',
-    coursesAvailable: ['Hilol Kids 4+', 'Professional Fonetika', 'Grammatika va CEFR'],
+    coursesAvailable: ['Kids 4+', 'Professional Fonetika', 'Grammatika va CEFR'],
     highlight: 'Algoritm va unga tutash hududlardagi o‘quvchilar uchun qulay filial.'
   },
   {
@@ -259,7 +259,7 @@ export const INITIAL_BRANCHES = [
     landmark: 'Havas do‘koni 2-qavat',
     image: '/branches/branch_yunusobod.png',
     hours: 'Dushanba – Shanba (guruhlar jadvali bo‘yicha)',
-    coursesAvailable: ['Hilol Kids 4+', 'Professional Fonetika', 'Grammatika va CEFR', 'Kundalik va Kasbiy Arab Tili'],
+    coursesAvailable: ['Kids 4+', 'Professional Fonetika', 'Grammatika va CEFR', 'Kundalik va Kasbiy Arab Tili'],
     highlight: 'Yunusobod tumani aholisi va yoshlari uchun barcha bosqichdagi arab tili guruhlari.'
   },
   {
@@ -271,7 +271,7 @@ export const INITIAL_BRANCHES = [
     landmark: '3-metro (Sergili) bekati',
     image: '/branches/branch_sergeli.png',
     hours: 'Dushanba – Shanba (guruhlar jadvali bo‘yicha)',
-    coursesAvailable: ['Hilol Kids 4+', 'Professional Fonetika', 'Grammatika va CEFR'],
+    coursesAvailable: ['Kids 4+', 'Professional Fonetika', 'Grammatika va CEFR'],
     highlight: 'Sergeli hududida bolajonlar va kattalar uchun tizimli arab tili darslari.'
   },
   {
@@ -283,7 +283,7 @@ export const INITIAL_BRANCHES = [
     landmark: 'Olmazor yong‘in xavfsizligi bo‘limi, Tinchlik metrosi',
     image: '/branches/branch_tinchlik.png',
     hours: 'Dushanba – Shanba (guruhlar jadvali bo‘yicha)',
-    coursesAvailable: ['Hilol Kids 4+', 'Professional Fonetika', 'Grammatika va CEFR'],
+    coursesAvailable: ['Kids 4+', 'Professional Fonetika', 'Grammatika va CEFR'],
     highlight: 'Transport va metroga yaqin hududda joylashgan qulay filial.'
   },
   {
@@ -295,7 +295,7 @@ export const INITIAL_BRANCHES = [
     landmark: '“Doka xleb” ro‘parasi',
     image: '/branches/branch_kattaqani.png',
     hours: 'Dushanba – Shanba (guruhlar jadvali bo‘yicha)',
-    coursesAvailable: ['Hilol Kids 4+', 'Professional Fonetika', 'Grammatika va CEFR', 'Kundalik va Kasbiy Arab Tili'],
+    coursesAvailable: ['Kids 4+', 'Professional Fonetika', 'Grammatika va CEFR', 'Kundalik va Kasbiy Arab Tili'],
     highlight: 'Uchtepa va Katta Qani hududidagi o‘quvchilar uchun qulay sharoitlarga ega faol filial.'
   }
 ];
@@ -382,8 +382,8 @@ export const INITIAL_KIDS_GRADUATES = [
     id: 'kids-grad-1',
     title: 'Bitiruvchilarimiz taqdirlandi 🥳',
     subtitle: 'Ustoz Kids — Kichkintoylarimiz bitiruv marosimi',
-    course: 'Hilol Kids 4+ dasturi',
-    certificate: 'Hilol Kids rasmiy sertifikati va Oltin medallari',
+    course: 'Kids 4+ dasturi',
+    certificate: 'Kids rasmiy sertifikati va Oltin medallari',
     image: '/graduates/kids_bitiruvchilar.png',
     quote: 'Bolajonlarimiz o‘yinlar, ko‘rgazmali darslar va arabcha multfilmlar yordamida harflarni bexato o‘zlashtirib, birinchi katta natijalariga erishdilar!',
     badge: 'Kids Bitiruvchilar 🥳',
@@ -459,13 +459,13 @@ export const INITIAL_ARTICLES = [
   {
     slug: 'farzandingizni-arab-tiliga-multfilmlar-orqali-qiziqtirish',
     title: "Farzandingizni arab tiliga multfilmlar va o'yinlar orqali qiziqtirish",
-    topic: 'Hilol Kids 4+',
+    topic: 'Kids 4+',
     readTime: '4 daqiqa',
     sourceNote: 'Telegram va Instagramdagi bolajonlar dars lavhalari asosida',
     excerpt:
       "4–10 yoshli bolalar quruq qoidalarni emas, balki jonli tasvir, o'yin va multfilm qahramonlari nutqini tezroq qabul qiladilar.",
     intro:
-      "«Farzandingizni arab tiliga qiziqtirish sirlari haqida bilasizmi? Biz bolalar sevib tomosha qiladigan multfilmlarning arabcha variantini tayyorlab qo'ydik» — ushbu yondashuv Hilol Kids 4+ dasturimizning asosini tashkil etadi.",
+      "«Farzandingizni arab tiliga qiziqtirish sirlari haqida bilasizmi? Biz bolalar sevib tomosha qiladigan multfilmlarning arabcha variantini tayyorlab qo'ydik» — ushbu yondashuv Kids 4+ dasturimizning asosini tashkil etadi.",
     items: [
       {
         ar: 'أَلْعَابُ الْأَرْقَامِ',
@@ -895,13 +895,13 @@ export const INITIAL_TEACHING_DEPARTMENTS = [
   },
   {
     id: 'dept-kids',
-    title: 'Hilol Kids 4+ va Ayollar ta’limi bo‘limi',
+    title: 'Kids 4+ va Ayollar ta’limi bo‘limi',
     badge: 'Bolalar pedagogikasi va Ayol ustozalar',
     image: '/departments/dept_kids.png',
     qualification: 'Bolalar psixologiyasi va interaktiv metodikani egallagan muallimalar',
     focus:
       "4 yoshdan katta bolajonlarga o'yinlar, raqamli plakatlar va arabcha multfilmlar yordamida, shuningdek ayol-qizlar guruhlariga alohida qulay muhitda dars berish.",
-    coursesTaught: ['Hilol Kids 4+', 'Professional Fonetika']
+    coursesTaught: ['Kids 4+', 'Professional Fonetika']
   }
 ];
 
@@ -964,8 +964,8 @@ export const INITIAL_FAQ_ITEMS = [
   },
   {
     category: 'Bolalar uchun',
-    q: 'Hilol Kids 4+ kursiga necha yoshdan qabul qilinadi va darslar qanday o‘tiladi?',
-    a: "Hilol Kids 4+ dasturiga 4 yoshdan boshlab bolajonlar qabul qilinadi. Darslar zerikarli yodlashsiz — maxsus arabcha multfilmlar, «Bolajonlar bilan raqamlarni topish o'yini» va ko'rgazmali kartochkalar orqali olib boriladi."
+    q: 'Kids 4+ kursiga necha yoshdan qabul qilinadi va darslar qanday o‘tiladi?',
+    a: "Kids 4+ dasturiga 4 yoshdan boshlab bolajonlar qabul qilinadi. Darslar zerikarli yodlashsiz — maxsus arabcha multfilmlar, «Bolajonlar bilan raqamlarni topish o'yini» va ko'rgazmali kartochkalar orqali olib boriladi."
   },
   {
     category: 'Filiallar',

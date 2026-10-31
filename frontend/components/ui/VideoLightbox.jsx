@@ -112,7 +112,7 @@ export default function VideoLightbox({
         onClick={(e) => e.stopPropagation()}
       >
         <span className="text-[11px] text-white/60 truncate">
-          Ustoz Akademiyasi • Hilol Kids 4+
+          Ustoz Akademiyasi • Kids 4+
         </span>
 
         {onRegisterClick && (

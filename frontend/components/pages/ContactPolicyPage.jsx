@@ -322,7 +322,7 @@ export default function ContactPolicyPage({
                 </div>
                 <div className="p-3 rounded-xl bg-[#F8FAF8] border border-[#073F31]/10">
                   <strong className="text-[#14231F] block mb-1">Bolalar uchun necha yoshdan boshlanadi?</strong>
-                  Hilol Kids 4+ dasturimiz bo‘yicha 4 yoshdan bolajonlar qabul qilinadi. Darslar o‘yin va ko‘rgazmali metodlar asosida o‘tiladi.
+                  Kids 4+ dasturimiz bo‘yicha 4 yoshdan bolajonlar qabul qilinadi. Darslar o‘yin va ko‘rgazmali metodlar asosida o‘tiladi.
                 </div>
               </div>
             </div>

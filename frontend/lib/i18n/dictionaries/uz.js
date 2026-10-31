@@ -29,7 +29,7 @@ export const uz = {
     badge: 'Toshkentdagi N1 Ixtisoslashgan Arab Tili Akademiyasi',
     titleLine1: 'Arab tilini mukammal o‘rganing:',
     titleLine2: 'Noldan CEFR C1 darajagacha',
-    subtitle: 'Toshkent bo‘ylab 8 ta zamonaviy filial, 15,000+ muvaffaqiyatli bitiruvchi, bolalar uchun Hilol Kids 4+ dasturi va xalqaro diplomga ega oliy toifali ustozlar jamoasi.',
+    subtitle: 'Toshkent bo‘ylab 8 ta zamonaviy filial, 15,000+ muvaffaqiyatli bitiruvchi, bolalar uchun Kids 4+ dasturi va xalqaro diplomga ega oliy toifali ustozlar jamoasi.',
     primaryCta: 'Bepul sinov darsiga yozilish',
     secondaryCta: 'Kurslar bilan tanishish',
     statGraduates: 'Muvaffaqiyatli bitiruvchilar',
@@ -70,7 +70,7 @@ export const uz = {
     methodologyLabel: 'O‘qitish metodikasi:',
     items: {
       'hilol-kids': {
-        title: 'Hilol Kids 4+',
+        title: 'Kids 4+',
         category: 'Bolalar uchun',
         audience: '4 yosh va undan katta bolajonlar uchun',
         level: 'Boshlang‘ich (0 dan)',
@@ -287,7 +287,7 @@ export const uz = {
         focus: 'Arab tili grammatikasi hamda Reading, Listening, Writing va Speaking ko‘nikmalarini imtihon talablari asosida chuqurlashtirib o‘qitish.'
       },
       'dept-kids': {
-        title: 'Hilol Kids 4+ va Ayollar ta’limi bo‘limi',
+        title: 'Kids 4+ va Ayollar ta’limi bo‘limi',
         badge: 'Bolalar pedagogikasi va Ayol ustozalar',
         qualification: 'Bolalar psixologiyasi va interaktiv metodikani egallagan muallimalar',
         focus: '4 yoshdan katta bolajonlarga o‘yinlar, raqamli plakatlar va arabcha multfilmlar yordamida, shuningdek ayol-qizlar guruhlariga alohida qulay muhitda dars berish.'
@@ -360,9 +360,9 @@ export const uz = {
       },
       'farzandingizni-arab-tiliga-multfilmlar-orqali-qiziqtirish': {
         title: 'Farzandingizni arab tiliga multfilmlar va o‘yinlar orqali qiziqtirish',
-        topic: 'Hilol Kids 4+',
+        topic: 'Kids 4+',
         excerpt: '4–10 yoshli bolalar quruq qoidalarni emas, balki jonli tasvir, o‘yin va multfilm qahramonlari nutqini tezroq qabul qiladilar.',
-        intro: '«Farzandingizni arab tiliga qiziqtirish sirlari haqida bilasizmi? Biz bolalar sevib tomosha qiladigan multfilmlarning arabcha variantini tayyorlab qo‘ydik» — ushbu yondashuv Hilol Kids 4+ dasturimizning asosini tashkil etadi.'
+        intro: '«Farzandingizni arab tiliga qiziqtirish sirlari haqida bilasizmi? Biz bolalar sevib tomosha qiladigan multfilmlarning arabcha variantini tayyorlab qo‘ydik» — ushbu yondashuv Kids 4+ dasturimizning asosini tashkil etadi.'
       },
       'arab-tilidagi-kasblar-va-imkoniyatlar': {
         title: 'Arab tilidagi kasblar va til bilishning amaliy ahamiyati',
@@ -384,8 +384,8 @@ export const uz = {
       },
       {
         category: 'Bolalar uchun',
-        q: 'Hilol Kids 4+ kursiga necha yoshdan qabul qilinadi va darslar qanday o‘tiladi?',
-        a: 'Hilol Kids 4+ dasturiga 4 yoshdan boshlab bolajonlar qabul qilinadi. Darslar zerikarli yodlashsiz — maxsus arabcha multfilmlar, «Bolajonlar bilan raqamlarni topish o‘yini» va ko‘rgazmali kartochkalar orqali olib boriladi.'
+        q: 'Kids 4+ kursiga necha yoshdan qabul qilinadi va darslar qanday o‘tiladi?',
+        a: 'Kids 4+ dasturiga 4 yoshdan boshlab bolajonlar qabul qilinadi. Darslar zerikarli yodlashsiz — maxsus arabcha multfilmlar, «Bolajonlar bilan raqamlarni topish o‘yini» va ko‘rgazmali kartochkalar orqali olib boriladi.'
       },
       {
         category: 'Filiallar',
@@ -524,7 +524,7 @@ export const uz = {
     telegramDesc: 't.me/ustozakademiyasi kanalida bolalar uchun arabcha multfilmlar, viktorinalar (116+ so‘rovnoma) va bepul kitoblar joylangan.',
     graduatesTitle: 'Bitiruvchilar',
     graduatesCount: '15,000+ o‘quvchilar',
-    graduatesDesc: 'Fonetika, grammatika, CEFR va Hilol Kids 4+ yo‘nalishlarida tahsil olgan bitiruvchilar.',
+    graduatesDesc: 'Fonetika, grammatika, CEFR va Kids 4+ yo‘nalishlarida tahsil olgan bitiruvchilar.',
   },
   teachersPage: {
     badge: 'Akademik Jamoa',
@@ -553,7 +553,7 @@ export const uz = {
     subtitle: 'Natijaga yo‘naltirilgan zamonaviy metodika, qulay infratuzilma va e’tirof etilgan ustozlar',
     card1Title: '8 ta Zamonaviy Filial',
     card1Desc: 'Toshkentning har bir yirik tumanida joylashgan, shinam o‘quv xonalari va barcha qulayliklar.',
-    card2Title: 'Hilol Kids 4+ Metodikasi',
+    card2Title: 'Kids 4+ Metodikasi',
     card2Desc: 'Bolalar uchun maxsus multfilmlar, o‘yinlar va rangli kartochkalar orqali mehr bilan o‘rgatish.',
     card3Title: 'CEFR C1 Kafolatlangan Tayyorlov',
     card3Desc: 'Milliy va xalqaro sertifikat imtihonlarining 4 ta bo‘limi bo‘yicha yuqori ball olish tizimi.',

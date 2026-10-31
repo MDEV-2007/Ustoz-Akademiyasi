@@ -18,9 +18,9 @@ export async function generateMetadata({ params }) {
   };
 
   const descriptions = {
-    uz: 'Toshkent bo‘ylab 8 ta filial va 15,000+ bitiruvchiga ega arab tili o‘quv markazi. Hilol Kids 4+, Professional fonetika va CEFR kurslari.',
-    ru: '8 филиалов в Ташкенте, 15 000+ выпускников. Программы Hilol Kids 4+, профессиональная фонетика и подготовка к экзаменам CEFR.',
-    en: '8 branches across Tashkent, 15,000+ graduates. Hilol Kids 4+, professional phonetics, and CEFR preparation courses.',
+    uz: 'Toshkent bo‘ylab 8 ta filial va 15,000+ bitiruvchiga ega arab tili o‘quv markazi. Kids 4+, Professional fonetika va CEFR kurslari.',
+    ru: '8 филиалов в Ташкенте, 15 000+ выпускников. Программы Kids 4+, профессиональная фонетика и подготовка к экзаменам CEFR.',
+    en: '8 branches across Tashkent, 15,000+ graduates. Kids 4+, professional phonetics, and CEFR preparation courses.',
   };
 
   return {

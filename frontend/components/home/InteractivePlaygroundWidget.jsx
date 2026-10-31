@@ -444,7 +444,7 @@ export default function InteractivePlaygroundWidget({
           <div className="flex flex-wrap items-center justify-between gap-4 bg-[#F8FAF8] p-4 rounded-xl border border-[#073F31]/15">
             <div>
               <div className="text-xs font-bold uppercase tracking-wider text-[#07966F]">
-                {t.playground?.kidsBadge || 'Hilol Kids 4+ mashg‘uloti asosida'}
+                {t.playground?.kidsBadge || 'Kids 4+ mashg‘uloti asosida'}
               </div>
               <div className="text-base sm:text-lg font-bold text-[#14231F] mt-0.5">
                 {locale === 'ru'

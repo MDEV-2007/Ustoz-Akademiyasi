@@ -182,7 +182,7 @@ export default function Footer({
               <span className="truncate">Telegram<span className="hidden md:inline"> ({brandConfig.telegramHandle})</span></span>
             </a>
             <a
-              href={brandConfig.facebookUrl || 'https://www.facebook.com/hiloltalimuz/'}
+              href={brandConfig.facebookUrl || 'https://www.facebook.com/arabtili_demo/'}
               target="_blank"
               rel="noreferrer"
               className="inline-flex items-center justify-center gap-1.5 px-2 sm:px-3 py-1.5 rounded-xl bg-white/5 hover:bg-white/10 border border-white/10 text-white/80 hover:text-white transition group shadow-xs text-[11px] sm:text-xs min-w-0"

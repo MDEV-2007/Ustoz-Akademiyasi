@@ -81,7 +81,7 @@ export default function AdminDevModal({
           <div className="grid sm:grid-cols-2 gap-3 text-xs">
             {[
               { key: 'hero', label: 'Hero (Bosh sahifa) surati' },
-              { key: 'hilol-kids', label: 'Hilol Kids 4+ surati' },
+              { key: 'hilol-kids', label: 'Kids 4+ surati' },
               { key: 'professional-fonetika', label: 'Professional Fonetika surati' },
               { key: 'grammatika-va-cefr', label: 'Grammatika va CEFR surati' }
             ].map((slot) => (

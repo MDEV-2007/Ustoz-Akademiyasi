@@ -420,17 +420,17 @@ function AppContent({ initialLocale = 'uz', initialPath = '/' }) {
 
     if (p === '/') {
       return {
-        title: `${base} | 8 ta Filial • Hilol Kids 4+ • Fonetika • CEFR`,
+        title: `${base} | 8 ta Filial • Kids 4+ • Fonetika • CEFR`,
         description:
-          "Arab Tili — Toshkent bo'ylab filiallar va zamonaviy arab tili ta'limi. Hilol Kids 4+, Professional fonetika, Grammatika va CEFR kurslari. Tel: +998 71 200 00 00.",
+          "Arab Tili — Toshkent bo'ylab filiallar va zamonaviy arab tili ta'limi. Kids 4+, Professional fonetika, Grammatika va CEFR kurslari. Tel: +998 71 200 00 00.",
         canonical: 'https://arabtili.uz/'
       };
     }
     if (p === '/kurslar') {
       return {
-        title: `Arab Tili Kurslari | Hilol Kids 4+, Fonetika, Grammatika va CEFR — Ustoz Akademiyasi`,
+        title: `Arab Tili Kurslari | Kids 4+, Fonetika, Grammatika va CEFR — Ustoz Akademiyasi`,
         description:
-          "4 yoshdan katta bolalar va kattalar uchun arab tili kurslari: Hilol Kids 4+, Professional fonetika, Grammatika va CEFR tayyorlov dasturlari.",
+          "4 yoshdan katta bolalar va kattalar uchun arab tili kurslari: Kids 4+, Professional fonetika, Grammatika va CEFR tayyorlov dasturlari.",
         canonical: 'https://ustozakademiyasi.uz/kurslar'
       };
     }
