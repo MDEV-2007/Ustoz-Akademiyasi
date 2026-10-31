@@ -17,20 +17,24 @@ export default function HeroSection({
 }) {
   return (
     <section className="relative overflow-hidden bg-gradient-to-b from-[#061c14] via-[#082319] to-[#0a2e22] text-white pt-16 sm:pt-20 lg:pt-24 xl:pt-28 pb-14 sm:pb-18 lg:pb-24 border-b border-white/10">
-      {/* Background Video Layer with Deep Emerald Overlay */}
-      <div className="absolute inset-0 z-0 overflow-hidden pointer-events-none">
+      {/* Background Video Layer with Responsive Deep Emerald Overlay */}
+      <div className="absolute inset-0 z-0 overflow-hidden pointer-events-none select-none">
         <video
           autoPlay
           loop
           muted
           playsInline
+          webkit-playsinline="true"
+          disablePictureInPicture
+          disableRemotePlayback
           preload="auto"
-          className="w-full h-full object-cover object-center opacity-35 scale-105"
+          poster="/academy_login_illustration.jpg"
+          className="absolute inset-0 w-full h-full min-w-full min-h-full object-cover object-[center_30%] sm:object-center scale-100 sm:scale-105 transition-transform duration-700 opacity-40 sm:opacity-35"
         >
           <source src="/background.mp4" type="video/mp4" />
         </video>
-        {/* Deep emerald brand gradient overlay to ensure perfect contrast and legibility */}
-        <div className="absolute inset-0 bg-gradient-to-b from-[#061c14]/85 via-[#082319]/80 to-[#0a2e22]/90" />
+        {/* Deep emerald brand gradient overlay with responsive opacity for crystal-clear readability */}
+        <div className="absolute inset-0 bg-gradient-to-b from-[#061c14]/90 via-[#082319]/80 to-[#0a2e22]/95 sm:from-[#061c14]/85 sm:via-[#082319]/75 sm:to-[#0a2e22]/90" />
       </div>
 
       {/* Delicate Islamic Geometric & Mesh Pattern Overlay */}
