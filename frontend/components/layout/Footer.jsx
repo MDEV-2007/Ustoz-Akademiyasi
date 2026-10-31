@@ -27,7 +27,7 @@ export default function Footer({
             <p className="text-xs text-white/70 leading-relaxed max-w-sm">
               {(t.nav?.sloganSecondary || brandConfig.sloganSecondary)} • {(t.nav?.sloganPrimary || brandConfig.sloganPrimary)}.{' '}
               {t.footer?.addressText ||
-                'Toshkent shahrida 8 ta filial va 15,000+ bitiruvchiga ega arab tili o‘quv markazi.'}
+                'Toshkent shahrida 8 ta filial va 5,000+ bitiruvchiga ega arab tili o‘quv markazi.'}
             </p>
             <div className="pt-2">
               <a

@@ -538,9 +538,9 @@ async function main() {
 
   // 8. Achievements
   const achievementsData = [
-    { title: 'Bitiruvchilar', value: '15,000+', unit: 'o‘quvchilar', icon: 'Award', sortOrder: 1 },
+    { title: 'Bitiruvchilar', value: '5,000+', unit: 'o‘quvchilar', icon: 'Award', sortOrder: 1 },
     { title: 'Toshkentdagi filiallar', value: '8 ta', unit: 'rasmiy filial', icon: 'MapPin', sortOrder: 2 },
-    { title: 'Instagram obunachilar', value: '134K+', unit: 'kuzatuvchi', icon: 'Users', sortOrder: 3 },
+    { title: 'Instagram obunachilar', value: '20K+', unit: 'kuzatuvchi', icon: 'Users', sortOrder: 3 },
     { title: 'CEFR C1 daraja', value: 'C1', unit: 'tayyorlov bosqichi', icon: 'GraduationCap', sortOrder: 4 },
   ];
 

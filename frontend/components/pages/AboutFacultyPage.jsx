@@ -107,14 +107,14 @@ const HISTORY_ITEMS = [
     quote:
       '«2024-yil sentabr oyidan boshlab o‘sish va taraqqiyot sari yangi qadam qo‘ydik. Arab Tili o‘rniga Arab tili nomi bilan xizmat ko‘rsatishni boshladik. Bizning maqsadimiz — sizga yanada yuqori darajada ta\'lim va bilim berishdir.»',
     desc:
-      'Ta’lim ko‘lamini kengaytirish, zamonaviy standartlar va innovatsion metodikalarni joriy etish maqsadida markazimiz yangi bosqichga ko‘tarildi. Bugungi kunda akademiyamiz 8 ta filial va 15,000 dan ortiq muvaffaqiyatli bitiruvchilarga ega nufuzli ta’lim maskanidir.',
+      'Ta’lim ko‘lamini kengaytirish, zamonaviy standartlar va innovatsion metodikalarni joriy etish maqsadida markazimiz yangi bosqichga ko‘tarildi. Bugungi kunda akademiyamiz 8 ta filial va 5,000 dan ortiq muvaffaqiyatli bitiruvchilarga ega nufuzli ta’lim maskanidir.',
     statsLabel: 'Bugungi natija',
-    statsValue: '8 ta filial • 15,000+ bitiruvchi',
+    statsValue: '8 ta filial • 5,000+ bitiruvchi',
     features: [
       'Toshkent bo‘ylab 8 ta zamonaviy filial tarmog‘i',
       'C1 darajali CEFR ustozlari jamoasi',
       'Kids 4+ innovatsion bolalar metodikasi',
-      '15,000 dan ortiq mamnun o‘quvchilar'
+      '5,000 dan ortiq mamnun o‘quvchilar'
     ]
   }
 ];
@@ -167,7 +167,7 @@ export default function AboutFacultyPage({
           </h1>
           <p className="text-base sm:text-lg text-[#65756F] leading-relaxed">
             {t.aboutPage?.intro ||
-              'Arab Tili — Toshkent shahrida 8 ta filialiga va 15,000 dan ortiq bitiruvchilarga ega bo‘lgan arab tili o‘quv markazidir. Markazimiz bolajonlar (4+ yosh), 0 dan boshlovchilar hamda CEFR sertifikatiga tayyorlanuvchilar uchun tizimli dasturlarni taqdim etadi.'}
+              'Arab Tili — Toshkent shahrida 8 ta filialiga va 5,000 dan ortiq bitiruvchilarga ega bo‘lgan arab tili o‘quv markazidir. Markazimiz bolajonlar (4+ yosh), 0 dan boshlovchilar hamda CEFR sertifikatiga tayyorlanuvchilar uchun tizimli dasturlarni taqdim etadi.'}
           </p>
         </div>
 
@@ -178,7 +178,7 @@ export default function AboutFacultyPage({
               {t.aboutPage?.instagramTitle || 'Instagram Rasmiy Sahifasi'}
             </div>
             <div className="text-2xl sm:text-3xl font-bold text-[#14231F]">
-              {t.aboutPage?.instagramFollowers || '134K+ obunachilar'}
+              {t.aboutPage?.instagramFollowers || '20K+ obunachilar'}
             </div>
             <p className="text-xs sm:text-sm text-[#65756F] leading-relaxed">
               {t.aboutPage?.instagramDesc ||
@@ -204,7 +204,7 @@ export default function AboutFacultyPage({
               {t.aboutPage?.graduatesTitle || 'Bitiruvchilar'}
             </div>
             <div className="text-2xl sm:text-3xl font-bold text-[#14231F]">
-              {t.aboutPage?.graduatesCount || '15,000+ o‘quvchilar'}
+              {t.aboutPage?.graduatesCount || '5,000+ o‘quvchilar'}
             </div>
             <p className="text-xs sm:text-sm text-[#65756F] leading-relaxed">
               {t.aboutPage?.graduatesDesc ||
@@ -225,7 +225,7 @@ export default function AboutFacultyPage({
                 Farzandingiz darsni o‘zlashtirishda qiynalyaptimi?
               </h2>
               <p className="text-sm sm:text-base text-[#65756F] leading-relaxed">
-                Arab Tili o‘qituvchilari tomonidan ishlab chiqilgan va amaliyotda 15,000 dan ortiq o‘quvchilarda sinovdan o‘tgan ta’lim metodikasi va ota-onalar uchun 4 ta oltin qoida.
+                Arab Tili o‘qituvchilari tomonidan ishlab chiqilgan va amaliyotda 5,000 dan ortiq o‘quvchilarda sinovdan o‘tgan ta’lim metodikasi va ota-onalar uchun 4 ta oltin qoida.
               </p>
             </div>
 

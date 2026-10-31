@@ -111,7 +111,7 @@ export default function MobileNavDrawer({
               onClick={() => navigate('/natijalar')}
               className="p-3 rounded-xl bg-[#F8FAF8] text-[#14231F] text-xs font-semibold text-left cursor-pointer min-h-[44px]"
             >
-              {t.nav?.results || 'Bitiruvchilar (15K+)'}
+              {t.nav?.results || 'Bitiruvchilar (5K+)'}
             </button>
             <button
               onClick={() => navigate('/maqolalar')}

@@ -188,10 +188,10 @@ export const AuthenticVisualPlate = ({ type, customImage, altText }) => {
             </div>
             <div className="text-[10px] sm:text-xs text-[#65756F] mt-0.5 truncate">
               {locale === 'ru'
-                ? 'Присоединяйтесь к 15 000+ выпускникам'
+                ? 'Присоединяйтесь к 5 000+ выпускникам'
                 : locale === 'en'
-                ? 'Join our 15,000+ alumni network'
-                : '15,000+ bitiruvchilar safiga qo‘shiling'}
+                ? 'Join our 5,000+ alumni network'
+                : '5,000+ bitiruvchilar safiga qo‘shiling'}
             </div>
           </div>
           <Award className="w-7 h-7 sm:w-9 sm:h-9 text-[#07966F] flex-shrink-0" />

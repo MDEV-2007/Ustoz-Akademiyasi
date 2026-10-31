@@ -119,7 +119,7 @@ export default function HeroSection({
                 </div>
                 <span className="hidden sm:inline text-slate-500">•</span>
                 <span className="text-slate-300 text-[11px] sm:text-xs font-medium whitespace-nowrap">
-                  {t.hero?.trustText || '15,000+ o‘quvchilar ishonchi'}
+                  {t.hero?.trustText || '5,000+ o‘quvchilar ishonchi'}
                 </span>
               </div>
             </div>
@@ -198,14 +198,14 @@ export default function HeroSection({
         {/* ======================================================== */}
         <div className="mt-10 sm:mt-12 lg:mt-16 rounded-2xl bg-white/[0.03] border border-white/10 backdrop-blur-md p-4 sm:p-6 shadow-2xl">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-4 sm:gap-6 divide-y md:divide-y-0 md:divide-x divide-white/10">
-            {/* Stat 1: 15,000+ */}
+            {/* Stat 1: 5,000+ */}
             <div className="flex items-center gap-3.5 sm:gap-4 pb-4 md:pb-0">
               <div className="w-11 h-11 sm:w-12 sm:h-12 rounded-xl bg-emerald-400/15 text-emerald-400 flex items-center justify-center flex-shrink-0">
                 <GraduationCap className="w-5 h-5 sm:w-6 sm:h-6" />
               </div>
               <div>
                 <div className="text-lg sm:text-2xl font-extrabold text-white">
-                  {t.hero?.stat1Number || '15,000+'}
+                  {t.hero?.stat1Number || '5,000+'}
                 </div>
                 <div className="text-xs text-slate-300 mt-0.5 font-medium">
                   {t.hero?.stat1Label || 'Muvaffaqiyatli bitiruvchilar'}

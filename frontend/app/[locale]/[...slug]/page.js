@@ -55,9 +55,9 @@ export async function generateMetadata({ params }) {
       en: 'About the Academy — Arab Tili',
     },
     '/natijalar': {
-      uz: 'Bitiruvchilar va Natijalar (15,000+) — Arab Tili',
-      ru: 'Выпускники и результаты (15 000+) — Arab Tili',
-      en: 'Graduates & Results (15,000+) — Arab Tili',
+      uz: 'Bitiruvchilar va Natijalar (5,000+) — Arab Tili',
+      ru: 'Выпускники и результаты (5 000+) — Arab Tili',
+      en: 'Graduates & Results (5,000+) — Arab Tili',
     },
     '/maqolalar': {
       uz: 'Foydali Maqolalar va Lug‘atlar — Arab Tili',

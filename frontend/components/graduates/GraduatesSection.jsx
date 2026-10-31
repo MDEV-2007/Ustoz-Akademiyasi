@@ -157,11 +157,11 @@ export default function GraduatesSection({
             <div className="inline-flex items-center gap-2 text-xs font-semibold uppercase tracking-wider text-[#047857]">
               <span>{t.graduates?.headerBadge || 'Arab Tili Natijalari'}</span>
               <span className="w-1 h-1 rounded-full bg-[#047857]/40" />
-              <span className="font-medium text-[#66736E]">{t.graduates?.headerBadgeCount || '15 000+ Bitiruvchi'}</span>
+              <span className="font-medium text-[#66736E]">{t.graduates?.headerBadgeCount || '5 000+ Bitiruvchi'}</span>
             </div>
 
             <h2 className="text-2xl sm:text-4xl lg:text-[42px] font-bold text-[#172421] tracking-tight leading-[1.15]">
-              {t.graduates?.headerTitle || '15 000+ bitiruvchi — minglab muvaffaqiyat hikoyalari'}
+              {t.graduates?.headerTitle || '5 000+ bitiruvchi — minglab muvaffaqiyat hikoyalari'}
             </h2>
 
             <p className="text-sm sm:text-base text-[#66736E] leading-relaxed max-w-2xl">

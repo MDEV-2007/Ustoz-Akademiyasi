@@ -18,7 +18,7 @@ export const uz = {
     adminLogin: 'Admin kirish',
     callUs: 'Aloqa markazi',
     aboutCenter: 'Markaz haqida',
-    results: 'Bitiruvchilar (15K+)',
+    results: 'Bitiruvchilar (5K+)',
     articles: 'Maqolalar',
     interactive: 'Interaktiv Arab Tili',
     allCourses: 'Barcha kurslar',
@@ -34,14 +34,14 @@ export const uz = {
     primaryCta: 'Bepul sinov darsiga yozilish',
     secondaryCta: 'Kurslar bilan tanishish',
     ratingText: '4.9/5 reyting',
-    trustText: '15,000+ o‘quvchilar ishonchi',
+    trustText: '5,000+ o‘quvchilar ishonchi',
     archTitle: 'Ilm va Ma’rifat',
     archSubtitle: 'Yuksak natijalar sari',
     badgeCefrTitle: 'CEFR C1',
     badgeCefrSub: 'Xalqaro va milliy sertifikat',
     badgeKidsTitle: 'Kids 4+',
     badgeKidsSub: 'Bolalar maxsus dasturi',
-    stat1Number: '15,000+',
+    stat1Number: '5,000+',
     stat1Label: 'Muvaffaqiyatli bitiruvchilar',
     stat2Number: '8 ta zamonaviy filial',
     stat2Label: 'Toshkent bo‘ylab metroga yaqin lokatsiyalar',
@@ -72,7 +72,7 @@ export const uz = {
     card4Desc: 'Barcha filiallar bo‘yicha guruh vaqtlari va sinov darslariga yozilish markazi.',
   },
   stats: {
-    graduatesNumber: '15,000+',
+    graduatesNumber: '5,000+',
     graduatesLabel: 'Muvaffaqiyatli bitiruvchi',
     branchesNumber: '8 ta',
     branchesLabel: 'Zamonaviy filiallar',
@@ -533,7 +533,7 @@ export const uz = {
   },
   resultsPage: {
     badge: 'Bitiruvchilar va Tadbirlar',
-    title: '15,000+ bitiruvchilar va filiallarimizdagi bitiruv marosimlari',
+    title: '5,000+ bitiruvchilar va filiallarimizdagi bitiruv marosimlari',
     subtitle: 'Har bir o‘quv bosqichi yakunida filiallarimizda (jumladan, Qoraqamish va boshqa filiallarda) bitiruv tadbirlari hamda sertifikat topshirish marosimlari o‘tkaziladi.',
     card1Title: 'Qoraqamish va barcha filiallardagi bitiruv tadbirlari',
     card1Desc: 'O‘quvchilarimiz va bolajonlarimiz bosqich yakunida sinovlardan o‘tib, rasmiy sertifikatlar bilan taqdirlanadilar. Haqiqiy video va fotolavhalar @arabtili_demo Instagram sahifamizning «Bitiruvchilar» va «O‘quvchilar» ruknlarida jamlangan.',
@@ -548,15 +548,15 @@ export const uz = {
   aboutPage: {
     badge: 'Arab Tili Haqida',
     title: 'Arab tili — Ilm va Ma’rifat kaliti',
-    intro: 'Arab Tili — Toshkent shahrida 8 ta filialiga va 15,000 dan ortiq bitiruvchilarga ega bo‘lgan arab tili o‘quv markazidir. Markazimiz bolajonlar (4+ yosh), 0 dan boshlovchilar hamda CEFR sertifikatiga tayyorlanuvchilar uchun tizimli dasturlarni taqdim etadi.',
+    intro: 'Arab Tili — Toshkent shahrida 8 ta filialiga va 5,000 dan ortiq bitiruvchilarga ega bo‘lgan arab tili o‘quv markazidir. Markazimiz bolajonlar (4+ yosh), 0 dan boshlovchilar hamda CEFR sertifikatiga tayyorlanuvchilar uchun tizimli dasturlarni taqdim etadi.',
     instagramTitle: 'Instagram Rasmiy Sahifasi',
-    instagramFollowers: '134K+ obunachilar',
+    instagramFollowers: '20K+ obunachilar',
     instagramDesc: '716+ post va video lavhalar orqali dars jarayonlari, so‘z boyligi va bitiruv tadbirlari yoritib boriladi.',
     telegramTitle: 'Telegram Ta’lim Kanali',
     telegramStats: '270+ video va 764 foto',
     telegramDesc: 't.me/ustozakademiyasi kanalida bolalar uchun arabcha multfilmlar, viktorinalar (116+ so‘rovnoma) va bepul kitoblar joylangan.',
     graduatesTitle: 'Bitiruvchilar',
-    graduatesCount: '15,000+ o‘quvchilar',
+    graduatesCount: '5,000+ o‘quvchilar',
     graduatesDesc: 'Fonetika, grammatika, CEFR va Kids 4+ yo‘nalishlarida tahsil olgan bitiruvchilar.',
   },
   teachersPage: {
@@ -582,8 +582,8 @@ export const uz = {
   },
   graduates: {
     headerBadge: 'Arab Tili Natijalari',
-    headerBadgeCount: '15 000+ Bitiruvchi',
-    headerTitle: '15 000+ bitiruvchi — minglab muvaffaqiyat hikoyalari',
+    headerBadgeCount: '5 000+ Bitiruvchi',
+    headerTitle: '5 000+ bitiruvchi — minglab muvaffaqiyat hikoyalari',
     headerSubtitle: 'Arab tili fonetikasi, grammatikasi va bolalar dasturlarini a’lo baholarga yakunlagan o‘quvchilarimizning rasmiy sertifikat topshirish marosimlari va erishgan natijalari.',
     allResultsBtn: 'Barcha natijalar',
     tabAll: 'Barchasi',
@@ -631,7 +631,7 @@ export const uz = {
   },
   trustSection: {
     badge: 'NEGA AYNAN ARAB TILI?',
-    title: 'Arab Tili Ta’limida 15,000+ O‘quvchi Ishongan Tizim',
+    title: 'Arab Tili Ta’limida 5,000+ O‘quvchi Ishongan Tizim',
     subtitle: 'Natijaga yo‘naltirilgan zamonaviy metodika, qulay infratuzilma va e’tirof etilgan ustozlar',
     card1Title: '8 ta Zamonaviy Filial',
     card1Desc: 'Toshkentning har bir yirik tumanida joylashgan, shinam o‘quv xonalari va barcha qulayliklar.',
@@ -685,6 +685,6 @@ export const uz = {
     callCenter: 'Yagona Call-markaz:',
     workHours: 'Ish tartibi: Dush-Shan 08:00 - 20:00',
     rights: 'Barcha huquqlar himoyalangan.',
-    addressText: 'Toshkent shahrida 8 ta filial va 15,000+ bitiruvchiga ega arab tili o‘quv markazi.'
+    addressText: 'Toshkent shahrida 8 ta filial va 5,000+ bitiruvchiga ega arab tili o‘quv markazi.'
   }
 };

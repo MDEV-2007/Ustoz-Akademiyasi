@@ -18,7 +18,7 @@ export const en = {
     adminLogin: 'Admin Portal',
     callUs: 'Call Center',
     aboutCenter: 'About Academy',
-    results: 'Graduates (15K+)',
+    results: 'Graduates (5K+)',
     articles: 'Articles',
     interactive: 'Interactive Arabic',
     allCourses: 'All Courses',
@@ -34,14 +34,14 @@ export const en = {
     primaryCta: 'Book Free Trial Lesson',
     secondaryCta: 'Explore Courses',
     ratingText: '4.9/5 Rating',
-    trustText: '15,000+ Students Trust Us',
+    trustText: '5,000+ Students Trust Us',
     archTitle: 'Knowledge & Wisdom',
     archSubtitle: 'Pathway to excellence',
     badgeCefrTitle: 'CEFR C1',
     badgeCefrSub: 'International & National Certificate',
     badgeKidsTitle: 'Kids 4+',
     badgeKidsSub: 'Specialized Kids Program',
-    stat1Number: '15,000+',
+    stat1Number: '5,000+',
     stat1Label: 'Successful Graduates',
     stat2Number: '8 Modern Branches',
     stat2Label: 'Prime locations near metro across Tashkent',
@@ -72,7 +72,7 @@ export const en = {
     card4Desc: 'Admissions desk for trial lessons and schedules across all 8 branches.',
   },
   stats: {
-    graduatesNumber: '15,000+',
+    graduatesNumber: '5,000+',
     graduatesLabel: 'Successful Graduates',
     branchesNumber: '8 Branches',
     branchesLabel: 'Across Tashkent',
@@ -538,7 +538,7 @@ export const en = {
   },
   resultsPage: {
     badge: 'GRADUATES & CEREMONIES',
-    title: '15,000+ Graduates & Graduation Ceremonies Across Branches',
+    title: '5,000+ Graduates & Graduation Ceremonies Across Branches',
     subtitle: 'At the end of each academic module, our branches (including Qoraqamish and others) hold celebratory graduation events and official certificate awarding ceremonies.',
     card1Title: 'Graduation ceremonies at Qoraqamish and across all branches',
     card1Desc: 'Our adult students and kids pass rigorous level examinations and earn accredited certificates. Authentic video highlights are featured on our @arabtili_demo Instagram page.',
@@ -553,15 +553,15 @@ export const en = {
   aboutPage: {
     badge: 'About Ustoz Academy',
     title: 'Arabic — Key to Knowledge & Wisdom',
-    intro: 'Arab Tili is Tashkent’s premier Arabic language academy with 8 modern branches and over 15,000 successful alumni. We offer structured curricula for children (4+), absolute beginners, and CEFR certificate candidates.',
+    intro: 'Arab Tili is Tashkent’s premier Arabic language academy with 8 modern branches and over 5,000 successful alumni. We offer structured curricula for children (4+), absolute beginners, and CEFR certificate candidates.',
     instagramTitle: 'Official Instagram Page',
-    instagramFollowers: '134K+ Followers',
+    instagramFollowers: '20K+ Followers',
     instagramDesc: '716+ videos and posts illustrating classroom lessons, vocabulary drills, and graduation ceremonies.',
     telegramTitle: 'Educational Telegram Channel',
     telegramStats: '270+ videos & 764 photos',
     telegramDesc: 'At t.me/ustozakademiyasi: animated Arabic cartoons for kids, quizzes (116+ interactive polls), and free educational books.',
     graduatesTitle: 'Graduates',
-    graduatesCount: '15,000+ Students',
+    graduatesCount: '5,000+ Students',
     graduatesDesc: 'Alumni who completed Phonetics, Grammar, CEFR, and Kids 4+ tracks.',
   },
   teachersPage: {
@@ -587,8 +587,8 @@ export const en = {
   },
   graduates: {
     headerBadge: 'Arab Tili Achievements',
-    headerBadgeCount: '15,000+ Graduates',
-    headerTitle: '15,000+ Graduates — Thousands of Success Stories',
+    headerBadgeCount: '5,000+ Graduates',
+    headerTitle: '5,000+ Graduates — Thousands of Success Stories',
     headerSubtitle: 'Official certificate award ceremonies and outcomes of our students who mastered Arabic phonetics, grammar, and kids curricula with distinction.',
     allResultsBtn: 'All Results',
     tabAll: 'All',
@@ -636,7 +636,7 @@ export const en = {
   },
   trustSection: {
     badge: 'WHY ARAB TILI?',
-    title: 'The Trusted Arabic Learning System for 15,000+ Students',
+    title: 'The Trusted Arabic Learning System for 5,000+ Students',
     subtitle: 'Results-driven methodology, comfortable campuses, and recognized master teachers',
     card1Title: '8 Modern Branches',
     card1Desc: 'Strategically located across all major Tashkent districts with modern amenities.',
@@ -690,6 +690,6 @@ export const en = {
     callCenter: 'Unified Call Center:',
     workHours: 'Working Hours: Mon-Sat 08:00 - 20:00',
     rights: 'All rights reserved.',
-    addressText: 'Specialized Arabic language academy with 8 branches across Tashkent and 15,000+ graduates.'
+    addressText: 'Specialized Arabic language academy with 8 branches across Tashkent and 5,000+ graduates.'
   }
 };

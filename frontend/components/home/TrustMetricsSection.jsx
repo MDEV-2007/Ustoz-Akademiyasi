@@ -21,7 +21,7 @@ export default function TrustMetricsSection({ brandConfig, t = {} }) {
               {t.trustMetrics?.card1Title || 'Bitiruvchilar ko‘rsatkichi'}
             </div>
             <div className="text-2xl 2xl:text-3xl font-bold text-[#14231F] mt-1.5">
-              <AnimatedCounter end={15000} suffix="+" /> {t.trustMetrics?.card1CountSuffix || 'bitiruvchilar'}
+              <AnimatedCounter end={5000} suffix="+" /> {t.trustMetrics?.card1CountSuffix || 'bitiruvchilar'}
             </div>
             <p className="text-xs text-[#65756F] mt-2 leading-relaxed">
               {t.trustMetrics?.card1Desc ||
@@ -59,7 +59,7 @@ export default function TrustMetricsSection({ brandConfig, t = {} }) {
               {t.trustMetrics?.card3Title || 'Jamoatchilik ishonchi'}
             </div>
             <div className="text-2xl 2xl:text-3xl font-bold text-[#14231F] mt-1.5">
-              <AnimatedCounter end={134} suffix="K+" duration={1000} /> {t.trustMetrics?.card3CountSuffix || 'kuzatuvchilar'}
+              <AnimatedCounter end={20} suffix="K+" duration={1000} /> {t.trustMetrics?.card3CountSuffix || 'kuzatuvchilar'}
             </div>
             <p className="text-xs text-[#65756F] mt-2 leading-relaxed">
               {t.trustMetrics?.card3Desc ||

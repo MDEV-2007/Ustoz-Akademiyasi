@@ -147,7 +147,7 @@ export default function ContactPolicyPage({
                 </div>
               </div>
               <p className="text-xs text-[#65756F] leading-relaxed">
-                134,000+ obunachilar, sinfxonalardan real videolar va bitiruv lavhalari.
+                20,000+ obunachilar, sinfxonalardan real videolar va bitiruv lavhalari.
               </p>
             </div>
             <div className="pt-4 mt-4 border-t border-[#073F31]/10 flex items-center gap-1 text-xs font-bold text-[#07966F] group-hover:translate-x-0.5 transition-transform">
