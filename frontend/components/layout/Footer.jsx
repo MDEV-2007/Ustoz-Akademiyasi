@@ -25,7 +25,7 @@ export default function Footer({
               </div>
             </div>
             <p className="text-xs text-white/70 leading-relaxed max-w-sm">
-              {brandConfig.sloganSecondary} • {brandConfig.sloganPrimary}.{' '}
+              {(t.nav?.sloganSecondary || brandConfig.sloganSecondary)} • {(t.nav?.sloganPrimary || brandConfig.sloganPrimary)}.{' '}
               {t.footer?.addressText ||
                 'Toshkent shahrida 8 ta filial va 15,000+ bitiruvchiga ega arab tili o‘quv markazi.'}
             </p>
@@ -52,7 +52,7 @@ export default function Footer({
                     onClick={() => navigate(`/kurslar/${c.slug}`)}
                     className="hover:text-[#63E6BE] transition cursor-pointer py-1 block w-full text-left"
                   >
-                    {c.title}
+                    {t.courses?.items?.[c.slug]?.title || c.title}
                   </button>
                 </li>
               ))}

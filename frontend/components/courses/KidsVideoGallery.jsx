@@ -259,7 +259,7 @@ export default function KidsVideoGallery({ onRegisterClick }) {
 
                 <div className="pt-2 flex items-center justify-between text-xs border-t border-[#E2E8E4]">
                   <span className="text-[11px] text-[#66736E]">
-                    Ustoz Kids
+                    Kids 4+
                   </span>
                   <span className="text-[11px] font-semibold text-[#047857] group-hover:underline flex items-center gap-0.5">
                     <span>Ko‘rish</span>

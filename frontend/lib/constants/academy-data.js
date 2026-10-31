@@ -381,7 +381,7 @@ export const INITIAL_KIDS_GRADUATES = [
   {
     id: 'kids-grad-1',
     title: 'Bitiruvchilarimiz taqdirlandi 🥳',
-    subtitle: 'Ustoz Kids — Kichkintoylarimiz bitiruv marosimi',
+    subtitle: 'Kids — Kichkintoylarimiz bitiruv marosimi',
     course: 'Kids 4+ dasturi',
     certificate: 'Kids rasmiy sertifikati va Oltin medallari',
     image: '/graduates/kids_bitiruvchilar.png',

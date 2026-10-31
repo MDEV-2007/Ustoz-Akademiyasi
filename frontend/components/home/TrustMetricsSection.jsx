@@ -5,7 +5,7 @@ import { GraduationCap, Building2, Users, PhoneCall } from 'lucide-react';
 import { PremiumIconBadge } from '@/components/ui/BrandShield';
 import { AnimatedCounter } from '@/components/ui/AnimatedCounter';
 
-export default function TrustMetricsSection({ brandConfig }) {
+export default function TrustMetricsSection({ brandConfig, t = {} }) {
   return (
     <section className="py-14 bg-white border-b border-[#073F31]/10">
       <div className="max-w-[1360px] 2xl:max-w-[1600px] min-[1920px]:max-w-[1780px] mx-auto px-4 sm:px-6 lg:px-8 2xl:px-12">
@@ -14,17 +14,18 @@ export default function TrustMetricsSection({ brandConfig }) {
             <div className="flex items-center justify-between mb-4">
               <PremiumIconBadge icon={GraduationCap} variant="emerald" size="md" />
               <span className="text-[10px] font-bold uppercase tracking-wider px-2.5 py-1 rounded-full bg-[#07966F]/10 text-[#07966F]">
-                Rasmiy
+                {t.trustMetrics?.card1Badge || 'Rasmiy'}
               </span>
             </div>
             <div className="text-xs font-semibold uppercase tracking-wider text-[#07966F]">
-              Bitiruvchilar ko‘rsatkichi
+              {t.trustMetrics?.card1Title || 'Bitiruvchilar ko‘rsatkichi'}
             </div>
             <div className="text-2xl 2xl:text-3xl font-bold text-[#14231F] mt-1.5">
-              <AnimatedCounter end={15000} suffix="+" /> bitiruvchilar
+              <AnimatedCounter end={15000} suffix="+" /> {t.trustMetrics?.card1CountSuffix || 'bitiruvchilar'}
             </div>
             <p className="text-xs text-[#65756F] mt-2 leading-relaxed">
-              Rasmiy Instagram (@arabtili_demo) bio ma’lumoti (Telegram kanalida 5,000+ bosqich qayd etilgan).
+              {t.trustMetrics?.card1Desc ||
+                'Rasmiy Instagram (@arabtili_demo) bio ma’lumoti (Telegram kanalida 5,000+ bosqich qayd etilgan).'}
             </p>
           </div>
 
@@ -32,17 +33,18 @@ export default function TrustMetricsSection({ brandConfig }) {
             <div className="flex items-center justify-between mb-4">
               <PremiumIconBadge icon={Building2} variant="emerald" size="md" />
               <span className="text-[10px] font-bold uppercase tracking-wider px-2.5 py-1 rounded-full bg-[#07966F]/10 text-[#07966F]">
-                Toshkent
+                {t.trustMetrics?.card2Badge || 'Toshkent'}
               </span>
             </div>
             <div className="text-xs font-semibold uppercase tracking-wider text-[#07966F]">
-              Toshkent tarmog‘i
+              {t.trustMetrics?.card2Title || 'Toshkent tarmog‘i'}
             </div>
             <div className="text-2xl 2xl:text-3xl font-bold text-[#14231F] mt-1.5">
-              <AnimatedCounter end={brandConfig.branchesCount} suffix=" ta" duration={800} /> rasmiy filial
+              <AnimatedCounter end={brandConfig.branchesCount} suffix={t.trustMetrics?.card2BranchSuffix || ' ta'} duration={800} /> {t.trustMetrics?.card2CountSuffix || 'rasmiy filial'}
             </div>
             <p className="text-xs text-[#65756F] mt-2 leading-relaxed">
-              Archako‘cha, Yangi ToshMI, Qoraqamish, Algoritm, Yunusobod, Sergeli, Tinchlik va Katta qani.
+              {t.trustMetrics?.card2Desc ||
+                'Archako‘cha, Yangi ToshMI, Qoraqamish, Algoritm, Yunusobod, Sergeli, Tinchlik va Katta qani.'}
             </p>
           </div>
 
@@ -50,17 +52,18 @@ export default function TrustMetricsSection({ brandConfig }) {
             <div className="flex items-center justify-between mb-4">
               <PremiumIconBadge icon={Users} variant="emerald" size="md" />
               <span className="text-[10px] font-bold uppercase tracking-wider px-2.5 py-1 rounded-full bg-[#07966F]/10 text-[#07966F]">
-                Auditoriya
+                {t.trustMetrics?.card3Badge || 'Auditoriya'}
               </span>
             </div>
             <div className="text-xs font-semibold uppercase tracking-wider text-[#07966F]">
-              Jamoatchilik ishonchi
+              {t.trustMetrics?.card3Title || 'Jamoatchilik ishonchi'}
             </div>
             <div className="text-2xl 2xl:text-3xl font-bold text-[#14231F] mt-1.5">
-              <AnimatedCounter end={134} suffix="K+" duration={1000} /> kuzatuvchilar
+              <AnimatedCounter end={134} suffix="K+" duration={1000} /> {t.trustMetrics?.card3CountSuffix || 'kuzatuvchilar'}
             </div>
             <p className="text-xs text-[#65756F] mt-2 leading-relaxed">
-              Instagramda 716+ o‘quv lavhalar hamda Telegramda 764 ta foto va 270 ta video darsliklar.
+              {t.trustMetrics?.card3Desc ||
+                'Instagramda 716+ o‘quv lavhalar hamda Telegramda 764 ta foto va 270 ta video darsliklar.'}
             </p>
           </div>
 
@@ -68,17 +71,18 @@ export default function TrustMetricsSection({ brandConfig }) {
             <div className="flex items-center justify-between mb-4">
               <PremiumIconBadge icon={PhoneCall} variant="emerald" size="md" />
               <span className="text-[10px] font-bold uppercase tracking-wider px-2.5 py-1 rounded-full bg-[#07966F]/10 text-[#07966F]">
-                Yagona
+                {t.trustMetrics?.card4Badge || 'Yagona'}
               </span>
             </div>
             <div className="text-xs font-semibold uppercase tracking-wider text-[#07966F]">
-              Yagona Call-Markaz
+              {t.trustMetrics?.card4Title || 'Yagona Call-Markaz'}
             </div>
             <div className="text-xl 2xl:text-2xl font-bold text-[#14231F] mt-1.5 whitespace-nowrap">
               +998 71 200 00 00
             </div>
             <p className="text-xs text-[#65756F] mt-2 leading-relaxed">
-              Barcha filiallar bo‘yicha guruh vaqtlari va sinov darslariga yozilish markazi.
+              {t.trustMetrics?.card4Desc ||
+                'Barcha filiallar bo‘yicha guruh vaqtlari va sinov darslariga yozilish markazi.'}
             </p>
           </div>
         </div>

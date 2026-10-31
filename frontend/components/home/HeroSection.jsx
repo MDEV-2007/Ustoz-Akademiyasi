@@ -11,7 +11,7 @@ import {
 } from 'lucide-react';
 
 export default function HeroSection({
-  t,
+  t = {},
   brandConfig,
   navigate,
 }) {
@@ -51,21 +51,21 @@ export default function HeroSection({
             <div>
               <div className="inline-flex items-center gap-2 px-3 sm:px-4 py-1 sm:py-1.5 rounded-full bg-emerald-950/60 border border-emerald-500/30 backdrop-blur-md text-emerald-300 text-[10px] sm:text-xs font-bold uppercase tracking-wide sm:tracking-wider shadow-sm max-w-full">
                 <span className="w-2 h-2 rounded-full bg-emerald-400 animate-pulse flex-shrink-0" />
-                <span className="truncate">O‘QI VA KO‘TARIL! • ZULMATLARDAN NUR TOMON</span>
+                <span className="truncate">{t.hero?.badge || 'O‘QI VA KO‘TARIL! • ZULMATLARDAN NUR TOMON'}</span>
               </div>
             </div>
 
             {/* Main Headline */}
             <h1 className="text-2xl sm:text-4xl md:text-5xl lg:text-[54px] xl:text-6xl font-extrabold tracking-tight leading-[1.18] sm:leading-[1.14] text-white">
-              Arab tilini mukammal o‘rganing:
+              {t.hero?.titleLine1 || 'Arab tilini mukammal o‘rganing:'}
               <span className="block mt-1 sm:mt-2 bg-gradient-to-r from-[#34d399] via-emerald-300 to-[#fbbf24] bg-clip-text text-transparent">
-                Noldan CEFR C1 darajagacha
+                {t.hero?.titleLine2 || 'Noldan CEFR C1 darajagacha'}
               </span>
             </h1>
 
             {/* Subheadline (Cleaned of repetitive stats) */}
             <p className="text-slate-300 text-sm sm:text-base lg:text-lg leading-relaxed max-w-xl">
-              Xalqaro diplomga ega oliy toifali ustozlar jamoasi bilan zamonaviy metodika asosida o‘qing. Kattalar uchun intensiv kurslar va bolalar uchun maxsus Kids 4+ dasturi.
+              {t.hero?.subtitle || 'Xalqaro diplomga ega oliy toifali ustozlar jamoasi bilan zamonaviy metodika asosida o‘qing. Kattalar uchun intensiv kurslar va bolalar uchun maxsus Kids 4+ dasturi.'}
             </p>
 
             {/* CTA Button Group */}
@@ -74,7 +74,7 @@ export default function HeroSection({
                 onClick={() => navigate('/royxatdan-otish')}
                 className="bg-emerald-400 hover:bg-emerald-300 text-slate-950 font-semibold px-5 sm:px-7 py-3.5 sm:py-4 rounded-xl shadow-[0_0_25px_rgba(52,211,153,0.35)] transition-all duration-200 flex items-center justify-center gap-2 cursor-pointer group active:scale-[0.99] text-sm sm:text-base whitespace-nowrap"
               >
-                <span>Bepul sinov darsiga yozilish</span>
+                <span>{t.hero?.primaryCta || 'Bepul sinov darsiga yozilish'}</span>
                 <ArrowRight className="w-4 h-4 transition-transform group-hover:translate-x-1" />
               </button>
 
@@ -82,7 +82,7 @@ export default function HeroSection({
                 onClick={() => navigate('/kurslar')}
                 className="bg-white/5 hover:bg-white/10 text-white border border-white/15 px-5 sm:px-7 py-3.5 sm:py-4 rounded-xl backdrop-blur-sm transition-all duration-200 flex items-center justify-center cursor-pointer font-semibold text-sm sm:text-base whitespace-nowrap"
               >
-                Kurslar bilan tanishish
+                {t.hero?.secondaryCta || 'Kurslar bilan tanishish'}
               </button>
             </div>
 
@@ -114,12 +114,12 @@ export default function HeroSection({
                     ))}
                   </div>
                   <span className="font-bold text-white text-xs sm:text-sm whitespace-nowrap">
-                    4.9/5 reyting
+                    {t.hero?.ratingText || '4.9/5 reyting'}
                   </span>
                 </div>
                 <span className="hidden sm:inline text-slate-500">•</span>
                 <span className="text-slate-300 text-[11px] sm:text-xs font-medium whitespace-nowrap">
-                  15,000+ o‘quvchilar ishonchi
+                  {t.hero?.trustText || '15,000+ o‘quvchilar ishonchi'}
                 </span>
               </div>
             </div>
@@ -152,10 +152,10 @@ export default function HeroSection({
                 <div className="h-6 w-px bg-amber-400/30 flex-shrink-0" />
                 <div className="text-left leading-tight">
                   <div className="text-xs font-bold text-white uppercase tracking-wider">
-                    O‘qi va Ko‘taril
+                    {t.hero?.archTitle || 'O‘qi va Ko‘taril'}
                   </div>
                   <div className="text-[10px] text-emerald-300 font-medium mt-0.5">
-                    Ilmdan yuksaklik sari
+                    {t.hero?.archSubtitle || 'Ilmdan yuksaklik sari'}
                   </div>
                 </div>
               </div>
@@ -167,9 +167,11 @@ export default function HeroSection({
                 <Star className="w-3.5 h-3.5 sm:w-4 sm:h-4 fill-amber-400" />
               </div>
               <div className="text-left">
-                <div className="text-[11px] sm:text-xs font-bold text-white leading-tight">CEFR C1</div>
+                <div className="text-[11px] sm:text-xs font-bold text-white leading-tight">
+                  {t.hero?.badgeCefrTitle || 'CEFR C1'}
+                </div>
                 <div className="text-[9px] sm:text-[10px] text-slate-300 mt-0.5 leading-snug">
-                  Xalqaro va milliy sertifikat
+                  {t.hero?.badgeCefrSub || 'Xalqaro va milliy sertifikat'}
                 </div>
               </div>
             </div>
@@ -180,9 +182,11 @@ export default function HeroSection({
                 <Sparkles className="w-3.5 h-3.5 sm:w-4 sm:h-4" />
               </div>
               <div className="text-left">
-                <div className="text-[11px] sm:text-xs font-bold text-white leading-tight">Kids 4+</div>
+                <div className="text-[11px] sm:text-xs font-bold text-white leading-tight">
+                  {t.hero?.badgeKidsTitle || 'Kids 4+'}
+                </div>
                 <div className="text-[9px] sm:text-[10px] text-slate-300 mt-0.5 leading-snug">
-                  Bolalar maxsus dasturi
+                  {t.hero?.badgeKidsSub || 'Bolalar maxsus dasturi'}
                 </div>
               </div>
             </div>
@@ -200,9 +204,11 @@ export default function HeroSection({
                 <GraduationCap className="w-5 h-5 sm:w-6 sm:h-6" />
               </div>
               <div>
-                <div className="text-lg sm:text-2xl font-extrabold text-white">15,000+</div>
+                <div className="text-lg sm:text-2xl font-extrabold text-white">
+                  {t.hero?.stat1Number || '15,000+'}
+                </div>
                 <div className="text-xs text-slate-300 mt-0.5 font-medium">
-                  Muvaffaqiyatli bitiruvchilar
+                  {t.hero?.stat1Label || 'Muvaffaqiyatli bitiruvchilar'}
                 </div>
               </div>
             </div>
@@ -213,9 +219,11 @@ export default function HeroSection({
                 <Building2 className="w-5 h-5 sm:w-6 sm:h-6" />
               </div>
               <div>
-                <div className="text-lg sm:text-2xl font-extrabold text-white">8 ta zamonaviy filial</div>
+                <div className="text-lg sm:text-2xl font-extrabold text-white">
+                  {t.hero?.stat2Number || '8 ta zamonaviy filial'}
+                </div>
                 <div className="text-xs text-slate-300 mt-0.5 font-medium">
-                  Toshkent bo‘ylab metroga yaqin lokatsiyalar
+                  {t.hero?.stat2Label || 'Toshkent bo‘ylab metroga yaqin lokatsiyalar'}
                 </div>
               </div>
             </div>
@@ -226,9 +234,11 @@ export default function HeroSection({
                 <Award className="w-5 h-5 sm:w-6 sm:h-6" />
               </div>
               <div>
-                <div className="text-lg sm:text-2xl font-extrabold text-white">CEFR C1</div>
+                <div className="text-lg sm:text-2xl font-extrabold text-white">
+                  {t.hero?.stat3Number || 'CEFR C1'}
+                </div>
                 <div className="text-xs text-slate-300 mt-0.5 font-medium">
-                  Oliy toifali va xalqaro diplomli ustozlar jamoasi
+                  {t.hero?.stat3Label || 'Oliy toifali va xalqaro diplomli ustozlar jamoasi'}
                 </div>
               </div>
             </div>
