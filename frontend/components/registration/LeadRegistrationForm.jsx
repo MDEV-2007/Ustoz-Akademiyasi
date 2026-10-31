@@ -11,6 +11,7 @@ import {
   ArrowRight,
   Award
 } from 'lucide-react';
+import CustomSelect from '@/components/ui/CustomSelect';
 import { formatUzbekPhoneInput } from '@/features/registration/validation';
 
 export default function LeadRegistrationForm({
@@ -179,25 +180,20 @@ export default function LeadRegistrationForm({
             {t?.registrationModal?.courseLabel || 'Qiziqayotgan o‘quv kursi'}{' '}
             <span className="text-red-600">*</span>
           </label>
-          <div className="relative">
-            <div className="absolute left-3 top-1/2 -translate-y-1/2 text-[#07966F] pointer-events-none z-10">
-              <BookOpen className="w-4 h-4 stroke-[2]" />
-            </div>
-            <select
-              id="reg-course"
-              value={regForm?.courseSlug || ''}
-              onChange={(e) => onChangeField('courseSlug', e.target.value)}
-              className={`w-full pl-9 sm:pl-10 pr-8 py-2.5 sm:py-3 rounded-xl border text-sm sm:text-base text-[#14231F] bg-[#F8FAF8] focus:bg-white focus:outline-none focus:ring-2 focus:ring-[#07966F] min-h-[42px] sm:min-h-[44px] transition-all cursor-pointer truncate ${
-                regErrors?.courseSlug ? 'border-red-500' : 'border-[#073F31]/20'
-              }`}
-            >
-              {courses.map((c) => (
-                <option key={c.slug} value={c.slug}>
-                  {c.title} {c.level ? `(${c.level})` : ''}
-                </option>
-              ))}
-            </select>
-          </div>
+          <CustomSelect
+            id="reg-course"
+            name="courseSlug"
+            value={regForm?.courseSlug || ''}
+            onChange={(val) => onChangeField('courseSlug', val)}
+            options={courses.map((c) => ({
+              value: c.slug,
+              label: c.title,
+              badge: c.level || null,
+              subtitle: c.shortDesc || c.description || null,
+            }))}
+            icon={BookOpen}
+            hasError={Boolean(regErrors?.courseSlug)}
+          />
           {regErrors?.courseSlug && (
             <p className="text-[11px] text-red-600 mt-1">{regErrors.courseSlug}</p>
           )}
@@ -212,25 +208,20 @@ export default function LeadRegistrationForm({
             {t?.registrationModal?.branchLabel || 'Sizga eng yaqin filial'}{' '}
             <span className="text-red-600">*</span>
           </label>
-          <div className="relative">
-            <div className="absolute left-3 top-1/2 -translate-y-1/2 text-[#07966F] pointer-events-none z-10">
-              <MapPin className="w-4 h-4 stroke-[2]" />
-            </div>
-            <select
-              id="reg-branch"
-              value={regForm?.branchSlug || ''}
-              onChange={(e) => onChangeField('branchSlug', e.target.value)}
-              className={`w-full pl-9 sm:pl-10 pr-8 py-2.5 sm:py-3 rounded-xl border text-sm sm:text-base text-[#14231F] bg-[#F8FAF8] focus:bg-white focus:outline-none focus:ring-2 focus:ring-[#07966F] min-h-[42px] sm:min-h-[44px] transition-all cursor-pointer truncate ${
-                regErrors?.branchSlug ? 'border-red-500' : 'border-[#073F31]/20'
-              }`}
-            >
-              {branches.map((b) => (
-                <option key={b.slug} value={b.slug}>
-                  {b.name} {b.area ? `(${b.area})` : ''}
-                </option>
-              ))}
-            </select>
-          </div>
+          <CustomSelect
+            id="reg-branch"
+            name="branchSlug"
+            value={regForm?.branchSlug || ''}
+            onChange={(val) => onChangeField('branchSlug', val)}
+            options={branches.map((b) => ({
+              value: b.slug,
+              label: b.name,
+              badge: b.area || b.district || null,
+              subtitle: b.addressFull || b.address || b.hours || null,
+            }))}
+            icon={MapPin}
+            hasError={Boolean(regErrors?.branchSlug)}
+          />
           {regErrors?.branchSlug && (
             <p className="text-[11px] text-red-600 mt-1">{regErrors.branchSlug}</p>
           )}

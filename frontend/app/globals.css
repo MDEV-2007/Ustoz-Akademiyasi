@@ -341,3 +341,48 @@ a:hover .motion-arrow {
   -webkit-font-smoothing: antialiased;
 }
 
+/* ==========================================================================
+   GLOBAL SELECT & OPTION ELEVATION
+   Polished dropdown controls across all pages, forms, and admin modules.
+   ========================================================================== */
+select {
+  appearance: none !important;
+  -webkit-appearance: none !important;
+  -moz-appearance: none !important;
+  background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 24 24' fill='none' stroke='%2307966F' stroke-width='2.5' stroke-linecap='round' stroke-linejoin='round'%3e%3cpolyline points='6 9 12 15 18 9'%3e%3c/polyline%3e%3c/svg%3e") !important;
+  background-repeat: no-repeat !important;
+  background-position: right 0.85rem center !important;
+  background-size: 1rem 1rem !important;
+  padding-right: 2.35rem !important;
+  cursor: pointer;
+  transition: all 0.15s ease-in-out;
+}
+
+select:focus {
+  outline: none;
+  border-color: #07966F !important;
+  box-shadow: 0 0 0 3px rgba(7, 150, 111, 0.18) !important;
+}
+
+select option {
+  background-color: #ffffff !important;
+  color: #14231F !important;
+  padding: 12px 14px !important;
+  font-size: 14px !important;
+  font-weight: 500 !important;
+  line-height: 1.5 !important;
+}
+
+select option:hover,
+select option:focus {
+  background-color: #ECFDF5 !important;
+  color: #073F31 !important;
+}
+
+select option:checked {
+  background-color: #073F31 !important;
+  color: #ffffff !important;
+  font-weight: 700 !important;
+}
+
+
