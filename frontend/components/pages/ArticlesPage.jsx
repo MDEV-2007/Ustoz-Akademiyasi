@@ -174,9 +174,6 @@ export default function ArticlesPage({
                 <span className="text-xs font-bold uppercase tracking-wider text-[#07966F]">
                   Tavsiyalar va O‘quv Bloklari ({article.items?.length || 0})
                 </span>
-                <span className="text-xs text-[#65756F]">
-                  Talaffuzni eshitish uchun dinamik tugmasini bosing
-                </span>
               </div>
 
               {/* Items / Sirlar list */}

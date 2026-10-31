@@ -116,9 +116,9 @@ async function bootstrap() {
 
   // Swagger OpenAPI documentation
   const swaggerConfig = new DocumentBuilder()
-    .setTitle('Ustoz Akademiyasi API')
+    .setTitle('Arab Tili API')
     .setDescription(
-      "Ustoz Akademiyasi arab tili ta'lim markazi uchun to'liq ishlab chiqarish darajasidagi REST API spetsifikatsiyasi.",
+      "Arab Tili ta'lim markazi uchun to'liq ishlab chiqarish darajasidagi REST API spetsifikatsiyasi.",
     )
     .setVersion('1.0.0')
     .addBearerAuth(
@@ -180,7 +180,7 @@ async function bootstrap() {
   app.enableShutdownHooks();
 
   await app.listen(port);
-  logger.log(`Ustoz Akademiyasi API ishga tushdi: http://localhost:${port}/api/v1`);
+  logger.log(`Arab Tili API ishga tushdi: http://localhost:${port}/api/v1`);
   logger.log(`Swagger OpenAPI hujjatlari: http://localhost:${port}/api/docs`);
 }
 
