@@ -213,121 +213,6 @@ export default function AboutFacultyPage({
           </div>
         </div>
 
-        {/* Section: Center History & Rebranding Story */}
-        <section id="tariximiz" className="space-y-10 pt-4">
-          <div className="flex flex-col md:flex-row md:items-end justify-between gap-5 pb-6 border-b border-[#073F31]/10">
-            <div className="max-w-3xl space-y-2">
-              <span className="text-xs font-bold uppercase tracking-wider text-[#07966F] flex items-center gap-1.5">
-                <History className="w-4 h-4" />
-                <span>Markaz Tarixi va Rebranding Yo‘li</span>
-              </span>
-              <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-[#14231F] tracking-tight">
-                «Arab Tili»dan «Arab Tili» sari
-              </h2>
-              <p className="text-sm sm:text-base text-[#65756F] leading-relaxed">
-                2019-yildagi ilk qadamlardan — bugungi 8 ta filial va 15,000 dan ortiq bitiruvchilarga ega zamonaviy akademiyagacha bo‘lgan rivojlanish tarixi.
-              </p>
-            </div>
-
-            <div className="flex items-center gap-2">
-              <span className="px-3.5 py-1.5 rounded-full bg-[#07966F]/10 text-[#073F31] text-xs font-bold flex items-center gap-1.5 border border-[#07966F]/20 shadow-xs">
-                <TrendingUp className="w-3.5 h-3.5 text-[#07966F]" />
-                <span>2019 — 2024+ rivojlanish</span>
-              </span>
-            </div>
-          </div>
-
-          {/* 2 Chronological History Cards */}
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-10">
-            {HISTORY_ITEMS.map((item, idx) => (
-              <div
-                key={item.id}
-                className="bg-white rounded-3xl border border-[#073F31]/15 overflow-hidden shadow-[0_4px_24px_rgba(0,0,0,0.03)] hover:border-[#07966F]/40 hover:shadow-xl transition-all duration-300 flex flex-col justify-between group"
-              >
-                <div>
-                  {/* Top Bar with Year and Badge */}
-                  <div className="p-5 sm:p-6 pb-4 border-b border-slate-100 flex items-center justify-between bg-[#F8FAF8]">
-                    <div className="flex items-center gap-2.5">
-                      <div className="w-9 h-9 rounded-xl bg-[#073F31] text-white flex items-center justify-center font-bold text-xs shadow-sm">
-                        <Calendar className="w-4 h-4" />
-                      </div>
-                      <div>
-                        <span className="text-xs font-bold text-[#073F31] block">
-                          {item.year}
-                        </span>
-                        <span className="text-[11px] text-[#65756F]">
-                          {item.badge}
-                        </span>
-                      </div>
-                    </div>
-
-                    <span className="text-xs font-bold text-[#07966F] px-2.5 py-1 rounded-lg bg-[#07966F]/10">
-                      {item.statsValue}
-                    </span>
-                  </div>
-
-                  {/* Visual Plate & Quote Area */}
-                  <div className="p-6 sm:p-7 space-y-5">
-                    {/* Authentic Announcement Image */}
-                    <div
-                      onClick={() => openHistoryLightboxAtIndex(idx)}
-                      className="relative rounded-2xl overflow-hidden aspect-[4/5] max-h-[360px] bg-[#073F31]/5 border border-[#073F31]/15 cursor-pointer group/img mx-auto w-full max-w-[280px] sm:max-w-[320px] shadow-sm"
-                    >
-                      <ImageWithSkeleton
-                        src={item.image}
-                        alt={item.title}
-                        className="w-full h-full object-cover object-top transition-transform duration-500 group-hover/img:scale-105"
-                        containerClassName="w-full h-full"
-                      />
-
-                      <div className="absolute inset-0 bg-[#073F31]/25 opacity-0 group-hover/img:opacity-100 transition-opacity flex items-center justify-center">
-                        <span className="px-3.5 py-1.5 rounded-xl bg-white/95 text-[#073F31] text-xs font-bold shadow-md flex items-center gap-1.5">
-                          <Maximize2 className="w-3.5 h-3.5" />
-                          <span>Kattalashtirish</span>
-                        </span>
-                      </div>
-                    </div>
-
-                    <h3 className="text-xl sm:text-2xl font-bold text-[#14231F] leading-snug">
-                      {item.title}
-                    </h3>
-
-                    {/* Official announcement quote */}
-                    <div className="p-4 rounded-2xl bg-[#07966F]/8 border-l-4 border-[#07966F] text-xs sm:text-sm text-[#14231F] font-medium leading-relaxed italic">
-                      {item.quote}
-                    </div>
-
-                    <p className="text-xs sm:text-sm text-[#65756F] leading-relaxed">
-                      {item.desc}
-                    </p>
-
-                    {/* Milestone Features */}
-                    <div className="space-y-2 pt-2 border-t border-slate-100">
-                      {item.features.map((feat, fIdx) => (
-                        <div key={fIdx} className="flex items-center gap-2.5 text-xs text-[#14231F]">
-                          <CheckCircle2 className="w-3.5 h-3.5 text-[#07966F] flex-shrink-0" />
-                          <span className="font-medium">{feat}</span>
-                        </div>
-                      ))}
-                    </div>
-                  </div>
-                </div>
-
-                <div className="p-6 pt-0">
-                  <button
-                    type="button"
-                    onClick={() => openHistoryLightboxAtIndex(idx)}
-                    className="w-full py-2.5 rounded-xl bg-[#F8FAF8] hover:bg-[#073F31] hover:text-white text-[#073F31] font-semibold text-xs border border-[#073F31]/15 transition-all cursor-pointer flex items-center justify-center gap-1.5"
-                  >
-                    <Maximize2 className="w-3.5 h-3.5" />
-                    <span>Rasmiy e’lon suratini to‘liq ko‘rish</span>
-                  </button>
-                </div>
-              </div>
-            ))}
-          </div>
-        </section>
-
         {/* Section: Authentic Methodology & Parent Guidance Sequence */}
         <section id="metodika" className="space-y-10 pt-4">
           {/* Section Editorial Header */}
@@ -592,14 +477,7 @@ export default function AboutFacultyPage({
           onNavigate={(newIdx) => setMethodologyLightbox((prev) => ({ ...prev, currentIndex: newIdx }))}
         />
 
-        {/* History & Rebranding Lightbox */}
-        <ImageLightbox
-          isOpen={historyLightbox.isOpen}
-          onClose={() => setHistoryLightbox((prev) => ({ ...prev, isOpen: false }))}
-          items={HISTORY_ITEMS}
-          currentIndex={historyLightbox.currentIndex}
-          onNavigate={(newIdx) => setHistoryLightbox((prev) => ({ ...prev, currentIndex: newIdx }))}
-        />
+        
       </div>
     );
   }
