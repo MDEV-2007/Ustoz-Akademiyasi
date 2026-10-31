@@ -17,9 +17,9 @@ export default function MobileNavDrawer({
 
   return (
     <div className="fixed inset-0 z-[100] lg:hidden">
-      {/* Dimmed backdrop */}
+      {/* Dimmed backdrop - starts below sticky header */}
       <div
-        className="fixed inset-0 bg-[#073F31]/60 backdrop-blur-xs"
+        className="fixed inset-0 top-20 bg-[#073F31]/60 backdrop-blur-xs"
         onClick={onClose}
         aria-hidden="true"
       />
@@ -28,7 +28,7 @@ export default function MobileNavDrawer({
       <div
         role="dialog"
         aria-label="Mobil navigatsiya menyusi"
-        className="fixed top-20 left-0 right-0 bottom-0 bg-white flex flex-col justify-between overflow-y-auto overscroll-contain px-4 py-5 space-y-5 shadow-2xl border-t border-[#073F31]/15"
+        className="fixed top-20 left-0 right-0 bottom-0 bg-white flex flex-col justify-between overflow-y-auto overscroll-contain px-4 pt-5 pb-8 space-y-5 shadow-2xl border-t border-[#073F31]/15"
       >
         <div className="space-y-5">
           {/* Quick Call & Status Header */}

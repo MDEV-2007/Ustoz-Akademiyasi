@@ -2,7 +2,6 @@
 
 import React, { useState } from 'react';
 import {
-  Volume2,
   Clock,
   ArrowLeft,
   ArrowRight,
@@ -54,7 +53,6 @@ export default function ArticlesPage({
   t = {}
 }) {
   const [articleTopicFilter, setArticleTopicFilter] = useState('Barchasi');
-  const [activeAudioIdx, setActiveAudioIdx] = useState(null);
   const [copied, setCopied] = useState(false);
 
   // Format read time without duplicate strings
@@ -72,14 +70,6 @@ export default function ArticlesPage({
       setCopied(true);
       setTimeout(() => setCopied(false), 2500);
     }
-  };
-
-  const handlePlayAudio = (arabicText, translit, idx) => {
-    setActiveAudioIdx(idx);
-    playArabicPronunciation?.(arabicText, 330, translit);
-    setTimeout(() => {
-      setActiveAudioIdx((curr) => (curr === idx ? null : curr));
-    }, 2200);
   };
 
   // ==========================================
@@ -192,7 +182,6 @@ export default function ArticlesPage({
               {/* Items / Sirlar list */}
               <div className="space-y-5">
                 {(article.items || []).map((item, idx) => {
-                  const isPlaying = activeAudioIdx === idx;
                   const itemNumber = String(idx + 1).padStart(2, '0');
 
                   return (
@@ -216,30 +205,6 @@ export default function ArticlesPage({
                             </span>
                           </div>
                         </div>
-
-                        {/* Interactive Audio Button */}
-                        <button
-                          onClick={() =>
-                            handlePlayAudio(
-                              item.ar || item.arabicText,
-                              item.tr || item.translit,
-                              idx
-                            )
-                          }
-                          className={`flex items-center gap-2 px-3 py-2 rounded-xl text-xs font-semibold cursor-pointer transition-all flex-shrink-0 border ${
-                            isPlaying
-                              ? 'bg-[#073F31] text-[#63E6BE] border-[#073F31] shadow-md scale-105'
-                              : 'bg-[#F8FAF8] hover:bg-[#073F31] hover:text-white text-[#073F31] border-[#073F31]/15'
-                          }`}
-                          title={t.playground?.playPronunciation || 'Talaffuzni tinglash'}
-                        >
-                          <Volume2
-                            className={`w-4 h-4 ${isPlaying ? 'animate-pulse text-[#63E6BE]' : ''}`}
-                          />
-                          <span className="hidden sm:inline">
-                            {isPlaying ? 'Tinglanmoqda...' : 'Tinglash'}
-                          </span>
-                        </button>
                       </div>
 
                       {/* Arabic Calligraphy Banner */}
@@ -540,21 +505,21 @@ export default function ArticlesPage({
                 {art.items && art.items.length > 0 && (
                   <div className="pt-2 flex items-center gap-1.5 text-xs text-[#07966F] font-semibold">
                     <BookOpen className="w-3.5 h-3.5" />
-                    <span>{art.items.length} ta o‘quv tavsiyasi & audio</span>
+                    <span>{art.items.length} ta o‘quv tavsiyasi</span>
                   </div>
                 )}
               </div>
 
-              <div className="pt-5 mt-6 border-t border-[#073F31]/10 flex items-center justify-between">
-                <span className="text-[11px] text-[#65756F] truncate max-w-[180px]">
+              <div className="pt-4 mt-6 border-t border-[#073F31]/10 flex flex-col sm:flex-row sm:items-center justify-between gap-2.5">
+                <span className="text-[11px] text-[#65756F] line-clamp-1">
                   {art.sourceNote || 'Ustoz Akademiyasi'}
                 </span>
                 <button
                   onClick={() => navigate(`/maqolalar/${art.slug}`)}
-                  className="inline-flex items-center gap-1.5 text-xs font-bold text-[#073F31] group-hover:text-[#07966F] cursor-pointer transition"
+                  className="inline-flex items-center gap-1.5 text-xs font-bold text-[#073F31] group-hover:text-[#07966F] cursor-pointer transition whitespace-nowrap self-end sm:self-auto"
                 >
-                  <span>{t.articles?.readMore || 'To‘liq o‘qish'}</span>
-                  <ArrowRight className="w-4 h-4 transition-transform group-hover:translate-x-1" />
+                  <span>{t.articles?.readMore || 'Maqolani to‘liq o‘qish'}</span>
+                  <ArrowRight className="w-4 h-4 transition-transform group-hover:translate-x-1 flex-shrink-0" />
                 </button>
               </div>
             </article>

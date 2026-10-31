@@ -529,13 +529,8 @@ function AppContent({ initialLocale = 'uz', initialPath = '/' }) {
     return items;
   }, [route.path, locale, t.nav, COURSES, BRANCHES, ARTICLES]);
 
-  // Audio Handler
-  const playArabicPronunciation = (arabicText, freq = 340, labelUz = '') => {
-    playArabicAudio(arabicText, freq, labelUz, (status, msg) => {
-      setAudioStatus(status);
-      setAudioMessage(msg);
-    });
-  };
+  // Audio Handler (Disabled per user requirement)
+  const playArabicPronunciation = () => {};
 
   // Registration Handlers
   const handleRegChange = (field, val) => {

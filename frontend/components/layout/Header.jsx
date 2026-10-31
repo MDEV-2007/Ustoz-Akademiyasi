@@ -32,7 +32,7 @@ export default function Header({
 }) {
   return (
     <header
-      className="sticky top-0 z-40 bg-white/95 backdrop-blur-xs border-b border-[#073F31]/12"
+      className="sticky top-0 z-[110] bg-white/95 backdrop-blur-xs border-b border-[#073F31]/12"
       onMouseLeave={() => setOpenDropdown(null)}
     >
       <div className="max-w-[1360px] 2xl:max-w-[1600px] min-[1920px]:max-w-[1780px] mx-auto px-4 sm:px-6 lg:px-8 2xl:px-12 h-20 flex items-center justify-between gap-3 lg:gap-4">

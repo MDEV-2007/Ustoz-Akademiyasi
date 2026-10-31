@@ -1,7 +1,7 @@
 'use client';
 
 import React from 'react';
-import { Volume2, ArrowRight, BookOpen } from 'lucide-react';
+import { ArrowRight, BookOpen } from 'lucide-react';
 
 export default function ArticlesSection({
   articles = [],
@@ -78,32 +78,19 @@ export default function ArticlesSection({
                       <div className="text-xs font-semibold text-[#14231F]">{word.tr || word.translit}</div>
                       <div className="text-[11px] text-[#65756F]">{word.uz || word.translation}</div>
                     </div>
-                    <button
-                      onClick={() =>
-                        playArabicPronunciation?.(
-                          word.ar || word.arabicText,
-                          340,
-                          word.tr || word.translit
-                        )
-                      }
-                      className="p-2 rounded-lg bg-[#F8FAF8] hover:bg-[#07966F] hover:text-white text-[#073F31] cursor-pointer transition flex-shrink-0"
-                      title="Tinglash"
-                    >
-                      <Volume2 className="w-4 h-4" />
-                    </button>
                   </div>
                 ))}
               </div>
             </div>
 
-            <div className="pt-5 mt-6 border-t border-[#073F31]/10 flex items-center justify-between">
-              <span className="text-xs text-[#65756F]">{leadArticle.sourceNote}</span>
+            <div className="pt-4 mt-6 border-t border-[#073F31]/10 flex flex-col sm:flex-row sm:items-center justify-between gap-2.5">
+              <span className="text-xs text-[#65756F] line-clamp-1">{leadArticle.sourceNote}</span>
               <button
                 onClick={() => navigate(`/maqolalar/${leadArticle.slug}`)}
-                className="text-xs font-bold text-[#073F31] hover:text-[#07966F] flex items-center gap-1 cursor-pointer transition-colors"
+                className="text-xs font-bold text-[#073F31] hover:text-[#07966F] flex items-center gap-1 cursor-pointer transition-colors whitespace-nowrap self-end sm:self-auto"
               >
                 <span>{t.articles?.readMore || 'Maqolani to‘liq o‘qish'}</span>
-                <ArrowRight className="w-3.5 h-3.5 motion-arrow" />
+                <ArrowRight className="w-3.5 h-3.5 motion-arrow flex-shrink-0" />
               </button>
             </div>
           </div>

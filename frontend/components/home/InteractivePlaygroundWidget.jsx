@@ -5,7 +5,6 @@ import {
   BookOpen,
   Award,
   GraduationCap,
-  Volume2,
   CheckCircle2,
   RefreshCw,
   ArrowRight,
@@ -145,29 +144,6 @@ export default function InteractivePlaygroundWidget({
         </div>
       </div>
 
-      {/* Audio Status Banner */}
-      {audioMessage && (
-        <div
-          role="status"
-          aria-live="polite"
-          className={`px-5 py-2.5 text-xs font-medium flex items-center justify-between border-b ${
-            audioStatus === 'fallback'
-              ? 'bg-[#E8B84A]/15 text-[#14231F] border-[#E8B84A]/40'
-              : 'bg-[#F8FAF8] text-[#073F31] border-[#073F31]/10'
-          }`}
-        >
-          <div className="flex items-center gap-2">
-            <Volume2 className="w-4 h-4 text-[#07966F] flex-shrink-0" />
-            <span>{audioMessage}</span>
-          </div>
-          <button
-            onClick={() => setAudioMessage('')}
-            className="text-xs underline text-[#65756F] hover:text-[#14231F] ml-4 cursor-pointer"
-          >
-            {locale === 'ru' ? 'Закрыть' : locale === 'en' ? 'Close' : 'Yopish'}
-          </button>
-        </div>
-      )}
 
       {/* TAB 1: HARFLAR VA MAXRAJ */}
       {playgroundTab === 'harflar' && (
@@ -335,20 +311,6 @@ export default function InteractivePlaygroundWidget({
                   </span>
                 </div>
               </div>
-
-              <button
-                onClick={() =>
-                  playArabicPronunciation?.(
-                    activeLetter.exampleAr,
-                    activeLetter.freq,
-                    exampleWordTrans
-                  )
-                }
-                className="px-4 py-2.5 rounded-lg bg-[#63E6BE] hover:bg-[#63E6BE]/90 text-[#14231F] font-bold text-xs flex items-center gap-2 cursor-pointer transition"
-              >
-                <Volume2 className="w-4 h-4" />
-                <span>{t.playground?.listenWord || 'So‘zni eshitish'}</span>
-              </button>
             </div>
           </div>
         </div>
@@ -369,20 +331,13 @@ export default function InteractivePlaygroundWidget({
               </div>
 
               <div className="flex flex-col sm:flex-row items-center gap-5 bg-[#F8FAF8] p-5 rounded-xl border border-[#073F31]/15">
-                <button
-                  onClick={() =>
-                    playArabicPronunciation?.(currentQuiz.arabicPrompt, 340, 'Quiz question')
-                  }
-                  className="w-24 h-24 rounded-xl bg-[#073F31] text-[#63E6BE] flex flex-col items-center justify-center flex-shrink-0 cursor-pointer hover:bg-[#07966F] hover:text-white transition"
-                  title={t.playground?.listen || 'Tinglash'}
+                <div
+                  className="w-20 h-20 sm:w-24 sm:h-24 rounded-xl bg-[#073F31] text-[#63E6BE] flex items-center justify-center flex-shrink-0 shadow-xs"
                 >
-                  <span className="font-arabic text-3xl font-bold" dir="rtl">
+                  <span className="font-arabic text-3xl sm:text-4xl font-bold" dir="rtl">
                     {currentQuiz.arabicPrompt}
                   </span>
-                  <span className="text-[10px] text-white/80 mt-1 flex items-center gap-1">
-                    <Volume2 className="w-3 h-3" /> {t.playground?.listen || 'Tinglash'}
-                  </span>
-                </button>
+                </div>
                 <h3 className="text-base sm:text-lg font-bold text-[#14231F] leading-snug">
                   {quizQuestion}
                 </h3>
@@ -505,19 +460,6 @@ export default function InteractivePlaygroundWidget({
             </div>
 
             <div className="flex items-center gap-3">
-              <button
-                onClick={() =>
-                  playArabicPronunciation?.(
-                    targetKidNumber.wordAr,
-                    350,
-                    `${targetLabel} - ${targetKidNumber.readUz}`
-                  )
-                }
-                className="px-3.5 py-2 rounded-lg bg-[#073F31] text-white text-xs font-semibold flex items-center gap-1.5 cursor-pointer hover:bg-[#07966F] transition"
-              >
-                <Volume2 className="w-4 h-4 text-[#63E6BE]" />
-                {t.playground?.playPronunciation || 'Talaffuzni eshitish'}
-              </button>
               <div className="px-3.5 py-2 rounded-lg bg-white border border-[#073F31]/15 text-xs font-bold text-[#073F31]">
                 {t.playground?.scoreLabel || 'Ball:'} {kidGameScore}
               </div>
