@@ -412,7 +412,7 @@ export default function InteractivePlaygroundWidget({
                 {t.playground?.quizCompletedDesc ||
                   'Arab tili harflari va so‘zlarini ustoz yordamida chuqurroq o‘rganish uchun bepul sinov darsimizga taklif etamiz.'}
               </p>
-              <div className="flex flex-wrap justify-center gap-3 pt-2">
+              <div className="flex flex-col sm:flex-row justify-center items-stretch sm:items-center gap-3 pt-2">
                 <button
                   onClick={() =>
                     navigate?.('/royxatdan-otish', { courseSlug: 'professional-fonetika' })

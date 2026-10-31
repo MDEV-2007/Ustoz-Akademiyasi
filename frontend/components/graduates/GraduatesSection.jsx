@@ -185,7 +185,7 @@ export default function GraduatesSection({
         </div>
 
         {/* Category Filters (Refined, Restrained, Accessible) */}
-        <div className="flex items-center gap-2 mb-10 overflow-x-auto py-1 no-scrollbar scroll-smooth -mx-4 px-4 sm:mx-0 sm:px-0" role="tablist">
+        <div className="flex items-center gap-2 mb-10 overflow-x-auto py-1 no-scrollbar scroll-smooth -mx-4 px-4 sm:mx-0 sm:px-0 flex-nowrap sm:flex-wrap" role="tablist">
           <button
             type="button"
             role="tab"
@@ -310,7 +310,7 @@ export default function GraduatesSection({
                   </div>
 
                   {/* Actions */}
-                  <div className="pt-4 flex flex-wrap items-center gap-3">
+                  <div className="pt-4 flex flex-col sm:flex-row items-stretch sm:items-center gap-3">
                     <button
                       type="button"
                       onClick={() => openAdultGallery(groupItem)}
@@ -490,7 +490,7 @@ export default function GraduatesSection({
                   </div>
 
                   {/* Actions */}
-                  <div className="pt-4 flex flex-wrap items-center gap-3">
+                  <div className="pt-4 flex flex-col sm:flex-row items-stretch sm:items-center gap-3">
                     <button
                       type="button"
                       onClick={() => navigate('/kurslar/hilol-kids')}

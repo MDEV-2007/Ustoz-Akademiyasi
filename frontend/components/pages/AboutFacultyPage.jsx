@@ -295,7 +295,7 @@ export default function AboutFacultyPage({
               </div>
 
               {/* Action Buttons */}
-              <div className="pt-2 flex flex-wrap items-center gap-3">
+              <div className="pt-2 flex flex-col sm:flex-row items-stretch sm:items-center gap-3">
                 <button
                   type="button"
                   onClick={() => openLightboxAtIndex(0)}

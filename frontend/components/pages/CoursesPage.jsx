@@ -94,7 +94,7 @@ export default function CoursesPage({
               </div>
 
               {/* Early prominent CTAs */}
-              <div className="pt-2 flex flex-wrap items-center gap-3">
+              <div className="pt-2 flex flex-col sm:flex-row items-stretch sm:items-center gap-3">
                 <button
                   type="button"
                   onClick={scrollToRegistration}
@@ -197,15 +197,18 @@ export default function CoursesPage({
                     </span>
                   </div>
 
-                  <div className="flex flex-wrap gap-2">
+                  <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-4 gap-2.5">
                     {branches.map((b) => (
                       <button
                         key={b.slug}
                         onClick={() => navigate(`/filiallar/${b.slug}`)}
-                        className="group inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-white border border-[#E2E8E4] hover:border-[#047857] hover:bg-[#F2FBF7] text-xs font-semibold text-[#172421] transition-all cursor-pointer"
+                        className="group w-full flex items-center justify-between gap-2 px-3 py-2.5 rounded-lg bg-white border border-[#E2E8E4] hover:border-[#047857] hover:bg-[#F2FBF7] text-xs font-semibold text-[#172421] transition-all cursor-pointer text-left shadow-2xs hover:shadow-xs"
                       >
-                        <MapPin className="w-3 h-3 text-[#047857] flex-shrink-0" />
-                        <span className="group-hover:text-[#064E3B]">{b.name}</span>
+                        <div className="flex items-center gap-2 min-w-0">
+                          <MapPin className="w-3.5 h-3.5 text-[#047857] flex-shrink-0" />
+                          <span className="group-hover:text-[#064E3B] truncate">{b.name}</span>
+                        </div>
+                        <ArrowRight className="w-3 h-3 text-[#047857]/40 group-hover:text-[#047857] group-hover:translate-x-0.5 transition-all flex-shrink-0" />
                       </button>
                     ))}
                   </div>
@@ -318,17 +321,22 @@ export default function CoursesPage({
               <h2 className="text-lg font-bold text-[#14231F]">
                 {t.courseDetail?.branchesTitle || 'Ushbu kurs mavjud bo‘lgan filiallar (8 ta):'}
               </h2>
-              <div className="flex flex-wrap gap-2.5">
+              <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-4 gap-2.5">
                 {branches.map((b) => (
                   <button
                     key={b.slug}
                     onClick={() => navigate(`/filiallar/${b.slug}`)}
-                    className="group inline-flex items-center gap-2 px-3.5 py-2 rounded-xl bg-white border border-[#073F31]/12 hover:border-[#07966F] hover:bg-[#F2FBF7] shadow-2xs hover:shadow-sm text-xs font-semibold text-[#14231F] transition-all duration-200 cursor-pointer"
+                    className="group w-full flex items-center justify-between gap-2.5 px-3.5 py-2.5 rounded-xl bg-white border border-[#073F31]/12 hover:border-[#07966F] hover:bg-[#F2FBF7] shadow-2xs hover:shadow-sm text-xs font-semibold text-[#14231F] transition-all duration-200 cursor-pointer text-left"
                   >
-                    <span className="w-5 h-5 rounded-lg bg-[#07966F]/10 text-[#07966F] group-hover:bg-[#07966F] group-hover:text-white flex items-center justify-center transition-colors">
-                      <MapPin className="w-3.5 h-3.5 stroke-[2.2]" />
-                    </span>
-                    <span className="group-hover:text-[#073F31] transition-colors">{b.name}</span>
+                    <div className="flex items-center gap-2 min-w-0">
+                      <span className="w-6 h-6 rounded-lg bg-[#07966F]/10 text-[#07966F] group-hover:bg-[#07966F] group-hover:text-white flex items-center justify-center transition-colors flex-shrink-0">
+                        <MapPin className="w-3.5 h-3.5 stroke-[2.2]" />
+                      </span>
+                      <span className="group-hover:text-[#073F31] transition-colors truncate">
+                        {b.name}
+                      </span>
+                    </div>
+                    <ArrowRight className="w-3.5 h-3.5 text-[#07966F]/40 group-hover:text-[#07966F] group-hover:translate-x-0.5 transition-all flex-shrink-0" />
                   </button>
                 ))}
               </div>
