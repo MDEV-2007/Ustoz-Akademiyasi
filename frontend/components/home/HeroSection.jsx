@@ -51,7 +51,7 @@ export default function HeroSection({
             <div>
               <div className="inline-flex items-center gap-2 px-3 sm:px-4 py-1 sm:py-1.5 rounded-full bg-emerald-950/60 border border-emerald-500/30 backdrop-blur-md text-emerald-300 text-[10px] sm:text-xs font-bold uppercase tracking-wide sm:tracking-wider shadow-sm max-w-full">
                 <span className="w-2 h-2 rounded-full bg-emerald-400 animate-pulse flex-shrink-0" />
-                <span className="truncate">{t.hero?.badge || 'O‘QI VA KO‘TARIL! • ZULMATLARDAN NUR TOMON'}</span>
+                <span className="truncate">{t.hero?.badge || 'ARAB TILI — ILM VA MA’RIFAT KALITI • SIFATLI VA TIZIMLI TA’LIM'}</span>
               </div>
             </div>
 
@@ -152,10 +152,10 @@ export default function HeroSection({
                 <div className="h-6 w-px bg-amber-400/30 flex-shrink-0" />
                 <div className="text-left leading-tight">
                   <div className="text-xs font-bold text-white uppercase tracking-wider">
-                    {t.hero?.archTitle || 'O‘qi va Ko‘taril'}
+                    {t.hero?.archTitle || 'Ilm va Ma’rifat'}
                   </div>
                   <div className="text-[10px] text-emerald-300 font-medium mt-0.5">
-                    {t.hero?.archSubtitle || 'Ilmdan yuksaklik sari'}
+                    {t.hero?.archSubtitle || 'Yuksak natijalar sari'}
                   </div>
                 </div>
               </div>

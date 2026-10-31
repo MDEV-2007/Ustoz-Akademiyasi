@@ -160,7 +160,7 @@ export default function AdminLoginPage() {
             {/* Tilla-zumrad yorug‘lik bilan ajratilgan shior */}
             <div className="space-y-1.5 max-w-sm mx-auto">
               <div className="inline-block px-3 py-1 rounded-full bg-emerald-500/10 border border-emerald-400/30 text-[10px] sm:text-xs font-bold uppercase tracking-wider text-emerald-300">
-                O‘QI VA KO‘TARIL! • ZULMATLARDAN NUR TOMON
+                ARAB TILI — ILM VA MA’RIFAT KALITI!
               </div>
               <p className="text-xs sm:text-sm text-slate-300 font-medium">
                 Sifatli va tizimli arab tili ta’limi

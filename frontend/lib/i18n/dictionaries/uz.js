@@ -4,8 +4,9 @@ export const uz = {
   flag: '🇺🇿',
   nav: {
     brandName: 'Arab Tili',
-    sloganPrimary: "O'QI VA KO'TARIL!",
-    sloganSecondary: 'Zulmatlardan Nur tomon',
+    sloganPrimary: "ARAB TILI — ILM KALITI!",
+    sloganSecondary: 'Sifatli va tizimli ta’lim',
+    
     courses: 'Kurslar',
     branches: 'Filiallar',
     teachers: 'Ustozlar',
@@ -26,7 +27,7 @@ export const uz = {
     openMenu: 'Menyuni ochish',
   },
   hero: {
-    badge: 'O‘QI VA KO‘TARIL! • ZULMATLARDAN NUR TOMON',
+    badge: 'ARAB TILI — ILM VA MA’RIFAT KALITI • SIFATLI VA TIZIMLI TA’LIM',
     titleLine1: 'Arab tilini mukammal o‘rganing:',
     titleLine2: 'Noldan CEFR C1 darajagacha',
     subtitle: 'Xalqaro diplomga ega oliy toifali ustozlar jamoasi bilan zamonaviy metodika asosida o‘qing. Kattalar uchun intensiv kurslar va bolalar uchun maxsus Kids 4+ dasturi.',
@@ -34,8 +35,8 @@ export const uz = {
     secondaryCta: 'Kurslar bilan tanishish',
     ratingText: '4.9/5 reyting',
     trustText: '15,000+ o‘quvchilar ishonchi',
-    archTitle: 'O‘qi va Ko‘taril',
-    archSubtitle: 'Ilmdan yuksaklik sari',
+    archTitle: 'Ilm va Ma’rifat',
+    archSubtitle: 'Yuksak natijalar sari',
     badgeCefrTitle: 'CEFR C1',
     badgeCefrSub: 'Xalqaro va milliy sertifikat',
     badgeKidsTitle: 'Kids 4+',
@@ -546,7 +547,7 @@ export const uz = {
   },
   aboutPage: {
     badge: 'Arab Tili Haqida',
-    title: 'Zulmatlardan Nur tomon — O‘qi va ko‘taril!',
+    title: 'Arab tili — Ilm va Ma’rifat kaliti',
     intro: 'Arab Tili — Toshkent shahrida 8 ta filialiga va 15,000 dan ortiq bitiruvchilarga ega bo‘lgan arab tili o‘quv markazidir. Markazimiz bolajonlar (4+ yosh), 0 dan boshlovchilar hamda CEFR sertifikatiga tayyorlanuvchilar uchun tizimli dasturlarni taqdim etadi.',
     instagramTitle: 'Instagram Rasmiy Sahifasi',
     instagramFollowers: '134K+ obunachilar',
@@ -663,7 +664,7 @@ export const uz = {
     closeBtn: 'Tushunarli, rahmat',
   },
   footer: {
-    brandSlogan: 'O‘QI VA KO‘TARIL! Zulmatlardan Nur tomon.',
+    brandSlogan: 'Arab tili — Ilm kaliti! Sifatli va tizimli ta’lim.',
     coursesCol: 'Kurslar',
     interactiveLink: 'Interaktiv Arab tili mashqlari',
     branchesCol: 'Toshkentdagi 8 ta filial',

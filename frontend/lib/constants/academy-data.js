@@ -6,8 +6,9 @@
 export const INITIAL_BRAND_CONFIG = {
   name: 'Arab Tili',
   shortName: 'Arab Tili',
-  sloganPrimary: "O'QI VA O'RGAN!",
-  sloganSecondary: "Arab tili o'quv markazi",
+  sloganPrimary: "ARAB TILI — ILM KALITI!",
+  sloganSecondary: "Sifatli va tizimli ta’lim",
+  
   phoneDisplay: '+998 71 200 00 00',
   phoneHref: 'tel:+998712000000',
   phoneRaw: '+998712000000',
@@ -451,7 +452,7 @@ export const INITIAL_ARTICLES = [
       {
         ar: '٥. الْأُسْتَاذُ الْمُتَخَصِّصُ',
         tr: '5-sir: Tajribali ustoz va tizimli muhit',
-        uz: "Mustaqil o'rganishda talaffuz xatolari sezilmay qoladi. Malakali ustoz xatolarni o'z vaqtida tuzatib, Zulmatlardan Nur tomon to'g'ri yo'nalish beradi."
+        uz: "Mustaqil o'rganishda talaffuz xatolari sezilmay qoladi. Malakali ustoz xatolarni o'z vaqtida tuzatib, ilm va yuksak natijalar sari to'g'ri yo'nalish beradi."
       }
     ],
     relatedCourseSlug: 'professional-fonetika'
@@ -792,9 +793,9 @@ export const PLAYGROUND_QUIZ = [
   {
     id: 1,
     arabicPrompt: 'نُورٌ',
-    question: "Arab Tili markazining «Zulmatlardan Nur tomon» shioridagi «نُورٌ» (Nurun) so'zining birinchi harfi qaysi?",
-    questionRu: 'Какая первая буква в слове «نُورٌ» (Нурун) из девиза Arab Tili «Из тьмы к Свету»?',
-    questionEn: 'Which letter begins the word «نُورٌ» (Nurun) from Arab Tili motto «From Darkness to Light»?',
+    question: "Arab tilida ilm va ma'rifatni ifodalovchi «نُورٌ» (Nurun — Nur) so'zining birinchi harfi qaysi?",
+    questionRu: 'Какая первая буква в слове «نُورٌ» (Нурун — Свет), означающем знания в арабском языке?',
+    questionEn: 'Which letter begins the Arabic word «نُورٌ» (Nurun — Light), symbolizing knowledge?',
     options: ['ن (Nun)', 'ب (Ba)', 'ت (Ta)', 'ق (Qof)'],
     optionsRu: ['ن (Нун)', 'ب (Ба)', 'ت (Та)', 'ق (Коф)'],
     optionsEn: ['ن (Nun)', 'ب (Ba)', 'ت (Ta)', 'ق (Qaf)'],

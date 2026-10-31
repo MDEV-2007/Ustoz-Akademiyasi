@@ -50,7 +50,7 @@ export async function generateMetadata({ params }) {
       en: 'Teaching Faculty — Arab Tili',
     },
     '/markaz-haqida': {
-      uz: 'Markaz Haqida | Zulmatlardan Nur tomon — Arab Tili',
+      uz: 'Markaz Haqida | Arab Tili — Ilm Kaliti',
       ru: 'Об академии — Arab Tili',
       en: 'About the Academy — Arab Tili',
     },

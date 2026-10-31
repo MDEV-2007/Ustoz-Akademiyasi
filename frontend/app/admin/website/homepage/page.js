@@ -23,8 +23,9 @@ export default function AdminHomepageCmsPage() {
 
   const [form, setForm] = useState({
     name: 'Arab Tili',
-    sloganPrimary: "O'QI VA KO'TARIL!",
-    sloganSecondary: 'Zulmatlardan Nur tomon',
+    sloganPrimary: "ARAB TILI — ILM KALITI!",
+    sloganSecondary: 'Sifatli va tizimli ta’lim',
+    
     heroBadge: 'Arab tili akademiyasi',
     heroHeading: 'Arab tilini mukammal o‘rganing',
     heroDescription:

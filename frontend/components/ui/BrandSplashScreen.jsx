@@ -3,7 +3,7 @@
 import React from 'react';
 import { OfficialBrandShield } from './BrandShield';
 
-export const BrandSplashScreen = ({ isVisible, text = 'Zulmatlardan Nur tomon' }) => {
+export const BrandSplashScreen = ({ isVisible, text = 'Arab tili — Ilm kaliti' }) => {
   if (!isVisible) return null;
 
   return (

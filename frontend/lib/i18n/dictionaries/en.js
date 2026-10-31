@@ -4,8 +4,9 @@ export const en = {
   flag: '🇬🇧',
   nav: {
     brandName: 'Arab Tili',
-    sloganPrimary: 'READ AND ELEVATE!',
-    sloganSecondary: 'From Darkness to Light',
+    sloganPrimary: 'ARABIC — KEY TO KNOWLEDGE!',
+    sloganSecondary: 'Quality and systematic education',
+    
     courses: 'Courses',
     branches: 'Branches',
     teachers: 'Teachers',
@@ -26,7 +27,7 @@ export const en = {
     openMenu: 'Open Menu',
   },
   hero: {
-    badge: 'READ AND ELEVATE! • FROM DARKNESS TO LIGHT',
+    badge: 'ARABIC — KEY TO KNOWLEDGE • QUALITY & SYSTEMATIC EDUCATION',
     titleLine1: 'Master Arabic Professionally:',
     titleLine2: 'From Zero to CEFR C1 Level',
     subtitle: 'Learn using modern methodology with internationally certified scholars. Intensive courses for adults and dedicated Kids 4+ program for children.',
@@ -34,8 +35,8 @@ export const en = {
     secondaryCta: 'Explore Courses',
     ratingText: '4.9/5 Rating',
     trustText: '15,000+ Students Trust Us',
-    archTitle: 'Read and Elevate',
-    archSubtitle: 'From knowledge to heights',
+    archTitle: 'Knowledge & Wisdom',
+    archSubtitle: 'Pathway to excellence',
     badgeCefrTitle: 'CEFR C1',
     badgeCefrSub: 'International & National Certificate',
     badgeKidsTitle: 'Kids 4+',
@@ -551,7 +552,7 @@ export const en = {
   },
   aboutPage: {
     badge: 'About Ustoz Academy',
-    title: 'From Darkness to Light — Read and Rise!',
+    title: 'Arabic — Key to Knowledge & Wisdom',
     intro: 'Arab Tili is Tashkent’s premier Arabic language academy with 8 modern branches and over 15,000 successful alumni. We offer structured curricula for children (4+), absolute beginners, and CEFR certificate candidates.',
     instagramTitle: 'Official Instagram Page',
     instagramFollowers: '134K+ Followers',
@@ -668,7 +669,7 @@ export const en = {
     closeBtn: 'Got it, thank you',
   },
   footer: {
-    brandSlogan: 'READ AND ELEVATE! From Darkness to Light.',
+    brandSlogan: 'Arabic — Key to Knowledge! Quality and systematic education.',
     coursesCol: 'Courses',
     interactiveLink: 'Interactive Arabic Practice',
     branchesCol: '8 Branches in Tashkent',

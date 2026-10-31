@@ -163,7 +163,7 @@ export default function AboutFacultyPage({
             {t.aboutPage?.badge || 'Arab Tili Haqida'}
           </span>
           <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-[#14231F] tracking-tight">
-            {t.aboutPage?.title || 'Zulmatlardan Nur tomon — O‘qi va ko‘taril!'}
+            {t.aboutPage?.title || 'Arab tili — Ilm va Ma’rifat kaliti'}
           </h1>
           <p className="text-base sm:text-lg text-[#65756F] leading-relaxed">
             {t.aboutPage?.intro ||
