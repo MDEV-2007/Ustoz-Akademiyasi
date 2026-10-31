@@ -1,7 +1,6 @@
 'use client';
 
-import React, { useState } from 'react';
-import Image from 'next/image';
+import React, { useState, useEffect } from 'react';
 import { useRouter } from 'next/navigation';
 import { useAdmin } from '@/lib/admin-context';
 import {
@@ -10,15 +9,15 @@ import {
   Eye,
   EyeOff,
   ArrowRight,
-  ShieldCheck,
   AlertCircle,
   Loader2,
-  Award,
+  Clock,
 } from 'lucide-react';
+import { OfficialBrandShield } from '@/components/ui/BrandShield';
 
 export default function AdminLoginPage() {
   const router = useRouter();
-  const { login, error: authError } = useAdmin();
+  const { login } = useAdmin();
 
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
@@ -26,6 +25,47 @@ export default function AdminLoginPage() {
   const [rememberMe, setRememberMe] = useState(true);
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [localError, setLocalError] = useState('');
+
+  // Live Tashkent Clock & Dynamic Time Vibe Greeting
+  const [currentTime, setCurrentTime] = useState('');
+  const [greeting, setGreeting] = useState({ text: 'Xayrli kun', icon: '🌤' });
+
+  useEffect(() => {
+    const updateTime = () => {
+      const now = new Date();
+      // Format Tashkent time: HH:mm:ss
+      const timeStr = now.toLocaleTimeString('uz-UZ', {
+        timeZone: 'Asia/Tashkent',
+        hour: '2-digit',
+        minute: '2-digit',
+        second: '2-digit',
+        hour12: false,
+      });
+      setCurrentTime(timeStr);
+
+      // Determine greeting based on Tashkent hour
+      const hour = parseInt(
+        now.toLocaleTimeString('uz-UZ', {
+          timeZone: 'Asia/Tashkent',
+          hour: '2-digit',
+          hour12: false,
+        }),
+        10
+      );
+
+      if (hour >= 6 && hour < 12) {
+        setGreeting({ text: 'Xayrli tong', icon: '☀️' });
+      } else if (hour >= 12 && hour < 18) {
+        setGreeting({ text: 'Xayrli kun', icon: '🌤' });
+      } else {
+        setGreeting({ text: 'Xayrli kech', icon: '🌙' });
+      }
+    };
+
+    updateTime();
+    const interval = setInterval(updateTime, 1000);
+    return () => clearInterval(interval);
+  }, []);
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -38,8 +78,12 @@ export default function AdminLoginPage() {
 
     setIsSubmitting(true);
     try {
-      await login(email.trim(), password);
-      router.push('/admin/dashboard');
+      const result = await login(email.trim(), password);
+      if (result && result.success === false) {
+        setLocalError(result.error || 'Email yoki parol noto‘g‘ri.');
+      } else {
+        router.push('/admin/dashboard');
+      }
     } catch (err) {
       setLocalError(
         err.message || 'Kirishda xatolik yuz berdi. Email yoki parol noto‘g‘ri.'
@@ -50,194 +94,205 @@ export default function AdminLoginPage() {
   };
 
   return (
-    <div className="min-h-screen w-full bg-[#132E25] flex items-center justify-center p-3 sm:p-6 lg:p-10 relative overflow-hidden font-sans">
-      {/* Ambient background glow & subtle organic particles */}
-      <div className="absolute -top-32 -left-32 w-96 h-96 rounded-full bg-[#1E5242]/50 blur-3xl pointer-events-none" />
-      <div className="absolute -bottom-32 -right-32 w-96 h-96 rounded-full bg-[#0E261E]/80 blur-3xl pointer-events-none" />
-      <div className="absolute top-1/2 left-1/4 -translate-y-1/2 w-80 h-80 rounded-full bg-[#1B4B3D]/30 blur-2xl pointer-events-none" />
+    <div className="min-h-screen w-full bg-[#04120e] text-white flex items-center justify-center p-3 sm:p-6 lg:p-10 relative overflow-hidden font-sans">
+      {/* Delicate Islamic Geometric Overlay */}
+      <div className="absolute inset-0 z-0 islamic-pattern-bg ambient-hero-pattern opacity-5 pointer-events-none" />
 
-      {/* Main Split Login Card */}
-      <div className="relative z-10 w-full max-w-[1100px] bg-[#1E4336] rounded-[28px] sm:rounded-[36px] shadow-2xl border border-emerald-900/40 overflow-hidden flex flex-col lg:flex-row min-h-[620px] transition-all">
+      {/* Ambient radial emerald-gold glow behind the card */}
+      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[700px] h-[700px] rounded-full bg-gradient-to-tr from-emerald-600/15 via-amber-400/10 to-transparent blur-3xl pointer-events-none" />
+      <div className="absolute -top-32 -left-32 w-96 h-96 rounded-full bg-emerald-950/60 blur-3xl pointer-events-none" />
+      <div className="absolute -bottom-32 -right-32 w-96 h-96 rounded-full bg-emerald-900/40 blur-3xl pointer-events-none" />
+
+      {/* Split-screen Unified Dark Luxury Emerald Card */}
+      <div className="relative z-10 max-w-5xl w-full rounded-3xl overflow-hidden shadow-2xl border border-emerald-500/20 bg-[#071f17]/90 backdrop-blur-xl flex flex-col lg:flex-row min-h-[640px]">
         
-        {/* ================= LEFT SECTION: White organic panel with brand & illustration ================= */}
-        <div className="relative lg:w-[58%] bg-[#FFFFFF] p-6 sm:p-10 flex flex-col justify-between overflow-hidden">
-          {/* Subtle decorative background organic shape */}
-          <div className="absolute top-0 right-0 w-80 h-80 bg-[#E8F5EE] rounded-full filter blur-2xl -mr-20 -mt-20 pointer-events-none opacity-70" />
-          <div className="absolute bottom-0 left-0 w-64 h-64 bg-[#F0FDF4] rounded-full filter blur-xl -ml-16 -mb-16 pointer-events-none opacity-80" />
+        {/* ========================================================================= */}
+        {/* 2. CHAP USTUN: Brend, Vizual va 'Time Vibe' vidjeti (50% kenglik)         */}
+        {/* ========================================================================= */}
+        <div className="relative lg:w-1/2 p-6 sm:p-8 lg:p-10 flex flex-col justify-between overflow-hidden min-h-[360px] lg:min-h-full">
+          {/* Background classroom photo with deep emerald gradient overlay */}
+          <div className="absolute inset-0 z-0">
+            <img
+              src="/teachers/teacher_1.png"
+              alt="Arab Tili Dars Jarayoni"
+              className="w-full h-full object-cover object-center"
+            />
+            {/* Deep emerald brand gradient overlay */}
+            <div className="absolute inset-0 bg-gradient-to-t from-[#04120e] via-[#061c14]/85 to-[#061c14]/65" />
+          </div>
 
-          {/* Top-Left: Brand Emblem & Academy Name */}
-          <div className="relative z-10 flex items-center gap-3.5">
-            {/* Authentic Arab Tili Emblem */}
-            <div className="w-12 h-12 rounded-2xl bg-[#086641] shadow-md flex items-center justify-center p-2 shrink-0 border border-emerald-600/30">
-              <svg viewBox="0 0 100 120" className="w-full h-full" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path
-                  d="M6 34C26 14 74 14 94 34V52C94 81 50 102 50 102C50 102 6 81 6 52V34Z"
-                  fill="#059E6B"
-                />
-                <line x1="50" y1="43" x2="50" y2="20" stroke="#FFF" strokeWidth="6" strokeLinecap="round" />
-                <line x1="36" y1="50" x2="19" y2="36" stroke="#FFF" strokeWidth="6" strokeLinecap="round" />
-                <line x1="64" y1="50" x2="81" y2="36" stroke="#FFF" strokeWidth="6" strokeLinecap="round" />
-                <path d="M41 54L50 46L59 54" stroke="#FFF" strokeWidth="6" strokeLinecap="round" />
-                <path
-                  d="M23 63C23 69 32 69 44 69C48 69 50 72 50 74.5C50 72 52 69 56 69C68 69 77 69 77 63"
-                  stroke="#FFF"
-                  strokeWidth="6"
-                  strokeLinecap="round"
-                />
-              </svg>
+          {/* Yuqori qism: Brend logotip va Jonli Toshkent Vaqti kapsulasi */}
+          <div className="relative z-10 flex items-center justify-between gap-3">
+            <div className="flex items-center gap-2.5">
+              <OfficialBrandShield size={38} className="w-9 h-9 sm:w-10 sm:h-10 shrink-0" />
+              <div className="leading-tight">
+                <div className="font-extrabold text-sm sm:text-base text-white tracking-wider flex items-center gap-1">
+                  <span>ARAB</span>
+                  <span className="text-emerald-400 font-black">TILI</span>
+                </div>
+                <div className="text-[9px] sm:text-[10px] text-emerald-300/80 font-semibold uppercase tracking-widest">
+                  Arab Tili O‘quv Markazi
+                </div>
+              </div>
             </div>
-            <div>
-              <span className="text-base sm:text-lg font-black tracking-wider text-[#064E3B] block uppercase leading-tight font-sans">
-                ARAB <span className="text-[#059E6B]">TILI</span>
-              </span>
-              <span className="text-[11px] font-semibold text-slate-500 uppercase tracking-widest block">
-                Arab Tili O‘quv Markazi
-              </span>
+
+            {/* Live Clock Badge */}
+            <div className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-emerald-950/70 border border-emerald-500/30 backdrop-blur-md text-[11px] font-mono text-emerald-300 shadow-sm">
+              <Clock className="w-3.5 h-3.5 text-amber-400" />
+              <span>{currentTime || '12:00:00'}</span>
+              <span className="text-[9px] text-slate-400 font-sans ml-0.5 hidden sm:inline">Toshkent</span>
             </div>
           </div>
 
-          {/* Center: Educational Illustration */}
-          <div className="relative z-10 my-6 sm:my-8 flex flex-col items-center justify-center">
-            <div className="relative w-64 h-64 sm:w-72 sm:h-72 max-w-full drop-shadow-xl hover:scale-[1.02] transition-transform duration-300">
-              <Image
-                src="/academy_login_illustration.jpg"
-                alt="Arab Tili ta’lim tasviri"
-                fill
-                priority
-                className="object-contain rounded-3xl"
-              />
+          {/* Markaziy qism: Iqro xattotlik silueti, Shior va Jonli CRM Status Vidjeti */}
+          <div className="relative z-10 my-auto py-8 text-center space-y-6">
+            {/* Fondagi arabcha 'اقرأ' (Iqro) xattotlik silueti */}
+            <div className="relative flex justify-center items-center">
+              <div
+                className="text-6xl sm:text-7xl font-bold text-amber-300/30 select-none tracking-wide drop-shadow-[0_0_25px_rgba(251,191,36,0.25)]"
+                dir="rtl"
+                style={{ fontFamily: "'Amiri', 'Noto Naskh Arabic', serif" }}
+              >
+                اقْرَأْ
+              </div>
             </div>
-            <div className="mt-4 text-center">
-              <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-emerald-50 border border-emerald-200/60 text-emerald-800 text-[11px] font-bold tracking-wide">
-                <Award className="w-3.5 h-3.5 text-emerald-700" />
-                «O‘QI VA KO‘TARIL!»
-              </span>
-              <p className="text-xs text-slate-500 mt-1.5 font-medium">
-                Zulmatlardan Nur tomon — Sifatli va tizimli arab tili ta’limi
+
+            {/* Tilla-zumrad yorug‘lik bilan ajratilgan shior */}
+            <div className="space-y-1.5 max-w-sm mx-auto">
+              <div className="inline-block px-3 py-1 rounded-full bg-emerald-500/10 border border-emerald-400/30 text-[10px] sm:text-xs font-bold uppercase tracking-wider text-emerald-300">
+                O‘QI VA KO‘TARIL! • ZULMATLARDAN NUR TOMON
+              </div>
+              <p className="text-xs sm:text-sm text-slate-300 font-medium">
+                Sifatli va tizimli arab tili ta’limi
+              </p>
+            </div>
+
+            {/* Jonli CRM Status Vidjeti (Glassmorphic Card) */}
+            <div className="mx-auto max-w-sm rounded-2xl bg-white/[0.04] border border-emerald-500/30 backdrop-blur-md p-3.5 text-left shadow-lg">
+              <div className="flex items-center gap-2.5">
+                <span className="w-2.5 h-2.5 rounded-full bg-emerald-400 animate-pulse shrink-0" />
+                <span className="text-xs font-bold text-white tracking-wide">
+                  8 ta rasmiy filial — Tizim faol
+                </span>
+              </div>
+              <p className="text-[11px] text-slate-300 mt-1 pl-5 leading-snug">
+                Bugungi o‘quv jarayonlari va CRM sinxronizatsiyasi tayyor.
               </p>
             </div>
           </div>
 
-          {/* Bottom-Left: Footer copyright & info */}
-          <div className="relative z-10 pt-2 border-t border-slate-100 flex items-center justify-between text-[11px] text-slate-400">
-            <span>© 2026 Arab Tili • Toshkent</span>
-            <span className="hidden sm:inline font-medium text-emerald-700">8 ta rasmiy filial</span>
-          </div>
-
-          {/* Right-side curved wave separator (desktop only) */}
-          <div className="hidden lg:block absolute -right-1 top-0 bottom-0 w-16 pointer-events-none z-20">
-            <svg
-              viewBox="0 0 100 800"
-              preserveAspectRatio="none"
-              className="w-full h-full text-[#1E4336] fill-current"
-            >
-              <path d="M0,0 Q60,180 20,400 Q-10,600 60,800 L100,800 L100,0 Z" />
-            </svg>
+          {/* Pastki qism (Footer) */}
+          <div className="relative z-10 text-xs text-slate-400/80 pt-4 border-t border-white/10 flex items-center justify-between">
+            <span>© 2026 Arab Tili</span>
+            <span className="text-[11px] text-slate-500">Toshkent</span>
           </div>
         </div>
 
-        {/* ================= RIGHT SECTION: Dark green login form ================= */}
-        <div className="lg:w-[42%] bg-[#1E4336] p-7 sm:p-10 lg:p-12 flex flex-col justify-between text-white relative z-10">
+        {/* ========================================================================= */}
+        {/* 3. O‘NG USTUN: Login Formasi va Dinamik Salomlashuv (50% kenglik)         */}
+        {/* ========================================================================= */}
+        <div className="lg:w-1/2 p-6 sm:p-10 lg:p-12 flex flex-col justify-between bg-[#071f17]/70">
           <div>
-            {/* Header */}
-            <div className="mb-7">
-              <h1 className="text-3xl sm:text-4xl font-bold tracking-tight text-white mb-2">
-                Login
-              </h1>
-              <p className="text-xs sm:text-sm text-emerald-100/70 font-normal">
-                Boshqaruv va CRM tizimiga kirish uchun xizmat hisobingiz ma’lumotlarini kiriting.
-              </p>
+            {/* Dinamik Time-Vibe Header */}
+            <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-emerald-950/60 border border-emerald-500/30 text-emerald-300 text-xs font-semibold mb-4 shadow-sm">
+              <span>{greeting.icon}</span>
+              <span>{greeting.text}</span>
             </div>
 
-            {/* Error Message */}
-            {(localError || authError) && (
-              <div className="mb-5 p-3.5 bg-rose-950/70 border border-rose-500/40 rounded-2xl flex items-start gap-2.5 text-xs text-rose-200 animate-in fade-in duration-200 shadow-sm">
-                <AlertCircle className="w-4 h-4 text-rose-400 shrink-0 mt-0.5" />
-                <span>{localError || authError}</span>
+            {/* Sarlavha & Tavsif */}
+            <h1 className="text-2xl sm:text-3xl font-bold text-white tracking-tight">
+              Tizimga kirish
+            </h1>
+            <p className="text-slate-400 text-xs sm:text-sm mt-1.5 leading-relaxed">
+              Boshqaruv va CRM tizimiga kirish uchun xizmat hisobingiz ma’lumotlarini kiriting.
+            </p>
+
+            {/* Xatolik xabari */}
+            {localError && (
+              <div className="mt-4 p-3 rounded-xl bg-red-500/10 border border-red-500/30 text-red-300 text-xs flex items-center gap-2 animate-in fade-in">
+                <AlertCircle className="w-4 h-4 shrink-0 text-red-400" />
+                <span>{localError}</span>
               </div>
             )}
 
             {/* Form */}
-            <form onSubmit={handleSubmit} className="space-y-5">
-              {/* Username/Email Input */}
+            <form onSubmit={handleSubmit} className="mt-6 space-y-4">
+              {/* Input: Foydalanuvchi nomi yoki Email */}
               <div>
-                <label className="block text-xs font-medium text-emerald-100/85 mb-2 ml-1">
-                  Username yoki Email
+                <label className="block text-xs font-semibold text-slate-200 mb-1.5">
+                  Foydalanuvchi nomi yoki Email
                 </label>
                 <div className="relative">
+                  <div className="absolute left-3.5 top-1/2 -translate-y-1/2 text-emerald-400 pointer-events-none">
+                    <Mail className="w-4 h-4" />
+                  </div>
                   <input
-                    type="email"
+                    type="text"
                     required
-                    autoComplete="email"
-                    placeholder="Enter your email"
+                    autoComplete="username"
                     value={email}
                     onChange={(e) => setEmail(e.target.value)}
-                    className="w-full px-5 py-3.5 bg-[#122F25] border border-emerald-700/60 rounded-full text-sm text-white placeholder-emerald-300/40 focus:outline-none focus:border-teal-400 focus:ring-2 focus:ring-teal-400/25 transition-all shadow-inner"
+                    placeholder="Loginingizni kiriting"
+                    className="w-full pl-10 pr-4 py-3 sm:py-3.5 rounded-xl bg-emerald-950/40 border border-emerald-500/20 focus:border-emerald-400 focus:ring-2 focus:ring-emerald-400/20 text-white placeholder-slate-500 text-sm outline-none transition-all"
                   />
-                  <Mail className="w-4 h-4 text-emerald-400/60 absolute right-4 top-1/2 -translate-y-1/2 pointer-events-none" />
                 </div>
               </div>
 
-              {/* Password Input */}
+              {/* Input: Maxfiy parol */}
               <div>
-                <label className="block text-xs font-medium text-emerald-100/85 mb-2 ml-1">
-                  Password
+                <label className="block text-xs font-semibold text-slate-200 mb-1.5">
+                  Maxfiy parol
                 </label>
                 <div className="relative">
+                  <div className="absolute left-3.5 top-1/2 -translate-y-1/2 text-emerald-400 pointer-events-none">
+                    <Lock className="w-4 h-4" />
+                  </div>
                   <input
                     type={showPassword ? 'text' : 'password'}
                     required
                     autoComplete="current-password"
-                    placeholder="Enter your password"
                     value={password}
                     onChange={(e) => setPassword(e.target.value)}
-                    className="w-full px-5 py-3.5 bg-[#122F25] border border-emerald-700/60 rounded-full text-sm text-white placeholder-emerald-300/40 focus:outline-none focus:border-teal-400 focus:ring-2 focus:ring-teal-400/25 transition-all shadow-inner pr-12"
+                    placeholder="Parolingizni kiriting"
+                    className="w-full pl-10 pr-11 py-3 sm:py-3.5 rounded-xl bg-emerald-950/40 border border-emerald-500/20 focus:border-emerald-400 focus:ring-2 focus:ring-emerald-400/20 text-white placeholder-slate-500 text-sm outline-none transition-all"
                   />
                   <button
                     type="button"
                     onClick={() => setShowPassword(!showPassword)}
-                    className="absolute right-4 top-1/2 -translate-y-1/2 text-emerald-400/60 hover:text-white transition-colors cursor-pointer p-1"
-                    tabIndex={-1}
-                    aria-label={showPassword ? 'Parolni yashirish' : 'Parolni ko‘rsatish'}
+                    className="absolute right-3.5 top-1/2 -translate-y-1/2 text-slate-400 hover:text-white transition-colors focus:outline-none cursor-pointer"
                   >
-                    {showPassword ? (
-                      <EyeOff className="w-4 h-4" />
-                    ) : (
-                      <Eye className="w-4 h-4" />
-                    )}
-                  </button>
-                </div>
-
-                <div className="flex items-center justify-between mt-2.5 px-1">
-                  <label className="flex items-center gap-2 text-xs text-emerald-100/75 cursor-pointer select-none">
-                    <input
-                      type="checkbox"
-                      checked={rememberMe}
-                      onChange={(e) => setRememberMe(e.target.checked)}
-                      className="w-4 h-4 rounded text-[#4DA199] border-emerald-700 bg-[#122F25] focus:ring-teal-400 focus:ring-offset-0"
-                    />
-                    Eslab qolish
-                  </label>
-                  <button
-                    type="button"
-                    onClick={() =>
-                      alert(
-                        "Parolni tiklash uchun tizim administratori yoki bosh texnik xodim bilan bog‘laning: +998 71 200 00 00"
-                      )
-                    }
-                    className="text-xs text-teal-300 hover:text-teal-200 hover:underline transition-colors cursor-pointer"
-                  >
-                    Forgot Password?
+                    {showPassword ? <EyeOff className="w-4 h-4" /> : <Eye className="w-4 h-4" />}
                   </button>
                 </div>
               </div>
 
-              {/* Submit Button (Pill shaped teal button) */}
+              {/* Qo‘shimcha qator: Eslab qolish & Parolni unutdingizmi */}
+              <div className="flex items-center justify-between pt-1">
+                <label className="flex items-center gap-2 cursor-pointer select-none">
+                  <input
+                    type="checkbox"
+                    checked={rememberMe}
+                    onChange={(e) => setRememberMe(e.target.checked)}
+                    className="w-4 h-4 rounded border-emerald-500/30 bg-emerald-950/60 accent-emerald-400 text-emerald-500 focus:ring-emerald-400/30 cursor-pointer"
+                  />
+                  <span className="text-xs text-slate-300 font-medium">Eslab qolish</span>
+                </label>
+
+                <button
+                  type="button"
+                  onClick={() => alert('Parolni tiklash uchun ma’muriyat bilan bog‘laning: +998 71 200 00 00')}
+                  className="text-xs text-emerald-400 hover:text-emerald-300 font-medium transition-colors cursor-pointer"
+                >
+                  Parolni unutdingizmi?
+                </button>
+              </div>
+
+              {/* Asosiy tugma (Primary CTA) */}
               <div className="pt-2">
                 <button
                   type="submit"
                   disabled={isSubmitting}
-                  className="w-full py-3.5 px-6 rounded-full bg-[#4DA199] hover:bg-[#3FA096] active:bg-[#348C83] text-white font-semibold text-sm transition-all shadow-lg hover:shadow-teal-900/40 flex items-center justify-center gap-2 disabled:opacity-50 disabled:cursor-not-allowed cursor-pointer"
+                  className="w-full bg-gradient-to-r from-emerald-400 to-teal-500 hover:from-emerald-300 hover:to-teal-400 text-slate-950 font-bold py-3.5 sm:py-4 rounded-xl shadow-[0_0_25px_rgba(52,211,153,0.3)] hover:shadow-[0_0_35px_rgba(52,211,153,0.5)] transition-all flex items-center justify-center gap-2 cursor-pointer disabled:opacity-70 disabled:cursor-not-allowed group active:scale-[0.99] text-sm sm:text-base"
                 >
                   {isSubmitting ? (
                     <>
@@ -247,36 +302,34 @@ export default function AdminLoginPage() {
                   ) : (
                     <>
                       <span>Tizimga kirish</span>
-                      <ArrowRight className="w-4 h-4" />
+                      <ArrowRight className="w-4 h-4 transition-transform group-hover:translate-x-1" />
                     </>
                   )}
                 </button>
               </div>
-            </form>
 
-            {/* Hint for admin access */}
-            <div className="mt-5 text-center">
-              <span className="text-[11px] text-emerald-200/50 block">
-                Faqat vakolatli ma’muriyat xodimlari uchun
-              </span>
-            </div>
+              {/* Xavfsizlik kichik qulf eslatmasi */}
+              <div className="flex items-center justify-center gap-1.5 text-[11px] text-slate-400 pt-1">
+                <Lock className="w-3 h-3 text-emerald-400" />
+                <span>Faqat vakolatli ma’muriyat xodimlari uchun</span>
+              </div>
+            </form>
           </div>
 
-          {/* Bottom Security / Support note */}
-          <div className="mt-8 pt-4 border-t border-emerald-800/60 flex flex-col sm:flex-row items-center justify-between gap-2 text-[11px] text-emerald-200/60">
-            <div className="flex items-center gap-1.5">
-              <ShieldCheck className="w-3.5 h-3.5 text-teal-400" />
+          {/* Eng pastki Xavfsizlik va Texnik yordam bloki */}
+          <div className="pt-6 mt-6 border-t border-white/10 flex flex-wrap items-center justify-between gap-2 text-[11px] text-slate-400">
+            <span className="flex items-center gap-1.5 text-emerald-300 font-medium">
+              <span>🛡️</span>
               <span>256-bit SSL Himoyalangan</span>
-            </div>
-            <a
-              href="tel:+998555184400"
-              className="hover:text-emerald-100 transition-colors"
-            >
-              Texnik yordam: +998 71 200 00 00
-            </a>
+            </span>
+            <span>
+              Texnik yordam:{' '}
+              <a href="tel:+998712000000" className="text-white hover:underline font-semibold">
+                +998 71 200 00 00
+              </a>
+            </span>
           </div>
         </div>
-
       </div>
     </div>
   );
