@@ -285,7 +285,7 @@ export default function BotLeadsManager() {
                 </div>
                 <div className="flex justify-between">
                   <span className="text-[#667085]">Manba:</span>
-                  <span className="font-semibold text-[#17212F]">Telegram Bot (@ustozakademiya_bot)</span>
+                  <span className="font-semibold text-[#17212F]">Telegram Bot (@arabtili_demo_bot)</span>
                 </div>
                 <div className="flex justify-between">
                   <span className="text-[#667085]">Tanlangan kurs:</span>

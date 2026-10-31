@@ -64,7 +64,7 @@ export default function AdminClientsPage() {
             Mijozlar Bazasi (O‘quvchilar)
           </h1>
           <p className={ADMIN_THEME.pageSubtitle}>
-            To‘lov qilib, Ustoz Akademiyasi kurslariga to‘liq qabul qilingan rasmiy o‘quvchilar
+            To‘lov qilib, Arab Tili kurslariga to‘liq qabul qilingan rasmiy o‘quvchilar
           </p>
         </div>
 

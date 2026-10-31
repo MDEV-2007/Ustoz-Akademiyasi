@@ -17,7 +17,7 @@ adminComposer.use(requireAdminMiddleware);
 // /admin command
 adminComposer.command('admin', async (ctx) => {
   const text =
-    `🛡 <b>Ustoz Akademiyasi — Ma’muriyat Paneli</b>\n` +
+    `🛡 <b>Arab Tili — Ma’muriyat Paneli</b>\n` +
     `━━━━━━━━━━━━━━━━━━━━━\n\n` +
     `Siz tizim administratori sifatida avtorizatsiyadan o‘tgansiz.\n` +
     `Quyidagi bo‘limlardan birini tanlang:`;
@@ -78,7 +78,7 @@ adminComposer.callbackQuery(new RegExp(`^adm_act:leads_(\\d+)$`), async (ctx) =>
 adminComposer.callbackQuery('adm_act:menu', async (ctx) => {
   await ctx.answerCallbackQuery();
   await ctx.editMessageText(
-    `🛡 <b>Ustoz Akademiyasi — Ma’muriyat Paneli</b>\n` +
+    `🛡 <b>Arab Tili — Ma’muriyat Paneli</b>\n` +
       `━━━━━━━━━━━━━━━━━━━━━\n\n` +
       `Quyidagi bo‘limlardan birini tanlang:`,
     { reply_markup: getAdminMenuKeyboard() },

@@ -60,7 +60,7 @@ async function showTeachersList(ctx: MyContext) {
     }
 
     const text =
-      `👨‍🏫 <b>Ustoz Akademiyasi O‘qituvchilar Jamoasi</b>\n\n` +
+      `👨‍🏫 <b>Arab Tili O‘qituvchilar Jamoasi</b>\n\n` +
       `Akademiyamizda milliy va xalqaro sertifikatga ega, tajribali arab tili mutaxassislari dars berishadi.\n\n` +
       `Kafedralar va ustozlarimiz bilan tanishish uchun quyidagilardan birini tanlang:`;
 

@@ -1,8 +1,8 @@
-// Comprehensive End-to-End Integration Test for Ustoz Akademiyasi
+// Comprehensive End-to-End Integration Test for Arab Tili
 
 async function runTests() {
   console.log('====================================================');
-  console.log('USTOZ AKADEMIYASI — FULL INTEGRATION TEST SUITE');
+  console.log('ARAB TILI — FULL INTEGRATION TEST SUITE');
   console.log('====================================================\n');
 
   let passed = 0;

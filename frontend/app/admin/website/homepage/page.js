@@ -22,7 +22,7 @@ export default function AdminHomepageCmsPage() {
   const [saving, setSaving] = useState(false);
 
   const [form, setForm] = useState({
-    name: 'Ustoz Akademiyasi',
+    name: 'Arab Tili',
     sloganPrimary: "O'QI VA KO'TARIL!",
     sloganSecondary: 'Zulmatlardan Nur tomon',
     heroBadge: 'Arab tili akademiyasi',

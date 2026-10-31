@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 # ==============================================================================
-# Ustoz Akademiyasi — Contabo Production Server Deployment Script
+# Arab Tili — Contabo Production Server Deployment Script
 # Safe deployment that does NOT interfere with existing projects (ilimildizi, uncoschool)
 # ==============================================================================
 
@@ -14,7 +14,7 @@ if [ ! -f .env.production ]; then
     exit 1
 fi
 
-echo "📦 [2/5] Building and starting Ustoz Akademiyasi Docker containers..."
+echo "📦 [2/5] Building and starting Arab Tili Docker containers..."
 docker compose -f docker-compose.prod.yml --env-file .env.production pull || true
 docker compose -f docker-compose.prod.yml --env-file .env.production up -d --build
 
@@ -48,7 +48,7 @@ echo "Agar SSL hali o'rnatilmagan bo'lsa, quyidagi buyruqni ishga tushiring:"
 echo "sudo certbot --nginx -d ustozakademiyasi-front.duckdns.org -d ustozakademiyasi-back.duckdns.org"
 
 echo "=========================================================================="
-echo "✅ USTOZ AKADEMIYASI MUVAFFAQIYATLI ISHGA TUSHDI!"
+echo "✅ Arab Tili MUVAFFAQIYATLI ISHGA TUSHDI!"
 echo "   Frontend: https://ustozakademiyasi-front.duckdns.org"
 echo "   Backend:  https://ustozakademiyasi-back.duckdns.org/api/v1/health/live"
 echo "   Boshqa loyihalar (ilimildizi, uncoschool) xavfsiz holatda saqlandi."

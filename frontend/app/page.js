@@ -428,42 +428,42 @@ function AppContent({ initialLocale = 'uz', initialPath = '/' }) {
     }
     if (p === '/kurslar') {
       return {
-        title: `Arab Tili Kurslari | Kids 4+, Fonetika, Grammatika va CEFR — Ustoz Akademiyasi`,
+        title: `Arab Tili Kurslari | Kids 4+, Fonetika, Grammatika va CEFR — Arab Tili`,
         description:
           "4 yoshdan katta bolalar va kattalar uchun arab tili kurslari: Kids 4+, Professional fonetika, Grammatika va CEFR tayyorlov dasturlari.",
-        canonical: 'https://ustozakademiyasi.uz/kurslar'
+        canonical: 'https://arabtili.uz/kurslar'
       };
     }
     if (p.startsWith('/kurslar/')) {
       const slug = p.replace('/kurslar/', '');
       const c = COURSES.find((item) => item.slug === slug);
       return {
-        title: c ? `${c.title} kursi — Ustoz Akademiyasi` : base,
+        title: c ? `${c.title} kursi — Arab Tili` : base,
         description: c ? c.shortSummary : '',
-        canonical: `https://ustozakademiyasi.uz/kurslar/${slug}`
+        canonical: `https://arabtili.uz/kurslar/${slug}`
       };
     }
     if (p === '/filiallar') {
       return {
-        title: `Toshkentdagi 8 ta Filialimiz Manzillari — Ustoz Akademiyasi`,
+        title: `Toshkentdagi 8 ta Filialimiz Manzillari — Arab Tili`,
         description:
           "Archako'cha, Yangi ToshMI, Qoraqamish, Algoritm, Yunusobod, Sergeli, Tinchlik va Beruniy filiallari haqida ma'lumot.",
-        canonical: 'https://ustozakademiyasi.uz/filiallar'
+        canonical: 'https://arabtili.uz/filiallar'
       };
     }
     if (p.startsWith('/filiallar/')) {
       const slug = p.replace('/filiallar/', '');
       const b = BRANCHES.find((item) => item.slug === slug);
       return {
-        title: b ? `${b.name} — Ustoz Akademiyasi Toshkent` : base,
+        title: b ? `${b.name} — Arab Tili Toshkent` : base,
         description: b ? `${b.name}: mavjud arab tili kurslari, ish tartibi va sinov darsiga yozilish.` : '',
-        canonical: `https://ustozakademiyasi.uz/filiallar/${slug}`
+        canonical: `https://arabtili.uz/filiallar/${slug}`
       };
     }
     return {
       title: base,
-      description: 'Ustoz Akademiyasi — Arab tili markazi.',
-      canonical: 'https://ustozakademiyasi.uz/'
+      description: 'Arab Tili — Arab tili markazi.',
+      canonical: 'https://arabtili.uz/'
     };
   }, [route.path, COURSES, BRANCHES]);
 
@@ -471,8 +471,8 @@ function AppContent({ initialLocale = 'uz', initialPath = '/' }) {
     return JSON.stringify({
       '@context': 'https://schema.org',
       '@type': 'EducationalOrganization',
-      name: 'Ustoz Akademiyasi',
-      url: 'https://ustozakademiyasi.uz',
+      name: 'Arab Tili',
+      url: 'https://arabtili.uz',
       telephone: BRAND_CONFIG.phoneDisplay,
       address: {
         '@type': 'PostalAddress',

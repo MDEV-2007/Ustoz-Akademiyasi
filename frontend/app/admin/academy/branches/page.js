@@ -139,7 +139,7 @@ export default function AdminBranchesPage() {
         <div>
           <h1 className={ADMIN_THEME.pageTitle}>Filiallar Tarmoqlari</h1>
           <p className={ADMIN_THEME.pageSubtitle}>
-            Toshkent shahri bo‘ylab Ustoz Akademiyasining barcha o‘quv markazlari, manzillari va lokatsiyalari
+            Toshkent shahri bo‘ylab Arab Tili markazining barcha o‘quv markazlari, manzillari va lokatsiyalari
           </p>
         </div>
 

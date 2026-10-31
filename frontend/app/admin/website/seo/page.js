@@ -18,10 +18,10 @@ import {
 } from 'lucide-react';
 
 const DEFAULT_SEO_SETTINGS = {
-  seo_site_title: 'Ustoz Akademiyasi — Professional Arab Tili Markazi',
+  seo_site_title: 'Arab Tili — Professional Arab Tili Markazi',
   seo_meta_description: 'Toshkent shahrida professional arab tili darslari. Tajvid, grammatika, so‘zlashuv va CEFR xalqaro sertifikatiga tayyorlov kurslari.',
-  seo_meta_keywords: 'arab tili toshkent, arab tili kursi, ustoz akademiyasi, tajvid darslari, arabcha so‘zlashuv',
-  seo_og_title: 'Ustoz Akademiyasi — Arab Tilini Mukammal O‘rganing',
+  seo_meta_keywords: 'arab tili toshkent, arab tili kursi, arab tili, tajvid darslari, arabcha so‘zlashuv',
+  seo_og_title: 'Arab Tili — Arab Tilini Mukammal O‘rganing',
   seo_og_image: 'https://images.unsplash.com/photo-1542838132-92c53300491e?auto=format&fit=crop&q=80&w=1200',
   seo_robots_index: 'index, follow',
   seo_google_analytics: 'G-USTOZ2026',
@@ -105,7 +105,7 @@ export default function SeoSettingsPage() {
         <div className="max-w-xl space-y-1">
           <div className="flex items-center gap-2 text-xs text-[#667085]">
             <Globe size={13} className="text-[#086641]" />
-            <span className="font-medium">https://ustozakademiyasi.uz</span>
+            <span className="font-medium">https://arabtili.uz</span>
             <span>› darslar</span>
           </div>
           <h3 className="text-base font-semibold text-[#1a0dab] hover:underline cursor-pointer leading-tight">

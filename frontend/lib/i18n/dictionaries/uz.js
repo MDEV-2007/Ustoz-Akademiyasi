@@ -3,7 +3,7 @@ export const uz = {
   langName: 'O‘zbekcha',
   flag: '🇺🇿',
   nav: {
-    brandName: 'Ustoz Akademiyasi',
+    brandName: 'Arab Tili',
     sloganPrimary: "O'QI VA KO'TARIL!",
     sloganSecondary: 'Zulmatlardan Nur tomon',
     courses: 'Kurslar',
@@ -307,7 +307,7 @@ export const uz = {
         department: 'Professional Fonetika kafedrasi',
         badge: 'Maxraj mutaxassisi',
         experience: '5 yillik tajriba',
-        motto: '«Arab tilini Ustoz akademiyasida 0 dan o‘rganing»',
+        motto: '«Arab tilini Arab tili markazida 0 dan o‘rganing»',
         description: 'Arab tilidagi 28 ta harfning artikulyatsion nuqtalarini aniq o‘rgatish va harflar talaffuzini to‘g‘rilash bo‘yicha ixtisoslashgan.'
       },
       'teacher-2': {
@@ -342,7 +342,7 @@ export const uz = {
   articles: {
     sectionBadge: 'FOYDALI MAQOLALAR',
     title: 'Arab Tili Bo‘yicha Qo‘llanmalar',
-    subtitle: 'Ustoz Akademiyasi o‘qituvchilaridan dolzarb maslahatlar va darsliklar',
+    subtitle: 'Arab Tili o‘qituvchilaridan dolzarb maslahatlar va darsliklar',
     readMore: 'Maqolani to‘liq o‘qish',
     minutesRead: 'daqiqa mutolaa',
     items: {
@@ -368,7 +368,7 @@ export const uz = {
         title: 'Arab tilidagi kasblar va til bilishning amaliy ahamiyati',
         topic: 'Kasb va Kelajak',
         excerpt: 'Arab tilini mukammal o‘rganish va CEFR sertifikatiga ega bo‘lish qaysi sohalarda kasbiy faoliyat yuritish imkonini beradi?',
-        intro: 'Arab tili BMTning 6 ta rasmiy tilidan biri bo‘lib, 20 dan ortiq davlatning rasmiy muloqot tilidir. Ustoz Akademiyasida fonetika, grammatika va CEFR bosqichlarini muvaffaqiyatli tamomlagan bitiruvchilar ko‘plab nufuzli sohalarda faoliyat yuritishlari mumkin.'
+        intro: 'Arab tili BMTning 6 ta rasmiy tilidan biri bo‘lib, 20 dan ortiq davlatning rasmiy muloqot tilidir. Arab Tili markazida fonetika, grammatika va CEFR bosqichlarini muvaffaqiyatli tamomlagan bitiruvchilar ko‘plab nufuzli sohalarda faoliyat yuritishlari mumkin.'
       }
     }
   },
@@ -390,7 +390,7 @@ export const uz = {
       {
         category: 'Filiallar',
         q: 'Toshkent shahrining qaysi hududlarida filiallaringiz bor?',
-        a: 'Ustoz Akademiyasining Toshkent shahrida 8 ta filiali faoliyat yuritadi: Archako‘cha, Yangi ToshMI, Qoraqamish, Algoritm, Yunusobod, Sergeli, Tinchlik va Beruniy filiallari.'
+        a: 'Arab Tili markazining Toshkent shahrida 8 ta filiali faoliyat yuritadi: Archako‘cha, Yangi ToshMI, Qoraqamish, Algoritm, Yunusobod, Sergeli, Tinchlik va Beruniy filiallari.'
       },
       {
         category: 'Sertifikat',
@@ -457,7 +457,7 @@ export const uz = {
   },
   courseCatalog: {
     badge: 'O‘quv Dasturlari Katalogi',
-    title: 'Ustoz Akademiyasi arab tili kurslari',
+    title: 'Arab Tili arab tili kurslari',
     subtitle: 'Har bir kurs o‘quvchining yoshi va boshlang‘ich darajasiga qarab bosqichma-bosqich o‘rgatish uchun ishlab chiqilgan.',
     viewSyllabus: 'To‘liq o‘quv dasturi →',
     trialBtn: 'Sinov darsiga yozilish',
@@ -503,7 +503,7 @@ export const uz = {
     title: '15,000+ bitiruvchilar va filiallarimizdagi bitiruv marosimlari',
     subtitle: 'Har bir o‘quv bosqichi yakunida filiallarimizda (jumladan, Qoraqamish va boshqa filiallarda) bitiruv tadbirlari hamda sertifikat topshirish marosimlari o‘tkaziladi.',
     card1Title: 'Qoraqamish va barcha filiallardagi bitiruv tadbirlari',
-    card1Desc: 'O‘quvchilarimiz va bolajonlarimiz bosqich yakunida sinovlardan o‘tib, rasmiy sertifikatlar bilan taqdirlanadilar. Haqiqiy video va fotolavhalar @ustoz_akademiyasi Instagram sahifamizning «Bitiruvchilar» va «O‘quvchilar» ruknlarida jamlangan.',
+    card1Desc: 'O‘quvchilarimiz va bolajonlarimiz bosqich yakunida sinovlardan o‘tib, rasmiy sertifikatlar bilan taqdirlanadilar. Haqiqiy video va fotolavhalar @arabtili_demo Instagram sahifamizning «Bitiruvchilar» va «O‘quvchilar» ruknlarida jamlangan.',
     card2Title: 'C1 daraja va CEFR sertifikatlari',
     card2Desc: 'Katta yoshdagilar va o‘qituvchilikka tayyorlanayotgan talabalarimiz davlat va xalqaro miqyosdagi CEFR C1 sertifikatlarini qo‘lga kiritmoqdalar.'
   },
@@ -513,9 +513,9 @@ export const uz = {
     subtitle: 'Harflarning yozuvdagi shakllarini ko‘ring, harakatlar bilan talaffuzini tinglang, viktorina savollariga javob bering va bolajonlar uchun raqamlar o‘yinini sinab ko‘ring.'
   },
   aboutPage: {
-    badge: 'Ustoz Akademiyasi Haqida',
+    badge: 'Arab Tili Haqida',
     title: 'Zulmatlardan Nur tomon — O‘qi va ko‘taril!',
-    intro: 'Ustoz Akademiyasi — Toshkent shahrida 8 ta filialiga va 15,000 dan ortiq bitiruvchilarga ega bo‘lgan arab tili o‘quv markazidir. Markazimiz bolajonlar (4+ yosh), 0 dan boshlovchilar hamda CEFR sertifikatiga tayyorlanuvchilar uchun tizimli dasturlarni taqdim etadi.',
+    intro: 'Arab Tili — Toshkent shahrida 8 ta filialiga va 15,000 dan ortiq bitiruvchilarga ega bo‘lgan arab tili o‘quv markazidir. Markazimiz bolajonlar (4+ yosh), 0 dan boshlovchilar hamda CEFR sertifikatiga tayyorlanuvchilar uchun tizimli dasturlarni taqdim etadi.',
     instagramTitle: 'Instagram Rasmiy Sahifasi',
     instagramFollowers: '134K+ obunachilar',
     instagramDesc: '716+ post va video lavhalar orqali dars jarayonlari, so‘z boyligi va bitiruv tadbirlari yoritib boriladi.',
@@ -528,7 +528,7 @@ export const uz = {
   },
   teachersPage: {
     badge: 'Akademik Jamoa',
-    title: 'Ustoz Akademiyasi o‘qituvchilar jamoasi va kafedralar',
+    title: 'Arab Tili o‘qituvchilar jamoasi va kafedralar',
     intro: 'Markazimizda darslar C1 darajali sertifikatga ega ustozlar, professional fonetika mutaxassislari hamda bolalar pedagogikasini chuqur egallagan ustozalar tomonidan olib boriladi.',
     heading: 'O‘qituvchilarimiz',
     trialBtn: 'Sinov darsiga yozilish',
@@ -548,7 +548,7 @@ export const uz = {
     callCenter: 'Yagona Call-Markaz',
   },
   trustSection: {
-    badge: 'NEGA AYNAN USTOZ AKADEMIYASI?',
+    badge: 'NEGA AYNAN ARAB TILI?',
     title: 'Arab Tili Ta’limida 15,000+ O‘quvchi Ishongan Tizim',
     subtitle: 'Natijaga yo‘naltirilgan zamonaviy metodika, qulay infratuzilma va e’tirof etilgan ustozlar',
     card1Title: '8 ta Zamonaviy Filial',

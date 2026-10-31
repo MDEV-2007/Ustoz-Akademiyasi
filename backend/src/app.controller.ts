@@ -11,7 +11,7 @@ export class AppController {
   getRootInfo() {
     return {
       success: true,
-      service: 'Ustoz Akademiyasi Production REST API',
+      service: 'Arab Tili Production REST API',
       status: 'operational',
       version: '1.0.0',
       timestamp: new Date().toISOString(),

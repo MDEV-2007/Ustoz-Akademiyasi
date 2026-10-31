@@ -91,7 +91,7 @@ export default function SystemSettingsPage() {
         <div>
           <h1 className={ADMIN_THEME.pageTitle}>Tizim va Akademiya Sozlamalari</h1>
           <p className={ADMIN_THEME.pageSubtitle}>
-            Ustoz Akademiyasi rekvizitlari, markaziy aloqa liniyalari, xabarnoma sozlamalari va Telegram integratsiyasi
+            Arab Tili rekvizitlari, markaziy aloqa liniyalari, xabarnoma sozlamalari va Telegram integratsiyasi
           </p>
         </div>
 

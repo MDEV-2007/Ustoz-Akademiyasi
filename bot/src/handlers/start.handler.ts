@@ -169,11 +169,11 @@ startComposer.command('start', async (ctx) => {
   }
 
   const promptText =
-    `👋 <b>Assalomu alaykum! Ustoz Akademiyasiga xush kelibsiz.</b>\n` +
+    `👋 <b>Assalomu alaykum! Arab Tili markaziga xush kelibsiz.</b>\n` +
     `Iltimos, davom etish uchun muloqot tilini tanlang:\n\n` +
-    `🇷🇺 <b>Здравствуйте! Добро пожаловать в Ustoz Akademiyasi.</b>\n` +
+    `🇷🇺 <b>Здравствуйте! Добро пожаловать в Arab Tili.</b>\n` +
     `Пожалуйста, выберите удобный для вас язык общения:\n\n` +
-    `🇬🇧 <b>Welcome to Ustoz Akademiyasi!</b>\n` +
+    `🇬🇧 <b>Welcome to Arab Tili!</b>\n` +
     `Please select your preferred language:`;
 
   await ctx.reply(promptText, {

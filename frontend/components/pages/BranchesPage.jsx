@@ -32,8 +32,8 @@ export default function BranchesPage({
           </span>
           <h1 className="text-3xl sm:text-4xl font-bold text-[#14231F] mt-0.5">
             {path === '/filiallar'
-              ? (t.branchesPage?.title || 'Ustoz Akademiyasi — 8 ta rasmiy filial va xaritasi')
-              : `Ustoz Akademiyasi — ${branch?.name || ''}`}
+              ? (t.branchesPage?.title || 'Arab Tili — 8 ta rasmiy filial va xaritasi')
+              : `Arab Tili — ${branch?.name || ''}`}
           </h1>
         </div>
 

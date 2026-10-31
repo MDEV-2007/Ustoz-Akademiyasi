@@ -17,10 +17,10 @@ export const AuthenticVisualPlate = ({ type, customImage, altText }) => {
           alt={
             altText ||
             (locale === 'ru'
-              ? 'Официальное фото Ustoz Akademiyasi'
+              ? 'Официальное фото Arab Tili'
               : locale === 'en'
-              ? 'Official photo of Ustoz Akademiyasi'
-              : 'Ustoz Akademiyasi rasmiy fotolavhasi')
+              ? 'Official photo of Arab Tili'
+              : 'Arab Tili rasmiy fotolavhasi')
           }
           containerClassName="w-full h-full"
           className="w-full h-full object-cover"

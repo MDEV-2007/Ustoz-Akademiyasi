@@ -309,7 +309,7 @@ function LeadsContent() {
               className={ADMIN_THEME.select}
             >
               <option value="ALL">Barcha manbalar</option>
-              <option value="TELEGRAM_BOT">Telegram Boti (@ustozakademiya_bot)</option>
+              <option value="TELEGRAM_BOT">Telegram Boti (@arabtili_demo_bot)</option>
               <option value="WEBSITE">Rasmiy Veb-Sayt</option>
             </select>
           </div>

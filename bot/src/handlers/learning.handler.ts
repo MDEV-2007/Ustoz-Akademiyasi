@@ -402,10 +402,10 @@ learningComposer.hears(
     const lang = ctx.session.language || 'uz';
     const text =
       lang === 'ru'
-        ? `📖 <b>Изучение арабского языка</b>\n\nИзучайте арабский язык по эффективной методике Ustoz Akademiyasi.\n\nВыберите нужный раздел:`
+        ? `📖 <b>Изучение арабского языка</b>\n\nИзучайте арабский язык по эффективной методике Arab Tili.\n\nВыберите нужный раздел:`
         : lang === 'en'
-        ? `📖 <b>Learn Arabic</b>\n\nMaster the Arabic language systematically with Ustoz Akademiyasi.\n\nPlease select a section below:`
-        : `📖 <b>Arab Tilini O‘rganish</b>\n\nUstoz Akademiyasining tizimli metodikasi bilan arab tilini oson va to‘g‘ri o‘rganing.\n\nQuyidagi bo‘limlardan birini tanlang:`;
+        ? `📖 <b>Learn Arabic</b>\n\nMaster the Arabic language systematically with Arab Tili.\n\nPlease select a section below:`
+        : `📖 <b>Arab Tilini O‘rganish</b>\n\nArab Tili markazining tizimli metodikasi bilan arab tilini oson va to‘g‘ri o‘rganing.\n\nQuyidagi bo‘limlardan birini tanlang:`;
 
     await ctx.reply(text, {
       reply_markup: getLearningMenuKeyboard(),
@@ -419,7 +419,7 @@ learningComposer.callbackQuery('nav:learning', async (ctx) => {
   await safeEditOrReply(
     ctx,
     `📖 <b>Arab Tilini O‘rganish</b>\n\n` +
-      `Ustoz Akademiyasining tizimli metodikasi bilan arab tilini oson va to‘g‘ri o‘rganing.\n\n` +
+      `Arab Tili markazining tizimli metodikasi bilan arab tilini oson va to‘g‘ri o‘rganing.\n\n` +
       `Quyidagi bo‘limlardan birini tanlang:`,
     { reply_markup: getLearningMenuKeyboard(), parse_mode: 'HTML' },
   );
@@ -589,7 +589,7 @@ learningComposer.callbackQuery('learn_sec:articles', async (ctx) => {
     }
 
     const text =
-      `📄 <b>Ustoz Akademiyasi Maqolalari va Lug‘ati</b>\n\n` +
+      `📄 <b>Arab Tili Maqolalari va Lug‘ati</b>\n\n` +
       `Quyidagi maqolalardan birini tanlang:`;
 
     await safeEditOrReply(ctx, text, {

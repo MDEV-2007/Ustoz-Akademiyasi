@@ -119,7 +119,7 @@ export default function AdminHeader() {
             </span>
             <span className="flex items-center gap-1">
               <Bot size={13} className="text-emerald-700" />
-              <span className="text-[11px] font-bold">@ustozakademiya_bot</span>
+              <span className="text-[11px] font-bold">@arabtili_demo_bot</span>
             </span>
           </Link>
 

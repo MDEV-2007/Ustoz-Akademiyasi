@@ -1,7 +1,7 @@
 {
   "name": "ustoz-akademiyasi-backend",
   "version": "1.0.0",
-  "description": "Production-ready NestJS API for Ustoz Akademiyasi",
+  "description": "Production-ready NestJS API for Arab Tili",
   "private": true,
   "license": "UNLICENSED",
   "scripts": {

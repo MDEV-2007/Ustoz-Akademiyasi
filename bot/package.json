@@ -1,7 +1,7 @@
 {
   "name": "ustoz-akademiyasi-telegram-bot",
   "version": "1.0.0",
-  "description": "Production Telegram Bot for Ustoz Akademiyasi Arabic Language Academy",
+  "description": "Production Telegram Bot for Arab Tili Arabic Language Academy",
   "main": "dist/index.js",
   "scripts": {
     "build": "tsc",

@@ -36,7 +36,7 @@ services:
       timeout: 5s
       retries: 5
 
-  # Ustoz Akademiyasi NestJS API
+  # Arab Tili NestJS API
   backend:
     build:
       context: ./backend
@@ -66,7 +66,7 @@ services:
     volumes:
       - uploads_data:/app/uploads
 
-  # Ustoz Akademiyasi Telegram Bot Service
+  # Arab Tili Telegram Bot Service
   telegram-bot:
     build:
       context: ./bot
@@ -90,7 +90,7 @@ services:
     ports:
       - "3001:3001"
 
-  # Ustoz Akademiyasi Next.js Frontend
+  # Arab Tili Next.js Frontend
   frontend:
     build:
       context: ./frontend

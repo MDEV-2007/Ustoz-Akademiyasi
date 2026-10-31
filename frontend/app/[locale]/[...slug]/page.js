@@ -35,69 +35,69 @@ export async function generateMetadata({ params }) {
 
   const titles = {
     '/kurslar': {
-      uz: 'Arab Tili Kurslari — Ustoz Akademiyasi',
-      ru: 'Курсы арабского языка — Ustoz Akademiyasi',
-      en: 'Arabic Language Courses — Ustoz Akademiyasi',
+      uz: 'Arab Tili Kurslari — Arab Tili',
+      ru: 'Курсы арабского языка — Arab Tili',
+      en: 'Arabic Language Courses — Arab Tili',
     },
     '/filiallar': {
-      uz: 'Toshkentdagi 8 ta Filialimiz — Ustoz Akademiyasi',
-      ru: '8 филиалов в Ташкенте — Ustoz Akademiyasi',
-      en: '8 Branches in Tashkent — Ustoz Akademiyasi',
+      uz: 'Toshkentdagi 8 ta Filialimiz — Arab Tili',
+      ru: '8 филиалов в Ташкенте — Arab Tili',
+      en: '8 Branches in Tashkent — Arab Tili',
     },
     '/ustozlar': {
-      uz: 'Ustozlar Jamoasi va Kafedralar — Ustoz Akademiyasi',
-      ru: 'Команда преподавателей — Ustoz Akademiyasi',
-      en: 'Teaching Faculty — Ustoz Akademiyasi',
+      uz: 'Ustozlar Jamoasi va Kafedralar — Arab Tili',
+      ru: 'Команда преподавателей — Arab Tili',
+      en: 'Teaching Faculty — Arab Tili',
     },
     '/markaz-haqida': {
-      uz: 'Markaz Haqida | Zulmatlardan Nur tomon — Ustoz Akademiyasi',
-      ru: 'Об академии — Ustoz Akademiyasi',
-      en: 'About the Academy — Ustoz Akademiyasi',
+      uz: 'Markaz Haqida | Zulmatlardan Nur tomon — Arab Tili',
+      ru: 'Об академии — Arab Tili',
+      en: 'About the Academy — Arab Tili',
     },
     '/natijalar': {
-      uz: 'Bitiruvchilar va Natijalar (15,000+) — Ustoz Akademiyasi',
-      ru: 'Выпускники и результаты (15 000+) — Ustoz Akademiyasi',
-      en: 'Graduates & Results (15,000+) — Ustoz Akademiyasi',
+      uz: 'Bitiruvchilar va Natijalar (15,000+) — Arab Tili',
+      ru: 'Выпускники и результаты (15 000+) — Arab Tili',
+      en: 'Graduates & Results (15,000+) — Arab Tili',
     },
     '/maqolalar': {
-      uz: 'Foydali Maqolalar va Lug‘atlar — Ustoz Akademiyasi',
-      ru: 'Полезные статьи и словари — Ustoz Akademiyasi',
-      en: 'Articles & Vocabulary — Ustoz Akademiyasi',
+      uz: 'Foydali Maqolalar va Lug‘atlar — Arab Tili',
+      ru: 'Полезные статьи и словари — Arab Tili',
+      en: 'Articles & Vocabulary — Arab Tili',
     },
     '/savol-javob': {
-      uz: 'Ko‘p Beriladigan Savollar (FAQ) — Ustoz Akademiyasi',
-      ru: 'Часто задаваемые вопросы (FAQ) — Ustoz Akademiyasi',
-      en: 'Frequently Asked Questions (FAQ) — Ustoz Akademiyasi',
+      uz: 'Ko‘p Beriladigan Savollar (FAQ) — Arab Tili',
+      ru: 'Часто задаваемые вопросы (FAQ) — Arab Tili',
+      en: 'Frequently Asked Questions (FAQ) — Arab Tili',
     },
     '/aloqa': {
       uz: 'Aloqa Markazi (+998 71 200 00 00) — Arab Tili',
-      ru: 'Контакты и колл-центр — Ustoz Akademiyasi',
-      en: 'Contact & Call Center — Ustoz Akademiyasi',
+      ru: 'Контакты и колл-центр — Arab Tili',
+      en: 'Contact & Call Center — Arab Tili',
     },
     '/royxatdan-otish': {
-      uz: 'Bepul Sinov Darsiga Yozilish — Ustoz Akademiyasi',
-      ru: 'Запись на бесплатный пробный урок — Ustoz Akademiyasi',
-      en: 'Register for a Free Trial Lesson — Ustoz Akademiyasi',
+      uz: 'Bepul Sinov Darsiga Yozilish — Arab Tili',
+      ru: 'Запись на бесплатный пробный урок — Arab Tili',
+      en: 'Register for a Free Trial Lesson — Arab Tili',
     },
     '/interaktiv-arab-tili': {
-      uz: 'Interaktiv Arab Tili Mashg‘ulotlari — Ustoz Akademiyasi',
-      ru: 'Интерактивные уроки арабского языка — Ustoz Akademiyasi',
-      en: 'Interactive Arabic Practice — Ustoz Akademiyasi',
+      uz: 'Interaktiv Arab Tili Mashg‘ulotlari — Arab Tili',
+      ru: 'Интерактивные уроки арабского языка — Arab Tili',
+      en: 'Interactive Arabic Practice — Arab Tili',
     },
     '/maxfiylik-siyosati': {
-      uz: 'Maxfiylik Siyosati — Ustoz Akademiyasi',
-      ru: 'Политика конфиденциальности — Ustoz Akademiyasi',
-      en: 'Privacy Policy — Ustoz Akademiyasi',
+      uz: 'Maxfiylik Siyosati — Arab Tili',
+      ru: 'Политика конфиденциальности — Arab Tili',
+      en: 'Privacy Policy — Arab Tili',
     },
   };
 
   const meta = titles[path];
-  const title = meta?.[locale] || meta?.uz || `Ustoz Akademiyasi — ${slug[0] || ''}`;
+  const title = meta?.[locale] || meta?.uz || `Arab Tili — ${slug[0] || ''}`;
 
   return {
     title,
     alternates: {
-      canonical: `https://ustozakademiyasi.uz/${locale}${path}`,
+      canonical: `https://arabtili.uz/${locale}${path}`,
     },
     icons: {
       icon: [

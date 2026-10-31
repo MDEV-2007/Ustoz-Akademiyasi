@@ -371,7 +371,7 @@ export default function CoursesPage({
           {t.courseCatalog?.badge || 'O‘quv Dasturlari Katalogi'}
         </span>
         <h1 className="text-3xl sm:text-4xl font-bold text-[#14231F] mt-1">
-          {t.courseCatalog?.title || 'Ustoz Akademiyasi arab tili kurslari'}
+          {t.courseCatalog?.title || 'Arab Tili arab tili kurslari'}
         </h1>
         <p className="text-sm sm:text-base text-[#65756F] mt-2">
           {t.courseCatalog?.subtitle || 'Har bir kurs o‘quvchining yoshi va boshlang‘ich darajasiga qarab bosqichma-bosqich o‘rgatish uchun ishlab chiqilgan.'}

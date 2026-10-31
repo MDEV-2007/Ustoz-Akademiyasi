@@ -217,7 +217,7 @@ export default function BotNotificationsManager() {
                   {message || 'Bu yerda xabar matni foydalanuvchilarning Telegram chatida qanday ko‘rinishi aks etadi.'}
                 </p>
                 <div className="flex justify-end pt-1">
-                  <span className="text-[9px] text-slate-400">01:25 • Ustoz Akademiyasi</span>
+                  <span className="text-[9px] text-slate-400">01:25 • Arab Tili</span>
                 </div>
               </div>
             </div>

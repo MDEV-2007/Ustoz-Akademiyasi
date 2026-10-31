@@ -1,4 +1,4 @@
-# Multi-stage Dockerfile for Ustoz Akademiyasi Telegram Bot
+# Multi-stage Dockerfile for Arab Tili Telegram Bot
 FROM node:20-alpine AS builder
 
 WORKDIR /app

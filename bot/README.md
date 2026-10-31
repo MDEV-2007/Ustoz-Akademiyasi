@@ -1,6 +1,6 @@
-# 🌟 Ustoz Akademiyasi — Rasmiy Telegram Bot
+# 🌟 Arab Tili — Rasmiy Telegram Bot
 
-Ustoz Akademiyasi arab tili ta’lim markazi uchun to‘liq ishlab chiqarish (production) darajasidagi rasmiy Telegram boti.
+Arab Tili arab tili ta’lim markazi uchun to‘liq ishlab chiqarish (production) darajasidagi rasmiy Telegram boti.
 
 Bot mavjud NestJS backend REST API bilan integratsiya qilingan bo‘lib, mavjud PostgreSQL ma’lumotlar bazasi, kurslar, filiallar, arizalar (lead) va ma’muriy tizim bilan yagona ekotizimda ishlaydi.
 
@@ -77,7 +77,7 @@ BOT_TOKEN=123456789:AAF_your_telegram_bot_token
 BOT_MODE=polling
 
 # Webhook sozlamalari (agar BOT_MODE=webhook bo‘lsa)
-BOT_WEBHOOK_URL=https://bot.ustozakademiyasi.uz/webhook
+BOT_WEBHOOK_URL=https://bot.arabtili.uz/webhook
 BOT_WEBHOOK_SECRET=super_secret_webhook_token_xyz_2026
 BOT_WEBHOOK_PORT=3001
 
@@ -91,7 +91,7 @@ BOT_API_TOKEN=ustoz_bot_secure_service_token_2026
 ADMIN_TELEGRAM_IDS=12345678,98765432
 
 # Rasmiy veb-sayt
-PUBLIC_WEBSITE_URL=https://ustozakademiyasi.uz
+PUBLIC_WEBSITE_URL=https://arabtili.uz
 
 # Loglar darajasi
 LOG_LEVEL=info
@@ -103,7 +103,7 @@ LOG_LEVEL=info
 
 1. Telegramda [@BotFather](https://t.me/BotFather) ga kiring.
 2. `/newbot` buyrug‘ini yuboring.
-3. Bot nomini kiriting: `Ustoz Akademiyasi | Arab tili`
+3. Bot nomini kiriting: `Arab Tili | Arab tili`
 4. Bot username ni kiriting: masalan `ustoz_akademiyasi_bot`
 5. Berilgan `BOT_TOKEN` ni nusxalang va `.env` faylidagi `BOT_TOKEN` ga qo‘ying.
 6. Buyruqlar menyusini sozlash uchun `/setcommands` yuboring va quyidagilarni kiriting:

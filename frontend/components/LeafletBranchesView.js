@@ -419,7 +419,7 @@ export default function LeafletBranchesView({
                 {/* Header with Name & Status Indicator */}
                 <div className="flex items-start justify-between gap-3 mb-2.5">
                   <h3 className="text-base font-bold text-[#14231F] leading-snug">
-                    Ustoz Akademiyasi — {b.name.replace(/ filiali/i, '')}
+                    Arab Tili — {b.name.replace(/ filiali/i, '')}
                   </h3>
                   <div className="flex items-center gap-1.5 flex-shrink-0 pt-0.5">
                     <span className="w-2.5 h-2.5 rounded-full bg-[#07966F] animate-pulse" />
@@ -432,7 +432,7 @@ export default function LeafletBranchesView({
                     type="button"
                     onClick={(e) => {
                       e.stopPropagation();
-                      setLightboxImage({ src: b.image, title: `Ustoz Akademiyasi — ${b.name.replace(/ filiali/i, '')}` });
+                      setLightboxImage({ src: b.image, title: `Arab Tili — ${b.name.replace(/ filiali/i, '')}` });
                     }}
                     className="mb-3 inline-flex items-center gap-1.5 px-3 py-2 rounded-xl bg-[#E8ECE9]/80 hover:bg-[#07966F]/15 text-[#073F31] hover:text-[#07966F] text-xs font-semibold border border-[#073F31]/10 transition cursor-pointer w-full justify-center"
                   >
@@ -519,7 +519,7 @@ export default function LeafletBranchesView({
 
               {/* Title */}
               <h4 className="text-sm font-bold text-[#14231F] mb-1">
-                Ustoz Akademiyasi — {selectedBranch.name.replace(/ filiali/i, '')}
+                Arab Tili — {selectedBranch.name.replace(/ filiali/i, '')}
               </h4>
 
               {/* Address */}
@@ -537,7 +537,7 @@ export default function LeafletBranchesView({
               {selectedBranch.image && (
                 <button
                   type="button"
-                  onClick={() => setLightboxImage({ src: selectedBranch.image, title: `Ustoz Akademiyasi — ${selectedBranch.name.replace(/ filiali/i, '')}` })}
+                  onClick={() => setLightboxImage({ src: selectedBranch.image, title: `Arab Tili — ${selectedBranch.name.replace(/ filiali/i, '')}` })}
                   className="inline-flex items-center gap-1.5 text-xs font-bold text-[#07966F] hover:text-[#073F31] hover:underline mb-3 cursor-pointer"
                 >
                   <ImageIcon className="w-3.5 h-3.5" />

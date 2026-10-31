@@ -1,6 +1,6 @@
-# Ustoz Akademiyasi — Production-Ready NestJS API
+# Arab Tili — Production-Ready NestJS API
 
-Ushbu backend Ustoz Akademiyasi arab tili ta’lim markazi uchun loyihalashtirilgan to‘liq ishlab chiqarish darajasidagi (production-ready) RESTful API tizimidir.
+Ushbu backend Arab Tili arab tili ta’lim markazi uchun loyihalashtirilgan to‘liq ishlab chiqarish darajasidagi (production-ready) RESTful API tizimidir.
 
 ---
 

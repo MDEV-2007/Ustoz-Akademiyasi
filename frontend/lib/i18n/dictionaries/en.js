@@ -3,7 +3,7 @@ export const en = {
   langName: 'English',
   flag: '🇬🇧',
   nav: {
-    brandName: 'Ustoz Akademiyasi',
+    brandName: 'Arab Tili',
     sloganPrimary: 'READ AND ELEVATE!',
     sloganSecondary: 'From Darkness to Light',
     courses: 'Courses',
@@ -307,7 +307,7 @@ export const en = {
         department: 'Department of Professional Phonetics',
         badge: 'Makhraj Specialist',
         experience: '5 years of experience',
-        motto: '«Learn authentic Arabic at Ustoz Akademiyasi from zero»',
+        motto: '«Learn authentic Arabic at Arab Tili from zero»',
         description: 'Specializes in establishing authentic biological articulation for all 28 Arabic sounds and correcting accented pronunciation.'
       },
       'teacher-2': {
@@ -342,7 +342,7 @@ export const en = {
   articles: {
     sectionBadge: 'EDUCATIONAL ARTICLES',
     title: 'Guides & Insights on Learning Arabic',
-    subtitle: 'Practical advice and insights from Ustoz Akademiyasi educators',
+    subtitle: 'Practical advice and insights from Arab Tili educators',
     readMore: 'Read Full Article',
     minutesRead: 'min read',
     items: {
@@ -368,7 +368,7 @@ export const en = {
         title: 'Careers with Arabic Language and Practical Opportunities',
         topic: 'Career & Future',
         excerpt: 'Which industries offer rewarding career paths upon mastering Arabic and obtaining a CEFR certificate?',
-        intro: 'Arabic is one of the 6 official UN languages and the national language of over 20 countries. Graduates of Ustoz Akademiyasi work across multiple prestigious international and domestic fields.'
+        intro: 'Arabic is one of the 6 official UN languages and the national language of over 20 countries. Graduates of Arab Tili work across multiple prestigious international and domestic fields.'
       }
     }
   },
@@ -390,7 +390,7 @@ export const en = {
       {
         category: 'Branches',
         q: 'Where are your branches located in Tashkent?',
-        a: 'Ustoz Akademiyasi operates 8 branches in Tashkent: Archako‘cha, Yangi ToshMI, Qoraqamish, Algoritm, Yunusobod, Sergeli, Tinchlik, and Beruniy.'
+        a: 'Arab Tili operates 8 branches in Tashkent: Archako‘cha, Yangi ToshMI, Qoraqamish, Algoritm, Yunusobod, Sergeli, Tinchlik, and Beruniy.'
       },
       {
         category: 'Certification',
@@ -462,7 +462,7 @@ export const en = {
   },
   courseCatalog: {
     badge: 'Academic Course Catalog',
-    title: 'Ustoz Akademiyasi Arabic Language Courses',
+    title: 'Arab Tili Arabic Language Courses',
     subtitle: 'Every course is systematically structured according to the student’s age, initial knowledge level, and learning goals.',
     viewSyllabus: 'Full Curriculum →',
     trialBtn: 'Sign up for Trial',
@@ -508,7 +508,7 @@ export const en = {
     title: '15,000+ Graduates & Graduation Ceremonies Across Branches',
     subtitle: 'At the end of each academic module, our branches (including Qoraqamish and others) hold celebratory graduation events and official certificate awarding ceremonies.',
     card1Title: 'Graduation ceremonies at Qoraqamish and across all branches',
-    card1Desc: 'Our adult students and kids pass rigorous level examinations and earn accredited certificates. Authentic video highlights are featured on our @ustoz_akademiyasi Instagram page.',
+    card1Desc: 'Our adult students and kids pass rigorous level examinations and earn accredited certificates. Authentic video highlights are featured on our @arabtili_demo Instagram page.',
     card2Title: 'Level C1 & CEFR Certifications',
     card2Desc: 'Adult learners and aspiring educators achieve national and international CEFR C1 credentials, unlocking global professional opportunities.'
   },
@@ -520,7 +520,7 @@ export const en = {
   aboutPage: {
     badge: 'About Ustoz Academy',
     title: 'From Darkness to Light — Read and Rise!',
-    intro: 'Ustoz Akademiyasi is Tashkent’s premier Arabic language academy with 8 modern branches and over 15,000 successful alumni. We offer structured curricula for children (4+), absolute beginners, and CEFR certificate candidates.',
+    intro: 'Arab Tili is Tashkent’s premier Arabic language academy with 8 modern branches and over 15,000 successful alumni. We offer structured curricula for children (4+), absolute beginners, and CEFR certificate candidates.',
     instagramTitle: 'Official Instagram Page',
     instagramFollowers: '134K+ Followers',
     instagramDesc: '716+ videos and posts illustrating classroom lessons, vocabulary drills, and graduation ceremonies.',
@@ -533,7 +533,7 @@ export const en = {
   },
   teachersPage: {
     badge: 'Academic Faculty',
-    title: 'Ustoz Akademiyasi Teaching Faculty & Departments',
+    title: 'Arab Tili Teaching Faculty & Departments',
     intro: 'All lessons are instructed by C1-certified Arabists, professional phonetics coaches, and seasoned child educators.',
     heading: 'Our Instructors',
     trialBtn: 'Book Trial Lesson',
@@ -553,7 +553,7 @@ export const en = {
     callCenter: 'Unified Call Center',
   },
   trustSection: {
-    badge: 'WHY USTOZ AKADEMIYASI?',
+    badge: 'WHY ARAB TILI?',
     title: 'The Trusted Arabic Learning System for 15,000+ Students',
     subtitle: 'Results-driven methodology, comfortable campuses, and recognized master teachers',
     card1Title: '8 Modern Branches',

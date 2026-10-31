@@ -35,7 +35,7 @@ export class JwtAuthGuard extends AuthGuard('jwt') {
       request.user = {
         id: 'bot-admin-service',
         fullName: 'Telegram Bot Service',
-        email: 'bot@ustozakademiyasi.uz',
+        email: 'bot@arabtili.uz',
         role: 'SUPER_ADMIN',
       };
       return true;

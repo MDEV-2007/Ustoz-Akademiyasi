@@ -26,8 +26,8 @@ const METHODOLOGY_GUIDES = [
     title: 'Farzandingiz darsni o‘zlashtirishda qiynalyaptimi?',
     badge: 'Asosiy savol',
     step: 'Muammo tahlili',
-    subtitle: 'Ustoz Akademiyasi ota-onalar uchun metodik qo‘llanmasi',
-    desc: 'Ko‘pincha bolalarning darsdan sovishi yoki qiynalishi noto‘g‘ri yondashuv va ortiqcha bosim natijasida yuzaga keladi. Ustoz Akademiyasida biz majburlash va taqqoslash o‘rniga erkin qiziqish, ko‘rgazmali o‘yinlar va mehrga asoslangan metodikani qo‘llaymiz.',
+    subtitle: 'Arab Tili ota-onalar uchun metodik qo‘llanmasi',
+    desc: 'Ko‘pincha bolalarning darsdan sovishi yoki qiynalishi noto‘g‘ri yondashuv va ortiqcha bosim natijasida yuzaga keladi. Arab Tili markazida biz majburlash va taqqoslash o‘rniga erkin qiziqish, ko‘rgazmali o‘yinlar va mehrga asoslangan metodikani qo‘llaymiz.',
     keyPoints: [
       'Erta yoshda darsni ortiqcha bosimsiz olib borish',
       'Bola nima uchun qiynalayotganini tushunish',
@@ -68,7 +68,7 @@ const METHODOLOGY_GUIDES = [
   {
     id: 5,
     image: '/about/methodology_5.png',
-    title: 'Individual yondashuv — Ustoz Akademiyasida',
+    title: 'Individual yondashuv — Arab Tili markazida',
     badge: 'Asosiy yechim',
     step: 'Natija',
     subtitle: 'Har bir bola bilan individual yondashuv asosida ishlanadi',
@@ -102,10 +102,10 @@ const HISTORY_ITEMS = [
     year: '2024-yil Sentabr',
     badge: 'Katta Rebranding',
     step: 'Yangi bosqich',
-    title: '«Ustoz Akademiyasi» — yangi taraqqiyot sari qadam',
+    title: '«Arab Tili» — yangi taraqqiyot sari qadam',
     image: '/about/history_2024.png',
     quote:
-      '«2024-yil sentabr oyidan boshlab o‘sish va taraqqiyot sari yangi qadam qo‘ydik. Arab Tili o‘rniga Ustoz akademiyasi nomi bilan xizmat ko‘rsatishni boshladik. Bizning maqsadimiz — sizga yanada yuqori darajada ta\'lim va bilim berishdir.»',
+      '«2024-yil sentabr oyidan boshlab o‘sish va taraqqiyot sari yangi qadam qo‘ydik. Arab Tili o‘rniga Arab tili nomi bilan xizmat ko‘rsatishni boshladik. Bizning maqsadimiz — sizga yanada yuqori darajada ta\'lim va bilim berishdir.»',
     desc:
       'Ta’lim ko‘lamini kengaytirish, zamonaviy standartlar va innovatsion metodikalarni joriy etish maqsadida markazimiz yangi bosqichga ko‘tarildi. Bugungi kunda akademiyamiz 8 ta filial va 15,000 dan ortiq muvaffaqiyatli bitiruvchilarga ega nufuzli ta’lim maskanidir.',
     statsLabel: 'Bugungi natija',
@@ -160,14 +160,14 @@ export default function AboutFacultyPage({
         {/* Academy Mission & Facts Header */}
         <div className="max-w-3xl space-y-4">
           <span className="text-xs font-bold uppercase tracking-wider text-[#07966F]">
-            {t.aboutPage?.badge || 'Ustoz Akademiyasi Haqida'}
+            {t.aboutPage?.badge || 'Arab Tili Haqida'}
           </span>
           <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-[#14231F] tracking-tight">
             {t.aboutPage?.title || 'Zulmatlardan Nur tomon — O‘qi va ko‘taril!'}
           </h1>
           <p className="text-base sm:text-lg text-[#65756F] leading-relaxed">
             {t.aboutPage?.intro ||
-              'Ustoz Akademiyasi — Toshkent shahrida 8 ta filialiga va 15,000 dan ortiq bitiruvchilarga ega bo‘lgan arab tili o‘quv markazidir. Markazimiz bolajonlar (4+ yosh), 0 dan boshlovchilar hamda CEFR sertifikatiga tayyorlanuvchilar uchun tizimli dasturlarni taqdim etadi.'}
+              'Arab Tili — Toshkent shahrida 8 ta filialiga va 15,000 dan ortiq bitiruvchilarga ega bo‘lgan arab tili o‘quv markazidir. Markazimiz bolajonlar (4+ yosh), 0 dan boshlovchilar hamda CEFR sertifikatiga tayyorlanuvchilar uchun tizimli dasturlarni taqdim etadi.'}
           </p>
         </div>
 
@@ -222,7 +222,7 @@ export default function AboutFacultyPage({
                 <span>Markaz Tarixi va Rebranding Yo‘li</span>
               </span>
               <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-[#14231F] tracking-tight">
-                «Arab Tili»dan «Ustoz Akademiyasi» sari
+                «Arab Tili»dan «Arab Tili» sari
               </h2>
               <p className="text-sm sm:text-base text-[#65756F] leading-relaxed">
                 2019-yildagi ilk qadamlardan — bugungi 8 ta filial va 15,000 dan ortiq bitiruvchilarga ega zamonaviy akademiyagacha bo‘lgan rivojlanish tarixi.
@@ -340,7 +340,7 @@ export default function AboutFacultyPage({
                 Farzandingiz darsni o‘zlashtirishda qiynalyaptimi?
               </h2>
               <p className="text-sm sm:text-base text-[#65756F] leading-relaxed">
-                Ustoz Akademiyasi o‘qituvchilari tomonidan ishlab chiqilgan va amaliyotda 15,000 dan ortiq o‘quvchilarda sinovdan o‘tgan ta’lim metodikasi va ota-onalar uchun 4 ta oltin qoida.
+                Arab Tili o‘qituvchilari tomonidan ishlab chiqilgan va amaliyotda 15,000 dan ortiq o‘quvchilarda sinovdan o‘tgan ta’lim metodikasi va ota-onalar uchun 4 ta oltin qoida.
               </p>
             </div>
 
@@ -556,7 +556,7 @@ export default function AboutFacultyPage({
                 Farzandingiz kelajagi uchun to‘g‘ri poydevor
               </span>
               <h3 className="text-xl sm:text-2xl lg:text-3xl font-bold tracking-tight">
-                Ustoz Akademiyasida birinchi sinov darsi — mutlaqo bepul
+                Arab Tili markazida birinchi sinov darsi — mutlaqo bepul
               </h3>
               <p className="text-xs sm:text-sm text-white/80 max-w-2xl leading-relaxed">
                 Tajribali ustozlarimiz farzandingizning qiziqish darajasini aniqlab, bolalar psixologiyasiga mos eng qulay dars guruhini tavsiya etadilar.
@@ -613,7 +613,7 @@ export default function AboutFacultyPage({
             {t.teachersPage?.badge || 'Akademik Jamoa'}
           </span>
           <h1 className="text-3xl sm:text-4xl font-bold text-[#14231F]">
-            {t.teachersPage?.title || 'Ustoz Akademiyasi o‘qituvchilar jamoasi va kafedralar'}
+            {t.teachersPage?.title || 'Arab Tili o‘qituvchilar jamoasi va kafedralar'}
           </h1>
           <p className="text-sm sm:text-base text-[#65756F]">
             {t.teachersPage?.intro ||
@@ -803,7 +803,7 @@ export default function AboutFacultyPage({
             </h2>
             <p className="text-sm text-[#65756F]">
               {t.resultsPage?.card1Desc ||
-                'O‘quvchilarimiz va bolajonlarimiz bosqich yakunida sinovlardan o‘tib, rasmiy sertifikatlar bilan taqdirlanadilar. Haqiqiy video va fotolavhalar @ustoz_akademiyasi Instagram sahifamizning «Bitiruvchilar» va «O‘quvchilar» ruknlarida jamlangan.'}
+                'O‘quvchilarimiz va bolajonlarimiz bosqich yakunida sinovlardan o‘tib, rasmiy sertifikatlar bilan taqdirlanadilar. Haqiqiy video va fotolavhalar @arabtili_demo Instagram sahifamizning «Bitiruvchilar» va «O‘quvchilar» ruknlarida jamlangan.'}
             </p>
           </div>
         </div>

@@ -1,9 +1,9 @@
-# Ustoz Akademiyasi — Full-Stack Monorepo
+# Arab Tili — Full-Stack Monorepo
 
-Toshkentdagi 8 ta filialga ega «Ustoz Akademiyasi» arab tili o‘quv markazining to‘liq arxitekturasi:
+Toshkentdagi 8 ta filialga ega «Arab Tili» arab tili o‘quv markazining to‘liq arxitekturasi:
 
 ```
-Ustoz Akademiyasi/
+Arab Tili/
 ├── frontend/             # Next.js 16 (App Router, TailwindCSS, Arab tili interaktiv platformasi, Admin panel)
 │   ├── app/              # 16 ta marshrut va ko'p tilli (uz, ru, en) sahifalar
 │   ├── components/       # Modul layout, UI va sahifa komponentlari

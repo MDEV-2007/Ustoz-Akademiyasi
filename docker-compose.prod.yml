@@ -75,7 +75,7 @@ services:
     networks:
       - ustoz_network
 
-  # 4. Ustoz Akademiyasi Telegram Bot (Polling Mode)
+  # 4. Arab Tili Telegram Bot (Polling Mode)
   ustoz_bot:
     build:
       context: ./bot

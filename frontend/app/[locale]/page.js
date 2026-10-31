@@ -12,9 +12,9 @@ export async function generateMetadata({ params }) {
   const locale = resolvedParams?.locale || 'uz';
 
   const titles = {
-    uz: 'Ustoz Akademiyasi — Toshkentdagi N1 Arab Tili O‘quv Markazi',
-    ru: 'Ustoz Akademiyasi — Академия Арабского Языка №1 в Ташкенте',
-    en: 'Ustoz Akademiyasi — #1 Arabic Language Academy in Tashkent',
+    uz: 'Arab Tili — Toshkentdagi N1 Arab Tili O‘quv Markazi',
+    ru: 'Arab Tili — Академия Арабского Языка №1 в Ташкенте',
+    en: 'Arab Tili — #1 Arabic Language Academy in Tashkent',
   };
 
   const descriptions = {
@@ -27,11 +27,11 @@ export async function generateMetadata({ params }) {
     title: titles[locale] || titles.uz,
     description: descriptions[locale] || descriptions.uz,
     alternates: {
-      canonical: `https://ustozakademiyasi.uz/${locale}`,
+      canonical: `https://arabtili.uz/${locale}`,
       languages: {
-        uz: 'https://ustozakademiyasi.uz/uz',
-        ru: 'https://ustozakademiyasi.uz/ru',
-        en: 'https://ustozakademiyasi.uz/en',
+        uz: 'https://arabtili.uz/uz',
+        ru: 'https://arabtili.uz/ru',
+        en: 'https://arabtili.uz/en',
       },
     },
     icons: {

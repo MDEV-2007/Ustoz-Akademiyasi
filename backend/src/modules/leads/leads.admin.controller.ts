@@ -42,7 +42,7 @@ export class LeadsAdminController {
   @Get('export/csv')
   @ApiOperation({ summary: 'Filtrlangan arizalarni CSV formatida yuklab olish' })
   @Header('Content-Type', 'text/csv; charset=utf-8')
-  @Header('Content-Disposition', 'attachment; filename="ustoz_akademiyasi_arizalar.csv"')
+  @Header('Content-Disposition', 'attachment; filename="arab_tili_arizalar.csv"')
   async exportCsv(@Query() query: QueryLeadsDto, @Res() res: Response) {
     const csvData = await this.leadsService.exportToCsv(query);
     res.send(csvData);

@@ -1,5 +1,5 @@
 /**
- * Ustoz Akademiyasi — Enterprise Admin API Client
+ * Arab Tili — Enterprise Admin API Client
  * Connects the Admin Dashboard with NestJS Backend (/api/v1)
  */
 

@@ -21,7 +21,7 @@ export class CreateUserDto {
   @IsNotEmpty()
   fullName: string;
 
-  @ApiProperty({ example: 'zafar@ustozakademiyasi.uz' })
+  @ApiProperty({ example: 'zafar@arabtili.uz' })
   @IsEmail()
   @IsNotEmpty()
   email: string;

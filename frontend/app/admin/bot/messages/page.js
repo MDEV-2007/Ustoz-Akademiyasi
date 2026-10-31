@@ -21,7 +21,7 @@ import {
 const DEFAULT_BOT_CONTENT = {
   bot_welcome_text: `Assalomu alaykum va rahmatullohi va barakotuh!
 
-<b>Ustoz Akademiyasi</b> rasmiy botiga xush kelibsiz.
+<b>Arab Tili</b> rasmiy botiga xush kelibsiz.
 
 Biz Toshkent shahridagi 8 ta zamonaviy filialimizda arab tilini noldan boshlab oliy darajagacha o‘rgatamiz.
 
@@ -284,7 +284,7 @@ export default function BotMessagesEditor() {
                   UA
                 </div>
                 <div>
-                  <h4 className="text-xs font-bold leading-tight">Ustoz Akademiyasi Bot</h4>
+                  <h4 className="text-xs font-bold leading-tight">Arab Tili Bot</h4>
                   <span className="text-[10px] text-emerald-500">bot • onlayn</span>
                 </div>
               </div>

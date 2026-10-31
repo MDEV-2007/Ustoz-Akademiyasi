@@ -13,7 +13,7 @@ async function showContactInfo(ctx: MyContext) {
   let phone = '+998 55 518 44 00';
   let hours = 'Dushanba – Shanba, 09:00 – 19:00';
   let address = 'Toshkent shahri, 8 ta rasmiy filial';
-  let tgHandle = '@ustozakademiyasi';
+  let tgHandle = '@arabtili_demo';
   let tgUrl = 'https://t.me/ustozakademiyasi';
 
   try {
@@ -42,7 +42,7 @@ async function showContactInfo(ctx: MyContext) {
 
   const text =
     `📞 <b>Bog‘lanish</b>\n\n` +
-    `Savollaringiz bormi? Kurs tanlashda yordam kerakmi? Ustoz Akademiyasi jamoasi sizga yordam beradi.\n\n` +
+    `Savollaringiz bormi? Kurs tanlashda yordam kerakmi? Arab Tili jamoasi sizga yordam beradi.\n\n` +
     `☎️ <b>Call-markaz:</b> <code>${escapeHtml(phone)}</code>\n` +
     `🕘 <b>Ish vaqti:</b> ${escapeHtml(hours)}\n` +
     `📍 <b>Manzil:</b> ${escapeHtml(address)}`;

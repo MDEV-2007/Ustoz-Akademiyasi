@@ -1,5 +1,5 @@
 # ==========================================
-# Ustoz Akademiyasi Backend - Multi-stage Dockerfile
+# Arab Tili Backend - Multi-stage Dockerfile
 # ==========================================
 
 # 1. Base stage

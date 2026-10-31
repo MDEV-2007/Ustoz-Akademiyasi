@@ -24,7 +24,7 @@ export default function TrustMetricsSection({ brandConfig }) {
               <AnimatedCounter end={15000} suffix="+" /> bitiruvchilar
             </div>
             <p className="text-xs text-[#65756F] mt-2 leading-relaxed">
-              Rasmiy Instagram (@ustoz_akademiyasi) bio ma’lumoti (Telegram kanalida 5,000+ bosqich qayd etilgan).
+              Rasmiy Instagram (@arabtili_demo) bio ma’lumoti (Telegram kanalida 5,000+ bosqich qayd etilgan).
             </p>
           </div>
 

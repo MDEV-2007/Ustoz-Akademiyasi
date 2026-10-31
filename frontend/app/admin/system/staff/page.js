@@ -388,7 +388,7 @@ export default function StaffManagementPage() {
                   required
                   value={formData.email}
                   onChange={(e) => setFormData({ ...formData, email: e.target.value })}
-                  placeholder="admin@ustozakademiyasi.uz"
+                  placeholder="admin@arabtili.uz"
                   className={ADMIN_THEME.input}
                 />
               </div>

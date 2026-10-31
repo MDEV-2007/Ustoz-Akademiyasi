@@ -1,5 +1,5 @@
 /**
- * Ustoz Akademiyasi Production API Client
+ * Arab Tili Production API Client
  * Connects the Next.js frontend with the NestJS REST API
  */
 

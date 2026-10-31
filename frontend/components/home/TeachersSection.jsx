@@ -19,7 +19,7 @@ export default function TeachersSection({
               {t.teachers?.sectionBadge || 'Ustozlar va Metodika'}
             </span>
             <h2 className="text-2xl sm:text-4xl font-bold text-[#14231F] mt-1">
-              {t.teachers?.title || 'Ustoz Akademiyasining tajribali ustozlari'}
+              {t.teachers?.title || 'Arab Tili markazining tajribali ustozlari'}
             </h2>
             <p className="text-sm text-[#65756F] mt-2 max-w-2xl">
               {t.teachers?.subtitle ||

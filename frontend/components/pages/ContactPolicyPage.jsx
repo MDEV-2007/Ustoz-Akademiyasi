@@ -114,7 +114,7 @@ export default function ContactPolicyPage({
                   Rasmiy Telegram
                 </span>
                 <div className="text-xl font-bold text-[#14231F] mt-0.5">
-                  {brandConfig?.telegramHandle || '@ustozakademiyasi'}
+                  {brandConfig?.telegramHandle || '@arabtili_demo'}
                 </div>
               </div>
               <p className="text-xs text-[#65756F] leading-relaxed">
@@ -129,7 +129,7 @@ export default function ContactPolicyPage({
 
           {/* Instagram */}
           <a
-            href={brandConfig?.instagramUrl || 'https://instagram.com/ustoz_akademiyasi'}
+            href={brandConfig?.instagramUrl || 'https://instagram.com/arabtili_demo'}
             target="_blank"
             rel="noreferrer"
             className="group bg-white p-6 rounded-2xl border border-[#073F31]/15 hover:border-[#07966F] hover:shadow-lg transition-all duration-300 flex flex-col justify-between"
@@ -143,7 +143,7 @@ export default function ContactPolicyPage({
                   Rasmiy Instagram
                 </span>
                 <div className="text-xl font-bold text-[#14231F] mt-0.5">
-                  {brandConfig?.instagramHandle || '@ustoz_akademiyasi'}
+                  {brandConfig?.instagramHandle || '@arabtili_demo'}
                 </div>
               </div>
               <p className="text-xs text-[#65756F] leading-relaxed">

@@ -3054,8 +3054,8 @@
     }
   },
   "info": {
-    "title": "Ustoz Akademiyasi API",
-    "description": "Ustoz Akademiyasi arab tili ta'lim markazi uchun to'liq ishlab chiqarish darajasidagi REST API spetsifikatsiyasi.",
+    "title": "Arab Tili API",
+    "description": "Arab Tili arab tili ta'lim markazi uchun to'liq ishlab chiqarish darajasidagi REST API spetsifikatsiyasi.",
     "version": "1.0.0",
     "contact": {}
   },
@@ -3187,7 +3187,7 @@
         "properties": {
           "email": {
             "type": "string",
-            "example": "admin@ustozakademiyasi.uz",
+            "example": "admin@arabtili.uz",
             "description": "Foydalanuvchi elektron pochtasi"
           },
           "password": {
@@ -3240,7 +3240,7 @@
           },
           "email": {
             "type": "string",
-            "example": "zafar@ustozakademiyasi.uz"
+            "example": "zafar@arabtili.uz"
           },
           "phone": {
             "type": "string",
@@ -4322,7 +4322,7 @@
           },
           "sourceNote": {
             "type": "string",
-            "example": "Instagram (@ustoz_akademiyasi) rasmiy o‘quv rukni asosida"
+            "example": "Instagram (@arabtili_demo) rasmiy o‘quv rukni asosida"
           },
           "readTime": {
             "type": "string",
@@ -4387,7 +4387,7 @@
           },
           "sourceNote": {
             "type": "string",
-            "example": "Instagram (@ustoz_akademiyasi) rasmiy o‘quv rukni asosida"
+            "example": "Instagram (@arabtili_demo) rasmiy o‘quv rukni asosida"
           },
           "readTime": {
             "type": "string",

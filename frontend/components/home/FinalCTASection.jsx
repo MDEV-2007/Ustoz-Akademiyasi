@@ -53,18 +53,18 @@ export default function FinalCTASection({
                     rel="noreferrer"
                     className="underline font-semibold text-[#14231F]"
                   >
-                    {brandConfig?.telegramHandle || '@ustozakademiyasi'}
+                    {brandConfig?.telegramHandle || '@arabtili_demo'}
                   </a>
                 </span>
                 <span>
                   Instagram:{' '}
                   <a
-                    href={brandConfig?.instagramUrl || 'https://instagram.com/ustoz_akademiyasi'}
+                    href={brandConfig?.instagramUrl || 'https://instagram.com/arabtili_demo'}
                     target="_blank"
                     rel="noreferrer"
                     className="underline font-semibold text-[#14231F]"
                   >
-                    {brandConfig?.instagramHandle || '@ustoz_akademiyasi'}
+                    {brandConfig?.instagramHandle || '@arabtili_demo'}
                   </a>
                 </span>
               </div>

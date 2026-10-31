@@ -9,7 +9,7 @@ export async function submitRegistration({
   courses = [],
   branches = [],
   telegramBotConfig = { botToken: '', chatId: '' },
-  sourceUrl = 'https://ustozakademiyasi.uz/'
+  sourceUrl = 'https://arabtili.uz/'
 }) {
   const nextErrors = {};
 

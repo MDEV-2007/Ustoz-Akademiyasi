@@ -198,7 +198,7 @@ export default function ArticlesPage({
                               {item.tr || item.translit}
                             </h2>
                             <span className="text-[11px] font-semibold text-[#07966F] uppercase tracking-wider">
-                              Ustoz Akademiyasi Metodikasi
+                              Arab Tili Metodikasi
                             </span>
                           </div>
                         </div>
@@ -365,7 +365,7 @@ export default function ArticlesPage({
                       Rasmiy Telegram Kanal
                     </h4>
                     <span className="text-[11px] text-[#0088cc] font-medium">
-                      @ustozakademiyasi
+                      @arabtili_demo
                     </span>
                   </div>
                 </div>
@@ -446,7 +446,7 @@ export default function ArticlesPage({
               {t.articles?.title || 'Arab tilini o‘rganuvchilar uchun foydali maqolalar'}
             </h1>
             <p className="text-sm sm:text-base text-[#65756F] mt-2 max-w-2xl">
-              Ustoz Akademiyasi ustozlari va metodistlari tomonidan tayyorlangan maxsus qo‘llanmalar, tavsiyalar va audio lug‘atlar to‘plami.
+              Arab Tili ustozlari va metodistlari tomonidan tayyorlangan maxsus qo‘llanmalar, tavsiyalar va audio lug‘atlar to‘plami.
             </p>
           </div>
 
@@ -509,7 +509,7 @@ export default function ArticlesPage({
 
               <div className="pt-4 mt-6 border-t border-[#073F31]/10 flex flex-col sm:flex-row sm:items-center justify-between gap-2.5">
                 <span className="text-[11px] text-[#65756F] line-clamp-1">
-                  {art.sourceNote || 'Ustoz Akademiyasi'}
+                  {art.sourceNote || 'Arab Tili'}
                 </span>
                 <button
                   onClick={() => navigate(`/maqolalar/${art.slug}`)}

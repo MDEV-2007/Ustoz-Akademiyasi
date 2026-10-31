@@ -90,7 +90,7 @@ export function AdminProvider({ children }) {
 
   // Demo / Quick superadmin login
   const loginAsDemoAdmin = async () => {
-    return login('admin@ustozakademiyasi.uz', 'SecureAdminPassword2026!#');
+    return login('admin@arabtili.uz', 'SecureAdminPassword2026!#');
   };
 
   // Logout handler

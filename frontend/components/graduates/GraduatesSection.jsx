@@ -86,7 +86,7 @@ export default function GraduatesSection({
       certificate: 'Maxraj va Fonetika sertifikati',
       date: '2026',
       image: '/graduates/akbarov_mirsolih.png',
-      quote: 'Ustoz Akademiyasida tahsil olib, fonetika bosqichini muvaffaqiyatli tamomladim.',
+      quote: 'Arab Tili markazida tahsil olib, fonetika bosqichini muvaffaqiyatli tamomladim.',
       badge: 'Fonetika',
       achievement: 'Mukammal maxraj sohibi',
       category: 'adults'
@@ -155,7 +155,7 @@ export default function GraduatesSection({
         <div className="flex flex-col lg:flex-row lg:items-end justify-between gap-6 mb-10 pb-8 border-b border-[#E2E8E4]">
           <div className="max-w-3xl space-y-3">
             <div className="inline-flex items-center gap-2 text-xs font-semibold uppercase tracking-wider text-[#047857]">
-              <span>Ustoz Akademiyasi Natijalari</span>
+              <span>Arab Tili Natijalari</span>
               <span className="w-1 h-1 rounded-full bg-[#047857]/40" />
               <span className="font-medium text-[#66736E]">15 000+ Bitiruvchi</span>
             </div>

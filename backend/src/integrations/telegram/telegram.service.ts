@@ -299,7 +299,7 @@ export class TelegramService {
     const toLabel = STATUS_LABELS[info.toStatus] || info.toStatus;
 
     const text = [
-      `🔄 <b>STATUS O‘ZGARISHI — USTOZ AKADEMIYASI</b>`,
+      `🔄 <b>STATUS O‘ZGARISHI — ARAB TILI</b>`,
       `🆔 <b>Ariza ID:</b> <code>${escapeHtml(info.referenceId)}</code>`,
       `👤 <b>Mijoz:</b> ${escapeHtml(info.fullName)}`,
       `📊 <b>Status:</b> ${escapeHtml(fromLabel)} ➡️ <b>${escapeHtml(toLabel)}</b>`,

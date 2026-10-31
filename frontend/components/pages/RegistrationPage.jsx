@@ -125,8 +125,8 @@ export default function RegistrationPage({
               <span>{brandConfig?.phoneDisplay || '+998 71 200 00 00'}</span>
             </a>
             <div className="text-xs text-[#65756F] flex flex-wrap items-center gap-x-4 gap-y-1 pt-1 border-t border-[#073F31]/10">
-              <span>Telegram: <strong>{brandConfig?.telegramHandle || '@ustozakademiyasi'}</strong></span>
-              <span>Instagram: <strong>{brandConfig?.instagramHandle || '@ustoz_akademiyasi'}</strong></span>
+              <span>Telegram: <strong>{brandConfig?.telegramHandle || '@arabtili_demo'}</strong></span>
+              <span>Instagram: <strong>{brandConfig?.instagramHandle || '@arabtili_demo'}</strong></span>
             </div>
           </div>
 

@@ -80,7 +80,7 @@ export default function BotOverviewPage() {
         <div>
           <h1 className={ADMIN_THEME.pageTitle}>Telegram Bot Boshqaruv Markazi</h1>
           <p className={ADMIN_THEME.pageSubtitle}>
-            @ustozakademiya_bot xizmati, jonli polling jarayoni va botdan kelayotgan o‘quvchilar arizalari
+            @arabtili_demo_bot xizmati, jonli polling jarayoni va botdan kelayotgan o‘quvchilar arizalari
           </p>
         </div>
 
@@ -95,7 +95,7 @@ export default function BotOverviewPage() {
           </button>
 
           <a
-            href="https://t.me/ustozakademiya_bot"
+            href="https://t.me/arabtili_demo_bot"
             target="_blank"
             rel="noopener noreferrer"
             className={ADMIN_THEME.btnPrimary}
@@ -120,7 +120,7 @@ export default function BotOverviewPage() {
               </span>
             </div>
             <h2 className="text-xl font-bold tracking-tight text-white mt-0.5">
-              @ustozakademiya_bot
+              @arabtili_demo_bot
             </h2>
             <p className="text-xs text-emerald-100/80 mt-1">
               GrammY v1.40.0 freymvorki orqali to‘liq o‘zbek tilida avtonom xizmat ko‘rsatmoqda

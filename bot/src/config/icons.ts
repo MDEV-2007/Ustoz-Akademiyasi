@@ -1,5 +1,5 @@
 /**
- * USTOZ AKADEMIYASI — TELEGRAM BOT ICON & EMOJI SYSTEM
+ * ARAB TILI — TELEGRAM BOT ICON & EMOJI SYSTEM
  * Standardized according to brand identity guidelines:
  * Premium, educational, respectful, minimal, and consistent across all screens.
  */

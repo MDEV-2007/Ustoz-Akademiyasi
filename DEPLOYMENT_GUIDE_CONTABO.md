@@ -1,4 +1,4 @@
-# 🚀 Ustoz Akademiyasi — Contabo Server Deployment Guide
+# 🚀 Arab Tili — Contabo Server Deployment Guide
 **Boshqa loyihalar (`ilimildizi`, `uncoschool`) bilan to‘qnashuvsiz (Zero-Conflict) o‘rnatish qo‘llanmasi.**
 
 ---

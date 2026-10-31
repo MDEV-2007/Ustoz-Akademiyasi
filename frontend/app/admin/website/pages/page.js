@@ -33,7 +33,7 @@ const STATIC_PAGES = [
     id: 'about',
     title: 'Biz haqimizda',
     slug: '/#about',
-    description: 'Ustoz Akademiyasi tarixi, missiyasi va professional metodikasi',
+    description: 'Arab Tili tarixi, missiyasi va professional metodikasi',
     status: 'PUBLISHED',
     lastModified: 'Kechagi kun',
     viewsCount: '3,840',

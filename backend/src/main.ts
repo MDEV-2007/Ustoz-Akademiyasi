@@ -35,7 +35,7 @@ async function bootstrap() {
       'http://ustozakademiyasi-front.duckdns.org',
       'https://ustozakademiyasi-back.duckdns.org',
       'http://ustozakademiyasi-back.duckdns.org',
-      'https://ustozakademiyasi.uz',
+      'https://arabtili.uz',
       'http://localhost:3000',
       'http://localhost:3001',
       'http://127.0.0.1:3000',

@@ -1,5 +1,5 @@
 /**
- * Ustoz Akademiyasi — Elite Enterprise Admin Design System Tokens
+ * Arab Tili — Elite Enterprise Admin Design System Tokens
  * Unified tokens for Linear & Stripe-level UI consistency across all admin routes.
  */
 

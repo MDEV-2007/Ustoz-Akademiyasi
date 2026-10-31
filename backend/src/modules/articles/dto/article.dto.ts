@@ -74,7 +74,7 @@ export class CreateArticleDto {
   @IsNotEmpty()
   topic: string;
 
-  @ApiPropertyOptional({ example: 'Instagram (@ustoz_akademiyasi) rasmiy o‘quv rukni asosida' })
+  @ApiPropertyOptional({ example: 'Instagram (@arabtili_demo) rasmiy o‘quv rukni asosida' })
   @IsOptional()
   @IsString()
   sourceNote?: string;

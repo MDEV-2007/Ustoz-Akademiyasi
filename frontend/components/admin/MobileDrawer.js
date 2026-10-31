@@ -113,7 +113,7 @@ export default function MobileDrawer() {
             <div className="w-8 h-8 rounded-lg bg-emerald-600 flex items-center justify-center font-black text-white text-xs">
               UA
             </div>
-            <span className="font-bold text-white text-sm">Ustoz Akademiyasi</span>
+            <span className="font-bold text-white text-sm">Arab Tili</span>
           </div>
 
           <button

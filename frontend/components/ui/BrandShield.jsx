@@ -4,7 +4,7 @@ import React from 'react';
 
 /**
  * OfficialBrandShield
- * Fully self-contained vector emblem for Ustoz Akademiyasi.
+ * Fully self-contained vector emblem for Arab Tili.
  * Uses direct fills and strokes to guarantee 100% reliable rendering
  * across all browsers, routes, and dark/light backgrounds without
  * relying on fragile external <defs> or linearGradient ID references.

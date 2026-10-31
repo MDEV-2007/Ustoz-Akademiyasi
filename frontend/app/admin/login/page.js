@@ -67,7 +67,7 @@ export default function AdminLoginPage() {
 
           {/* Top-Left: Brand Emblem & Academy Name */}
           <div className="relative z-10 flex items-center gap-3.5">
-            {/* Authentic Ustoz Akademiyasi Emblem */}
+            {/* Authentic Arab Tili Emblem */}
             <div className="w-12 h-12 rounded-2xl bg-[#086641] shadow-md flex items-center justify-center p-2 shrink-0 border border-emerald-600/30">
               <svg viewBox="0 0 100 120" className="w-full h-full" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path
@@ -101,7 +101,7 @@ export default function AdminLoginPage() {
             <div className="relative w-64 h-64 sm:w-72 sm:h-72 max-w-full drop-shadow-xl hover:scale-[1.02] transition-transform duration-300">
               <Image
                 src="/academy_login_illustration.jpg"
-                alt="Ustoz Akademiyasi ta’lim tasviri"
+                alt="Arab Tili ta’lim tasviri"
                 fill
                 priority
                 className="object-contain rounded-3xl"
@@ -120,7 +120,7 @@ export default function AdminLoginPage() {
 
           {/* Bottom-Left: Footer copyright & info */}
           <div className="relative z-10 pt-2 border-t border-slate-100 flex items-center justify-between text-[11px] text-slate-400">
-            <span>© 2026 Ustoz Akademiyasi • Toshkent</span>
+            <span>© 2026 Arab Tili • Toshkent</span>
             <span className="hidden sm:inline font-medium text-emerald-700">8 ta rasmiy filial</span>
           </div>
 

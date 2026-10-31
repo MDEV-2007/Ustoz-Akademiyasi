@@ -4,10 +4,10 @@ import * as argon2 from 'argon2';
 const prisma = new PrismaClient();
 
 async function main() {
-  console.log('🌱 Starting idempotent database seed for Ustoz Akademiyasi...');
+  console.log('🌱 Starting idempotent database seed for Arab Tili...');
 
   // 1. Initial Super Admin Bootstrap
-  const adminEmail = process.env.SUPERADMIN_EMAIL || 'admin@ustozakademiyasi.uz';
+  const adminEmail = process.env.SUPERADMIN_EMAIL || 'admin@arabtili.uz';
   const adminPassword = process.env.SUPERADMIN_PASSWORD || 'SecureAdminPassword2026!#';
   const adminName = process.env.SUPERADMIN_NAME || 'Bosh Administrator';
 
@@ -345,7 +345,7 @@ async function main() {
       badge: 'Maxraj mutaxassisi',
       qualification: 'Arab fonetikasi va klassik talaffuz mutaxassisi',
       focus: '28 ta arab harfining artikulyatsion nuqtalari, boshlang‘ich talaffuz va eshitish mashqlari',
-      biography: 'Ustoz Akademiyasida 0 dan boshlovchi o‘quvchilarga harflar maxraji va fonetika asoslaridan dars beradi.',
+      biography: 'Arab Tili markazida 0 dan boshlovchi o‘quvchilarga harflar maxraji va fonetika asoslaridan dars beradi.',
       photo: '/teachers/teacher_1.png',
       yearsOfExperience: 5,
       displayOrder: 1,
@@ -427,9 +427,9 @@ async function main() {
       title: "Kundalik hayotda kerak bo'ladigan 10 ta Arabcha so'z va ibora",
       topic: "Kundalik lug'at",
       readTime: '4 daqiqa',
-      sourceNote: 'Instagram (@ustoz_akademiyasi) rasmiy o‘quv rukni asosida',
+      sourceNote: 'Instagram (@arabtili_demo) rasmiy o‘quv rukni asosida',
       excerpt: "Arab tilini o'rganishni boshlagan har bir inson kundalik suhbatda, salomlashishda va o'zaro hurmat bildirishda eng ko'p ishlatadigan 10 ta muhim ibora.",
-      intro: "Til o'rganishning eng samarali usuli — har kuni eng ko'p takrorlanadigan jonli so'zlarni to'g'ri talaffuz bilan nutqqa kiritishdir. Ustoz Akademiyasi ustozlari kundalik muloqotda eng zarur bo'lgan 10 ta arabcha so'z va iborani jamlab chiqdilar.",
+      intro: "Til o'rganishning eng samarali usuli — har kuni eng ko'p takrorlanadigan jonli so'zlarni to'g'ri talaffuz bilan nutqqa kiritishdir. Arab Tili ustozlari kundalik muloqotda eng zarur bo'lgan 10 ta arabcha so'z va iborani jamlab chiqdilar.",
       items: [
         { ar: 'السَّلَامُ عَلَيْكُمْ', tr: 'As-salamu alaykum', uz: 'Sizga tinchlik va omonlik bo‘lsin (Salomlashish)' },
         { ar: 'كَيْفَ حَالُكَ؟', tr: 'Kayfa haluka / haluki?', uz: 'Ahvolingiz qanday?' },
@@ -499,7 +499,7 @@ async function main() {
   const faqsData = [
     { category: "Boshlang'ich", question: 'Arab tilini umuman 0 dan boshlasam, qaysi kursga yozilishim kerak?', answer: "Agar siz hali arab harflarini tanimasangiz yoki talaffuzingizda ikkilanish bo'lsa, o'qishni «Professional Fonetika» kursidan boshlaysiz. Bu bosqichda 28 ta harfning maxraji va o'qish qoidalari to'liq o'rgatiladi.", sortOrder: 1 },
     { category: 'Bolalar uchun', question: 'Kids 4+ kursiga necha yoshdan qabul qilinadi va darslar qanday o‘tiladi?', answer: "Kids 4+ dasturiga 4 yoshdan boshlab bolajonlar qabul qilinadi. Darslar zerikarli yodlashsiz — maxsus arabcha multfilmlar, «Bolajonlar bilan raqamlarni topish o'yini» va ko'rgazmali kartochkalar orqali olib boriladi.", sortOrder: 2 },
-    { category: 'Filiallar', question: 'Toshkent shahrining qaysi hududlarida filiallaringiz bor?', answer: "Ustoz Akademiyasining Toshkent shahrida 8 ta filiali faoliyat yuritadi: Archako'cha, Yangi ToshMI, Qoraqamish, Algoritm, Yunusobod, Sergeli, Tinchlik va Beruniy filiallari.", sortOrder: 3 },
+    { category: 'Filiallar', question: 'Toshkent shahrining qaysi hududlarida filiallaringiz bor?', answer: "Arab Tili markazining Toshkent shahrida 8 ta filiali faoliyat yuritadi: Archako'cha, Yangi ToshMI, Qoraqamish, Algoritm, Yunusobod, Sergeli, Tinchlik va Beruniy filiallari.", sortOrder: 3 },
     { category: 'Sertifikat', question: 'Grammatika va CEFR kursida qaysi darajalarga tayyorlanadi?', answer: "Fonetika bosqichini tamomlagan o'quvchilar Sarf va Nahv qoidalari bilan birga A2, B1, B2 hamda C1 (Milliy va xalqaro CEFR) sertifikat imtihonlarining 4 ta bo'limiga tizimli tayyorlanadilar.", sortOrder: 4 },
     { category: "To'lov va Jadval", question: 'Kurs narxlari va dars vaqtlarini qanday bilsam bo‘ladi?', answer: "Har bir filialdagi guruhlar jadvali hamda joriy o'quv to'lovlari bo'yicha aniq ma'lumot olish uchun saytdagi sinov darsi shaklini to'ldiring yoki +998 71 200 00 00 raqamiga qo'ng'iroq qiling.", sortOrder: 5 },
     { category: 'Sinov darsi', question: 'Sinov darsiga qanday yozilaman va u qanday o‘tadi?', answer: "«Bepul sinov darsiga yozilish» sahifasida ismingiz, telefon raqamingiz, kurs va o'zingizga yaqin filialni tanlaysiz. Ma'muriyatimiz siz bilan bog'lanib, darajangizga mos guruh va vaqtni belgilab beradi.", sortOrder: 6 },

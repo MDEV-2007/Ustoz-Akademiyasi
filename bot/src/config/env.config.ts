@@ -25,7 +25,7 @@ const envSchema = z.object({
     ),
   ADMIN_NOTIFICATION_CHAT_ID: z.string().optional().default(''),
   REDIS_URL: z.string().optional().default(''),
-  PUBLIC_WEBSITE_URL: z.string().url().default('https://ustozakademiyasi.uz'),
+  PUBLIC_WEBSITE_URL: z.string().url().default('https://arabtili.uz'),
   LOG_LEVEL: z.enum(['debug', 'info', 'warn', 'error']).default('info'),
 });
 

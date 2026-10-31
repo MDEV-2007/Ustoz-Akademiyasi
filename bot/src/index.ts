@@ -7,7 +7,7 @@ import { getConfig } from './config/env.config';
 async function bootstrap() {
   const config = getConfig();
   console.log('====================================================');
-  console.log('USTOZ AKADEMIYASI — TELEGRAM BOT SERVICE');
+  console.log('ARAB TILI — TELEGRAM BOT SERVICE');
   console.log(`Mode: ${config.BOT_MODE}`);
   console.log(`Backend API: ${config.BACKEND_API_URL}`);
   console.log(`Website: ${config.PUBLIC_WEBSITE_URL}`);
@@ -79,7 +79,7 @@ async function bootstrap() {
     await bot.start({
       drop_pending_updates: false,
       onStart: (botInfo) => {
-        console.log(`✅ Ustoz Akademiyasi Telegram boti (@${botInfo.username}) muvaffaqiyatli ishlamoqda!`);
+        console.log(`✅ Arab Tili Telegram boti (@${botInfo.username}) muvaffaqiyatli ishlamoqda!`);
       },
     });
   }

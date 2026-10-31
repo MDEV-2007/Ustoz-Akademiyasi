@@ -106,7 +106,7 @@ export default function AdminDashboardPage() {
       <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 pb-2">
         <div>
           <h2 className="text-xl sm:text-2xl font-black text-slate-900 tracking-tight">
-            Ustoz Akademiyasi — Operatsion Boshqaruv
+            Arab Tili — Operatsion Boshqaruv
           </h2>
           <p className="text-xs text-slate-500 mt-0.5">
             Real vaqt rejimida arizalar oqimi, konversiya va filiallar monitoringi
@@ -328,7 +328,7 @@ export default function AdminDashboardPage() {
                   </div>
                   <div>
                     <span className="text-xs font-bold text-slate-900 block">Telegram Boti</span>
-                    <span className="text-[11px] text-slate-500">@ustozakademiya_bot</span>
+                    <span className="text-[11px] text-slate-500">@arabtili_demo_bot</span>
                   </div>
                 </div>
                 <div className="text-right">
@@ -345,7 +345,7 @@ export default function AdminDashboardPage() {
                   </div>
                   <div>
                     <span className="text-xs font-bold text-slate-900 block">Rasmiy Veb-Sayt</span>
-                    <span className="text-[11px] text-slate-500">ustozakademiyasi.uz</span>
+                    <span className="text-[11px] text-slate-500">arabtili.uz</span>
                   </div>
                 </div>
                 <div className="text-right">

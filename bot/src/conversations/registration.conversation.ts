@@ -105,7 +105,7 @@ export async function registrationConversation(
   // 2. Greeting & Brief Explanation with cancel keyboard
   await ctx.reply(
     `📝 <b>Sinov Darsiga Yozilish</b>\n\n` +
-      `Ustoz Akademiyasida arab tili darslarimiz bilan tanishish uchun quyidagi bosqichlarni bajaring.\n\n` +
+      `Arab Tili markazida arab tili darslarimiz bilan tanishish uchun quyidagi bosqichlarni bajaring.\n\n` +
       BOT_STRINGS.PRIVACY_NOTICE,
     { reply_markup: getCancelKeyboard(), parse_mode: 'HTML' },
   );
@@ -568,13 +568,13 @@ export async function registrationConversation(
             // -------------------------------------------------------------
             const successMessage =
               `✅ <b>Arizangiz muvaffaqiyatli yuborildi!</b>\n\n` +
-              `Ustoz Akademiyasi jamoasi murojaatingizni ko‘rib chiqadi va tez orada siz bilan bog‘lanadi.\n\n` +
+              `Arab Tili jamoasi murojaatingizni ko‘rib chiqadi va tez orada siz bilan bog‘lanadi.\n\n` +
               `🆔 <b>Ariza raqami:</b> <code>${escapeHtml(result.referenceId)}</code>\n` +
               `👤 <b>O‘quvchi:</b> ${escapeHtml(result.fullName)}\n` +
               `📚 <b>Kurs:</b> ${escapeHtml(result.courseTitle)}\n` +
               `📍 <b>Filial:</b> ${escapeHtml(result.branchName)}\n` +
               `📞 <b>Telefon:</b> <code>${escapeHtml(result.phoneFormatted)}</code>\n\n` +
-              `<i>Ustoz Akademiyasini tanlaganingiz uchun tashakkur!</i>`;
+              `<i>Arab Tilini tanlaganingiz uchun tashakkur!</i>`;
 
             const successKeyboard = new InlineKeyboard()
               .text('📍 Filiallarimiz', 'nav:branches')

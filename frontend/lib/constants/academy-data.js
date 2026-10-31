@@ -1,5 +1,5 @@
 /**
- * Ustoz Akademiyasi — Verified Business Data & Educational Content Constants
+ * Arab Tili — Verified Business Data & Educational Content Constants
  * Grounded in authentic academy records, Tashkent branch network, and verified curriculum.
  */
 
@@ -358,7 +358,7 @@ export const INITIAL_GRADUATES = [
     certificate: 'Maxraj va Fonetika sertifikati',
     date: '2026',
     image: '/graduates/akbarov_mirsolih.png',
-    quote: 'Ustoz Akademiyasida tahsil olib, fonetika bosqichini muvaffaqiyatli tamomladim.',
+    quote: 'Arab Tili markazida tahsil olib, fonetika bosqichini muvaffaqiyatli tamomladim.',
     badge: 'Fonetika Bitiruvchisi',
     achievement: 'Mukammal maxraj sohibi',
     category: 'adults'
@@ -398,11 +398,11 @@ export const INITIAL_ARTICLES = [
     title: "Kundalik hayotda kerak bo'ladigan 10 ta Arabcha so'z va ibora",
     topic: "Kundalik lug'at",
     readTime: '4 daqiqa',
-    sourceNote: 'Instagram (@ustoz_akademiyasi) rasmiy o‘quv rukni asosida',
+    sourceNote: 'Instagram (@arabtili_demo) rasmiy o‘quv rukni asosida',
     excerpt:
       "Arab tilini o'rganishni boshlagan har bir inson kundalik suhbatda, salomlashishda va o'zaro hurmat bildirishda eng ko'p ishlatadigan 10 ta muhim ibora.",
     intro:
-      "Til o'rganishning eng samarali usuli — har kuni eng ko'p takrorlanadigan jonli so'zlarni to'g'ri talaffuz bilan nutqqa kiritishdir. Ustoz Akademiyasi ustozlari kundalik muloqotda eng zarur bo'lgan 10 ta arabcha so'z va iborani jamlab chiqdilar.",
+      "Til o'rganishning eng samarali usuli — har kuni eng ko'p takrorlanadigan jonli so'zlarni to'g'ri talaffuz bilan nutqqa kiritishdir. Arab Tili ustozlari kundalik muloqotda eng zarur bo'lgan 10 ta arabcha so'z va iborani jamlab chiqdilar.",
     items: [
       { ar: 'السَّلَامُ عَلَيْكُمْ', tr: 'As-salamu alaykum', uz: 'Sizga tinchlik va omonlik bo‘lsin (Salomlashish)' },
       { ar: 'كَيْفَ حَالُكَ؟', tr: 'Kayfa haluka / haluki?', uz: 'Ahvolingiz qanday?' },
@@ -490,11 +490,11 @@ export const INITIAL_ARTICLES = [
     title: 'Arab tilidagi kasblar va til bilishning amaliy ahamiyati',
     topic: 'Kasb va Kelajak',
     readTime: '4 daqiqa',
-    sourceNote: 'Instagram (@ustoz_akademiyasi) «Arab tilidagi kasblar» postidan',
+    sourceNote: 'Instagram (@arabtili_demo) «Arab tilidagi kasblar» postidan',
     excerpt:
       "Arab tilini mukammal o'rganish va CEFR sertifikatiga ega bo'lish qaysi sohalarda kasbiy faoliyat yuritish imkonini beradi?",
     intro:
-      "Arab tili BMTning 6 ta rasmiy tilidan biri bo'lib, 20 dan ortiq davlatning rasmiy muloqot tilidir. Ustoz Akademiyasida fonetika, grammatika va CEFR bosqichlarini muvaffaqiyatli tamomlagan bitiruvchilar quyidagi yo'nalishlarda o'z bilimlarini qo'llashlari mumkin.",
+      "Arab tili BMTning 6 ta rasmiy tilidan biri bo'lib, 20 dan ortiq davlatning rasmiy muloqot tilidir. Arab Tili markazida fonetika, grammatika va CEFR bosqichlarini muvaffaqiyatli tamomlagan bitiruvchilar quyidagi yo'nalishlarda o'z bilimlarini qo'llashlari mumkin.",
     items: [
       {
         ar: 'مُعَلِّمُ اللُّغَةِ الْعَرَبِيَّةِ',
@@ -792,9 +792,9 @@ export const PLAYGROUND_QUIZ = [
   {
     id: 1,
     arabicPrompt: 'نُورٌ',
-    question: "Ustoz Akademiyasining «Zulmatlardan Nur tomon» shioridagi «نُورٌ» (Nurun) so'zining birinchi harfi qaysi?",
-    questionRu: 'Какая первая буква в слове «نُورٌ» (Нурун) из девиза Ustoz Akademiyasi «Из тьмы к Свету»?',
-    questionEn: 'Which letter begins the word «نُورٌ» (Nurun) from Ustoz Akademiyasi motto «From Darkness to Light»?',
+    question: "Arab Tili markazining «Zulmatlardan Nur tomon» shioridagi «نُورٌ» (Nurun) so'zining birinchi harfi qaysi?",
+    questionRu: 'Какая первая буква в слове «نُورٌ» (Нурун) из девиза Arab Tili «Из тьмы к Свету»?',
+    questionEn: 'Which letter begins the word «نُورٌ» (Nurun) from Arab Tili motto «From Darkness to Light»?',
     options: ['ن (Nun)', 'ب (Ba)', 'ت (Ta)', 'ق (Qof)'],
     optionsRu: ['ن (Нун)', 'ب (Ба)', 'ت (Та)', 'ق (Коф)'],
     optionsEn: ['ن (Nun)', 'ب (Ba)', 'ت (Ta)', 'ق (Qaf)'],
@@ -914,7 +914,7 @@ export const INITIAL_TEACHERS = [
     badge: 'Maxraj mutaxassisi',
     image: '/teachers/teacher_1.png',
     experience: '5 yillik tajriba',
-    motto: "«Arab tilini Ustoz akademiyasida 0 dan o‘rganing»",
+    motto: "«Arab tilini Arab tili markazida 0 dan o‘rganing»",
     description: 'Arab tilidagi 28 ta harfning artikulyatsion nuqtalarini aniq o‘rgatish va harflar talaffuzini to‘g‘rilash bo‘yicha ixtisoslashgan.',
     courses: ['Professional Fonetika', 'Boshlang‘ich Arab Tili'],
   },
@@ -970,7 +970,7 @@ export const INITIAL_FAQ_ITEMS = [
   {
     category: 'Filiallar',
     q: 'Toshkent shahrining qaysi hududlarida filiallaringiz bor?',
-    a: "Ustoz Akademiyasining Toshkent shahrida 8 ta filiali faoliyat yuritadi: Archako'cha, Yangi ToshMI, Qoraqamish, Algoritm, Yunusobod, Sergeli, Tinchlik va Beruniy filiallari."
+    a: "Arab Tili markazining Toshkent shahrida 8 ta filiali faoliyat yuritadi: Archako'cha, Yangi ToshMI, Qoraqamish, Algoritm, Yunusobod, Sergeli, Tinchlik va Beruniy filiallari."
   },
   {
     category: 'Sertifikat',
