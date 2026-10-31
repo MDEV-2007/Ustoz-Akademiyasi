@@ -11,77 +11,17 @@ import React from 'react';
  */
 export const OfficialBrandShield = ({ size = 42, className = '' }) => (
   <div
-    style={{ width: size, height: Math.round(size * 1.08) }}
+    style={{ width: size, height: size }}
     className={`relative flex-shrink-0 flex items-center justify-center select-none ${className}`}
   >
-    <svg
-      width="100%"
-      height="100%"
-      viewBox="0 0 100 108"
-      fill="none"
-      xmlns="http://www.w3.org/2000/svg"
-      aria-hidden="true"
-      className="w-full h-full drop-shadow-[0_2px_8px_rgba(7,150,111,0.22)]"
-    >
-      {/* Outer Shield Backing */}
-      <path
-        d="M6 6H94V52C94 81 50 102 50 102C50 102 6 81 6 52V6Z"
-        fill="#033022"
-      />
-      {/* Main Vibrant Emerald Shield Body */}
-      <path
-        d="M8 8H92V51C92 78.5 50 98.5 50 98.5C50 98.5 8 78.5 8 51V8Z"
-        fill="#07966F"
-      />
-      {/* Upper Bright Glow Arc */}
-      <path
-        d="M8 8H92V36C65 24 35 24 8 36V8Z"
-        fill="#00E599"
-        opacity="0.32"
-      />
-      {/* Bottom Depth Shadow */}
-      <path
-        d="M12 60C32 48 68 48 88 60C80 78 50 94 50 94C50 94 20 78 12 60Z"
-        fill="#022318"
-        opacity="0.65"
-      />
-      {/* Inner Glowing Border */}
-      <path
-        d="M10 10H90V50C90 75 50 95 50 95C50 95 10 75 10 50V10Z"
-        stroke="#63E6BE"
-        strokeWidth="1.8"
-        strokeOpacity="0.6"
-      />
-
-      {/* Sun Rays ("Zulmatlardan Nur tomon") */}
-      <g stroke="#FFFFFF" strokeWidth="4.5" strokeLinecap="round">
-        <line x1="50" y1="43" x2="50" y2="20" />
-        <line x1="42" y1="45" x2="31" y2="25" />
-        <line x1="36" y1="50" x2="19" y2="36" />
-        <line x1="58" y1="45" x2="69" y2="25" />
-        <line x1="64" y1="50" x2="81" y2="36" />
-        <line x1="20" y1="54" x2="41" y2="54" />
-        <line x1="59" y1="54" x2="80" y2="54" />
-      </g>
-
-      {/* Central Book Peak */}
-      <path
-        d="M41 54L50 46L59 54"
-        stroke="#FFFFFF"
-        strokeWidth="4.5"
-        strokeLinecap="round"
-        strokeLinejoin="round"
-      />
-
-      {/* Open Book Curve */}
-      <path
-        d="M23 63C23 69 32 69 44 69C48 69 50 72 50 74.5C50 72 52 69 56 69C68 69 77 69 77 63"
-        stroke="#FFFFFF"
-        strokeWidth="5"
-        strokeLinecap="round"
-        strokeLinejoin="round"
-      />
-    </svg>
+    <img
+      src="/brand/siteicon.png"
+      alt="Arab Tili"
+      width={size}
+      height={size}
+      className="w-full h-full rounded-xl object-cover drop-shadow-[0_2px_8px_rgba(7,150,111,0.22)]"
+      loading="eager"
+    />
   </div>
 );
 
