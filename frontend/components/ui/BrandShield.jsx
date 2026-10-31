@@ -19,7 +19,7 @@ export const OfficialBrandShield = ({ size = 42, className = '' }) => (
       alt="Arab Tili"
       width={size}
       height={size}
-      className="w-full h-full rounded-xl object-cover drop-shadow-[0_2px_8px_rgba(7,150,111,0.22)]"
+      className="w-full h-full rounded-xl object-contain drop-shadow-[0_2px_8px_rgba(7,150,111,0.22)]"
       loading="eager"
     />
   </div>
