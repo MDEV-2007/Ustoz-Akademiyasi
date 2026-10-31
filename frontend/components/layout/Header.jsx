@@ -1,6 +1,6 @@
 'use client';
 
-import React from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import {
   ChevronDown,
   ChevronRight,
@@ -30,9 +30,90 @@ export default function Header({
   mobileNavOpen,
   setMobileNavOpen,
 }) {
+  const [isHeaderVisible, setIsHeaderVisible] = useState(true);
+  const [isScrolledDown, setIsScrolledDown] = useState(false);
+  const hideTimeoutRef = useRef(null);
+  const lastScrollYRef = useRef(0);
+  const isRevealedRef = useRef(false);
+
+  useEffect(() => {
+    // If mobile navigation drawer is open, always keep header visible
+    if (mobileNavOpen) {
+      setIsHeaderVisible(true);
+      if (hideTimeoutRef.current) {
+        clearTimeout(hideTimeoutRef.current);
+        hideTimeoutRef.current = null;
+      }
+      return;
+    }
+
+    const handleScroll = () => {
+      const currentScrollY = window.scrollY;
+      const delta = currentScrollY - lastScrollYRef.current;
+
+      // 1. At the very top (within 80px): header sits normally in static/sticky position
+      if (currentScrollY <= 80) {
+        setIsScrolledDown(false);
+        setIsHeaderVisible(true);
+        isRevealedRef.current = false;
+        if (hideTimeoutRef.current) {
+          clearTimeout(hideTimeoutRef.current);
+          hideTimeoutRef.current = null;
+        }
+        lastScrollYRef.current = currentScrollY;
+        return;
+      }
+
+      setIsScrolledDown(true);
+
+      // 2. Swiped/scrolled UP by at least 6px: slide down smoothly with animation
+      if (delta < -6) {
+        if (hideTimeoutRef.current) {
+          clearTimeout(hideTimeoutRef.current);
+          hideTimeoutRef.current = null;
+        }
+        setIsHeaderVisible(true);
+        isRevealedRef.current = true;
+      }
+      // 3. Scrolled DOWN by at least 6px
+      else if (delta > 6) {
+        // If header was previously brought down by swipe-up, stay visible for 2 seconds then animate back up
+        if (isRevealedRef.current) {
+          if (!hideTimeoutRef.current) {
+            hideTimeoutRef.current = setTimeout(() => {
+              setIsHeaderVisible(false);
+              isRevealedRef.current = false;
+              hideTimeoutRef.current = null;
+            }, 2000);
+          }
+        } else {
+          // Normal downward scroll from top: hide out of view
+          setIsHeaderVisible(false);
+        }
+      }
+
+      lastScrollYRef.current = currentScrollY;
+    };
+
+    window.addEventListener('scroll', handleScroll, { passive: true });
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+      if (hideTimeoutRef.current) {
+        clearTimeout(hideTimeoutRef.current);
+        hideTimeoutRef.current = null;
+      }
+    };
+  }, [mobileNavOpen]);
+
   return (
     <header
-      className="sticky top-0 z-[110] bg-white/95 backdrop-blur-xs border-b border-[#073F31]/12"
+      className={`sticky top-0 z-[110] bg-white/95 backdrop-blur-md border-b border-[#073F31]/12 transition-all duration-300 ease-out will-change-transform ${
+        isHeaderVisible
+          ? 'translate-y-0 opacity-100'
+          : '-translate-y-full opacity-0 pointer-events-none lg:translate-y-0 lg:opacity-100 lg:pointer-events-auto'
+      } ${
+        isScrolledDown && isHeaderVisible ? 'shadow-md shadow-[#073F31]/8' : ''
+      }`}
       onMouseLeave={() => setOpenDropdown(null)}
     >
       <div className="max-w-[1360px] 2xl:max-w-[1600px] min-[1920px]:max-w-[1780px] mx-auto px-4 sm:px-6 lg:px-8 2xl:px-12 h-20 flex items-center justify-between gap-3 lg:gap-4">
