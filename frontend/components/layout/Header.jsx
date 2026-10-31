@@ -47,57 +47,64 @@ export default function Header({
       return;
     }
 
+    let rafId = null;
+
     const handleScroll = () => {
-      const currentScrollY = window.scrollY;
-      const delta = currentScrollY - lastScrollYRef.current;
+      if (rafId) return;
 
-      // 1. At the very top (within 80px): header sits normally in static/sticky position
-      if (currentScrollY <= 80) {
-        setIsScrolledDown(false);
-        setIsHeaderVisible(true);
-        isRevealedRef.current = false;
-        if (hideTimeoutRef.current) {
-          clearTimeout(hideTimeoutRef.current);
-          hideTimeoutRef.current = null;
-        }
-        lastScrollYRef.current = currentScrollY;
-        return;
-      }
+      rafId = requestAnimationFrame(() => {
+        rafId = null;
+        const currentScrollY = window.scrollY;
+        const delta = currentScrollY - lastScrollYRef.current;
 
-      setIsScrolledDown(true);
+        // Scrolled down state for subtle shadow
+        const isPastTop = currentScrollY > 80;
+        setIsScrolledDown((prev) => (prev !== isPastTop ? isPastTop : prev));
 
-      // 2. Swiped/scrolled UP by at least 6px: slide down smoothly with animation
-      if (delta < -6) {
-        if (hideTimeoutRef.current) {
-          clearTimeout(hideTimeoutRef.current);
-          hideTimeoutRef.current = null;
-        }
-        setIsHeaderVisible(true);
-        isRevealedRef.current = true;
-      }
-      // 3. Scrolled DOWN by at least 6px
-      else if (delta > 6) {
-        // If header was previously brought down by swipe-up, stay visible for 2 seconds then animate back up
-        if (isRevealedRef.current) {
-          if (!hideTimeoutRef.current) {
-            hideTimeoutRef.current = setTimeout(() => {
-              setIsHeaderVisible(false);
-              isRevealedRef.current = false;
+        // Mobile headroom auto-hide/reveal (only on mobile screens < 1024px)
+        if (window.innerWidth < 1024) {
+          if (currentScrollY <= 80) {
+            setIsHeaderVisible((prev) => (!prev ? true : prev));
+            isRevealedRef.current = false;
+            if (hideTimeoutRef.current) {
+              clearTimeout(hideTimeoutRef.current);
               hideTimeoutRef.current = null;
-            }, 2000);
+            }
+          } else if (delta < -8) {
+            // Swiped/scrolled UP by at least 8px: reveal header
+            if (hideTimeoutRef.current) {
+              clearTimeout(hideTimeoutRef.current);
+              hideTimeoutRef.current = null;
+            }
+            setIsHeaderVisible((prev) => (!prev ? true : prev));
+            isRevealedRef.current = true;
+          } else if (delta > 8) {
+            // Scrolled DOWN
+            if (isRevealedRef.current) {
+              if (!hideTimeoutRef.current) {
+                hideTimeoutRef.current = setTimeout(() => {
+                  setIsHeaderVisible(false);
+                  isRevealedRef.current = false;
+                  hideTimeoutRef.current = null;
+                }, 2000);
+              }
+            } else {
+              setIsHeaderVisible((prev) => (prev ? false : prev));
+            }
           }
         } else {
-          // Normal downward scroll from top: hide out of view
-          setIsHeaderVisible(false);
+          // Desktop: always keep visible
+          setIsHeaderVisible((prev) => (!prev ? true : prev));
         }
-      }
 
-      lastScrollYRef.current = currentScrollY;
+        lastScrollYRef.current = currentScrollY;
+      });
     };
 
     window.addEventListener('scroll', handleScroll, { passive: true });
     return () => {
       window.removeEventListener('scroll', handleScroll);
+      if (rafId) cancelAnimationFrame(rafId);
       if (hideTimeoutRef.current) {
         clearTimeout(hideTimeoutRef.current);
         hideTimeoutRef.current = null;
@@ -107,7 +114,7 @@ export default function Header({
 
   return (
     <header
-      className={`sticky top-0 z-[110] bg-white/95 backdrop-blur-md border-b border-[#073F31]/12 transition-all duration-300 ease-out will-change-transform ${
+      className={`sticky top-0 z-[110] bg-white/95 backdrop-blur-md border-b border-[#073F31]/12 transition-[transform,opacity] duration-300 ease-out will-change-transform lg:transition-none ${
         isHeaderVisible
           ? 'translate-y-0 opacity-100'
           : '-translate-y-full opacity-0 pointer-events-none lg:translate-y-0 lg:opacity-100 lg:pointer-events-auto'
