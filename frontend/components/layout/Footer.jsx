@@ -14,9 +14,9 @@ export default function Footer({
   return (
     <footer className="bg-[#14231F] text-white/80 pt-14 pb-10 border-t border-white/10 text-sm">
       <div className="max-w-[1360px] 2xl:max-w-[1600px] min-[1920px]:max-w-[1780px] mx-auto px-4 sm:px-6 lg:px-8 2xl:px-12">
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 pb-10 border-b border-white/10">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-12 gap-8 lg:gap-10 pb-10 border-b border-white/10">
           {/* Col 1: Brand Identity */}
-          <div className="space-y-3">
+          <div className="lg:col-span-4 space-y-3">
             <div className="flex items-center gap-3">
               <OfficialBrandShield size={36} />
               <div className="leading-none">
@@ -24,7 +24,7 @@ export default function Footer({
                 <div className="font-bold text-xs text-[#63E6BE]">TILI</div>
               </div>
             </div>
-            <p className="text-xs text-white/70 leading-relaxed">
+            <p className="text-xs text-white/70 leading-relaxed max-w-sm">
               {brandConfig.sloganSecondary} • {brandConfig.sloganPrimary}.{' '}
               {t.footer?.addressText ||
                 'Toshkent shahrida 8 ta filial va 15,000+ bitiruvchiga ega arab tili o‘quv markazi.'}
@@ -41,7 +41,7 @@ export default function Footer({
           </div>
 
           {/* Col 2: Course Links */}
-          <div>
+          <div className="lg:col-span-2">
             <div className="text-xs font-bold uppercase tracking-wider text-white mb-3">
               {t.footer?.coursesCol || t.nav?.courses || 'Kurslar'}
             </div>
@@ -73,7 +73,7 @@ export default function Footer({
           </div>
 
           {/* Col 3: 8 Branches */}
-          <div>
+          <div className="lg:col-span-4">
             <div className="text-xs font-bold uppercase tracking-wider text-white mb-3">
               {t.footer?.branchesCol || t.nav?.allBranches || 'Toshkentdagi 8 ta filial'}
             </div>
@@ -93,7 +93,7 @@ export default function Footer({
           </div>
 
           {/* Col 4: Academy, Articles & Legal */}
-          <div>
+          <div className="lg:col-span-2">
             <div className="text-xs font-bold uppercase tracking-wider text-white mb-3">
               {t.footer?.infoCol || 'Markaz va Ma’lumotlar'}
             </div>
@@ -162,33 +162,33 @@ export default function Footer({
           <div>
             © 2026 Arab Tili. {t.footer?.rights || 'Barcha huquqlar himoyalangan.'}
           </div>
-          <div className="grid grid-cols-3 gap-2 w-full sm:w-auto sm:flex sm:items-center sm:gap-2.5">
+          <div className="flex items-center gap-2 flex-wrap justify-center sm:justify-end">
             <a
               href={brandConfig.instagramUrl}
               target="_blank"
               rel="noreferrer"
-              className="inline-flex items-center justify-center gap-1.5 px-2 sm:px-3 py-1.5 rounded-xl bg-white/5 hover:bg-white/10 border border-white/10 text-white/80 hover:text-white transition group shadow-xs text-[11px] sm:text-xs min-w-0"
+              className="inline-flex items-center justify-center gap-1.5 px-3 py-1.5 rounded-xl bg-white/5 hover:bg-white/10 border border-white/10 text-white/80 hover:text-white transition group shadow-xs text-xs"
             >
               <Instagram className="w-3.5 h-3.5 text-[#E1306C] group-hover:scale-110 transition-transform flex-shrink-0" />
-              <span className="truncate">Instagram<span className="hidden md:inline"> ({brandConfig.instagramFollowers})</span></span>
+              <span>Instagram</span>
             </a>
             <a
               href={brandConfig.telegramUrl}
               target="_blank"
               rel="noreferrer"
-              className="inline-flex items-center justify-center gap-1.5 px-2 sm:px-3 py-1.5 rounded-xl bg-white/5 hover:bg-white/10 border border-white/10 text-white/80 hover:text-white transition group shadow-xs text-[11px] sm:text-xs min-w-0"
+              className="inline-flex items-center justify-center gap-1.5 px-3 py-1.5 rounded-xl bg-white/5 hover:bg-white/10 border border-white/10 text-white/80 hover:text-white transition group shadow-xs text-xs"
             >
               <TelegramIcon className="w-3.5 h-3.5 text-[#2AABEE] group-hover:scale-110 transition-transform flex-shrink-0" />
-              <span className="truncate">Telegram<span className="hidden md:inline"> ({brandConfig.telegramHandle})</span></span>
+              <span>Telegram</span>
             </a>
             <a
               href={brandConfig.facebookUrl || 'https://www.facebook.com/arabtili_demo/'}
               target="_blank"
               rel="noreferrer"
-              className="inline-flex items-center justify-center gap-1.5 px-2 sm:px-3 py-1.5 rounded-xl bg-white/5 hover:bg-white/10 border border-white/10 text-white/80 hover:text-white transition group shadow-xs text-[11px] sm:text-xs min-w-0"
+              className="inline-flex items-center justify-center gap-1.5 px-3 py-1.5 rounded-xl bg-white/5 hover:bg-white/10 border border-white/10 text-white/80 hover:text-white transition group shadow-xs text-xs"
             >
               <FacebookIcon className="w-3.5 h-3.5 text-[#1877F2] fill-[#1877F2] group-hover:scale-110 transition-transform flex-shrink-0" />
-              <span className="truncate">Facebook</span>
+              <span>Facebook</span>
             </a>
           </div>
         </div>
