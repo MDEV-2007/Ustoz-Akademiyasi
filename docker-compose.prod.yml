@@ -63,7 +63,7 @@ services:
       SUPERADMIN_PASSWORD: ${SUPERADMIN_PASSWORD:-SecureAdminPassword2026!#}
       CORS_ORIGINS: "https://ustozakademiyasi-front.duckdns.org,http://ustozakademiyasi-front.duckdns.org,http://localhost:3000,http://127.0.0.1:3000"
       TELEGRAM_BOT_TOKEN: ${TELEGRAM_BOT_TOKEN:-8643739593:AAEDTpqkcKvHpcw7AkIEe0sbmvTywYQk7SE}
-      TELEGRAM_CHAT_IDS: ${TELEGRAM_CHAT_IDS:--1003976608840}
+      TELEGRAM_CHAT_IDS: ${TELEGRAM_CHAT_IDS:--1004306704415}
       TELEGRAM_OPERATOR_IDS: ${TELEGRAM_OPERATOR_IDS:-8273794138}
       BOT_API_TOKEN: ${BOT_API_TOKEN:-ustoz_bot_secure_service_token_2026}
       UPLOAD_DIR: uploads
@@ -93,7 +93,7 @@ services:
       BOT_API_TOKEN: ${BOT_API_TOKEN:-ustoz_bot_secure_service_token_2026}
       REDIS_URL: redis://ustoz_redis:6379
       ADMIN_TELEGRAM_IDS: ${TELEGRAM_OPERATOR_IDS:-8273794138}
-      ADMIN_NOTIFICATION_CHAT_ID: ${TELEGRAM_CHAT_IDS:--1003976608840}
+      ADMIN_NOTIFICATION_CHAT_ID: ${TELEGRAM_CHAT_IDS:--1004306704415}
       PUBLIC_WEBSITE_URL: https://ustozakademiyasi-front.duckdns.org
       LOG_LEVEL: info
     networks:
