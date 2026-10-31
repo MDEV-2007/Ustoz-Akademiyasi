@@ -42,7 +42,7 @@ export default function FinalCTASection({
                 className="text-xl sm:text-2xl font-bold text-[#073F31] hover:text-[#07966F] flex items-center gap-2 transition"
               >
                 <Phone className="w-5 h-5 text-[#07966F]" />
-                <span>{brandConfig?.phoneDisplay || '55 518 44 00'}</span>
+                <span>{brandConfig?.phoneDisplay || '+998 71 200 00 00'}</span>
               </a>
               <div className="text-xs text-[#65756F] flex flex-wrap items-center gap-x-4 gap-y-1 pt-1 border-t border-[#073F31]/10">
                 <span>

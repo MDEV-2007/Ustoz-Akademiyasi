@@ -76,7 +76,7 @@ export async function submitRegistration({
     // 1. If admin configured a live Telegram Bot Webhook
     if (telegramBotConfig.botToken?.trim() && telegramBotConfig.chatId?.trim()) {
       const tgText = [
-        `🟢 *YANGI SINOV DARSI ARIZASI — USTOZ AKADEMIYASI*`,
+        `🟢 *YANGI SINOV DARSI ARIZASI — ARAB TILI*`,
         `👤 *F.I.Sh:* ${payload.fullName}`,
         `📞 *Telefon:* ${payload.phone}`,
         `📚 *Kurs:* ${payload.courseTitle}`,
@@ -177,7 +177,7 @@ export async function submitRegistration({
       errors: {
         general:
           data.message ||
-          "Arizani qabul qilishda xatolik yuz berdi. Iltimos, keyinroq qayta urinib ko'ring yoki qo'ng'iroq qiling: +998 55 518 44 00"
+          "Arizani qabul qilishda xatolik yuz berdi. Iltimos, keyinroq qayta urinib ko'ring yoki qo'ng'iroq qiling: +998 71 200 00 00"
       }
     };
   } catch (err) {

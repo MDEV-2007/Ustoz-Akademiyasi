@@ -50,11 +50,11 @@ export default function Header({
           </div>
           <div className="leading-tight">
             <div className="font-extrabold text-base sm:text-xl tracking-tight text-[#14231F] flex items-center gap-1.5">
-              <span>USTOZ</span>
-              <span className="text-[#07966F] font-black">AKADEMIYASI</span>
+              <span>ARAB</span>
+              <span className="text-[#07966F] font-black">TILI</span>
             </div>
             <div className="font-semibold text-[9px] sm:text-[10px] tracking-wider text-[#073F31]/75 uppercase whitespace-nowrap">
-              Zulmatlardan Nur tomon
+              O‘quv markazi
             </div>
           </div>
         </button>

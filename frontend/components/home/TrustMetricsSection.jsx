@@ -74,8 +74,8 @@ export default function TrustMetricsSection({ brandConfig }) {
             <div className="text-xs font-semibold uppercase tracking-wider text-[#07966F]">
               Yagona Call-Markaz
             </div>
-            <div className="text-2xl 2xl:text-3xl font-bold text-[#14231F] mt-1.5">
-              55 518 44 00
+            <div className="text-xl 2xl:text-2xl font-bold text-[#14231F] mt-1.5 whitespace-nowrap">
+              +998 71 200 00 00
             </div>
             <p className="text-xs text-[#65756F] mt-2 leading-relaxed">
               Barcha filiallar bo‘yicha guruh vaqtlari va sinov darslariga yozilish markazi.

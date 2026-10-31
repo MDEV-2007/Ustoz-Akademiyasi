@@ -70,7 +70,7 @@ export async function generateMetadata({ params }) {
       en: 'Frequently Asked Questions (FAQ) — Ustoz Akademiyasi',
     },
     '/aloqa': {
-      uz: 'Aloqa Markazi (+998 55 518 44 00) — Ustoz Akademiyasi',
+      uz: 'Aloqa Markazi (+998 71 200 00 00) — Arab Tili',
       ru: 'Контакты и колл-центр — Ustoz Akademiyasi',
       en: 'Contact & Call Center — Ustoz Akademiyasi',
     },

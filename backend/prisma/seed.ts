@@ -60,7 +60,7 @@ async function main() {
       methodology: "Telegram va Instagram sahifalarimizda namoyish etilganidek, darslar bolajonlar sevib tomosha qiladigan multfilmlarning maxsus arabcha talqini hamda «Bolajonlar bilan raqamlarni topish o'yini» kabi jamoaviy mashg'ulotlar asosida olib boriladi.",
       entryRequirements: "4 yoshdan boshlab qabul qilinadi. Oldindan harf tanish talab etilmaydi.",
       durationNote: "Bosqichma-bosqich o'quv dasturi (guruh jadvali filial ma'muriyati bilan belgilanadi)",
-      priceStatus: "Oylik to'lov miqdori tanlangan filial va guruh jadvaliga ko'ra +998 55 518 44 00 orqali tasdiqlanadi",
+      priceStatus: "Oylik to'lov miqdori tanlangan filial va guruh jadvaliga ko'ra +998 71 200 00 00 orqali tasdiqlanadi",
       plateType: 'kids-numbers',
       featured: true,
       objectives: [
@@ -88,7 +88,7 @@ async function main() {
       methodology: "Har bir harfning artikulyatsion o'rni (bo'g'iz, til, lablar) ustoz nazoratida individual mashq qilinadi. Harakatlar (fatha, kasra, damma), tanvin, sukun va tashdid qoidalari amaliy matnlar ustida mustahkamlanadi.",
       entryRequirements: "Arab tilini umuman bilmaydigan (0 dan boshlovchi) yoki talaffuzini to'g'rilamoqchi bo'lganlar uchun.",
       durationNote: "Boshlang'ich fonetika va o'qish bosqichi (guruh jadvali filialda aniqlashtiriladi)",
-      priceStatus: "Kurs to'lovi va dars vaqtlari +998 55 518 44 00 call-markazi orqali ma'lum qilinadi",
+      priceStatus: "Kurs to'lovi va dars vaqtlari +998 71 200 00 00 call-markazi orqali ma'lum qilinadi",
       plateType: 'phonetics-calligraphy',
       featured: true,
       objectives: [
@@ -116,7 +116,7 @@ async function main() {
       methodology: "C1 darajali tajribali ustozlar metodikasi asosida o'quvchilarga so'z yasalishi (Sarf), gap tuzilishi (Nahv), o'qib tushunish (Reading), tinglab tushunish (Listening), yozma nutq (Writing) va og'zaki nutq (Speaking) kompleks o'rgatiladi.",
       entryRequirements: "Arab harflarida ravon o'qiy olish va yozish ko'nikmasi (Fonetika bosqichini tugatgan bo'lish).",
       durationNote: "Darajalar kesimida tizimli kurs (kirish suhbati/testi orqali mos guruhga joylashtiriladi)",
-      priceStatus: "Daraja va guruh turiga ko'ra +998 55 518 44 00 orqali tasdiqlanadi",
+      priceStatus: "Daraja va guruh turiga ko'ra +998 71 200 00 00 orqali tasdiqlanadi",
       plateType: 'graduation-cefr',
       featured: true,
       objectives: [
@@ -144,7 +144,7 @@ async function main() {
       methodology: "Markazimizning «Kundalik hayotda kerak bo'ladigan 10 ta Arabcha so'z» va «Arab tilidagi kasblar» mavzusidagi o'quv materiallari asosida jonli vaziyatlar (aeroport, bozor, mehmonxona, ish suhbati) modellashtiriladi.",
       entryRequirements: "Boshlang'ich o'qish ko'nikmasi tavsiya etiladi.",
       durationNote: "Amaliy so'zlashuv va lug'at boyitish dasturi",
-      priceStatus: "Filial ma'muriyati bilan +998 55 518 44 00 orqali aniqlashtiriladi",
+      priceStatus: "Filial ma'muriyati bilan +998 71 200 00 00 orqali aniqlashtiriladi",
       plateType: 'careers-chalkboard',
       featured: false,
       objectives: [
@@ -501,7 +501,7 @@ async function main() {
     { category: 'Bolalar uchun', question: 'Hilol Kids 4+ kursiga necha yoshdan qabul qilinadi va darslar qanday o‘tiladi?', answer: "Hilol Kids 4+ dasturiga 4 yoshdan boshlab bolajonlar qabul qilinadi. Darslar zerikarli yodlashsiz — maxsus arabcha multfilmlar, «Bolajonlar bilan raqamlarni topish o'yini» va ko'rgazmali kartochkalar orqali olib boriladi.", sortOrder: 2 },
     { category: 'Filiallar', question: 'Toshkent shahrining qaysi hududlarida filiallaringiz bor?', answer: "Ustoz Akademiyasining Toshkent shahrida 8 ta filiali faoliyat yuritadi: Archako'cha, Yangi ToshMI, Qoraqamish, Algoritm, Yunusobod, Sergeli, Tinchlik va Beruniy filiallari.", sortOrder: 3 },
     { category: 'Sertifikat', question: 'Grammatika va CEFR kursida qaysi darajalarga tayyorlanadi?', answer: "Fonetika bosqichini tamomlagan o'quvchilar Sarf va Nahv qoidalari bilan birga A2, B1, B2 hamda C1 (Milliy va xalqaro CEFR) sertifikat imtihonlarining 4 ta bo'limiga tizimli tayyorlanadilar.", sortOrder: 4 },
-    { category: "To'lov va Jadval", question: 'Kurs narxlari va dars vaqtlarini qanday bilsam bo‘ladi?', answer: "Har bir filialdagi guruhlar jadvali hamda joriy o'quv to'lovlari bo'yicha aniq ma'lumot olish uchun saytdagi sinov darsi shaklini to'ldiring yoki +998 55 518 44 00 raqamiga qo'ng'iroq qiling.", sortOrder: 5 },
+    { category: "To'lov va Jadval", question: 'Kurs narxlari va dars vaqtlarini qanday bilsam bo‘ladi?', answer: "Har bir filialdagi guruhlar jadvali hamda joriy o'quv to'lovlari bo'yicha aniq ma'lumot olish uchun saytdagi sinov darsi shaklini to'ldiring yoki +998 71 200 00 00 raqamiga qo'ng'iroq qiling.", sortOrder: 5 },
     { category: 'Sinov darsi', question: 'Sinov darsiga qanday yozilaman va u qanday o‘tadi?', answer: "«Bepul sinov darsiga yozilish» sahifasida ismingiz, telefon raqamingiz, kurs va o'zingizga yaqin filialni tanlaysiz. Ma'muriyatimiz siz bilan bog'lanib, darajangizga mos guruh va vaqtni belgilab beradi.", sortOrder: 6 },
   ];
 
@@ -534,9 +534,9 @@ async function main() {
     {
       key: 'brand_info',
       value: {
-        name: 'Ustoz Akademiyasi',
-        sloganPrimary: "O'QI VA KO'TARIL!",
-        sloganSecondary: 'Zulmatlardan Nur tomon',
+        name: 'Arab Tili',
+        sloganPrimary: "O'QI VA O'RGAN!",
+        sloganSecondary: "Arab tili o'quv markazi",
         city: 'Toshkent shahri',
         branchesCount: 8,
       },
@@ -545,19 +545,20 @@ async function main() {
     {
       key: 'contact_info',
       value: {
-        phoneDisplay: '+998 55 518 44 00',
-        phoneHref: 'tel:+998555184400',
-        phoneRaw: '+998555184400',
+        phoneDisplay: '+998 71 200 00 00',
+        phoneHref: 'tel:+998712000000',
+        phoneRaw: '+998712000000',
+        email: 'info@arabtili.uz',
       },
       description: "Yagona call-markaz telefon raqamlari",
     },
     {
       key: 'social_links',
       value: {
-        instagramHandle: '@ustoz_akademiyasi',
-        instagramUrl: 'https://instagram.com/ustoz_akademiyasi',
-        telegramHandle: '@ustozakademiyasi',
-        telegramUrl: 'https://t.me/ustozakademiyasi',
+        instagramHandle: '@arabtili_demo',
+        instagramUrl: 'https://instagram.com',
+        telegramHandle: '@arabtili_demo',
+        telegramUrl: 'https://t.me',
       },
       description: "Rasmiy ijtimoiy tarmoq sahifalari",
     },

@@ -78,7 +78,7 @@ export const uz = {
         methodology: 'Darslar bolajonlar sevib tomosha qiladigan multfilmlarning maxsus arabcha talqini hamda «Bolajonlar bilan raqamlarni topish o‘yini» kabi jamoaviy mashg‘ulotlar asosida olib boriladi.',
         entryRequirements: '4 yoshdan boshlab qabul qilinadi. Oldindan harf tanish talab etilmaydi.',
         durationNote: 'Bosqichma-bosqich o‘quv dasturi (guruh jadvali filial ma’muriyati bilan belgilanadi)',
-        priceStatus: 'Oylik to‘lov miqdori tanlangan filial va guruh jadvaliga ko‘ra +998 55 518 44 00 orqali tasdiqlanadi',
+        priceStatus: 'Oylik to‘lov miqdori tanlangan filial va guruh jadvaliga ko‘ra +998 71 200 00 00 orqali tasdiqlanadi',
         objectives: [
           'Arab alifbosidagi 28 ta harfni rangli kartochkalar va o‘yinlar yordamida tanish',
           'Arab raqamlari (١ dan ١٠ gacha) va kundalik buyumlar nomini eslab qolish',
@@ -100,7 +100,7 @@ export const uz = {
         methodology: 'Har bir harfning artikulyatsion o‘rni (bo‘g‘iz, til, lablar) ustoz nazoratida individual mashq qilinadi. Harakatlar, sukun va tashdid qoidalari amaliy matnlar ustida mustahkamlanadi.',
         entryRequirements: 'Arab tilini umuman bilmaydigan (0 dan boshlovchi) yoki talaffuzini to‘g‘rilamoqchi bo‘lganlar uchun.',
         durationNote: '2 - 3 oylik intensiv bosqich',
-        priceStatus: 'Kurs to‘lovi va dars vaqtlari +998 55 518 44 00 call-markazi orqali ma’lum qilinadi',
+        priceStatus: 'Kurs to‘lovi va dars vaqtlari +998 71 200 00 00 call-markazi orqali ma’lum qilinadi',
         objectives: [
           '28 ta arab harfining aniq maxrajini (talaffuz nuqtasini) amaliy o‘zlashtirish',
           'Qalin va ingichka harflarni bir-biridan xatosiz farqlash',
@@ -400,7 +400,7 @@ export const uz = {
       {
         category: 'To‘lov va Jadval',
         q: 'Kurs narxlari va dars vaqtlarini qanday bilsam bo‘ladi?',
-        a: 'Har bir filialdagi guruhlar jadvali (ertalabki, kunduzgi, kechki) hamda joriy o‘quv to‘lovlari bo‘yicha aniq ma’lumot olish uchun saytdagi sinov darsi shaklini to‘ldiring yoki +998 55 518 44 00 raqamiga qo‘ng‘iroq qiling.'
+        a: 'Har bir filialdagi guruhlar jadvali (ertalabki, kunduzgi, kechki) hamda joriy o‘quv to‘lovlari bo‘yicha aniq ma’lumot olish uchun saytdagi sinov darsi shaklini to‘ldiring yoki +998 71 200 00 00 raqamiga qo‘ng‘iroq qiling.'
       },
       {
         category: 'Sinov darsi',

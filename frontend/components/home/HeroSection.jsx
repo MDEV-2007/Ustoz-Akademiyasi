@@ -80,7 +80,7 @@ export default function HeroSection({
                   {t.hero?.statGraduates || 'Muvaffaqiyatli bitiruvchilar'}
                 </div>
                 <div className="text-[11px] text-white/55 mt-0.5">
-                  Rasmiy Instagram (@ustoz_akademiyasi) tasdiqlangan
+                  Demo o‘quv markazi ko‘rsatkichlari
                 </div>
               </div>
             </div>

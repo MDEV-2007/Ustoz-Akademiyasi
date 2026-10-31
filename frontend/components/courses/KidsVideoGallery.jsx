@@ -98,7 +98,7 @@ export default function KidsVideoGallery({ onRegisterClick }) {
             Jonli Dars Jarayonlari
           </div>
           <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-[#172421] tracking-tight">
-            Hilol Kids darslari — real videolar
+            Arab tili darslari — demo videolar
           </h2>
           <p className="text-sm sm:text-base text-[#66736E] leading-relaxed">
             Filiallarimizdagi bolalar darslari qanday o‘tishini bevosita o‘z ko‘zingiz bilan ko‘ring: harflar talaffuzi, interaktiv o‘yinlar va ibratli multfilmlar orqali arab tilini o‘rganish jarayoni.

@@ -181,7 +181,7 @@ export const AuthenticVisualPlate = ({ type, customImage, altText }) => {
         <div className="my-2 sm:my-3 bg-[#F8FAF8] text-[#14231F] p-2.5 sm:p-3.5 rounded-lg border-2 border-[#E8B84A] flex items-center justify-between gap-2">
           <div className="min-w-0">
             <div className="text-[9px] sm:text-[10px] font-bold uppercase tracking-widest text-[#07966F] truncate">
-              USTOZ AKADEMIYASI • {locale === 'ru' ? 'СЕРТИФИКАТ' : locale === 'en' ? 'CERTIFICATE' : 'SERTIFIKAT'}
+              ARAB TILI • {locale === 'ru' ? 'СЕРТИФИКАТ' : locale === 'en' ? 'CERTIFICATE' : 'SERTIFIKAT'}
             </div>
             <div className="text-xs sm:text-sm font-bold text-[#14231F] mt-0.5 truncate">
               {locale === 'ru' ? 'Сарф, Нахв и уровни CEFR' : locale === 'en' ? 'Sarf, Nahw & CEFR Levels' : 'Sarf, Nahv va CEFR Bosqichlari'}

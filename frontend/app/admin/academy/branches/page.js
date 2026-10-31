@@ -36,7 +36,7 @@ export default function AdminBranchesPage() {
     district: '',
     address: '',
     landmark: '',
-    phone: '+998 55 518 44 00',
+    phone: '+998 71 200 00 00',
     workingHours: 'Dushanba – Shanba (09:00 – 21:00)',
     latitude: 41.311,
     longitude: 69.24,
@@ -70,7 +70,7 @@ export default function AdminBranchesPage() {
         district: branch.district || '',
         address: branch.address || '',
         landmark: branch.landmark || '',
-        phone: branch.phone || '+998 55 518 44 00',
+        phone: branch.phone || '+998 71 200 00 00',
         workingHours: branch.workingHours || 'Dushanba – Shanba (09:00 – 21:00)',
         latitude: branch.latitude || 41.311,
         longitude: branch.longitude || 69.24,
@@ -86,7 +86,7 @@ export default function AdminBranchesPage() {
         district: '',
         address: '',
         landmark: '',
-        phone: '+998 55 518 44 00',
+        phone: '+998 71 200 00 00',
         workingHours: 'Dushanba – Shanba (09:00 – 21:00)',
         latitude: 41.311,
         longitude: 69.24,
@@ -169,7 +169,7 @@ export default function AdminBranchesPage() {
               <Phone size={18} />
             </span>
           </div>
-          <p className={ADMIN_THEME.metricValue}>+998 55 518 44 00</p>
+          <p className={ADMIN_THEME.metricValue}>+998 71 200 00 00</p>
           <p className={ADMIN_THEME.metricMeta}>Barcha filiallar uchun markazlashgan</p>
         </div>
 

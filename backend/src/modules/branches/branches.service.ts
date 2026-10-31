@@ -141,7 +141,7 @@ export class BranchesService {
           landmark: dto.landmark?.trim(),
           latitude: dto.latitude,
           longitude: dto.longitude,
-          phone: dto.phone?.trim() || '+998 55 518 44 00',
+          phone: dto.phone?.trim() || '+998 71 200 00 00',
           workingHours: dto.workingHours || 'Dushanba – Shanba (guruhlar jadvali bo‘yicha)',
           description: dto.description?.trim(),
           highlight: dto.highlight?.trim(),

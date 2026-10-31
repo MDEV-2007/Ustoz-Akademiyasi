@@ -8,9 +8,9 @@ export const viewport = {
 };
 
 export const metadata = {
-  title: "Ustoz Akademiyasi — Toshkentdagi Arab Tili O‘quv Markazi",
+  title: "Arab Tili — Zamonaviy Arab Tili O‘quv Markazi",
   description:
-    "Ustoz Akademiyasi — Toshkent bo'ylab 8 ta filial va 15,000+ bitiruvchiga ega arab tili o'quv markazi. Hilol Kids 4+, Professional fonetika, Grammatika va CEFR kurslari. Tel: +998 55 518 44 00.",
+    "Arab Tili — Toshkent bo'ylab filiallar va zamonaviy arab tili ta'limi. Hilol Kids 4+, Professional fonetika, Grammatika va CEFR kurslari. Tel: +998 71 200 00 00.",
   icons: {
     icon: [
       { url: "/favicon.ico", sizes: "any" },

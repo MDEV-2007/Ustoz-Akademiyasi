@@ -26,7 +26,7 @@ const DEFAULT_BOT_CONTENT = {
 Biz Toshkent shahridagi 8 ta zamonaviy filialimizda arab tilini noldan boshlab oliy darajagacha o‘rgatamiz.
 
 Quyidagi menyudan kerakli bo‘limni tanlang:`,
-  bot_contact_phone: '+998 55 518 44 00',
+  bot_contact_phone: '+998 71 200 00 00',
   bot_contact_telegram: '@ustoz_admin',
   bot_channel_link: 'https://t.me/ustozakademiyasi',
   bot_privacy_text: `Maxfiylik eslatmasi:

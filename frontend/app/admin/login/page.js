@@ -88,7 +88,7 @@ export default function AdminLoginPage() {
             </div>
             <div>
               <span className="text-base sm:text-lg font-black tracking-wider text-[#064E3B] block uppercase leading-tight font-sans">
-                USTOZ <span className="text-[#059E6B]">AKADEMIYASI</span>
+                ARAB <span className="text-[#059E6B]">TILI</span>
               </span>
               <span className="text-[11px] font-semibold text-slate-500 uppercase tracking-widest block">
                 Arab Tili O‘quv Markazi
@@ -222,7 +222,7 @@ export default function AdminLoginPage() {
                     type="button"
                     onClick={() =>
                       alert(
-                        "Parolni tiklash uchun tizim administratori yoki bosh texnik xodim bilan bog‘laning: +998 55 518 44 00"
+                        "Parolni tiklash uchun tizim administratori yoki bosh texnik xodim bilan bog‘laning: +998 71 200 00 00"
                       )
                     }
                     className="text-xs text-teal-300 hover:text-teal-200 hover:underline transition-colors cursor-pointer"
@@ -272,7 +272,7 @@ export default function AdminLoginPage() {
               href="tel:+998555184400"
               className="hover:text-emerald-100 transition-colors"
             >
-              Texnik yordam: +998 55 518 44 00
+              Texnik yordam: +998 71 200 00 00
             </a>
           </div>
         </div>

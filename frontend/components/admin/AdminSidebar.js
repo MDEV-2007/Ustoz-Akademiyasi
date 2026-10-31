@@ -137,7 +137,7 @@ export default function AdminSidebar() {
           {!sidebarCollapsed && (
             <div className="flex flex-col min-w-0">
               <span className="text-sm font-black tracking-wider uppercase text-white truncate">
-                USTOZ <span className="text-emerald-400">AKADEMIYASI</span>
+                ARAB <span className="text-emerald-400">TILI</span>
               </span>
               <span className="text-[10px] uppercase font-bold tracking-widest text-[#D4AF65]">
                 Admin & CRM Suite

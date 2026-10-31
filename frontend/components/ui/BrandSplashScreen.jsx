@@ -31,7 +31,7 @@ export const BrandSplashScreen = ({ isVisible, text = 'Zulmatlardan Nur tomon' }
 
         {/* Brand Name */}
         <div className="text-xl sm:text-2xl font-extrabold tracking-wider uppercase text-white font-sans">
-          USTOZ <span className="text-[#00D98B]">AKADEMIYASI</span>
+          ARAB <span className="text-[#00D98B]">TILI</span>
         </div>
 
         {/* Brand Slogan */}

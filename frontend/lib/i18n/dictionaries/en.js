@@ -78,7 +78,7 @@ export const en = {
         methodology: 'Lessons incorporate Arabic-dubbed animated stories beloved by children alongside collaborative classroom games like "Find the Arabic Number".',
         entryRequirements: 'Open for children from 4 years old. No prior alphabet knowledge needed.',
         durationNote: 'Step-by-step modular curriculum (group schedules coordinated with branch administration)',
-        priceStatus: 'Tuition fees and class schedules confirmed via +998 55 518 44 00',
+        priceStatus: 'Tuition fees and class schedules confirmed via +998 71 200 00 00',
         objectives: [
           'Recognize all 28 Arabic letters through colorful flashcards and interactive games',
           'Memorize Arabic numerals (from ١ to ١٠) and names of everyday objects',
@@ -100,7 +100,7 @@ export const en = {
         methodology: 'Individual coaching on vocal tract articulation (throat, tongue, lips) under master teachers. Practical drills on authentic vowelled texts.',
         entryRequirements: 'Designed for absolute beginners (0 knowledge) or those correcting pronunciation habits.',
         durationNote: '2 - 3 months of intensive study',
-        priceStatus: 'Tuition details and timetable available through the call center (+998 55 518 44 00)',
+        priceStatus: 'Tuition details and timetable available through the call center (+998 71 200 00 00)',
         objectives: [
           'Master exact articulation points (makhraj) for all 28 Arabic letters',
           'Accurately distinguish between emphatic and soft consonant sounds',
@@ -400,7 +400,7 @@ export const en = {
       {
         category: 'Tuition & Schedule',
         q: 'How can I get details on current tuition and timetables?',
-        a: 'To receive precise schedules (morning, afternoon, evening cohorts) and current fees, book a free trial lesson or call +998 55 518 44 00.'
+        a: 'To receive precise schedules (morning, afternoon, evening cohorts) and current fees, book a free trial lesson or call +998 71 200 00 00.'
       },
       {
         category: 'Trial Lesson',

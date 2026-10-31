@@ -72,8 +72,8 @@ const METHODOLOGY_GUIDES = [
     badge: 'Asosiy yechim',
     step: 'Natija',
     subtitle: 'Har bir bola bilan individual yondashuv asosida ishlanadi',
-    desc: 'Ustoz Akademiyasida bolalar 8–10 kishilik kichik guruhlarda, tajribali ustozlar rahbarligida mehr va individual e’tibor bilan tahsil oladilar.',
-    phone: '55 518 44 00'
+    desc: 'Markazimizda bolalar 8–10 kishilik kichik guruhlarda, tajribali ustozlar rahbarligida mehr va individual e’tibor bilan tahsil oladilar.',
+    phone: '+998 71 200 00 00'
   }
 ];
 
@@ -565,11 +565,11 @@ export default function AboutFacultyPage({
 
             <div className="flex flex-col sm:flex-row items-center gap-3 flex-shrink-0 w-full sm:w-auto">
               <a
-                href="tel:555184400"
+                href="tel:+998712000000"
                 className="w-full sm:w-auto px-5 py-3 rounded-xl border border-white/20 text-white hover:bg-white/10 font-bold text-xs sm:text-sm transition-colors text-center flex items-center justify-center gap-2"
               >
                 <Phone className="w-4 h-4" />
-                <span>55 518 44 00</span>
+                <span>+998 71 200 00 00</span>
               </a>
 
               <button

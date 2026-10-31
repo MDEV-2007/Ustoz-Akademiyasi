@@ -31,7 +31,7 @@ export default function AdminHomepageCmsPage() {
       'Bolalar va kattalar uchun zamonaviy metodika, malakali ustozlar va Toshkent bo‘ylab 8 ta qulay filial.',
     primaryCtaLabel: 'Sinov darsiga yozilish',
     secondaryCtaLabel: 'Kurslarni ko‘rish',
-    callCenterPhone: '+998 55 518 44 00',
+    callCenterPhone: '+998 71 200 00 00',
   });
 
   useEffect(() => {

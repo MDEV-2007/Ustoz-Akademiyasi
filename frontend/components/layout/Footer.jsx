@@ -20,8 +20,8 @@ export default function Footer({
             <div className="flex items-center gap-3">
               <OfficialBrandShield size={36} />
               <div className="leading-none">
-                <div className="font-extrabold text-base text-white">USTOZ</div>
-                <div className="font-bold text-xs text-[#63E6BE]">AKADEMIYASI</div>
+                <div className="font-extrabold text-base text-white">ARAB</div>
+                <div className="font-bold text-xs text-[#63E6BE]">TILI</div>
               </div>
             </div>
             <p className="text-xs text-white/70 leading-relaxed">
@@ -160,7 +160,7 @@ export default function Footer({
 
         <div className="pt-6 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-white/60 text-center sm:text-left">
           <div>
-            © 2026 Ustoz Akademiyasi. {t.footer?.rights || 'Barcha huquqlar himoyalangan.'}
+            © 2026 Arab Tili. {t.footer?.rights || 'Barcha huquqlar himoyalangan.'}
           </div>
           <div className="grid grid-cols-3 gap-2 w-full sm:w-auto sm:flex sm:items-center sm:gap-2.5">
             <a

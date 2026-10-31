@@ -23,14 +23,14 @@ import {
 } from 'lucide-react';
 
 const DEFAULT_SETTINGS = {
-  academy_name: 'Ustoz Akademiyasi',
+  academy_name: 'Arab Tili',
   academy_slogan: 'Professional Arab Tili Ta’lim Markazi',
-  academy_phone: '+998 55 518 44 00',
-  academy_email: 'info@ustozakademiyasi.uz',
-  academy_address: 'Toshkent shahri, Chilonzor tumani, Bunyodkor ko‘chasi, 42-uy',
-  working_hours: 'Dushanba - Shanba: 09:00 - 21:00',
-  telegram_channel: 'https://t.me/ustozakademiyasi',
-  instagram_page: 'https://instagram.com/ustozakademiyasi',
+  academy_phone: '+998 71 200 00 00',
+  academy_email: 'info@arabtili.uz',
+  academy_address: 'Toshkent shahri',
+  working_hours: 'Dushanba - Shanba: 09:00 - 20:00',
+  telegram_channel: 'https://t.me/arabtili_demo',
+  instagram_page: 'https://instagram.com/arabtili_demo',
   telegram_admin_chat_id: '-1002345678901',
   notify_lead_telegram: 'true',
   notify_lead_email: 'false',

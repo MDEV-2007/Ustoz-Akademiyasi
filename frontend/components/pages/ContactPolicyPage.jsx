@@ -11,7 +11,8 @@ import {
   ArrowRight,
   ShieldCheck,
   Building2,
-  Calendar
+  Calendar,
+  Mail
 } from 'lucide-react';
 import {
   Instagram,
@@ -64,7 +65,7 @@ export default function ContactPolicyPage({
             Biz bilan bog‘lanish va qabul markazi
           </h1>
           <p className="text-sm sm:text-base text-[#65756F] max-w-3xl leading-relaxed">
-            Ustoz Akademiyasida yangi guruhlarga qabul davom etmoqda. Savollaringiz bormi, dars jadvali bilan tanishmoqchimisiz yoki bepul sinov darsiga yozilmoqchimisiz? Yagona aloqa markazimiz haftaning 7 kuni sizga xizmat ko‘rsatishga tayyor.
+            Arab Tili o‘quv markazida yangi guruhlarga qabul davom etmoqda. Savollaringiz bormi, dars jadvali bilan tanishmoqchimisiz yoki bepul sinov darsiga yozilmoqchimisiz? Yagona aloqa markazimiz haftaning 7 kuni sizga xizmat ko‘rsatishga tayyor.
           </p>
         </div>
 
@@ -84,7 +85,7 @@ export default function ContactPolicyPage({
                   Yagona Call-Markaz
                 </span>
                 <div className="text-xl font-bold text-[#14231F] mt-0.5">
-                  {brandConfig?.phoneDisplay || '55 518 44 00'}
+                  {brandConfig?.phoneDisplay || '+998 71 200 00 00'}
                 </div>
               </div>
               <p className="text-xs text-[#65756F] leading-relaxed">
@@ -155,31 +156,29 @@ export default function ContactPolicyPage({
             </div>
           </a>
 
-          {/* Facebook */}
+          {/* Email */}
           <a
-            href="https://www.facebook.com/hiloltalimuz/?ref=NONE_xav_ig_profile_page_web#"
-            target="_blank"
-            rel="noreferrer"
+            href={`mailto:${brandConfig?.email || 'info@arabtili.uz'}`}
             className="group bg-white p-6 rounded-2xl border border-[#073F31]/15 hover:border-[#07966F] hover:shadow-lg transition-all duration-300 flex flex-col justify-between"
           >
             <div className="space-y-3">
               <div className="w-12 h-12 rounded-xl bg-[#07966F]/10 text-[#07966F] flex items-center justify-center group-hover:bg-[#07966F] group-hover:text-white transition-colors duration-300">
-                <FacebookIcon className="w-6 h-6" />
+                <Mail className="w-6 h-6" />
               </div>
               <div>
                 <span className="text-[11px] font-bold uppercase tracking-wider text-[#65756F]">
-                  Rasmiy Facebook
+                  Rasmiy Email
                 </span>
-                <div className="text-xl font-bold text-[#14231F] mt-0.5">
-                  Ustoz Akademiyasi
+                <div className="text-xl font-bold text-[#14231F] mt-0.5 truncate">
+                  {brandConfig?.email || 'info@arabtili.uz'}
                 </div>
               </div>
               <p className="text-xs text-[#65756F] leading-relaxed">
-                Akademiya yangiliklari, ilmiy maqolalar va ota-onalar tavsiyalari.
+                Tijoriy hamkorlik, taklif va savollar uchun elektron pochta.
               </p>
             </div>
             <div className="pt-4 mt-4 border-t border-[#073F31]/10 flex items-center gap-1 text-xs font-bold text-[#07966F] group-hover:translate-x-0.5 transition-transform">
-              <span>Facebook sahifasi</span>
+              <span>Email yozish</span>
               <ArrowRight className="w-3.5 h-3.5" />
             </div>
           </a>
@@ -339,13 +338,13 @@ export default function ContactPolicyPage({
       <h1 className="text-3xl font-bold text-[#14231F]">Maxfiylik siyosati</h1>
       <div className="bg-white rounded-2xl p-6 border border-[#073F31]/15 space-y-4 text-sm text-[#65756F] leading-relaxed shadow-sm">
         <p>
-          <strong className="text-[#14231F]">1. Umumiy qoidalar:</strong> Ushbu maxfiylik siyosati «Ustoz Akademiyasi» veb-sayti orqali sinov darsiga yozilish vaqtida taqdim etilgan shaxsiy ma’lumotlarni (ism, telefon raqami va tanlangan filial) qayta ishlash tartibini belgilaydi.
+          <strong className="text-[#14231F]">1. Umumiy qoidalar:</strong> Ushbu maxfiylik siyosati «Arab Tili» o‘quv markazi veb-sayti orqali sinov darsiga yozilish vaqtida taqdim etilgan shaxsiy ma’lumotlarni (ism, telefon raqami va tanlangan filial) qayta ishlash tartibini belgilaydi.
         </p>
         <p>
           <strong className="text-[#14231F]">2. Ma’lumotlardan foydalanish maqsadi:</strong> Kiritilgan telefon raqami va ism faqatgina o‘quvchi bilan bog‘lanish, sinov darsi vaqtini belgilash hamda tanlangan filial manzilini yuborish uchungina ishlatiladi.
         </p>
         <p>
-          <strong className="text-[#14231F]">3. Ma’lumotlar daxlsizligi:</strong> Foydalanuvchi ma’lumotlari uchinchi shaxslarga berilmaydi. Savollar bo‘yicha {brandConfig?.phoneDisplay || '55 518 44 00'} raqamiga murojaat qilishingiz mumkin.
+          <strong className="text-[#14231F]">3. Ma’lumotlar daxlsizligi:</strong> Foydalanuvchi ma’lumotlari uchinchi shaxslarga berilmaydi. Savollar bo‘yicha {brandConfig?.phoneDisplay || '+998 71 200 00 00'} raqamiga murojaat qilishingiz mumkin.
         </p>
       </div>
     </div>

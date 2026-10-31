@@ -4,26 +4,28 @@
  */
 
 export const INITIAL_BRAND_CONFIG = {
-  name: 'Ustoz Akademiyasi',
-  sloganPrimary: "O'QI VA KO'TARIL!",
-  sloganSecondary: 'Zulmatlardan Nur tomon',
-  phoneDisplay: '+998 55 518 44 00',
-  phoneHref: 'tel:+998555184400',
-  phoneRaw: '+998555184400',
-  instagramHandle: '@ustoz_akademiyasi',
-  instagramUrl: 'https://instagram.com/ustoz_akademiyasi',
-  instagramFollowers: '134K+',
-  instagramPosts: '716+',
-  telegramHandle: '@ustozakademiyasi',
-  telegramUrl: 'https://t.me/ustozakademiyasi',
-  facebookHandle: 'hiloltalimuz',
-  facebookUrl: 'https://www.facebook.com/hiloltalimuz/',
-  telegramSubscribers: '1,707+',
-  telegramPhotos: '764',
-  telegramVideos: '270',
-  telegramPolls: '116',
-  graduatesInstagram: '15,000+',
-  graduatesTelegram: '5,000+',
+  name: 'Arab Tili',
+  shortName: 'Arab Tili',
+  sloganPrimary: "O'QI VA O'RGAN!",
+  sloganSecondary: "Arab tili o'quv markazi",
+  phoneDisplay: '+998 71 200 00 00',
+  phoneHref: 'tel:+998712000000',
+  phoneRaw: '+998712000000',
+  email: 'info@arabtili.uz',
+  instagramHandle: '@arabtili_demo',
+  instagramUrl: 'https://instagram.com',
+  instagramFollowers: '10K+',
+  instagramPosts: '100+',
+  telegramHandle: '@arabtili_demo',
+  telegramUrl: 'https://t.me',
+  facebookHandle: 'arabtili_demo',
+  facebookUrl: 'https://facebook.com',
+  telegramSubscribers: '2,500+',
+  telegramPhotos: '150+',
+  telegramVideos: '40+',
+  telegramPolls: '30+',
+  graduatesInstagram: '5,000+',
+  graduatesTelegram: '2,000+',
   branchesCount: 8,
   city: 'Toshkent shahri'
 };
@@ -41,7 +43,7 @@ export const INITIAL_COURSES = [
       "Telegram va Instagram sahifalarimizda namoyish etilganidek, darslar bolajonlar sevib tomosha qiladigan multfilmlarning maxsus arabcha talqini hamda «Bolajonlar bilan raqamlarni topish o'yini» kabi jamoaviy mashg'ulotlar asosida olib boriladi.",
     entryRequirements: "4 yoshdan boshlab qabul qilinadi. Oldindan harf tanish talab etilmaydi.",
     durationNote: "Bosqichma-bosqich o'quv dasturi (guruh jadvali filial ma'muriyati bilan belgilanadi)",
-    priceStatus: "Oylik to'lov miqdori tanlangan filial va guruh jadvaliga ko'ra +998 55 518 44 00 orqali tasdiqlanadi",
+    priceStatus: "Oylik to'lov miqdori tanlangan filial va guruh jadvaliga ko'ra +998 71 200 00 00 orqali tasdiqlanadi",
     objectives: [
       "Arab alifbosidagi 28 ta harfni rangli kartochkalar va o'yinlar yordamida tanish",
       "Arab raqamlari (١ dan ١٠ gacha) va kundalik buyumlar nomini eslab qolish",
@@ -86,7 +88,7 @@ export const INITIAL_COURSES = [
       "Har bir harfning artikulyatsion o'rni (bo'g'iz, til, lablar) ustoz nazoratida individual mashq qilinadi. Harakatlar (fatha, kasra, damma), tanvin, sukun va tashdid qoidalari amaliy matnlar ustida mustahkamlanadi.",
     entryRequirements: "Arab tilini umuman bilmaydigan (0 dan boshlovchi) yoki talaffuzini to'g'rilamoqchi bo'lganlar uchun.",
     durationNote: "Boshlang'ich fonetika va o'qish bosqichi (guruh jadvali filialda aniqlashtiriladi)",
-    priceStatus: "Kurs to'lovi va dars vaqtlari +998 55 518 44 00 call-markazi orqali ma'lum qilinadi",
+    priceStatus: "Kurs to'lovi va dars vaqtlari +998 71 200 00 00 call-markazi orqali ma'lum qilinadi",
     objectives: [
       "28 ta arab harfining aniq maxrajini (talaffuz nuqtasini) amaliy o'zlashtirish",
       "Qalin va ingichka harflarni bir-biridan xatosiz farqlash",
@@ -127,7 +129,7 @@ export const INITIAL_COURSES = [
       "C1 darajali tajribali ustozlar metodikasi asosida o'quvchilarga so'z yasalishi (Sarf), gap tuzilishi (Nahv), o'qib tushunish (Reading), tinglab tushunish (Listening), yozma nutq (Writing) va og'zaki nutq (Speaking) kompleks o'rgatiladi.",
     entryRequirements: "Arab harflarida ravon o'qiy olish va yozish ko'nikmasi (Fonetika bosqichini tugatgan bo'lish).",
     durationNote: "Darajalar kesimida tizimli kurs (kirish suhbati/testi orqali mos guruhga joylashtiriladi)",
-    priceStatus: "Daraja va guruh turiga ko'ra +998 55 518 44 00 orqali tasdiqlanadi",
+    priceStatus: "Daraja va guruh turiga ko'ra +998 71 200 00 00 orqali tasdiqlanadi",
     objectives: [
       "Arab tilida fe'l boblarini, zamonlarni va ism turlarini (Sarf) mustaqil tahlil qilish",
       "Murakkab gap tuzilishi va e'rob qoidalarini (Nahv) matnlarda qo'llash",
@@ -168,7 +170,7 @@ export const INITIAL_COURSES = [
       "Markazimizning «Kundalik hayotda kerak bo'ladigan 10 ta Arabcha so'z» va «Arab tilidagi kasblar» mavzusidagi o'quv materiallari asosida jonli vaziyatlar (aeroport, bozor, mehmonxona, ish suhbati) modellashtiriladi.",
     entryRequirements: "Boshlang'ich o'qish ko'nikmasi tavsiya etiladi.",
     durationNote: "Amaliy so'zlashuv va lug'at boyitish dasturi",
-    priceStatus: "Filial ma'muriyati bilan +998 55 518 44 00 orqali aniqlashtiriladi",
+    priceStatus: "Filial ma'muriyati bilan +998 71 200 00 00 orqali aniqlashtiriladi",
     objectives: [
       "Kundalik hayotda eng ko'p qo'llaniladigan faol so'z va iboralarni erkin ishlatish",
       "Safar, ziyorat va mehmonxona vaziyatlarida mustaqil muloqot qilish",
@@ -978,7 +980,7 @@ export const INITIAL_FAQ_ITEMS = [
   {
     category: "To'lov va Jadval",
     q: 'Kurs narxlari va dars vaqtlarini qanday bilsam bo‘ladi?',
-    a: "Har bir filialdagi guruhlar jadvali (ertalabki, kunduzgi, kechki) hamda joriy o'quv to'lovlari bo'yicha aniq ma'lumot olish uchun saytdagi sinov darsi shaklini to'ldiring yoki +998 55 518 44 00 raqamiga qo'ng'iroq qiling."
+    a: "Har bir filialdagi guruhlar jadvali (ertalabki, kunduzgi, kechki) hamda joriy o'quv to'lovlari bo'yicha aniq ma'lumot olish uchun saytdagi sinov darsi shaklini to'ldiring yoki +998 71 200 00 00 raqamiga qo'ng'iroq qiling."
   },
   {
     category: 'Sinov darsi',
