@@ -794,7 +794,7 @@ export default function AboutFacultyPage({
       <div className="max-w-[1360px] 2xl:max-w-[1600px] min-[1920px]:max-w-[1780px] mx-auto px-4 sm:px-6 lg:px-8 2xl:px-12">
         <div className="grid md:grid-cols-2 gap-7 pb-16">
         <div className="bg-white rounded-2xl border border-[#073F31]/15 overflow-hidden">
-          <div className="h-56">
+          <div className="min-h-[200px] sm:h-56 overflow-hidden">
             <AuthenticVisualPlate type="graduation-cefr" />
           </div>
           <div className="p-6 space-y-2">
@@ -809,7 +809,7 @@ export default function AboutFacultyPage({
         </div>
 
         <div className="bg-white rounded-2xl border border-[#073F31]/15 overflow-hidden">
-          <div className="h-56">
+          <div className="min-h-[200px] sm:h-56 overflow-hidden">
             <AuthenticVisualPlate type="cefr" />
           </div>
           <div className="p-6 space-y-2">

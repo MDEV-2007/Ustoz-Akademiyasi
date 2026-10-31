@@ -385,7 +385,7 @@ export default function CoursesPage({
             className="bg-white rounded-2xl border border-[#073F31]/15 overflow-hidden flex flex-col justify-between"
           >
             <div>
-              <div className="h-52 border-b border-[#073F31]/10">
+              <div className="min-h-[200px] sm:h-56 border-b border-[#073F31]/10 overflow-hidden">
                 <AuthenticVisualPlate
                   type={course.plateType}
                   customImage={customPhotos[course.slug]}

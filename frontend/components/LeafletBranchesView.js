@@ -255,6 +255,7 @@ export default function LeafletBranchesView({
         zoom: 12,
         zoomControl: true,
         scrollWheelZoom: false,
+        attributionControl: false,
       });
 
       // OpenStreetMap standard tiles — completely free, no API key required, full Tashkent coverage
@@ -545,30 +546,33 @@ export default function LeafletBranchesView({
               )}
 
               {/* Action Buttons */}
-              <div className="flex items-center gap-2 pt-1 border-t border-[#073F31]/10">
-                <a
-                  href={getRouteUrl(selectedBranch)}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="flex-1 py-2 px-3 rounded-xl bg-[#073F31] hover:bg-[#07966F] text-white font-bold text-xs flex items-center justify-center gap-1.5 transition cursor-pointer shadow-xs"
-                >
-                  <Navigation className="w-3.5 h-3.5" />
-                  <span>{labels.routeBtn}</span>
-                </a>
+              <div className="pt-2 border-t border-[#073F31]/10 space-y-2">
+                <div className="flex items-center gap-2">
+                  <a
+                    href={getRouteUrl(selectedBranch)}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex-1 py-2 px-3 rounded-xl bg-[#073F31] hover:bg-[#07966F] text-white font-bold text-xs flex items-center justify-center gap-1.5 transition cursor-pointer shadow-xs whitespace-nowrap"
+                  >
+                    <Navigation className="w-3.5 h-3.5 flex-shrink-0" />
+                    <span>{labels.routeBtn}</span>
+                  </a>
 
-                <a
-                  href={phoneHref}
-                  className="w-9 h-9 rounded-xl border border-[#073F31]/20 bg-white hover:bg-[#F8FAF8] text-[#073F31] flex items-center justify-center transition cursor-pointer flex-shrink-0"
-                  title={labels.callBtn}
-                  aria-label={labels.callBtn}
-                >
-                  <Phone className="w-3.5 h-3.5 text-[#073F31]" />
-                </a>
+                  <a
+                    href={phoneHref}
+                    className="py-2 px-3 rounded-xl border border-[#073F31]/20 bg-white hover:bg-[#F8FAF8] text-[#073F31] font-semibold text-xs flex items-center justify-center gap-1.5 transition cursor-pointer flex-shrink-0"
+                    title={labels.callBtn}
+                    aria-label={labels.callBtn}
+                  >
+                    <Phone className="w-3.5 h-3.5 text-[#073F31] flex-shrink-0" />
+                    <span>{labels.callBtn}</span>
+                  </a>
+                </div>
 
                 <button
                   type="button"
                   onClick={() => onEnroll(selectedBranch.slug)}
-                  className="py-2 px-3 rounded-xl bg-[#63E6BE] hover:bg-[#63E6BE]/90 text-[#14231F] font-bold text-xs flex items-center justify-center transition cursor-pointer"
+                  className="w-full py-2.5 px-3 rounded-xl bg-[#63E6BE] hover:bg-[#63E6BE]/90 text-[#14231F] font-bold text-xs flex items-center justify-center transition cursor-pointer shadow-xs active:scale-[0.99] whitespace-nowrap"
                 >
                   <span>{labels.enrollBtn}</span>
                 </button>

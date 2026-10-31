@@ -11,7 +11,7 @@ export const AuthenticVisualPlate = ({ type, customImage, altText }) => {
 
   if (customImage) {
     return (
-      <div className="relative w-full h-full min-h-[220px] bg-[#073F31] overflow-hidden">
+      <div className="relative w-full h-full min-h-[200px] sm:min-h-[220px] bg-[#073F31] overflow-hidden">
         <ImageWithSkeleton
           src={customImage}
           alt={
@@ -35,12 +35,12 @@ export const AuthenticVisualPlate = ({ type, customImage, altText }) => {
       <div
         role="img"
         aria-label="Hilol Kids 4+"
-        className="w-full h-full min-h-[230px] bg-[#073F31] text-white p-5 flex flex-col justify-between relative overflow-hidden select-none"
+        className="w-full h-full bg-[#073F31] text-white p-3.5 sm:p-5 flex flex-col justify-between relative overflow-hidden select-none"
       >
-        <div className="flex items-center justify-between border-b border-white/15 pb-3">
-          <div className="flex items-center gap-2">
-            <OfficialBrandShield size={24} />
-            <span className="text-xs font-semibold tracking-wider uppercase text-[#63E6BE]">
+        <div className="flex items-center justify-between border-b border-white/15 pb-2.5 sm:pb-3">
+          <div className="flex items-center gap-2 min-w-0">
+            <OfficialBrandShield size={20} className="flex-shrink-0" />
+            <span className="text-[11px] sm:text-xs font-semibold tracking-wider uppercase text-[#63E6BE] truncate">
               {locale === 'ru'
                 ? 'Hilol Kids 4+ • Игровая методика'
                 : locale === 'en'
@@ -48,13 +48,13 @@ export const AuthenticVisualPlate = ({ type, customImage, altText }) => {
                 : 'Hilol Kids 4+ • O‘yin metodikasi'}
             </span>
           </div>
-          <span className="text-[11px] px-2 py-0.5 rounded bg-white/10 text-white/90">
+          <span className="text-[10px] sm:text-[11px] px-1.5 sm:px-2 py-0.5 rounded bg-white/10 text-white/90 flex-shrink-0">
             {locale === 'ru' ? '4+ года' : locale === 'en' ? '4+ years' : '4+ yosh'}
           </span>
         </div>
 
         {/* Classroom Arabic Number Poster Simulation */}
-        <div className="my-3 grid grid-cols-4 gap-2 bg-[#F8FAF8] text-[#14231F] p-3 rounded-lg border-2 border-[#E8B84A]">
+        <div className="my-2 sm:my-3 grid grid-cols-4 gap-1.5 sm:gap-2 bg-[#F8FAF8] text-[#14231F] p-2 sm:p-3 rounded-lg border-2 border-[#E8B84A]">
           {[
             { ar: '١', uz: locale === 'ru' ? '1 • Вахид' : locale === 'en' ? '1 • Wahid' : '1 • Vohid' },
             { ar: '٢', uz: locale === 'ru' ? '2 • Иснани' : locale === 'en' ? '2 • Ithnan' : '2 • Isnan' },
@@ -63,21 +63,21 @@ export const AuthenticVisualPlate = ({ type, customImage, altText }) => {
           ].map((item) => (
             <div
               key={item.ar}
-              className="bg-white border border-[#073F31]/15 rounded p-2 text-center shadow-sm"
+              className="bg-white border border-[#073F31]/15 rounded p-1 sm:p-2 text-center shadow-xs"
             >
-              <div className="font-arabic text-2xl font-bold text-[#073F31] leading-none">
+              <div className="font-arabic text-xl sm:text-2xl font-bold text-[#073F31] leading-none">
                 {item.ar}
               </div>
-              <div className="text-[10px] font-medium text-[#65756F] mt-1">{item.uz}</div>
+              <div className="text-[9px] sm:text-[10px] font-medium text-[#65756F] mt-0.5 sm:mt-1 truncate">{item.uz}</div>
             </div>
           ))}
         </div>
 
         <div>
-          <div className="text-[11px] uppercase tracking-wider text-[#63E6BE] font-semibold">
+          <div className="text-[10px] sm:text-[11px] uppercase tracking-wider text-[#63E6BE] font-semibold">
             {t.playgroundExtra?.workshopBadge || 'Amaliy mashg‘ulot'}
           </div>
-          <div className="text-sm font-bold tracking-tight text-white mt-0.5">
+          <div className="text-xs sm:text-sm font-bold tracking-tight text-white mt-0.5 line-clamp-2">
             {t.playgroundExtra?.numbersGameTitle || 'BOLAJONLAR BILAN RAQAMLARNI VA HARFLARNI TOPISH O‘YINI'}
           </div>
         </div>
@@ -91,16 +91,16 @@ export const AuthenticVisualPlate = ({ type, customImage, altText }) => {
       <div
         role="img"
         aria-label="Professional Fonetika"
-        className="w-full h-full min-h-[230px] bg-[#14231F] text-white p-5 flex flex-col justify-between relative overflow-hidden select-none"
+        className="w-full h-full bg-[#14231F] text-white p-3.5 sm:p-5 flex flex-col justify-between relative overflow-hidden select-none"
       >
-        <div className="flex items-center justify-between border-b border-white/15 pb-3">
-          <div className="flex items-center gap-2">
-            <OfficialBrandShield size={24} />
-            <span className="text-xs font-semibold tracking-wider uppercase text-[#63E6BE]">
+        <div className="flex items-center justify-between border-b border-white/15 pb-2.5 sm:pb-3">
+          <div className="flex items-center gap-2 min-w-0">
+            <OfficialBrandShield size={20} className="flex-shrink-0" />
+            <span className="text-[11px] sm:text-xs font-semibold tracking-wider uppercase text-[#63E6BE] truncate">
               {t.courses?.items?.['professional-fonetika']?.title || 'Professional Fonetika'}
             </span>
           </div>
-          <span className="text-[11px] px-2 py-0.5 rounded bg-[#07966F]/30 text-[#63E6BE]">
+          <span className="text-[10px] sm:text-[11px] px-1.5 sm:px-2 py-0.5 rounded bg-[#07966F]/30 text-[#63E6BE] flex-shrink-0">
             {locale === 'ru'
               ? 'Правила махраджа и таджвида'
               : locale === 'en'
@@ -109,43 +109,43 @@ export const AuthenticVisualPlate = ({ type, customImage, altText }) => {
           </span>
         </div>
 
-        <div className="my-3 flex items-center justify-between gap-4 bg-white/5 border border-white/10 rounded-lg p-3.5">
-          <div className="space-y-1">
-            <div className="text-xs text-[#63E6BE] font-medium">
+        <div className="my-2 sm:my-3 flex items-center justify-between gap-2.5 sm:gap-4 bg-white/5 border border-white/10 rounded-lg p-2.5 sm:p-3.5">
+          <div className="space-y-0.5 sm:space-y-1 min-w-0">
+            <div className="text-[11px] sm:text-xs text-[#63E6BE] font-medium truncate">
               {locale === 'ru'
                 ? 'Гортанный и корневой махрадж'
                 : locale === 'en'
                 ? 'Throat & Root Makhraj'
                 : 'Bo‘g‘iz va Til maxraji'}
             </div>
-            <div className="text-sm font-semibold text-white">
+            <div className="text-xs sm:text-sm font-semibold text-white leading-tight">
               {locale === 'ru'
                 ? 'Точная артикуляция каждого звука'
                 : locale === 'en'
                 ? 'Precise articulation of each letter'
                 : 'Har bir harfning aniq artikulyatsion nuqtasi'}
             </div>
-            <div className="text-xs text-white/70">
+            <div className="text-[10px] sm:text-xs text-white/70">
               Fatha (ـَ), Kasra (ـِ), Damma (ـُ), Sukun (ـْ)
             </div>
           </div>
           <div
             dir="rtl"
-            className="font-arabic text-4xl font-bold text-[#E8B84A] bg-[#073F31] px-4 py-2.5 rounded-lg border border-[#63E6BE]/30"
+            className="font-arabic text-2xl sm:text-3xl lg:text-4xl font-bold text-[#E8B84A] bg-[#073F31] px-2.5 py-1.5 sm:px-4 sm:py-2.5 rounded-lg border border-[#63E6BE]/30 flex-shrink-0 shadow-sm"
           >
             اقْرَأْ
           </div>
         </div>
 
         <div>
-          <div className="text-[11px] uppercase tracking-wider text-[#E8B84A] font-semibold">
+          <div className="text-[10px] sm:text-[11px] uppercase tracking-wider text-[#E8B84A] font-semibold">
             {locale === 'ru'
               ? 'От 0 до беглого чтения'
               : locale === 'en'
               ? 'From scratch to fluent reading'
               : '0 dan ravon o‘qishgacha'}
           </div>
-          <div className="text-sm font-bold tracking-tight text-white mt-0.5">
+          <div className="text-xs sm:text-sm font-bold tracking-tight text-white mt-0.5 line-clamp-2">
             {locale === 'ru'
               ? 'ПРАВИЛЬНОЕ ПРОИЗНОШЕНИЕ 28 АРАБСКИХ БУКВ ИЗ ИХ МАХРАДЖА'
               : locale === 'en'
@@ -163,30 +163,30 @@ export const AuthenticVisualPlate = ({ type, customImage, altText }) => {
       <div
         role="img"
         aria-label="CEFR"
-        className="w-full h-full min-h-[230px] bg-[#073F31] text-white p-5 flex flex-col justify-between relative overflow-hidden select-none"
+        className="w-full h-full bg-[#073F31] text-white p-3.5 sm:p-5 flex flex-col justify-between relative overflow-hidden select-none"
       >
-        <div className="flex items-center justify-between border-b border-white/15 pb-3">
-          <div className="flex items-center gap-2">
-            <OfficialBrandShield size={24} />
-            <span className="text-xs font-semibold tracking-wider uppercase text-[#63E6BE]">
+        <div className="flex items-center justify-between border-b border-white/15 pb-2.5 sm:pb-3">
+          <div className="flex items-center gap-2 min-w-0">
+            <OfficialBrandShield size={20} className="flex-shrink-0" />
+            <span className="text-[11px] sm:text-xs font-semibold tracking-wider uppercase text-[#63E6BE] truncate">
               {t.courses?.items?.['grammatika-va-cefr']?.title || 'Grammatika va CEFR'}
             </span>
           </div>
-          <span className="text-[11px] px-2 py-0.5 rounded bg-[#E8B84A]/20 text-[#E8B84A] font-semibold">
+          <span className="text-[10px] sm:text-[11px] px-1.5 sm:px-2 py-0.5 rounded bg-[#E8B84A]/20 text-[#E8B84A] font-semibold flex-shrink-0">
             A2 • B1 • B2 • C1
           </span>
         </div>
 
         {/* Certificate Specimen */}
-        <div className="my-3 bg-[#F8FAF8] text-[#14231F] p-3.5 rounded-lg border-2 border-[#E8B84A] flex items-center justify-between">
-          <div>
-            <div className="text-[10px] font-bold uppercase tracking-widest text-[#07966F]">
+        <div className="my-2 sm:my-3 bg-[#F8FAF8] text-[#14231F] p-2.5 sm:p-3.5 rounded-lg border-2 border-[#E8B84A] flex items-center justify-between gap-2">
+          <div className="min-w-0">
+            <div className="text-[9px] sm:text-[10px] font-bold uppercase tracking-widest text-[#07966F] truncate">
               USTOZ AKADEMIYASI • {locale === 'ru' ? 'СЕРТИФИКАТ' : locale === 'en' ? 'CERTIFICATE' : 'SERTIFIKAT'}
             </div>
-            <div className="text-sm font-bold text-[#14231F] mt-0.5">
+            <div className="text-xs sm:text-sm font-bold text-[#14231F] mt-0.5 truncate">
               {locale === 'ru' ? 'Сарф, Нахв и уровни CEFR' : locale === 'en' ? 'Sarf, Nahw & CEFR Levels' : 'Sarf, Nahv va CEFR Bosqichlari'}
             </div>
-            <div className="text-xs text-[#65756F] mt-0.5">
+            <div className="text-[10px] sm:text-xs text-[#65756F] mt-0.5 truncate">
               {locale === 'ru'
                 ? 'Присоединяйтесь к 15 000+ выпускникам'
                 : locale === 'en'
@@ -194,14 +194,14 @@ export const AuthenticVisualPlate = ({ type, customImage, altText }) => {
                 : '15,000+ bitiruvchilar safiga qo‘shiling'}
             </div>
           </div>
-          <Award className="w-9 h-9 text-[#07966F] flex-shrink-0" />
+          <Award className="w-7 h-7 sm:w-9 sm:h-9 text-[#07966F] flex-shrink-0" />
         </div>
 
         <div>
-          <div className="text-[11px] uppercase tracking-wider text-[#63E6BE] font-semibold">
+          <div className="text-[10px] sm:text-[11px] uppercase tracking-wider text-[#63E6BE] font-semibold">
             {locale === 'ru' ? 'Подтверждённые результаты' : locale === 'en' ? 'Proven results' : 'Tasdiqlangan natijalar'}
           </div>
-          <div className="text-sm font-bold tracking-tight text-white mt-0.5">
+          <div className="text-xs sm:text-sm font-bold tracking-tight text-white mt-0.5 line-clamp-2">
             {locale === 'ru'
               ? 'ВЫПУСКНЫЕ МЕРОПРИЯТИЯ И ПОДГОТОВКА К CEFR'
               : locale === 'en'
@@ -218,12 +218,12 @@ export const AuthenticVisualPlate = ({ type, customImage, altText }) => {
     <div
       role="img"
       aria-label="Kundalik va kasbiy arab tili"
-      className="w-full h-full min-h-[230px] bg-[#073F31] text-white p-5 flex flex-col justify-between relative overflow-hidden select-none"
+      className="w-full h-full bg-[#073F31] text-white p-3.5 sm:p-5 flex flex-col justify-between relative overflow-hidden select-none"
     >
-      <div className="flex items-center justify-between border-b border-white/15 pb-3">
-        <div className="flex items-center gap-2">
-          <OfficialBrandShield size={24} />
-          <span className="text-xs font-semibold tracking-wider uppercase text-[#63E6BE]">
+      <div className="flex items-center justify-between border-b border-white/15 pb-2.5 sm:pb-3">
+        <div className="flex items-center gap-2 min-w-0">
+          <OfficialBrandShield size={20} className="flex-shrink-0" />
+          <span className="text-[11px] sm:text-xs font-semibold tracking-wider uppercase text-[#63E6BE] truncate">
             {locale === 'ru'
               ? 'Общение и деловая карьера'
               : locale === 'en'
@@ -231,30 +231,30 @@ export const AuthenticVisualPlate = ({ type, customImage, altText }) => {
               : 'Muloqot va Kasbiy Yo‘nalish'}
           </span>
         </div>
-        <span className="text-[11px] px-2 py-0.5 rounded bg-white/10 text-white/90">
+        <span className="text-[10px] sm:text-[11px] px-1.5 sm:px-2 py-0.5 rounded bg-white/10 text-white/90 flex-shrink-0">
           {locale === 'ru' ? 'Живая речь' : locale === 'en' ? 'Spoken fluency' : 'Amaliy nutq'}
         </span>
       </div>
 
       {/* Chalkboard Frame */}
-      <div className="my-3 bg-[#1E2623] border-4 border-[#8C6D46] rounded-lg p-3.5 text-center shadow-inner">
-        <div className="font-serif italic text-lg text-white/95 leading-snug">
+      <div className="my-2 sm:my-3 bg-[#1E2623] border-2 sm:border-4 border-[#8C6D46] rounded-lg p-2.5 sm:p-3.5 text-center shadow-inner">
+        <div className="font-serif italic text-xs sm:text-base lg:text-lg text-white/95 leading-snug line-clamp-2">
           {locale === 'ru'
             ? '«Профессии на арабском и необходимые повседневные фразы»'
             : locale === 'en'
             ? '“Careers in Arabic and everyday spoken expressions”'
             : '“Arab tilidagi kasblar va kundalik hayotda kerak bo‘ladigan so‘zlar”'}
         </div>
-        <div className="font-arabic text-base text-[#63E6BE] mt-1" dir="rtl">
+        <div className="font-arabic text-sm sm:text-base text-[#63E6BE] mt-1" dir="rtl">
           مُعَلِّمٌ • مُتَرْجِمٌ • مُرْشِدٌ
         </div>
       </div>
 
       <div>
-        <div className="text-[11px] uppercase tracking-wider text-[#63E6BE] font-semibold">
+        <div className="text-[10px] sm:text-[11px] uppercase tracking-wider text-[#63E6BE] font-semibold">
           {locale === 'ru' ? 'Живой диалог' : locale === 'en' ? 'Live dialogue' : 'Jonli muloqot'}
         </div>
-        <div className="text-sm font-bold tracking-tight text-white mt-0.5">
+        <div className="text-xs sm:text-sm font-bold tracking-tight text-white mt-0.5 line-clamp-2">
           {locale === 'ru'
             ? 'РАЗГОВОРНЫЙ И ДЕЛОВОЙ АРАБСКИЙ ЯЗЫК'
             : locale === 'en'

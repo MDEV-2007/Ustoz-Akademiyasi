@@ -162,33 +162,33 @@ export default function Footer({
           <div>
             © 2026 Ustoz Akademiyasi. {t.footer?.rights || 'Barcha huquqlar himoyalangan.'}
           </div>
-          <div className="flex flex-wrap items-center justify-center sm:justify-end gap-2 sm:gap-3 w-full sm:w-auto">
+          <div className="grid grid-cols-3 gap-2 w-full sm:w-auto sm:flex sm:items-center sm:gap-2.5">
             <a
               href={brandConfig.instagramUrl}
               target="_blank"
               rel="noreferrer"
-              className="inline-flex items-center gap-1.5 sm:gap-2 px-2.5 sm:px-3 py-1.5 rounded-xl bg-white/5 hover:bg-white/10 border border-white/10 text-white/80 hover:text-white transition group shadow-xs text-[11px] sm:text-xs"
+              className="inline-flex items-center justify-center gap-1.5 px-2 sm:px-3 py-1.5 rounded-xl bg-white/5 hover:bg-white/10 border border-white/10 text-white/80 hover:text-white transition group shadow-xs text-[11px] sm:text-xs min-w-0"
             >
-              <Instagram className="w-3.5 h-3.5 text-[#E1306C] group-hover:scale-110 transition-transform" />
-              <span>Instagram ({brandConfig.instagramFollowers})</span>
+              <Instagram className="w-3.5 h-3.5 text-[#E1306C] group-hover:scale-110 transition-transform flex-shrink-0" />
+              <span className="truncate">Instagram<span className="hidden md:inline"> ({brandConfig.instagramFollowers})</span></span>
             </a>
             <a
               href={brandConfig.telegramUrl}
               target="_blank"
               rel="noreferrer"
-              className="inline-flex items-center gap-1.5 sm:gap-2 px-2.5 sm:px-3 py-1.5 rounded-xl bg-white/5 hover:bg-white/10 border border-white/10 text-white/80 hover:text-white transition group shadow-xs text-[11px] sm:text-xs"
+              className="inline-flex items-center justify-center gap-1.5 px-2 sm:px-3 py-1.5 rounded-xl bg-white/5 hover:bg-white/10 border border-white/10 text-white/80 hover:text-white transition group shadow-xs text-[11px] sm:text-xs min-w-0"
             >
-              <TelegramIcon className="w-3.5 h-3.5 text-[#2AABEE] group-hover:scale-110 transition-transform" />
-              <span>Telegram ({brandConfig.telegramHandle})</span>
+              <TelegramIcon className="w-3.5 h-3.5 text-[#2AABEE] group-hover:scale-110 transition-transform flex-shrink-0" />
+              <span className="truncate">Telegram<span className="hidden md:inline"> ({brandConfig.telegramHandle})</span></span>
             </a>
             <a
               href={brandConfig.facebookUrl || 'https://www.facebook.com/hiloltalimuz/'}
               target="_blank"
               rel="noreferrer"
-              className="inline-flex items-center gap-1.5 sm:gap-2 px-2.5 sm:px-3 py-1.5 rounded-xl bg-white/5 hover:bg-white/10 border border-white/10 text-white/80 hover:text-white transition group shadow-xs text-[11px] sm:text-xs"
+              className="inline-flex items-center justify-center gap-1.5 px-2 sm:px-3 py-1.5 rounded-xl bg-white/5 hover:bg-white/10 border border-white/10 text-white/80 hover:text-white transition group shadow-xs text-[11px] sm:text-xs min-w-0"
             >
-              <FacebookIcon className="w-3.5 h-3.5 text-[#1877F2] fill-[#1877F2] group-hover:scale-110 transition-transform" />
-              <span>Facebook</span>
+              <FacebookIcon className="w-3.5 h-3.5 text-[#1877F2] fill-[#1877F2] group-hover:scale-110 transition-transform flex-shrink-0" />
+              <span className="truncate">Facebook</span>
             </a>
           </div>
         </div>

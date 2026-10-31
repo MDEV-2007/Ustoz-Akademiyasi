@@ -74,7 +74,7 @@ export default function CourseDiscoverySection({
               }`}
             >
               <div>
-                <div className="h-56 border-b border-[#073F31]/10 overflow-hidden">
+                <div className="min-h-[200px] sm:h-56 border-b border-[#073F31]/10 overflow-hidden">
                   <AuthenticVisualPlate
                     type={course.plateType}
                     customImage={customPhotos[course.slug]}
