@@ -3,6 +3,8 @@ import { Suspense } from 'react';
 import { SUPPORTED_LOCALES } from '@/lib/i18n/config';
 import App from '../../page';
 
+const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || 'https://arabdemo-front.duckdns.org';
+
 export function generateStaticParams() {
   const commonRoutes = [
     'kurslar',
@@ -97,7 +99,32 @@ export async function generateMetadata({ params }) {
   return {
     title,
     alternates: {
-      canonical: `https://arabtili.uz/${locale}${path}`,
+      canonical: `${SITE_URL}/${locale}${path}`,
+      languages: {
+        uz: `${SITE_URL}/uz${path}`,
+        ru: `${SITE_URL}/ru${path}`,
+        en: `${SITE_URL}/en${path}`,
+      },
+    },
+    openGraph: {
+      title,
+      url: `${SITE_URL}/${locale}${path}`,
+      siteName: 'Arab Tili',
+      locale: locale === 'ru' ? 'ru_RU' : locale === 'en' ? 'en_US' : 'uz_UZ',
+      type: 'website',
+      images: [
+        {
+          url: '/academy_login_illustration.jpg',
+          width: 1200,
+          height: 630,
+          alt: title,
+        },
+      ],
+    },
+    twitter: {
+      card: 'summary_large_image',
+      title,
+      images: ['/academy_login_illustration.jpg'],
     },
     icons: {
       icon: [

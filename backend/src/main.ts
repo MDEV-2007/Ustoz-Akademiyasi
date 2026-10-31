@@ -31,6 +31,10 @@ async function bootstrap() {
     ...new Set([
       ...rawCors,
       ...envCors,
+      'https://arabdemo-front.duckdns.org',
+      'http://arabdemo-front.duckdns.org',
+      'https://arabdemo-backend.duckdns.org',
+      'http://arabdemo-backend.duckdns.org',
       'https://ustozakademiyasi-front.duckdns.org',
       'http://ustozakademiyasi-front.duckdns.org',
       'https://ustozakademiyasi-back.duckdns.org',

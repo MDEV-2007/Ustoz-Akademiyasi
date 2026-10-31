@@ -423,7 +423,7 @@ function AppContent({ initialLocale = 'uz', initialPath = '/' }) {
         title: `${base} | 8 ta Filial • Kids 4+ • Fonetika • CEFR`,
         description:
           "Arab Tili — Toshkent bo'ylab filiallar va zamonaviy arab tili ta'limi. Kids 4+, Professional fonetika, Grammatika va CEFR kurslari. Tel: +998 71 200 00 00.",
-        canonical: 'https://arabtili.uz/'
+        canonical: 'https://arabdemo-front.duckdns.org/'
       };
     }
     if (p === '/kurslar') {
@@ -431,7 +431,7 @@ function AppContent({ initialLocale = 'uz', initialPath = '/' }) {
         title: `Arab Tili Kurslari | Kids 4+, Fonetika, Grammatika va CEFR — Arab Tili`,
         description:
           "4 yoshdan katta bolalar va kattalar uchun arab tili kurslari: Kids 4+, Professional fonetika, Grammatika va CEFR tayyorlov dasturlari.",
-        canonical: 'https://arabtili.uz/kurslar'
+        canonical: 'https://arabdemo-front.duckdns.org/kurslar'
       };
     }
     if (p.startsWith('/kurslar/')) {
@@ -440,7 +440,7 @@ function AppContent({ initialLocale = 'uz', initialPath = '/' }) {
       return {
         title: c ? `${c.title} kursi — Arab Tili` : base,
         description: c ? c.shortSummary : '',
-        canonical: `https://arabtili.uz/kurslar/${slug}`
+        canonical: `https://arabdemo-front.duckdns.org/kurslar/${slug}`
       };
     }
     if (p === '/filiallar') {
@@ -448,7 +448,7 @@ function AppContent({ initialLocale = 'uz', initialPath = '/' }) {
         title: `Toshkentdagi 8 ta Filialimiz Manzillari — Arab Tili`,
         description:
           "Archako'cha, Yangi ToshMI, Qoraqamish, Algoritm, Yunusobod, Sergeli, Tinchlik va Beruniy filiallari haqida ma'lumot.",
-        canonical: 'https://arabtili.uz/filiallar'
+        canonical: 'https://arabdemo-front.duckdns.org/filiallar'
       };
     }
     if (p.startsWith('/filiallar/')) {
@@ -457,13 +457,13 @@ function AppContent({ initialLocale = 'uz', initialPath = '/' }) {
       return {
         title: b ? `${b.name} — Arab Tili Toshkent` : base,
         description: b ? `${b.name}: mavjud arab tili kurslari, ish tartibi va sinov darsiga yozilish.` : '',
-        canonical: `https://arabtili.uz/filiallar/${slug}`
+        canonical: `https://arabdemo-front.duckdns.org/filiallar/${slug}`
       };
     }
     return {
       title: base,
       description: 'Arab Tili — Arab tili markazi.',
-      canonical: 'https://arabtili.uz/'
+      canonical: 'https://arabdemo-front.duckdns.org/'
     };
   }, [route.path, COURSES, BRANCHES]);
 
@@ -472,7 +472,7 @@ function AppContent({ initialLocale = 'uz', initialPath = '/' }) {
       '@context': 'https://schema.org',
       '@type': 'EducationalOrganization',
       name: 'Arab Tili',
-      url: 'https://arabtili.uz',
+      url: 'https://arabdemo-front.duckdns.org',
       telephone: BRAND_CONFIG.phoneDisplay,
       address: {
         '@type': 'PostalAddress',

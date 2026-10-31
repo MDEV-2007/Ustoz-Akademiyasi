@@ -9,7 +9,7 @@ export async function submitRegistration({
   courses = [],
   branches = [],
   telegramBotConfig = { botToken: '', chatId: '' },
-  sourceUrl = 'https://arabtili.uz/'
+  sourceUrl = 'https://arabdemo-front.duckdns.org/'
 }) {
   const nextErrors = {};
 

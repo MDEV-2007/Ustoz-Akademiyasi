@@ -7,8 +7,8 @@
 
 | Xizmat | Domen | Docker Ichki Porti | Host (Lokal) Porti | Holati |
 |---|---|---|---|---|
-| **Frontend (Next.js)** | `https://ustozakademiyasi-front.duckdns.org` | `3000` | `127.0.0.1:3005` | Nginx orqali proksi |
-| **Backend (NestJS API)**| `https://ustozakademiyasi-back.duckdns.org` | `4000` | `127.0.0.1:4005` | Nginx orqali proksi |
+| **Frontend (Next.js)** | `https://arabdemo-front.duckdns.org` | `3000` | `127.0.0.1:3005` | Nginx orqali proksi |
+| **Backend (NestJS API)**| `https://arabdemo-backend.duckdns.org` | `4000` | `127.0.0.1:4005` | Nginx orqali proksi |
 | **Telegram Bot** | *@UstozAkademiyasiBot* | Polling rejimida | Alohida port talab qilmaydi | Fondagi xizmat |
 | **PostgreSQL DB** | `ustoz_postgres` | `5432` | `127.0.0.1:5435` | Host 5432 ga tegmaydi |
 | **Redis** | `ustoz_redis` | `6379` | *Faqat Docker tarmog‘ida* | Host 6379 ga tegmaydi |
@@ -23,8 +23,8 @@
 
 ### 1-Qadam: DuckDNS IP sozlamalarini tekshiring
 DuckDNS shaxsiy kabinetingizda quyidagi 2 ta subdomenga Contabo serveringizning tashqi IP manzilini kiriting:
-1. `ustozakademiyasi-front.duckdns.org`  -> `SIZNING_CONTABO_IP`
-2. `ustozakademiyasi-back.duckdns.org`   -> `SIZNING_CONTABO_IP`
+1. `arabdemo-front.duckdns.org`  -> `SIZNING_CONTABO_IP`
+2. `arabdemo-backend.duckdns.org`   -> `SIZNING_CONTABO_IP`
 
 ---
 
@@ -62,7 +62,7 @@ chmod +x deploy.sh
 Nginx ishga tushgach, Certbot orqali ikkala domen uchun bepul Let's Encrypt SSL sertifikatini oling:
 
 ```bash
-sudo certbot --nginx -d ustozakademiyasi-front.duckdns.org -d ustozakademiyasi-back.duckdns.org
+sudo certbot --nginx -d arabdemo-front.duckdns.org -d arabdemo-backend.duckdns.org
 ```
 
 > Certbot avtomatik ravishda HTTPS ni sozlaydi va har 90 kunda avtomatik yangilanishini ta'minlaydi.
@@ -100,7 +100,7 @@ sudo certbot --nginx -d ustozakademiyasi-front.duckdns.org -d ustozakademiyasi-b
 
 ## 🔑 BOSH ADMINISTRATOR KABINETI
 O‘rnatish tugagach, backend bazasida avtomatik ravishda bosh administrator yaratiladi:
-- **Admin panel:** `https://ustozakademiyasi-front.duckdns.org/uz/admin`
+- **Admin panel:** `https://arabdemo-front.duckdns.org/uz/admin`
 - **Login:** `admin@ustozakademiyasi.uz`
 - **Parol:** `SecureAdminPassword2026!#`
-- **Backend Swagger API Docs:** `https://ustozakademiyasi-back.duckdns.org/api/docs`
+- **Backend Swagger API Docs:** `https://arabdemo-backend.duckdns.org/api/docs`

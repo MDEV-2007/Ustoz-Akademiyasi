@@ -28,11 +28,11 @@ docker exec -t ustoz_api npm run prisma:seed || true
 echo "🌐 [4/5] Configuring Nginx reverse proxy (Isolated server blocks)..."
 # Copy Nginx virtual hosts
 if [ -d /etc/nginx/sites-available ]; then
-    sudo cp nginx/ustozakademiyasi-front.duckdns.org.conf /etc/nginx/sites-available/
-    sudo cp nginx/ustozakademiyasi-back.duckdns.org.conf /etc/nginx/sites-available/
+    sudo cp nginx/arabdemo-front.duckdns.org.conf /etc/nginx/sites-available/
+    sudo cp nginx/arabdemo-backend.duckdns.org.conf /etc/nginx/sites-available/
 
-    sudo ln -sf /etc/nginx/sites-available/ustozakademiyasi-front.duckdns.org.conf /etc/nginx/sites-enabled/
-    sudo ln -sf /etc/nginx/sites-available/ustozakademiyasi-back.duckdns.org.conf /etc/nginx/sites-enabled/
+    sudo ln -sf /etc/nginx/sites-available/arabdemo-front.duckdns.org.conf /etc/nginx/sites-enabled/
+    sudo ln -sf /etc/nginx/sites-available/arabdemo-backend.duckdns.org.conf /etc/nginx/sites-enabled/
 
     echo "🔍 Nginx konfiguratsiyasi tekshirilmoqda..."
     sudo nginx -t
@@ -45,11 +45,11 @@ fi
 
 echo "🔒 [5/5] SSL Sertifikatlarini o'rnatish (Certbot)..."
 echo "Agar SSL hali o'rnatilmagan bo'lsa, quyidagi buyruqni ishga tushiring:"
-echo "sudo certbot --nginx -d ustozakademiyasi-front.duckdns.org -d ustozakademiyasi-back.duckdns.org"
+echo "sudo certbot --nginx -d arabdemo-front.duckdns.org -d arabdemo-backend.duckdns.org"
 
 echo "=========================================================================="
 echo "✅ Arab Tili MUVAFFAQIYATLI ISHGA TUSHDI!"
-echo "   Frontend: https://ustozakademiyasi-front.duckdns.org"
-echo "   Backend:  https://ustozakademiyasi-back.duckdns.org/api/v1/health/live"
+echo "   Frontend: https://arabdemo-front.duckdns.org"
+echo "   Backend:  https://arabdemo-backend.duckdns.org/api/v1/health/live"
 echo "   Boshqa loyihalar (ilimildizi, uncoschool) xavfsiz holatda saqlandi."
 echo "=========================================================================="

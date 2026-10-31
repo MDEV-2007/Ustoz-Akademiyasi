@@ -8,7 +8,7 @@ RUN npm ci
 
 FROM base AS builder
 WORKDIR /app
-ARG NEXT_PUBLIC_API_URL=https://ustozakademiyasi-back.duckdns.org/api/v1
+ARG NEXT_PUBLIC_API_URL=https://arabdemo-backend.duckdns.org/api/v1
 ENV NEXT_PUBLIC_API_URL=$NEXT_PUBLIC_API_URL
 COPY --from=deps /app/node_modules ./node_modules
 COPY . .

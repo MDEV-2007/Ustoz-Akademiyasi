@@ -3,6 +3,8 @@ import { Suspense } from 'react';
 import { SUPPORTED_LOCALES } from '@/lib/i18n/config';
 import App from '../page';
 
+const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || 'https://arabdemo-front.duckdns.org';
+
 export function generateStaticParams() {
   return SUPPORTED_LOCALES.map((locale) => ({ locale }));
 }
@@ -23,16 +25,41 @@ export async function generateMetadata({ params }) {
     en: '8 branches across Tashkent, 5,000+ graduates. Kids 4+, professional phonetics, and CEFR preparation courses.',
   };
 
+  const title = titles[locale] || titles.uz;
+  const description = descriptions[locale] || descriptions.uz;
+
   return {
-    title: titles[locale] || titles.uz,
-    description: descriptions[locale] || descriptions.uz,
+    title,
+    description,
     alternates: {
-      canonical: `https://arabtili.uz/${locale}`,
+      canonical: `${SITE_URL}/${locale}`,
       languages: {
-        uz: 'https://arabtili.uz/uz',
-        ru: 'https://arabtili.uz/ru',
-        en: 'https://arabtili.uz/en',
+        uz: `${SITE_URL}/uz`,
+        ru: `${SITE_URL}/ru`,
+        en: `${SITE_URL}/en`,
       },
+    },
+    openGraph: {
+      title,
+      description,
+      url: `${SITE_URL}/${locale}`,
+      siteName: 'Arab Tili',
+      locale: locale === 'ru' ? 'ru_RU' : locale === 'en' ? 'en_US' : 'uz_UZ',
+      type: 'website',
+      images: [
+        {
+          url: '/academy_login_illustration.jpg',
+          width: 1200,
+          height: 630,
+          alt: title,
+        },
+      ],
+    },
+    twitter: {
+      card: 'summary_large_image',
+      title,
+      description,
+      images: ['/academy_login_illustration.jpg'],
     },
     icons: {
       icon: [
@@ -48,7 +75,7 @@ export async function generateMetadata({ params }) {
   };
 }
 
-async function LocaleContent({ params }) {
+export default async function LocalizedHomePage({ params }) {
   const resolvedParams = await params;
   const locale = resolvedParams?.locale;
 
@@ -56,14 +83,9 @@ async function LocaleContent({ params }) {
     notFound();
   }
 
-  return <App initialLocale={locale} />;
-}
-
-export default function LocalePage({ params }) {
   return (
-    <Suspense fallback={<div className="min-h-screen bg-[#F8FAF8]" />}>
-      <LocaleContent params={params} />
+    <Suspense fallback={null}>
+      <App />
     </Suspense>
   );
 }
-
