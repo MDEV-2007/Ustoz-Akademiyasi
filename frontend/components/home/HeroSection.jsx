@@ -137,28 +137,8 @@ export default function HeroSection({
                 className="w-full h-full object-cover object-top transition-transform duration-700 group-hover:scale-105"
               />
 
-              {/* Ambient bottom-fade gradient */}
-              <div className="absolute inset-0 bg-gradient-to-t from-[#061c14] via-[#061c14]/40 to-transparent opacity-85" />
-
-              {/* Stylized Glowing Arabic Calligraphy of "اقرأ" (Iqra) Centerpiece */}
-              <div className="absolute bottom-5 sm:bottom-6 left-1/2 -translate-x-1/2 px-4 sm:px-6 py-2.5 sm:py-3 rounded-2xl bg-gradient-to-r from-emerald-950/95 via-[#073F31]/95 to-emerald-950/95 border border-amber-400/40 backdrop-blur-md shadow-2xl flex items-center gap-2.5 sm:gap-3 w-[92%] sm:w-[88%] max-w-[320px] justify-center z-10">
-                <span
-                  className="text-2xl sm:text-3xl font-bold text-amber-300 tracking-wide select-none drop-shadow-[0_2px_12px_rgba(251,191,36,0.5)]"
-                  dir="rtl"
-                  style={{ fontFamily: "'Amiri', 'Noto Naskh Arabic', serif" }}
-                >
-                  اقْرَأْ
-                </span>
-                <div className="h-6 w-px bg-amber-400/30 flex-shrink-0" />
-                <div className="text-left leading-tight">
-                  <div className="text-xs font-bold text-white uppercase tracking-wider">
-                    {t.hero?.archTitle || 'Ilm va Ma’rifat'}
-                  </div>
-                  <div className="text-[10px] text-emerald-300 font-medium mt-0.5">
-                    {t.hero?.archSubtitle || 'Yuksak natijalar sari'}
-                  </div>
-                </div>
-              </div>
+              {/* Subtle ambient bottom gradient */}
+              <div className="absolute inset-0 bg-gradient-to-t from-[#061c14]/40 via-transparent to-transparent pointer-events-none" />
             </div>
 
             {/* Floating Glassmorphic Micro-Card 1: Top-Right (CEFR C1) */}
