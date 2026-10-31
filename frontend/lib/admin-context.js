@@ -90,7 +90,7 @@ export function AdminProvider({ children }) {
 
   // Demo / Quick superadmin login
   const loginAsDemoAdmin = async () => {
-    return login('admin@arabtili.uz', 'SecureAdminPassword2026!#');
+    return login('arabdemo@gmail.com', '1234');
   };
 
   // Logout handler

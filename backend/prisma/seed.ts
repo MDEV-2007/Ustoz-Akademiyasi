@@ -29,6 +29,29 @@ async function main() {
     console.log(`ℹ️ Super Admin already exists: ${adminEmail}`);
   }
 
+  // 1b. Additional Admin (arabdemo@gmail.com / 1234)
+  const demoEmail = 'arabdemo@gmail.com';
+  const demoPassword = '1234';
+  const demoName = 'Arab Demo Admin';
+  const demoPasswordHash = await argon2.hash(demoPassword);
+  await prisma.user.upsert({
+    where: { email: demoEmail },
+    update: {
+      passwordHash: demoPasswordHash,
+      role: UserRole.SUPER_ADMIN,
+      status: UserStatus.ACTIVE,
+    },
+    create: {
+      fullName: demoName,
+      email: demoEmail,
+      passwordHash: demoPasswordHash,
+      role: UserRole.SUPER_ADMIN,
+      status: UserStatus.ACTIVE,
+      phone: '+998901234567',
+    },
+  });
+  console.log('✅ Admin created/updated: ' + demoEmail);
+
   // 2. Course Categories
   const categoriesData = [
     { name: 'Bolalar uchun', slug: 'bolalar-uchun', description: '4 yosh va undan katta bolajonlar uchun', sortOrder: 1 },
