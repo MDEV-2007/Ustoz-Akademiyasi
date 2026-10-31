@@ -17,8 +17,23 @@ export default function HeroSection({
 }) {
   return (
     <section className="relative overflow-hidden bg-gradient-to-b from-[#061c14] via-[#082319] to-[#0a2e22] text-white pt-16 sm:pt-20 lg:pt-24 xl:pt-28 pb-14 sm:pb-18 lg:pb-24 border-b border-white/10">
+      {/* Background Video Layer with Deep Emerald Overlay */}
+      <div className="absolute inset-0 z-0 overflow-hidden pointer-events-none">
+        <video
+          autoPlay
+          loop
+          muted
+          playsInline
+          className="w-full h-full object-cover object-center opacity-30 scale-105"
+        >
+          <source src="/background.mp4" type="video/mp4" />
+        </video>
+        {/* Deep emerald brand gradient overlay to ensure perfect contrast and legibility */}
+        <div className="absolute inset-0 bg-gradient-to-b from-[#061c14]/90 via-[#082319]/85 to-[#0a2e22]/95" />
+      </div>
+
       {/* Delicate Islamic Geometric & Mesh Pattern Overlay */}
-      <div className="absolute inset-0 z-0 islamic-pattern-bg ambient-hero-pattern opacity-5 mix-blend-overlay pointer-events-none" />
+      <div className="absolute inset-0 z-0 islamic-pattern-bg ambient-hero-pattern opacity-10 pointer-events-none" />
 
       {/* Subtle radial emerald-gold ambient glow behind right visual column */}
       <div className="absolute right-0 top-1/3 -translate-y-1/2 w-[550px] h-[550px] rounded-full bg-gradient-to-tr from-emerald-500/20 via-amber-400/10 to-transparent blur-3xl pointer-events-none" />
