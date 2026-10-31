@@ -184,7 +184,7 @@ export default function GraduatesSection({
         </div>
 
         {/* Category Filters (Refined, Restrained, Accessible) */}
-        <div className="flex items-center gap-2 mb-10 overflow-x-auto pb-1 scrollbar-none" role="tablist">
+        <div className="flex items-center gap-2 mb-10 overflow-x-auto py-1 no-scrollbar scroll-smooth -mx-4 px-4 sm:mx-0 sm:px-0" role="tablist">
           <button
             type="button"
             role="tab"

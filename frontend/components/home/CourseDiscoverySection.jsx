@@ -37,7 +37,7 @@ export default function CourseDiscoverySection({
           </div>
 
           {/* Category Filter */}
-          <div className="flex items-center gap-2 overflow-x-auto pb-1 max-w-full no-scrollbar flex-nowrap sm:flex-wrap">
+          <div className="flex items-center gap-2 overflow-x-auto py-1 max-w-full no-scrollbar scroll-smooth flex-nowrap sm:flex-wrap -mx-4 px-4 sm:mx-0 sm:px-0">
             {[
               { key: 'all', label: t.courses?.filterAll || 'Barchasi' },
               { key: 'kids', label: t.courses?.filterKids || 'Bolalar uchun' },

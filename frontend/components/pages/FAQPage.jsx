@@ -78,7 +78,7 @@ export default function FAQPage({
         )}
       </div>
 
-      <div className="flex flex-wrap gap-2">
+      <div className="flex items-center gap-2 overflow-x-auto no-scrollbar scroll-smooth py-1 -mx-4 px-4 sm:mx-0 sm:px-0">
         {categories.map((c) => (
           <button
             key={c}
@@ -87,10 +87,10 @@ export default function FAQPage({
               setFaqCategoryFilter(c);
               setOpenFaqIdx(0);
             }}
-            className={`px-3.5 py-2 rounded-lg text-xs font-semibold cursor-pointer transition-colors ${
+            className={`px-4 py-2.5 rounded-xl text-xs sm:text-sm font-semibold cursor-pointer whitespace-nowrap transition-all flex-shrink-0 ${
               faqCategoryFilter === c
                 ? 'bg-[#073F31] text-white shadow-xs'
-                : 'bg-white text-[#14231F] border border-[#073F31]/15 hover:border-[#07966F]'
+                : 'bg-white text-[#14231F] border border-[#073F31]/15 hover:border-[#07966F] hover:bg-emerald-50/50'
             }`}
           >
             {c}

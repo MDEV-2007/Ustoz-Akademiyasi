@@ -102,7 +102,7 @@ export default function InteractivePlaygroundWidget({
         </div>
 
         <div
-          className="flex flex-wrap sm:flex-nowrap gap-1.5 w-full sm:w-auto"
+          className="flex items-center gap-1.5 w-full sm:w-auto overflow-x-auto no-scrollbar scroll-smooth py-0.5"
           role="tablist"
           aria-label="Interaktiv mashq turlari"
         >
