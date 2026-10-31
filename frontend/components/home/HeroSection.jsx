@@ -24,12 +24,13 @@ export default function HeroSection({
           loop
           muted
           playsInline
-          className="w-full h-full object-cover object-center opacity-30 scale-105"
+          preload="auto"
+          className="w-full h-full object-cover object-center opacity-35 scale-105"
         >
           <source src="/background.mp4" type="video/mp4" />
         </video>
         {/* Deep emerald brand gradient overlay to ensure perfect contrast and legibility */}
-        <div className="absolute inset-0 bg-gradient-to-b from-[#061c14]/90 via-[#082319]/85 to-[#0a2e22]/95" />
+        <div className="absolute inset-0 bg-gradient-to-b from-[#061c14]/85 via-[#082319]/80 to-[#0a2e22]/90" />
       </div>
 
       {/* Delicate Islamic Geometric & Mesh Pattern Overlay */}
